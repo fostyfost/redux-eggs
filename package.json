@@ -1,0 +1,71 @@
+{
+  "name": "next-with-redux-dynamic-modules",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "analyze": "cross-env ANALYZE=true yarn build"
+  },
+  "engines": {
+    "node": ">= 13.12.0",
+    "yarn": ">= 1.22.4",
+    "npm": ">= 6.14.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "9.4.2",
+    "cross-env": "7.0.2",
+    "es6-promise": "4.2.8",
+    "immer": "6.0.8",
+    "next": "9.4.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "7.2.0",
+    "redux": "4.0.5",
+    "redux-dynamic-modules": "5.2.3",
+    "redux-saga": "1.1.3",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.5",
+    "@types/react": "16.9.35",
+    "@types/react-dom": "16.9.8",
+    "@types/react-redux": "7.1.9",
+    "@typescript-eslint/eslint-plugin": "3.0.0",
+    "@typescript-eslint/parser": "3.0.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.1.0",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-plugin-flowtype": "5.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.0.2",
+    "husky": "4.2.5",
+    "nodemon": "2.0.4",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1",
+    "ts-loader": "7.0.4",
+    "ts-node": "8.10.1",
+    "tslib": "2.0.0",
+    "typescript": "3.9.3"
+  }
+}

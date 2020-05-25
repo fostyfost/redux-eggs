@@ -1,20 +1,24 @@
 import React from 'react'
-import { DynamicModuleLoader, IModule } from 'redux-dynamic-modules'
+import { NextPage } from 'next'
+import Head from 'next/head'
 import { Clock } from '../components/clock'
-import { getClockModule } from '../modules/clock/module'
-import { NextPageWithModules } from '../contracts'
 
-const modules = [getClockModule()]
-
-const ClockPage: NextPageWithModules = () => {
+const ClockPage: NextPage<{ title: string }> = ({ title }) => {
   return (
-    <DynamicModuleLoader modules={modules as IModule<any>[]}>
-      <h1>Clock page</h1>
-      <Clock />
-    </DynamicModuleLoader>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div>
+        <h1>{title}</h1>
+        <Clock />
+      </div>
+    </>
   )
 }
 
-ClockPage.modules = modules
+ClockPage.getInitialProps = () => {
+  return { title: 'Clock page' }
+}
 
 export default ClockPage

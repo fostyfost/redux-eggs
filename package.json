@@ -40,7 +40,7 @@
     "react-dom": "16.13.1",
     "react-redux": "7.2.0",
     "redux": "4.0.5",
-    "redux-dynamic-modules": "5.2.3",
+    "redux-dynamic-modules-core": "5.2.3",
     "redux-saga": "1.1.3",
     "reselect": "4.0.0"
   },
@@ -49,6 +49,7 @@
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
     "@types/react-redux": "7.1.9",
+    "@types/redux": "3.6.0",
     "@typescript-eslint/eslint-plugin": "3.0.0",
     "@typescript-eslint/parser": "3.0.0",
     "babel-eslint": "10.1.0",

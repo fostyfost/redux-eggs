@@ -1,5 +1,5 @@
 import { delay, put, takeLatest } from 'redux-saga/effects'
-import { ClockReducerAction } from './action-creators'
+import { ClockPublicAction, ClockReducerAction } from './action-creators'
 import { ClockActionType } from './action-types'
 
 function* clockWorker() {
@@ -15,5 +15,6 @@ export function* startClockWatcher() {
     yield put(ClockReducerAction.tickClock())
   } else {
     yield takeLatest(ClockActionType.START_CLOCK, clockWorker)
+    yield put(ClockPublicAction.startClock())
   }
 }

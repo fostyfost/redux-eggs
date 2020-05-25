@@ -1097,6 +1097,13 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/redux@3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@types/redux/-/redux-3.6.0.tgz#f1ebe1e5411518072e4fdfca5c76e16e74c1399a"
+  integrity sha1-8evh5UEVGAcuT9/KXHbhbnTBOZo=
+  dependencies:
+    redux "*"
+
 "@typescript-eslint/eslint-plugin@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-3.0.0.tgz#02f8ec6b5ce814bda80dfc22463f108bed1f699b"
@@ -6165,30 +6172,13 @@ redux-dynamic-middlewares@^1.0.0:
   resolved "https://registry.yarnpkg.com/redux-dynamic-middlewares/-/redux-dynamic-middlewares-1.0.0.tgz#a4c5859a6018a1d7fab3bdd4989f51095c806d15"
   integrity sha512-smX1eY17dH90FVtXL6JPW01on1ptP4SOlkDYON5Lka52RNcZfgWM6hvtoZKA3O+dZL2/ytbS+tHo2gdKln5iHw==
 
-redux-dynamic-modules-core@^5.2.3:
+redux-dynamic-modules-core@5.2.3:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/redux-dynamic-modules-core/-/redux-dynamic-modules-core-5.2.3.tgz#ebee39513c6e605fdf940a61e77ccc65d104c035"
   integrity sha512-4UyJY+r9llTYO2AJj/HMY2M/FPvcks169V3o0wUr1ViIFC8cmNsq9f1DRsNqI2Ns57hAvpvdd8fU6nm+GczRnw==
   dependencies:
     redux-devtools-extension "^2.13.7"
     redux-dynamic-middlewares "^1.0.0"
-
-redux-dynamic-modules-react@^5.2.3:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/redux-dynamic-modules-react/-/redux-dynamic-modules-react-5.2.3.tgz#91e97a48474beecf59e53fc9f43bde01cb96eb2f"
-  integrity sha512-JuRBjjTL0WAcTu0sdTVghTrxWHc8G9d4cLzUy5m3m51ycW3W7hnq2mZNo/eaoIADYtMMWtpnhEm+z9KeNyp0kA==
-  dependencies:
-    redux-devtools-extension "^2.13.7"
-    redux-dynamic-middlewares "^1.0.0"
-    redux-dynamic-modules-core "^5.2.3"
-
-redux-dynamic-modules@5.2.3:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/redux-dynamic-modules/-/redux-dynamic-modules-5.2.3.tgz#a035e981b4ad1fa75ff7d106740b92cf5ede58ed"
-  integrity sha512-eL3b82N4YiBYkXcWOMVFm7AOdNkwa6xp8jeXIoLAivoG1gjxNVg6AQIN7xmiB+PR7qBfN0QoPIiZ/uKmA9UhXw==
-  dependencies:
-    redux-dynamic-modules-core "^5.2.3"
-    redux-dynamic-modules-react "^5.2.3"
 
 redux-saga@1.1.3:
   version "1.1.3"
@@ -6197,7 +6187,7 @@ redux-saga@1.1.3:
   dependencies:
     "@redux-saga/core" "^1.1.3"
 
-redux@4.0.5, redux@^4.0.0, redux@^4.0.4:
+redux@*, redux@4.0.5, redux@^4.0.0, redux@^4.0.4:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.5.tgz#4db5de5816e17891de8a80c424232d06f051d93f"
   integrity sha512-VSz1uMAH24DM6MF72vcojpYPtrTUu3ByVWfPL1nPfVRb5mZVTve5GnNCUV53QM/BZ66xfWrm0CTWoM+Xlz8V1w==

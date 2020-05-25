@@ -1,21 +1,26 @@
 import React from 'react'
-import { DynamicModuleLoader, IModule } from 'redux-dynamic-modules'
+import { NextPage } from 'next'
+import Head from 'next/head'
 import { Count } from '../components/count'
 import { getCountModule } from '../modules/count/module'
-import { NextPageWithModules } from '../contracts'
-import { getClockModule } from '../modules/clock/module'
+import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
 
-const modules = [getClockModule(), getCountModule()]
-
-const CountPage: NextPageWithModules = () => {
+const CountPage: NextPage<{ title: string }> = ({ title }) => {
   return (
-    <DynamicModuleLoader modules={modules as IModule<any>[]}>
-      <h1>Count page</h1>
-      <Count />
-    </DynamicModuleLoader>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div>
+        <h1>{title}</h1>
+        <Count />
+      </div>
+    </>
   )
 }
 
-CountPage.modules = modules
+CountPage.getInitialProps = () => {
+  return { title: 'Count page' }
+}
 
-export default CountPage
+export default withDynamicModuleLoader(CountPage, [getCountModule()])

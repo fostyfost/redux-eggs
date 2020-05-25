@@ -8,7 +8,7 @@ const Users = () => {
   const error = useSelector(errorSelector)
 
   if (isLoading) {
-    return <div>Loading ...</div>
+    return <div>Load users ...</div>
   }
 
   return (

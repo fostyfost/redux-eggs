@@ -1,6 +1,7 @@
-import { IModule, IExtension, IMap, IItemManager, IModuleStore } from 'redux-dynamic-modules'
+import { IModule, IExtension, IMap, IItemManager } from 'redux-dynamic-modules-core'
 import { Task } from 'redux-saga'
 import { Action, AnyAction, ReducersMapObject } from 'redux'
+import { AdvancedModuleStore } from '../create-store'
 
 export interface ISagaWithArguments<T = any> {
   saga: (argument?: T) => Iterator<any>
@@ -23,6 +24,6 @@ export interface ISagaManager extends IItemManager<ISagaRegistration> {
   sagaTasks: IMap<ISagaRegistration, Task>
 }
 
-export type IModuleStoreWithSagaTasks<State = {}> = IModuleStore<State> & {
+export type IModuleStoreWithSagaTasks<State = {}> = AdvancedModuleStore<State> & {
   sagaTasks: IMap<ISagaRegistration, Task>
 }

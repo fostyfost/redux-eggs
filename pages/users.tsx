@@ -1,21 +1,26 @@
 import React from 'react'
-import { DynamicModuleLoader, IModule } from 'redux-dynamic-modules'
+import Head from 'next/head'
+import { NextPage } from 'next'
 import { Users } from '../components/users'
 import { getUsersModule } from '../modules/users/module'
-import { NextPageWithModules } from '../contracts'
-import { getClockModule } from '../modules/clock/module'
+import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
 
-const modules = [getClockModule(), getUsersModule()]
-
-const UsersPage: NextPageWithModules = () => {
+const UsersPage: NextPage<{ title: string }> = ({ title }) => {
   return (
-    <DynamicModuleLoader modules={modules as IModule<any>[]}>
-      <h1>Users page</h1>
-      <Users />
-    </DynamicModuleLoader>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div>
+        <h1>{title}</h1>
+        <Users />
+      </div>
+    </>
   )
 }
 
-UsersPage.modules = modules
+UsersPage.getInitialProps = () => {
+  return { title: 'Users page' }
+}
 
-export default UsersPage
+export default withDynamicModuleLoader(UsersPage, [getUsersModule()])

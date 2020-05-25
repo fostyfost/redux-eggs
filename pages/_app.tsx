@@ -1,20 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import App, { AppInitialProps, AppContext } from 'next/app'
+import App, { AppInitialProps } from 'next/app'
 import Link from 'next/link'
 import { withRedux } from '../store'
 import { Clock } from '../components/clock'
+import { getClockModule } from '../modules/clock/module'
+import { ISagaModule } from '../store/saga-extension/contracts'
 
 class WrappedApp extends App<AppInitialProps> {
-  static async getInitialProps({ Component, ctx }: AppContext) {
-    let pageProps = {}
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return { pageProps }
-  }
+  static initialModules: ISagaModule<any, any>[] = [getClockModule()]
 
   render() {
     const { Component, pageProps } = this.props
@@ -33,6 +27,9 @@ class WrappedApp extends App<AppInitialProps> {
           </Link>
           <Link href={'/users'}>
             <a style={{ padding: '10px' }}>Users page</a>
+          </Link>
+          <Link href={'/picsum'}>
+            <a style={{ padding: '10px' }}>Picsum page</a>
           </Link>
         </nav>
         <Clock />

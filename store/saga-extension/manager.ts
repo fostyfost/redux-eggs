@@ -1,5 +1,5 @@
 import { SagaMiddleware, Task } from 'redux-saga'
-import { getMap } from 'redux-dynamic-modules'
+import { getMap } from 'redux-dynamic-modules-core'
 import { sagaEquals } from './saga-equals'
 import { ISagaManager, ISagaRegistration, ISagaWithArguments } from './contracts'
 

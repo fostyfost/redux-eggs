@@ -12,6 +12,5 @@ export const getCountModule = (): ISagaModule<CountAwareState, CountActionsUnion
       [COUNT_MODULE_NAME]: countReducer,
     },
     sagas: [countWatcher],
-    retained: true,
   }
 }

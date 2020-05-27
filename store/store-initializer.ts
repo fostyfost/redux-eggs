@@ -6,32 +6,24 @@ import { createStore } from './create-store'
 
 declare const window: WindowWithStore
 
-const getStoreCreator = () => {
-  let store: IModuleStoreWithSagaTasks
+const createStoreWithSagaTasks = (initialModules: ISagaModule[]) => {
+  const sagaExtension = getSagaExtension()
 
-  return (initialModules: ISagaModule[]) => {
-    if (!store) {
-      const sagaExtension = getSagaExtension()
+  const store = createStore({ extensions: [sagaExtension] }, initialModules) as IModuleStoreWithSagaTasks
 
-      store = createStore({ extensions: [sagaExtension] }, initialModules) as IModuleStoreWithSagaTasks
+  store.sagaTasks = sagaExtension.sagaTasks
 
-      store.sagaTasks = sagaExtension.sagaTasks
-    }
-
-    return store
-  }
+  return store
 }
-
-const createAdvancedStore = getStoreCreator()
 
 export const getStore = (initialModules: ISagaModule[] | undefined = []) => {
   if (typeof window === 'undefined') {
-    return createAdvancedStore(initialModules)
+    return createStoreWithSagaTasks(initialModules)
   }
 
   // Memoize store if client
   if (!(STOREKEY in window)) {
-    window[STOREKEY] = createAdvancedStore(initialModules)
+    window[STOREKEY] = createStoreWithSagaTasks(initialModules)
   }
 
   return window[STOREKEY]

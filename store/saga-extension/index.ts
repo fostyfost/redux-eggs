@@ -2,16 +2,13 @@ import { default as createSagaMiddleware } from 'redux-saga'
 import { getRefCountedManager, IModuleManager } from 'redux-dynamic-modules-core'
 import { getSagaManager } from './manager'
 import { sagaEquals } from './saga-equals'
-import { ISagaModule, ISagaExtension, ISagaManager } from './contracts'
+import { ISagaModule, ISagaExtension, ISagaManager, SagaContext } from './contracts'
 
 /**
  * Get an extension that integrates saga with the store
  * sagaContext param is the context to provide to the saga
  */
-export function getSagaExtension(
-  sagaContext: { [filed: string]: any } = {},
-  onError?: (error: Error) => void,
-): ISagaExtension {
+export function getSagaExtension(sagaContext: SagaContext = {}, onError?: (error: Error) => void): ISagaExtension {
   // Setup the saga middleware
   const sagaMiddleware = createSagaMiddleware<any>({
     context: sagaContext,

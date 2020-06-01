@@ -1,29 +1,29 @@
 import { STOREKEY } from './index'
-import { IModuleStoreWithSagaTasks, ISagaModule } from './saga-extension/contracts'
-import { WindowWithStore } from './contracts'
+import { IModuleStoreWithSagaTasks, ISagaModule, SagaContext } from './saga-extension/contracts'
+import { GetStoreParams, WindowWithStore } from './contracts'
 import { getSagaExtension } from './saga-extension'
 import { createStore } from './create-store'
 
 declare const window: WindowWithStore
 
-const createStoreWithSagaTasks = (initialModules: ISagaModule[]) => {
-  const sagaExtension = getSagaExtension()
+const createStoreWithSagaTasks = (modules: ISagaModule[], sagaContext?: SagaContext) => {
+  const sagaExtension = getSagaExtension(sagaContext)
 
-  const store = createStore({ extensions: [sagaExtension] }, initialModules) as IModuleStoreWithSagaTasks
+  const store = createStore({ extensions: [sagaExtension] }, modules) as IModuleStoreWithSagaTasks
 
   store.sagaTasks = sagaExtension.sagaTasks
 
   return store
 }
 
-export const getStore = (initialModules: ISagaModule[] | undefined = []) => {
+export const getStore = ({ rootModules = [], pageModules = [] }: GetStoreParams): IModuleStoreWithSagaTasks => {
   if (typeof window === 'undefined') {
-    return createStoreWithSagaTasks(initialModules)
+    return createStoreWithSagaTasks(rootModules.concat(pageModules))
   }
 
   // Memoize store if client
   if (!(STOREKEY in window)) {
-    window[STOREKEY] = createStoreWithSagaTasks(initialModules)
+    window[STOREKEY] = createStoreWithSagaTasks(rootModules.concat(pageModules))
   }
 
   return window[STOREKEY]

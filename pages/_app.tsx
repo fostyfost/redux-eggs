@@ -8,8 +8,6 @@ import { getClockModule } from '../modules/clock/module'
 import { ISagaModule } from '../store/saga-extension/contracts'
 
 class WrappedApp extends App<AppInitialProps> {
-  static initialModules: ISagaModule<any, any>[] = [getClockModule()]
-
   render() {
     const { Component, pageProps } = this.props
 
@@ -39,4 +37,4 @@ class WrappedApp extends App<AppInitialProps> {
   }
 }
 
-export default withRedux(WrappedApp)
+export default withRedux(WrappedApp, [getClockModule()] as ISagaModule[])

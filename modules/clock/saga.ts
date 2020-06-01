@@ -4,7 +4,6 @@ import { ClockActionType } from './action-types'
 
 function* clockWorker() {
   while (true) {
-    console.log('tick')
     yield put(ClockReducerAction.tickClock())
     yield delay(1000)
   }

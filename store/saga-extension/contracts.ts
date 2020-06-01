@@ -27,3 +27,5 @@ export interface ISagaManager extends IItemManager<ISagaRegistration> {
 export type IModuleStoreWithSagaTasks<State = {}> = AdvancedModuleStore<State> & {
   sagaTasks: IMap<ISagaRegistration, Task>
 }
+
+export type SagaContext = { [filed: string]: any }

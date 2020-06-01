@@ -19,12 +19,10 @@ export type NextPageWithModules<P = {}, IP = {}, S = any, R extends Action = any
   P
 > & { modules: ISagaModule<S, R>[] }
 
-export type AppContextWithModules = AppContext & {
-  Component: NextPageWithModules
-  modules: ISagaModule[]
-}
+export type AppContextWithModules = AppContext & { Component: NextPageWithModules }
 
-export interface MakePropsParams {
-  initialModules: ISagaModule[]
-  context: AppContextWithModules
+export interface GetStoreParams {
+  rootModules?: ISagaModule[]
+  pageModules?: ISagaModule[]
+  context?: AppContextWithModules
 }

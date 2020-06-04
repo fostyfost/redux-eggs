@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
-import App from 'next/app'
+import React, { FC, useCallback, useEffect, useRef } from 'react'
 import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
 import { allSagasDone } from './all-sagas-done'
@@ -7,10 +6,11 @@ import { getStore } from './store-initializer'
 import { hydrateAction } from './hydrate-action'
 import { AppContextWithModules, WrapperProps } from './contracts'
 import { IModuleStoreWithSagaTasks, ISagaModule } from './saga-extension/contracts'
+import { AppPropsType } from 'next/dist/next-server/lib/utils'
 
 export const STOREKEY = '__NEXT_REDUX_WRAPPER_STORE__' as const
 
-export const withRedux = (Application: App | any, rootModules: ISagaModule[]) => {
+export const withRedux = (App: FC<AppPropsType>, rootModules: ISagaModule[]) => {
   let initialStore: IModuleStoreWithSagaTasks
 
   const makeProps = async (context: AppContextWithModules): Promise<WrapperProps> => {
@@ -70,7 +70,7 @@ export const withRedux = (Application: App | any, rootModules: ISagaModule[]) =>
 
     return (
       <Provider store={store.current}>
-        <Application {...initialProps} {...props} Component={Component} />
+        <App {...initialProps} {...props} Component={Component} />
       </Provider>
     )
   }

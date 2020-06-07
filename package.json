@@ -35,7 +35,7 @@
     "cross-env": "7.0.2",
     "es6-promise": "4.2.8",
     "immer": "6.0.8",
-    "next": "9.4.2",
+    "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-redux": "7.2.0",

@@ -1,7 +1,16 @@
 {
   "name": "next-with-redux-dynamic-modules",
   "version": "1.0.0",
-  "license": "ISC",
+  "license": "MIT",
+  "author": "Fosty Fost",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fostyfost/next-with-redux-dynamic-modules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fostyfost/next-with-redux-dynamic-modules/issues"
+  },
+  "homepage": "https://github.com/fostyfost/next-with-redux-dynamic-modules",
   "scripts": {
     "dev": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",

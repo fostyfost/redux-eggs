@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useRef } from 'react'
+import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
 import { allSagasDone } from './all-sagas-done'
@@ -40,17 +40,17 @@ export const withRedux = (App: FC<AppPropsType>, rootModules: ISagaModule[]) => 
   const Wrapper = ({ initialState, initialProps, Component, ...props }: WrapperProps & AppContextWithModules) => {
     const isFirstRender = useRef(true)
 
-    const store = useRef(
-      typeof window === 'undefined'
-        ? initialStore
-        : getStore({
-            rootModules,
-            pageModules: Component.modules,
-          }),
-    )
+    // see https://reactjs.org/docs/hooks-faq.html#how-to-create-expensive-objects-lazily
+    const [store] = useState(() => {
+      if (typeof window === 'undefined' && initialStore) {
+        return initialStore
+      }
+
+      return getStore({ rootModules, pageModules: Component.modules })
+    })
 
     const hydrate = useCallback(() => {
-      store.current.dispatch(hydrateAction(initialState))
+      store.dispatch(hydrateAction(initialState))
     }, [initialState])
 
     // apply synchronously on first render (both server side and client side)
@@ -69,7 +69,7 @@ export const withRedux = (App: FC<AppPropsType>, rootModules: ISagaModule[]) => 
     }, [hydrate])
 
     return (
-      <Provider store={store.current}>
+      <Provider store={store}>
         <App {...initialProps} {...props} Component={Component} />
       </Provider>
     )

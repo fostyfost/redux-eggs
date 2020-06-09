@@ -1,9 +1,9 @@
 import React from 'react'
-import { NextPage } from 'next'
 import Head from 'next/head'
 import { Clock } from '../components/clock'
+import { NextPageWithStore } from '../store/contracts'
 
-const ClockPage: NextPage<{ title: string }> = ({ title }) => {
+const ClockPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
     <>
       <Head>

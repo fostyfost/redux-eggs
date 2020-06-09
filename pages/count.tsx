@@ -1,11 +1,11 @@
 import React from 'react'
-import { NextPage } from 'next'
 import Head from 'next/head'
 import { Count } from '../components/count'
 import { getCountModule } from '../modules/count/module'
 import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
+import { NextPageWithStore } from '../store/contracts'
 
-const CountPage: NextPage<{ title: string }> = ({ title }) => {
+const CountPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
     <>
       <Head>

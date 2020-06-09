@@ -1,11 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
-import { NextPage } from 'next'
 import { Users } from '../components/users'
 import { getUsersModule } from '../modules/users/module'
 import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
+import { NextPageWithStore } from '../store/contracts'
+import { UsersPublicAction } from '../modules/users/action-creators'
+import { usersSelector } from '../modules/users/selectors'
 
-const UsersPage: NextPage<{ title: string }> = ({ title }) => {
+const UsersPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
     <>
       <Head>
@@ -19,7 +21,11 @@ const UsersPage: NextPage<{ title: string }> = ({ title }) => {
   )
 }
 
-UsersPage.getInitialProps = () => {
+UsersPage.getInitialProps = ctx => {
+  if (!usersSelector(ctx.store.getState())) {
+    ctx.store.dispatch(UsersPublicAction.loadUsers())
+  }
+
   return { title: 'Users page' }
 }
 

@@ -1,11 +1,13 @@
 import React from 'react'
-import { NextPage } from 'next'
 import Head from 'next/head'
 import { Picsum } from '../components/picsum'
 import { getPicsumModule } from '../modules/picsum/module'
 import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
+import { NextPageWithStore } from '../store/contracts'
+import { picsSelector } from '../modules/picsum/selectors'
+import { PicsumPublicAction } from '../modules/picsum/action-creators'
 
-const PicsumPage: NextPage<{ title: string }> = ({ title }) => {
+const PicsumPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
     <>
       <Head>
@@ -19,7 +21,11 @@ const PicsumPage: NextPage<{ title: string }> = ({ title }) => {
   )
 }
 
-PicsumPage.getInitialProps = () => {
+PicsumPage.getInitialProps = ctx => {
+  if (!picsSelector(ctx.store.getState())) {
+    ctx.store.dispatch(PicsumPublicAction.loadPics())
+  }
+
   return { title: 'Picsum page' }
 }
 

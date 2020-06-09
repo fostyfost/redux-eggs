@@ -13,11 +13,15 @@ export interface WrapperProps {
   initialState: any // stuff in the Store state after getInitialProps
 }
 
-export type NextPageWithModules<P = {}, IP = {}, S = any, R extends Action = any> = NextComponentType<
-  NextPageContext & { store: IModuleStoreWithSagaTasks },
+export type NextPageWithStore<P = {}, IP = {}, S = any> = NextComponentType<
+  NextPageContext & { store: IModuleStoreWithSagaTasks<S> },
   IP,
   P
-> & { modules: ISagaModule<S, R>[] }
+>
+
+export type NextPageWithModules<P = {}, IP = {}, S = any, R extends Action = any> = NextPageWithStore<P, IP, S> & {
+  modules: ISagaModule<S, R>[]
+}
 
 export type AppContextWithModules = AppContext & { Component: NextPageWithModules }
 

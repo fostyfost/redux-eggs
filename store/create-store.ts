@@ -165,5 +165,5 @@ export function createStore<State>(
 
   moduleManager.add(modules)
 
-  return store as AdvancedModuleStore<State>
+  return store
 }

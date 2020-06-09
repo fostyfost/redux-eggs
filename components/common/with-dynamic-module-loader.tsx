@@ -20,7 +20,10 @@ export const withDynamicModuleLoader = (
   Wrapper.displayName = `withDynamicModuleLoader(${Component.displayName || 'Component'})`
 
   if (Component.getInitialProps) {
-    Wrapper.getInitialProps = Component.getInitialProps
+    Wrapper.getInitialProps = async ctx => {
+      ctx.store.addModules(modules)
+      return Component.getInitialProps && Component.getInitialProps(ctx)
+    }
   }
 
   return Wrapper

@@ -3,9 +3,9 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import { withRedux } from '../store'
 import { Clock } from '../components/clock'
-import { getClockModule } from '../modules/clock/module'
-import { ISagaModule } from '../store/saga-extension/contracts'
 import { AppPropsType } from 'next/dist/next-server/lib/utils'
+import { Xkcd } from '../components/xkcd'
+import { getCommonModule } from '../modules/common/module'
 
 const App: FC<AppPropsType> = ({ Component, pageProps }) => {
   return (
@@ -26,11 +26,15 @@ const App: FC<AppPropsType> = ({ Component, pageProps }) => {
         <Link href={'/picsum'}>
           <a style={{ padding: '10px' }}>Picsum page</a>
         </Link>
+        <Link href={'/xkcd'}>
+          <a style={{ padding: '10px' }}>XKCD page</a>
+        </Link>
       </nav>
       <Clock />
+      <Xkcd />
       <Component {...pageProps} />
     </>
   )
 }
 
-export default withRedux(App, [getClockModule()] as ISagaModule[])
+export default withRedux(App, [getCommonModule()])

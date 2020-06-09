@@ -1,7 +1,7 @@
 import { picsumReducer } from './reducer'
 import { PICSUM_MODULE_NAME } from './index'
 import { loadPicsumWatcher } from './saga'
-import { PicsumActionsUnion } from './action-creators'
+import { PicsumActionsUnion, PicsumPublicAction } from './action-creators'
 import { ISagaModule } from '../../store/saga-extension/contracts'
 import { PicsumAwareState } from './state'
 
@@ -11,6 +11,7 @@ export const getPicsumModule = (): ISagaModule<PicsumAwareState, PicsumActionsUn
     reducerMap: {
       [PICSUM_MODULE_NAME]: picsumReducer,
     },
+    initialActions: [PicsumPublicAction.loadPics()],
     sagas: [loadPicsumWatcher],
   }
 }

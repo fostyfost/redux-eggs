@@ -1,11 +1,14 @@
 import { STOREKEY } from './index'
-import { IModuleStoreWithSagaTasks, ISagaModule, SagaContext } from './saga-extension/contracts'
+import { IModuleStoreWithSagaTasks, SagaContext } from './saga-extension/contracts'
 import { GetStoreParams, WindowWithStore } from './contracts'
 import { getSagaExtension } from './saga-extension'
 import { createStore } from './create-store'
 import produce, { Draft } from 'immer'
 import { HYDRATE } from './hydrate-action'
 import { AnyAction, combineReducers, ReducersMapObject } from 'redux'
+import { IModuleTuple } from '../components/common/dynamic-module-loader'
+import { IExtension } from 'redux-dynamic-modules-core'
+import { getLoggerExtension } from './logger-extension'
 
 declare const window: WindowWithStore
 
@@ -31,12 +34,18 @@ const combineReducersWithGlobalActions = (reducersMap: ReducersMapObject) => {
   return combineReducers(reducersMapWithHydration)
 }
 
-const createStoreWithSagaTasks = (modules: ISagaModule[], sagaContext?: SagaContext) => {
+interface StoreCreatorConfig {
+  modules: IModuleTuple
+  sagaContext?: SagaContext
+  extensions?: IExtension[]
+}
+
+const createStoreWithSagaTasks = ({ modules, sagaContext, extensions = [] }: StoreCreatorConfig) => {
   const sagaExtension = getSagaExtension(sagaContext)
 
   const store = createStore(
     {
-      extensions: [sagaExtension],
+      extensions: [sagaExtension, ...extensions],
       advancedCombineReducers: combineReducersWithGlobalActions,
     },
     modules,
@@ -47,14 +56,32 @@ const createStoreWithSagaTasks = (modules: ISagaModule[], sagaContext?: SagaCont
   return store
 }
 
+const getExtensions = (): IExtension[] => {
+  const extensions = []
+
+  const loggerExtension = getLoggerExtension()
+
+  if (loggerExtension) {
+    extensions.push(loggerExtension)
+  }
+
+  return extensions
+}
+
 export const getStore = ({ rootModules = [], pageModules = [] }: GetStoreParams): IModuleStoreWithSagaTasks => {
   if (typeof window === 'undefined') {
-    return createStoreWithSagaTasks(rootModules.concat(pageModules))
+    return createStoreWithSagaTasks({
+      modules: rootModules.concat(pageModules),
+      extensions: getExtensions(),
+    })
   }
 
   // Memoize store if client
   if (!(STOREKEY in window)) {
-    window[STOREKEY] = createStoreWithSagaTasks(rootModules.concat(pageModules))
+    window[STOREKEY] = createStoreWithSagaTasks({
+      modules: rootModules.concat(pageModules),
+      extensions: getExtensions(),
+    })
   }
 
   return window[STOREKEY]

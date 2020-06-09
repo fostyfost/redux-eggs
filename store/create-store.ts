@@ -35,7 +35,7 @@ export interface AdvancedModuleStore<State> extends IModuleStore<State> {
 
 export function createStore<State>(
   moduleStoreSettings: ModuleStoreSettings<State>,
-  initialModules: IModule<any>[],
+  initialModules: IModuleTuple,
 ): AdvancedModuleStore<State> {
   const {
     initialState = {},

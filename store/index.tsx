@@ -5,12 +5,13 @@ import { allSagasDone } from './all-sagas-done'
 import { getStore } from './store-initializer'
 import { hydrateAction } from './hydrate-action'
 import { AppContextWithModules, WrapperProps } from './contracts'
-import { IModuleStoreWithSagaTasks, ISagaModule } from './saga-extension/contracts'
+import { IModuleStoreWithSagaTasks } from './saga-extension/contracts'
 import { AppPropsType } from 'next/dist/next-server/lib/utils'
+import { IModuleTuple } from '../components/common/dynamic-module-loader'
 
 export const STOREKEY = '__NEXT_REDUX_WRAPPER_STORE__' as const
 
-export const withRedux = (App: FC<AppPropsType>, rootModules: ISagaModule[]) => {
+export const withRedux = (App: FC<AppPropsType>, rootModules: IModuleTuple) => {
   let initialStore: IModuleStoreWithSagaTasks
 
   const makeProps = async (context: AppContextWithModules): Promise<WrapperProps> => {

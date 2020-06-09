@@ -4,8 +4,6 @@ import { Picsum } from '../components/picsum'
 import { getPicsumModule } from '../modules/picsum/module'
 import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
 import { NextPageWithStore } from '../store/contracts'
-import { picsSelector } from '../modules/picsum/selectors'
-import { PicsumPublicAction } from '../modules/picsum/action-creators'
 
 const PicsumPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
@@ -21,11 +19,7 @@ const PicsumPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   )
 }
 
-PicsumPage.getInitialProps = ctx => {
-  if (!picsSelector(ctx.store.getState())) {
-    ctx.store.dispatch(PicsumPublicAction.loadPics())
-  }
-
+PicsumPage.getInitialProps = () => {
   return { title: 'Picsum page' }
 }
 

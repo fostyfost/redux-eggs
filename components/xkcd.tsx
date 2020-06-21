@@ -1,31 +1,36 @@
-import React, { useCallback, useEffect } from 'react'
-import { useSelector } from 'react-redux'
-import { xkcdInfoSelector, errorSelector, isXkcdInfoLoading } from '../modules/xkcd/selectors'
-import { useRouter } from 'next/router'
+import React, { FC, useCallback } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-const Xkcd = () => {
+import { XkcdPublicAction } from '../modules/xkcd/action-creators'
+import { errorSelector, isXkcdInfoLoading, xkcdInfoSelector } from '../modules/xkcd/selectors'
+
+const Xkcd: FC<{ small?: boolean }> = ({ small }) => {
   const isLoading = useSelector(isXkcdInfoLoading)
   const info = useSelector(xkcdInfoSelector)
   const error = useSelector(errorSelector)
 
-  const router = useRouter()
+  const dispatch = useDispatch()
   const update = useCallback(() => {
-    router.replace(`/xkcd?update=true`)
-  }, [])
-
-  useEffect(() => {
-    router.replace(`/xkcd`)
-  }, [])
+    dispatch(XkcdPublicAction.loadInfo())
+  }, [dispatch])
 
   if (isLoading) {
     return <div>Load xkcd info ...</div>
+  }
+
+  if (small && info) {
+    return (
+      <div>
+        <img src={info.img} alt={info.alt} width={100} />
+      </div>
+    )
   }
 
   return (
     <div>
       {info && (
         <>
-          <img loading='lazy' src={info.img} alt={info.alt} />
+          <img src={info.img} alt={info.alt} />
           <pre>
             <code>{JSON.stringify(info, null, 2)}</code>
           </pre>

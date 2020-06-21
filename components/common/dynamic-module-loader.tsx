@@ -1,14 +1,9 @@
-import React, { ReactNode, useCallback, useEffect } from 'react'
+import React, { FC, ReactNode, useCallback, useEffect } from 'react'
 import { useStore } from 'react-redux'
-import { IModule } from 'redux-dynamic-modules-core'
 import { IModuleStoreWithSagaTasks, ISagaModule } from '../../store/saga-extension/contracts'
+import { IModuleTuple } from '../../store/contracts'
 
-type IModuleTupleRecursive<Module extends IModule<any> = IModule<any>> = Module | IModuleTuple
-
-export interface IModuleTuple<Module extends IModule<any> = IModule<any>>
-  extends Array<IModuleTupleRecursive<Module>> {}
-
-const renderLoader = (children: ReactNode): React.ReactNode => {
+const renderLoader = (children: ReactNode): ReactNode => {
   if (children) {
     if (typeof children === 'function') {
       return children()
@@ -26,7 +21,7 @@ const renderLoader = (children: ReactNode): React.ReactNode => {
  * cleanup and allows them to unsubscribe from store before dynamic reducers
  * removing (and avoid errors in selectors)
  */
-export const AddedModulesCleanup = ({ cleanup }: { cleanup: () => void }) => {
+export const AddedModulesCleanup: FC<{ cleanup: () => void }> = ({ cleanup }) => {
   useEffect(() => {
     return () => {
       cleanup()
@@ -36,13 +31,10 @@ export const AddedModulesCleanup = ({ cleanup }: { cleanup: () => void }) => {
   return null
 }
 
-export function DynamicModuleLoader({
-  modules,
-  children,
-}: {
+export const DynamicModuleLoader: FC<{
   modules: ISagaModule[] | IModuleTuple<any>
   children: ReactNode
-}) {
+}> = ({ modules, children }) => {
   const store = useStore() as IModuleStoreWithSagaTasks
 
   store.addModules(modules)

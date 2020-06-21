@@ -1,5 +1,6 @@
-import React from 'react'
 import Head from 'next/head'
+import React from 'react'
+
 import { NextPageWithStore } from '../store/contracts'
 
 const IndexPage: NextPageWithStore<{ title: string }> = ({ title }) => {

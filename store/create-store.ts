@@ -3,10 +3,10 @@ import {
   compose,
   createStore as createReduxStore,
   DeepPartial,
-  StoreEnhancer,
-  ReducersMapObject,
-  Reducer,
   PreloadedState,
+  Reducer,
+  ReducersMapObject,
+  StoreEnhancer,
 } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly'
 import {
@@ -15,10 +15,11 @@ import {
   IExtension,
   IModule,
   IModuleStore,
-  IModuleTuple,
 } from 'redux-dynamic-modules-core'
 import { getModuleManager } from 'redux-dynamic-modules-core/lib/Managers/ModuleManager'
 import { flatten } from 'redux-dynamic-modules-core/lib/Utils/Flatten'
+
+import { IModuleTuple } from './contracts'
 
 type ModuleStoreSettings<S> = {
   initialState?: DeepPartial<S>

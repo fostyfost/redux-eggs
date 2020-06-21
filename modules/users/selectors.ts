@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect'
+
 import { USERS_MODULE_NAME } from './index'
 import { UsersAwareState, UsersLoadingState } from './state'
 

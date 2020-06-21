@@ -1,5 +1,5 @@
-import { PicsumActionType } from './action-types'
 import { ActionsUnion, createAction } from '../../store/action-helper'
+import { PicsumActionType } from './action-types'
 import { PicsumLoadingState } from './state'
 
 export const PicsumPublicAction = {

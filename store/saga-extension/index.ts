@@ -1,8 +1,9 @@
-import { default as createSagaMiddleware } from 'redux-saga'
 import { getRefCountedManager, IModuleManager } from 'redux-dynamic-modules-core'
+import { default as createSagaMiddleware } from 'redux-saga'
+
+import { ISagaExtension, ISagaManager, ISagaModule, SagaContext } from './contracts'
 import { getSagaManager } from './manager'
 import { sagaEquals } from './saga-equals'
-import { ISagaModule, ISagaExtension, ISagaManager, SagaContext } from './contracts'
 
 /**
  * Get an extension that integrates saga with the store

@@ -1,8 +1,9 @@
 /* eslint-disable default-case */
 import produce, { Draft } from 'immer'
+
+import { PicsumActionsUnion } from './action-creators'
 import { PicsumActionType } from './action-types'
 import { picsumInitialState, PicsumState } from './state'
-import { PicsumActionsUnion } from './action-creators'
 
 export const picsumReducer = produce((draft: Draft<PicsumState>, action: PicsumActionsUnion): void => {
   switch (action.type) {

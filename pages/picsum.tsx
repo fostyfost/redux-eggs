@@ -1,8 +1,9 @@
-import React from 'react'
 import Head from 'next/head'
+import React from 'react'
+
+import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
 import { Picsum } from '../components/picsum'
 import { getPicsumModule } from '../modules/picsum/module'
-import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
 import { NextPageWithStore } from '../store/contracts'
 
 const PicsumPage: NextPageWithStore<{ title: string }> = ({ title }) => {

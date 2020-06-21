@@ -1,5 +1,5 @@
-import { ClockActionType } from './action-types'
 import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ClockActionType } from './action-types'
 
 export const ClockPublicAction = {
   startClock: () => createAction(ClockActionType.START_CLOCK),

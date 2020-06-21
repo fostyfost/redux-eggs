@@ -1,11 +1,9 @@
-import { put, takeLatest, delay } from 'redux-saga/effects'
-import es6promise from 'es6-promise'
+import { delay, put, takeLatest } from 'redux-saga/effects'
+
 import { XkcdReducerAction } from './action-creators'
 import { XkcdActionType } from './action-types'
 import { XkcdLoadingState } from './state'
 import { getRandomInteger } from './utils/random-integer'
-
-es6promise.polyfill()
 
 function* loadXkcdInfoWorker() {
   yield put(XkcdReducerAction.setLoadingState(XkcdLoadingState.LOADING))
@@ -16,7 +14,8 @@ function* loadXkcdInfoWorker() {
   yield delay(1000)
 
   try {
-    const res = yield fetch(`https://xkcd.com/${getRandomInteger(0, 1000)}/info.0.json`)
+    // Alternative api https://xkcd.com/${getRandomInteger(0, 1000)}/info.0.json
+    const res = yield fetch(`https://xkcd.now.sh/?comic=${getRandomInteger(0, 1000)}`)
 
     const info = yield res.json()
 

@@ -1,7 +1,7 @@
-import { IModuleTuple } from '../../components/common/dynamic-module-loader'
+import { IModuleTuple } from '../../store/contracts'
+import { ISagaModule } from '../../store/saga-extension/contracts'
 import { getClockModule } from '../clock/module'
 import { getXkcdModule } from '../xkcd/module'
-import { ISagaModule } from '../../store/saga-extension/contracts'
 import { COMMON_MODULE_NAME } from './index'
 import { commonSaga } from './saga'
 

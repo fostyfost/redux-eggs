@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { picsSelector, errorSelector, isPicsLoading } from '../modules/picsum/selectors'
+
+import { errorSelector, isPicsLoading, picsSelector } from '../modules/picsum/selectors'
 
 const Picsum = () => {
   const isLoading = useSelector(isPicsLoading)

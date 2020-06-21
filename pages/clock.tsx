@@ -1,5 +1,6 @@
-import React from 'react'
 import Head from 'next/head'
+import React from 'react'
+
 import { Clock } from '../components/clock'
 import { NextPageWithStore } from '../store/contracts'
 

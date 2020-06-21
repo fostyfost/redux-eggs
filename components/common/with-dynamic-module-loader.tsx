@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextPage } from 'next'
-import { DynamicModuleLoader, IModuleTuple } from './dynamic-module-loader'
-import { NextPageWithModules } from '../../store/contracts'
+import { DynamicModuleLoader } from './dynamic-module-loader'
+import { IModuleTuple, NextPageWithModules } from '../../store/contracts'
 
 export const withDynamicModuleLoader = (
   Component: NextPage<any>,
@@ -20,9 +20,9 @@ export const withDynamicModuleLoader = (
   Wrapper.displayName = `withDynamicModuleLoader(${Component.displayName || 'Component'})`
 
   if (Component.getInitialProps) {
-    Wrapper.getInitialProps = async ctx => {
-      ctx.store.addModules(modules)
-      return Component.getInitialProps && Component.getInitialProps(ctx)
+    Wrapper.getInitialProps = async context => {
+      context.store.addModules(modules)
+      return Component.getInitialProps?.(context)
     }
   }
 

@@ -1,13 +1,13 @@
+import { AppPropsType } from 'next/dist/next-server/lib/utils'
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
+
 import { allSagasDone } from './all-sagas-done'
-import { getStore } from './store-initializer'
+import { AppContextWithModules, IModuleTuple, WrapperProps } from './contracts'
 import { hydrateAction } from './hydrate-action'
-import { AppContextWithModules, WrapperProps } from './contracts'
 import { IModuleStoreWithSagaTasks } from './saga-extension/contracts'
-import { AppPropsType } from 'next/dist/next-server/lib/utils'
-import { IModuleTuple } from '../components/common/dynamic-module-loader'
+import { getStore } from './store-initializer'
 
 export const STOREKEY = '__NEXT_REDUX_WRAPPER_STORE__' as const
 

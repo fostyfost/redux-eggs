@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect'
+
 import { XKCD_MODULE_NAME } from './index'
 import { XkcdAwareState, XkcdInfo, XkcdLoadingState } from './state'
 

@@ -1,8 +1,9 @@
 /* eslint-disable default-case */
 import produce, { Draft } from 'immer'
+
+import { ClockActionsUnion } from './action-creators'
 import { ClockActionType } from './action-types'
 import { clockInitialState, ClockState } from './state'
-import { ClockActionsUnion } from './action-creators'
 
 export const clockReducer = produce((draft: Draft<ClockState>, action: ClockActionsUnion): void => {
   switch (action.type) {

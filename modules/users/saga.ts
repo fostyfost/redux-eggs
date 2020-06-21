@@ -1,10 +1,8 @@
-import { put, takeLatest, delay } from 'redux-saga/effects'
-import es6promise from 'es6-promise'
+import { delay, put, takeLatest } from 'redux-saga/effects'
+
 import { UsersReducerAction } from './action-creators'
 import { UsersActionType } from './action-types'
 import { UsersLoadingState } from './state'
-
-es6promise.polyfill()
 
 function* loadUsersWorker() {
   yield put(UsersReducerAction.setLoadingState(UsersLoadingState.LOADING))

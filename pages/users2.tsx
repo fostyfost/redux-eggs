@@ -8,7 +8,7 @@ import { getUsersModule } from '../modules/users/module'
 import { usersSelector } from '../modules/users/selectors'
 import { NextPageWithStore } from '../store/contracts'
 
-const UsersPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+const UsersPage2: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
     <>
       <Head>
@@ -22,12 +22,12 @@ const UsersPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   )
 }
 
-UsersPage.getInitialProps = context => {
+UsersPage2.getInitialProps = context => {
   if (!usersSelector(context.store.getState())) {
     context.store.dispatch(UsersPublicAction.loadUsers())
   }
 
-  return { title: 'Users page' }
+  return { title: 'Users page 2' }
 }
 
-export default withDynamicModuleLoader(UsersPage, [getUsersModule()])
+export default withDynamicModuleLoader(UsersPage2, [getUsersModule()])

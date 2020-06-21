@@ -1,8 +1,9 @@
 /* eslint-disable default-case */
 import produce, { Draft } from 'immer'
+
+import { XkcdActionsUnion } from './action-creators'
 import { XkcdActionType } from './action-types'
 import { xkcdInitialState, XkcdState } from './state'
-import { XkcdActionsUnion } from './action-creators'
 
 export const xkcdReducer = produce((draft: Draft<XkcdState>, action: XkcdActionsUnion): void => {
   switch (action.type) {

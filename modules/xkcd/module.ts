@@ -1,8 +1,8 @@
-import { xkcdReducer } from './reducer'
-import { XKCD_MODULE_NAME } from './index'
-import { loadXkcdInfoWatcher } from './saga'
-import { XkcdActionsUnion } from './action-creators'
 import { ISagaModule } from '../../store/saga-extension/contracts'
+import { XkcdActionsUnion } from './action-creators'
+import { XKCD_MODULE_NAME } from './index'
+import { xkcdReducer } from './reducer'
+import { loadXkcdInfoWatcher } from './saga'
 import { XkcdAwareState } from './state'
 
 export const getXkcdModule = (): ISagaModule<XkcdAwareState, XkcdActionsUnion> => {

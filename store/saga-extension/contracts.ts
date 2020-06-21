@@ -1,6 +1,7 @@
-import { IModule, IExtension, IMap, IItemManager } from 'redux-dynamic-modules-core'
-import { Task } from 'redux-saga'
 import { Action, AnyAction, ReducersMapObject } from 'redux'
+import { IExtension, IItemManager, IMap, IModule } from 'redux-dynamic-modules-core'
+import { Task } from 'redux-saga'
+
 import { AdvancedModuleStore } from '../create-store'
 
 export interface ISagaWithArguments<T = any> {

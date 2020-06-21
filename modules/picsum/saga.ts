@@ -1,10 +1,8 @@
-import { put, takeLatest, delay } from 'redux-saga/effects'
-import es6promise from 'es6-promise'
+import { delay, put, takeLatest } from 'redux-saga/effects'
+
 import { PicsumReducerAction } from './action-creators'
 import { PicsumActionType } from './action-types'
 import { PicsumLoadingState } from './state'
-
-es6promise.polyfill()
 
 function* loadPicsumWorker() {
   yield put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADING))

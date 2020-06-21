@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect'
+
 import { PICSUM_MODULE_NAME } from './index'
 import { PicsumAwareState, PicsumLoadingState } from './state'
 

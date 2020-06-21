@@ -1,10 +1,10 @@
-import React from 'react'
 import Head from 'next/head'
-import { NextPageWithStore } from '../store/contracts'
+import React from 'react'
+
 import { Xkcd } from '../components/xkcd'
 import { isXkcdInfoLoaded, xkcdInfoTitleSelector } from '../modules/xkcd/selectors'
+import { NextPageWithStore } from '../store/contracts'
 import { waitForLoadedState } from '../store/wait-for-loaded-state'
-import { XkcdPublicAction } from '../modules/xkcd/action-creators'
 
 const XkcdPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
@@ -20,14 +20,10 @@ const XkcdPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   )
 }
 
-XkcdPage.getInitialProps = async ctx => {
-  if (typeof window !== 'undefined' && ctx.query?.update) {
-    ctx.store.dispatch(XkcdPublicAction.loadInfo())
-  }
+XkcdPage.getInitialProps = async context => {
+  await waitForLoadedState(context.store, isXkcdInfoLoaded)
 
-  await waitForLoadedState(ctx.store, isXkcdInfoLoaded)
-
-  const title = xkcdInfoTitleSelector(ctx.store.getState())
+  const title = xkcdInfoTitleSelector(context.store.getState())
 
   return { title: title || 'XKCD page' }
 }

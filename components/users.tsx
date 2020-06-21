@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { usersSelector, errorSelector, isUsersLoading } from '../modules/users/selectors'
+
+import { errorSelector, isUsersLoading, usersSelector } from '../modules/users/selectors'
 
 const Users = () => {
   const isLoading = useSelector(isUsersLoading)

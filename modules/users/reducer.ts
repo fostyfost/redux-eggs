@@ -1,8 +1,9 @@
 /* eslint-disable default-case */
 import produce, { Draft } from 'immer'
+
+import { UsersActionsUnion } from './action-creators'
 import { UsersActionType } from './action-types'
 import { usersInitialState, UsersState } from './state'
-import { UsersActionsUnion } from './action-creators'
 
 export const usersReducer = produce((draft: Draft<UsersState>, action: UsersActionsUnion): void => {
   switch (action.type) {

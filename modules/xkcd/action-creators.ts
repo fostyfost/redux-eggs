@@ -1,5 +1,5 @@
-import { XkcdActionType } from './action-types'
 import { ActionsUnion, createAction } from '../../store/action-helper'
+import { XkcdActionType } from './action-types'
 import { XkcdInfo, XkcdLoadingState } from './state'
 
 export const XkcdPublicAction = {

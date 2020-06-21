@@ -1,8 +1,8 @@
 import { IExtension } from 'redux-dynamic-modules-core'
 
 export const getLoggerExtension = (): IExtension | undefined => {
-  if (process.env.NODE_ENV === `development`) {
-    const { createLogger } = require(`redux-logger`)
+  if (process.env.NODE_ENV === 'development') {
+    const { createLogger } = require('redux-logger')
 
     const logger = createLogger({
       level: {

@@ -1,5 +1,5 @@
-import { UsersActionType } from './action-types'
 import { ActionsUnion, createAction } from '../../store/action-helper'
+import { UsersActionType } from './action-types'
 import { UsersLoadingState } from './state'
 
 export const UsersPublicAction = {

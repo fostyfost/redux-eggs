@@ -32,6 +32,7 @@ type ModuleStoreSettings<S> = {
 export interface AdvancedModuleStore<State> extends IModuleStore<State> {
   removeModule: (moduleToBeRemoved: IModule<any>) => void
   removeModules: (moduleToBeRemoved: IModuleTuple) => void
+  getAddedModules: () => string[]
 }
 
 export function createStore<State>(
@@ -77,32 +78,29 @@ export function createStore<State>(
   moduleManager.setDispatch(store.dispatch)
 
   const addedModulesIds = new Set<string>()
-  const initializedModulesIds = new Set<string>()
 
-  const addModules = (modulesToBeAdded: IModuleTuple) => {
-    const flattenedModules = (flatten(modulesToBeAdded) as IModule<any>[]).filter(
-      module => !addedModulesIds.has(module.id),
-    )
-
-    const modules = flattenedModules.map(module => {
-      const moduleCopy = { ...module }
-
-      addedModulesIds.add(module.id)
-
-      return moduleCopy
+  const _removeModules = (modules: IModule<any>[]) => {
+    modules.forEach(module => {
+      if (!module.retained) {
+        addedModulesIds.delete(module.id)
+      }
     })
 
-    moduleManager.add(modules)
+    moduleManager.remove(modules)
+  }
+
+  const addModules = (modulesToBeAdded: IModuleTuple) => {
+    const flattenedModules = flatten(modulesToBeAdded)
+
+    flattenedModules.forEach(module => {
+      addedModulesIds.add(module.id)
+    })
+
+    moduleManager.add(flattenedModules)
 
     return {
       remove: () => {
-        flattenedModules.forEach(module => {
-          if (!module.retained) {
-            addedModulesIds.delete(module.id)
-          }
-        })
-
-        moduleManager.remove(flattenedModules)
+        _removeModules(flattenedModules)
       },
     }
   }
@@ -110,15 +108,7 @@ export function createStore<State>(
   const addModule = (moduleToBeAdded: IModule<any>) => addModules([moduleToBeAdded])
 
   const removeModules = (modulesToBeRemoved: IModuleTuple) => {
-    const flattenedModules = flatten(modulesToBeRemoved) as IModule<any>[]
-
-    flattenedModules.forEach(module => {
-      if (!module.retained) {
-        addedModulesIds.delete(module.id)
-      }
-    })
-
-    moduleManager.remove(flattenedModules)
+    _removeModules(flatten(modulesToBeRemoved) as IModule<any>[])
   }
 
   const removeModule = (moduleToBeRemoved: IModule<any>) => {
@@ -151,6 +141,10 @@ export function createStore<State>(
     })
   }
 
+  store.getAddedModules = (): string[] => {
+    return Array.from(addedModulesIds)
+  }
+
   const modules = flatten(initialModules).map(module => {
     const moduleCopy = { ...module }
 
@@ -158,7 +152,6 @@ export function createStore<State>(
 
     if (typeof window !== 'undefined') {
       moduleCopy.initialActions = []
-      initializedModulesIds.add(moduleCopy.id)
     }
 
     return moduleCopy

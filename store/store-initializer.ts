@@ -1,14 +1,14 @@
-import { STOREKEY } from './index'
-import { IModuleStoreWithSagaTasks, SagaContext } from './saga-extension/contracts'
-import { GetStoreParams, WindowWithStore } from './contracts'
-import { getSagaExtension } from './saga-extension'
-import { createStore } from './create-store'
 import produce, { Draft } from 'immer'
-import { HYDRATE } from './hydrate-action'
 import { AnyAction, combineReducers, ReducersMapObject } from 'redux'
-import { IModuleTuple } from '../components/common/dynamic-module-loader'
 import { IExtension } from 'redux-dynamic-modules-core'
+
+import { GetStoreParams, IModuleTuple, WindowWithStore } from './contracts'
+import { createStore } from './create-store'
+import { HYDRATE } from './hydrate-action'
+import { STOREKEY } from './index'
 import { getLoggerExtension } from './logger-extension'
+import { getSagaExtension } from './saga-extension'
+import { IModuleStoreWithSagaTasks, SagaContext } from './saga-extension/contracts'
 
 declare const window: WindowWithStore
 

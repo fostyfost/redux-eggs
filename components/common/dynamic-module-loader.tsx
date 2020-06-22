@@ -1,7 +1,8 @@
 import React, { FC, ReactNode, useCallback, useEffect } from 'react'
 import { useStore } from 'react-redux'
-import { IModuleStoreWithSagaTasks, ISagaModule } from '../../store/saga-extension/contracts'
+
 import { IModuleTuple } from '../../store/contracts'
+import { IModuleStoreWithSagaTasks, ISagaModule } from '../../store/saga-extension/contracts'
 
 const renderLoader = (children: ReactNode): ReactNode => {
   if (children) {

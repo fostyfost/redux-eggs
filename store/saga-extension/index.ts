@@ -1,7 +1,7 @@
 import { getRefCountedManager, IModuleManager } from 'redux-dynamic-modules-core'
 import { default as createSagaMiddleware } from 'redux-saga'
 
-import { ISagaExtension, ISagaManager, ISagaModule, SagaContext } from './contracts'
+import { SagaExtension, SagaManager, SagaModule, SagaContext } from './contracts'
 import { getSagaManager } from './manager'
 import { sagaEquals } from './saga-equals'
 
@@ -9,14 +9,14 @@ import { sagaEquals } from './saga-equals'
  * Get an extension that integrates saga with the store
  * sagaContext param is the context to provide to the saga
  */
-export function getSagaExtension(sagaContext: SagaContext = {}, onError?: (error: Error) => void): ISagaExtension {
+export function getSagaExtension(sagaContext: SagaContext = {}, onError?: (error: Error) => void): SagaExtension {
   // Setup the saga middleware
   const sagaMiddleware = createSagaMiddleware<any>({
     context: sagaContext,
     onError,
   })
 
-  const sagaManager: ISagaManager = getRefCountedManager(getSagaManager(sagaMiddleware), sagaEquals)
+  const sagaManager: SagaManager = getRefCountedManager(getSagaManager(sagaMiddleware), sagaEquals)
 
   return {
     sagaTasks: sagaManager.sagaTasks,
@@ -29,13 +29,13 @@ export function getSagaExtension(sagaContext: SagaContext = {}, onError?: (error
       }
     },
 
-    onModuleAdded: (module: ISagaModule) => {
+    onModuleAdded: (module: SagaModule) => {
       if (module.sagas) {
         sagaManager.add(module.sagas)
       }
     },
 
-    onModuleRemoved: (module: ISagaModule) => {
+    onModuleRemoved: (module: SagaModule) => {
       if (module.sagas) {
         sagaManager.remove(module.sagas)
       }

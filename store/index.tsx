@@ -4,15 +4,15 @@ import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
 
 import { allSagasDone } from './all-sagas-done'
-import { AppContextWithModules, IModuleTuple, WrapperProps } from './contracts'
+import { AppContextWithModules, ModuleTuple, WrapperProps } from './contracts'
 import { hydrateAction } from './hydrate-action'
-import { IModuleStoreWithSagaTasks } from './saga-extension/contracts'
+import { ModuleStoreWithSagaTasks } from './saga-extension/contracts'
 import { getStore } from './store-initializer'
 
 export const STOREKEY = '__NEXT_REDUX_WRAPPER_STORE__' as const
 
-export const withRedux = (App: FC<AppPropsType>, rootModules: IModuleTuple) => {
-  let initialStore: IModuleStoreWithSagaTasks
+export const withRedux = (App: FC<AppPropsType>, rootModules: ModuleTuple) => {
+  let initialStore: ModuleStoreWithSagaTasks
 
   const makeProps = async (context: AppContextWithModules): Promise<WrapperProps> => {
     initialStore = getStore({

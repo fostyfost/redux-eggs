@@ -19,7 +19,7 @@ import {
 import { getModuleManager } from 'redux-dynamic-modules-core/lib/Managers/ModuleManager'
 import { flatten } from 'redux-dynamic-modules-core/lib/Utils/Flatten'
 
-import { IModuleTuple } from './contracts'
+import { ModuleTuple } from './contracts'
 
 type ModuleStoreSettings<S> = {
   initialState?: DeepPartial<S>
@@ -31,13 +31,13 @@ type ModuleStoreSettings<S> = {
 
 export interface AdvancedModuleStore<State> extends IModuleStore<State> {
   removeModule: (moduleToBeRemoved: IModule<any>) => void
-  removeModules: (moduleToBeRemoved: IModuleTuple) => void
+  removeModules: (moduleToBeRemoved: ModuleTuple) => void
   getAddedModules: () => string[]
 }
 
 export function createStore<State>(
   moduleStoreSettings: ModuleStoreSettings<State>,
-  initialModules: IModuleTuple,
+  initialModules: ModuleTuple,
 ): AdvancedModuleStore<State> {
   const {
     initialState = {},
@@ -89,7 +89,7 @@ export function createStore<State>(
     moduleManager.remove(modules)
   }
 
-  const addModules = (modulesToBeAdded: IModuleTuple) => {
+  const addModules = (modulesToBeAdded: ModuleTuple) => {
     const flattenedModules = flatten(modulesToBeAdded)
 
     flattenedModules.forEach(module => {
@@ -107,7 +107,7 @@ export function createStore<State>(
 
   const addModule = (moduleToBeAdded: IModule<any>) => addModules([moduleToBeAdded])
 
-  const removeModules = (modulesToBeRemoved: IModuleTuple) => {
+  const removeModules = (modulesToBeRemoved: ModuleTuple) => {
     _removeModules(flatten(modulesToBeRemoved) as IModule<any>[])
   }
 

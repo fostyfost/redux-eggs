@@ -4,29 +4,29 @@ import { Task } from 'redux-saga'
 
 import { AdvancedModuleStore } from '../create-store'
 
-export interface ISagaWithArguments<T = any> {
+export interface SagaWithArguments<T = any> {
   saga: (argument?: T) => Iterator<any>
   argument?: T
 }
 
-export type ISagaRegistration<T = any> = (() => Iterator<any>) | ISagaWithArguments<T>
+export type SagaRegistration<T = any> = (() => Iterator<any>) | SagaWithArguments<T>
 
-export interface ISagaModule<State = any, ReducerAction extends Action = AnyAction>
+export interface SagaModule<State = any, ReducerAction extends Action = AnyAction>
   extends Omit<IModule<State>, 'reducerMap'> {
-  sagas?: ISagaRegistration[]
+  sagas?: SagaRegistration[]
   reducerMap?: ReducersMapObject<State, ReducerAction>
 }
 
-export interface ISagaExtension<T = any> extends IExtension {
-  sagaTasks: IMap<ISagaRegistration<T>, Task>
+export interface SagaExtension<T = any> extends IExtension {
+  sagaTasks: IMap<SagaRegistration<T>, Task>
 }
 
-export interface ISagaManager extends IItemManager<ISagaRegistration> {
-  sagaTasks: IMap<ISagaRegistration, Task>
+export interface SagaManager extends IItemManager<SagaRegistration> {
+  sagaTasks: IMap<SagaRegistration, Task>
 }
 
-export type IModuleStoreWithSagaTasks<State = {}> = AdvancedModuleStore<State> & {
-  sagaTasks: IMap<ISagaRegistration, Task>
+export type ModuleStoreWithSagaTasks<State = {}> = AdvancedModuleStore<State> & {
+  sagaTasks: IMap<SagaRegistration, Task>
 }
 
 export type SagaContext = { [filed: string]: any }

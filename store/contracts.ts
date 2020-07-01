@@ -4,15 +4,14 @@ import { Action } from 'redux'
 import { IModule } from 'redux-dynamic-modules-core'
 
 import { STOREKEY } from './index'
-import { IModuleStoreWithSagaTasks, ISagaModule } from './saga-extension/contracts'
+import { ModuleStoreWithSagaTasks, SagaModule } from './saga-extension/contracts'
 
-type IModuleTupleRecursive<Module extends IModule<any> = IModule<any>> = Module | IModuleTuple
+type ModuleTupleRecursive<Module extends IModule<any> = IModule<any>> = Module | ModuleTuple
 
-export interface IModuleTuple<Module extends IModule<any> = IModule<any>>
-  extends Array<IModuleTupleRecursive<Module>> {}
+export interface ModuleTuple<Module extends IModule<any> = IModule<any>> extends Array<ModuleTupleRecursive<Module>> {}
 
 export interface WindowWithStore extends Window {
-  [STOREKEY]: IModuleStoreWithSagaTasks
+  [STOREKEY]: ModuleStoreWithSagaTasks
 }
 
 export interface WrapperProps {
@@ -21,19 +20,19 @@ export interface WrapperProps {
 }
 
 export type NextPageWithStore<P = {}, IP = {}, S = any> = NextComponentType<
-  NextPageContext & { store: IModuleStoreWithSagaTasks<S> },
+  NextPageContext & { store: ModuleStoreWithSagaTasks<S> },
   IP,
   P
 >
 
 export type NextPageWithModules<P = {}, IP = {}, S = any, R extends Action = any> = NextPageWithStore<P, IP, S> & {
-  modules: ISagaModule<S, R>[]
+  modules: SagaModule<S, R>[]
 }
 
 export type AppContextWithModules = AppContext & { Component: NextPageWithModules }
 
 export interface GetStoreParams {
-  rootModules?: IModuleTuple
-  pageModules?: IModuleTuple
+  rootModules?: ModuleTuple
+  pageModules?: ModuleTuple
   context?: AppContextWithModules
 }

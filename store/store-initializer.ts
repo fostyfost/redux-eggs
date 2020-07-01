@@ -2,13 +2,13 @@ import produce, { Draft } from 'immer'
 import { AnyAction, combineReducers, ReducersMapObject } from 'redux'
 import { IExtension } from 'redux-dynamic-modules-core'
 
-import { GetStoreParams, IModuleTuple, WindowWithStore } from './contracts'
+import { GetStoreParams, ModuleTuple, WindowWithStore } from './contracts'
 import { createStore } from './create-store'
 import { HYDRATE } from './hydrate-action'
 import { STOREKEY } from './index'
 import { getLoggerExtension } from './logger-extension'
 import { getSagaExtension } from './saga-extension'
-import { IModuleStoreWithSagaTasks, SagaContext } from './saga-extension/contracts'
+import { ModuleStoreWithSagaTasks, SagaContext } from './saga-extension/contracts'
 
 declare const window: WindowWithStore
 
@@ -35,7 +35,7 @@ const combineReducersWithGlobalActions = (reducersMap: ReducersMapObject) => {
 }
 
 interface StoreCreatorConfig {
-  modules: IModuleTuple
+  modules: ModuleTuple
   sagaContext?: SagaContext
   extensions?: IExtension[]
 }
@@ -49,7 +49,7 @@ const createStoreWithSagaTasks = ({ modules, sagaContext, extensions = [] }: Sto
       advancedCombineReducers: combineReducersWithGlobalActions,
     },
     modules,
-  ) as IModuleStoreWithSagaTasks
+  ) as ModuleStoreWithSagaTasks
 
   store.sagaTasks = sagaExtension.sagaTasks
 
@@ -68,7 +68,7 @@ const getExtensions = (): IExtension[] => {
   return extensions
 }
 
-export const getStore = ({ rootModules = [], pageModules = [] }: GetStoreParams): IModuleStoreWithSagaTasks => {
+export const getStore = ({ rootModules = [], pageModules = [] }: GetStoreParams): ModuleStoreWithSagaTasks => {
   if (typeof window === 'undefined') {
     return createStoreWithSagaTasks({
       modules: rootModules.concat(pageModules),

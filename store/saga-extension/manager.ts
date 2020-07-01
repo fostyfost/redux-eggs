@@ -1,30 +1,30 @@
 import { getMap } from 'redux-dynamic-modules-core'
 import { SagaMiddleware, Task } from 'redux-saga'
 
-import { ISagaManager, ISagaRegistration, ISagaWithArguments } from './contracts'
+import { SagaManager, SagaRegistration, SagaWithArguments } from './contracts'
 import { sagaEquals } from './saga-equals'
 
-const runSaga = (sagaMiddleware: SagaMiddleware<any>, sagaRegistration: ISagaRegistration): Task => {
+const runSaga = (sagaMiddleware: SagaMiddleware<any>, sagaRegistration: SagaRegistration): Task => {
   if (typeof sagaRegistration === 'function') {
     return sagaMiddleware.run(sagaRegistration as () => Iterator<any>)
   }
 
   return sagaMiddleware.run(
-    (sagaRegistration as ISagaWithArguments).saga,
-    (sagaRegistration as ISagaWithArguments).argument,
+    (sagaRegistration as SagaWithArguments).saga,
+    (sagaRegistration as SagaWithArguments).argument,
   )
 }
 
 /**
  * Creates saga items which can be used to start and stop sagas dynamically
  */
-export const getSagaManager = (sagaMiddleware: SagaMiddleware<any>): ISagaManager => {
-  const sagaTasks = getMap<ISagaRegistration, Task>(sagaEquals)
+export const getSagaManager = (sagaMiddleware: SagaMiddleware<any>): SagaManager => {
+  const sagaTasks = getMap<SagaRegistration, Task>(sagaEquals)
 
   return {
     sagaTasks,
-    getItems: (): ISagaRegistration[] => [...sagaTasks.keys],
-    add: (sagas: ISagaRegistration[]) => {
+    getItems: (): SagaRegistration[] => [...sagaTasks.keys],
+    add: (sagas: SagaRegistration[]) => {
       if (!sagas) {
         return
       }
@@ -35,7 +35,7 @@ export const getSagaManager = (sagaMiddleware: SagaMiddleware<any>): ISagaManage
         }
       })
     },
-    remove: (sagas: ISagaRegistration[]) => {
+    remove: (sagas: SagaRegistration[]) => {
       if (!sagas) {
         return
       }

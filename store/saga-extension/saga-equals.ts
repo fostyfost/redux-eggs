@@ -1,6 +1,6 @@
-import { ISagaRegistration, ISagaWithArguments } from './contracts'
+import { SagaRegistration, SagaWithArguments } from './contracts'
 
-export const sagaEquals = (sagaA: ISagaRegistration, sagaB: ISagaRegistration): boolean => {
+export const sagaEquals = (sagaA: SagaRegistration, sagaB: SagaRegistration): boolean => {
   if (typeof sagaA === 'function' && typeof sagaB === 'function') {
     return sagaA === sagaB
   }
@@ -11,19 +11,19 @@ export const sagaEquals = (sagaA: ISagaRegistration, sagaB: ISagaRegistration): 
 
   if (typeof sagaA === 'function') {
     return (
-      (sagaA as () => Iterator<any>) === (sagaB as ISagaWithArguments).saga && !(sagaB as ISagaWithArguments).argument
+      (sagaA as () => Iterator<any>) === (sagaB as SagaWithArguments).saga && !(sagaB as SagaWithArguments).argument
     )
   }
 
   if (typeof sagaB === 'function') {
     return (
-      (sagaA as ISagaWithArguments).saga === (sagaB as () => Iterator<any>) && !(sagaA as ISagaWithArguments).argument
+      (sagaA as SagaWithArguments).saga === (sagaB as () => Iterator<any>) && !(sagaA as SagaWithArguments).argument
     )
   }
 
   // TODO: This needs to be a deep equals
   return (
-    (sagaA as ISagaWithArguments).saga === (sagaB as ISagaWithArguments).saga &&
-    (sagaA as ISagaWithArguments).argument === (sagaB as ISagaWithArguments).argument
+    (sagaA as SagaWithArguments).saga === (sagaB as SagaWithArguments).saga &&
+    (sagaA as SagaWithArguments).argument === (sagaB as SagaWithArguments).argument
   )
 }

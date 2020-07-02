@@ -31,6 +31,10 @@ const links = [
     href: '/xkcd',
     label: 'XKCD page',
   },
+  {
+    href: '/chuck-norris',
+    label: 'Chuck Norris',
+  },
 ]
 
 const Navigation = () => {

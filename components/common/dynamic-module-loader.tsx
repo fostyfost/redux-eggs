@@ -1,8 +1,8 @@
-import React, { FC, ReactNode, useCallback, useEffect } from 'react'
+import React, { FC, ReactNode, useCallback, useEffect, useState } from 'react'
 import { useStore } from 'react-redux'
 
-import { IModuleTuple } from '../../store/contracts'
-import { IModuleStoreWithSagaTasks, ISagaModule } from '../../store/saga-extension/contracts'
+import { ModuleTuple } from '../../store/contracts'
+import { ModuleStoreWithSagaTasks, SagaModule } from '../../store/saga-extension/contracts'
 
 const renderLoader = (children: ReactNode): ReactNode => {
   if (children) {
@@ -33,16 +33,16 @@ export const AddedModulesCleanup: FC<{ cleanup: () => void }> = ({ cleanup }) =>
 }
 
 export const DynamicModuleLoader: FC<{
-  modules: ISagaModule[] | IModuleTuple<any>
+  modules: SagaModule[] | ModuleTuple<any>
   children: ReactNode
 }> = ({ modules, children }) => {
-  const store = useStore() as IModuleStoreWithSagaTasks
+  const store = useStore() as ModuleStoreWithSagaTasks
 
-  store.addModules(modules)
+  const [addedModulesRemover] = useState(() => store.addModules(modules))
 
   const cleanup = useCallback(() => {
-    store.removeModules(modules)
-  }, [])
+    addedModulesRemover.remove()
+  }, [addedModulesRemover])
 
   return (
     <>

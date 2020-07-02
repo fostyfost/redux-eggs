@@ -31,6 +31,10 @@ const links = [
     href: '/xkcd',
     label: 'XKCD page',
   },
+  {
+    href: '/intersection-observer',
+    label: 'Intersection observer',
+  },
 ]
 
 const Navigation = () => {

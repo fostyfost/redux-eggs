@@ -4,11 +4,13 @@ import { getClockModule } from '../clock/module'
 import { getXkcdModule } from '../xkcd/module'
 import { COMMON_MODULE_NAME } from './index'
 import { commonSaga } from './saga'
+import { getDogModule } from '../dog/module'
 
 export const getCommonModule = (): ModuleTuple<SagaModule<any, any>> => {
   return [
     getClockModule(),
     getXkcdModule(),
+    getDogModule(),
     {
       id: COMMON_MODULE_NAME,
       sagas: [commonSaga],

@@ -1,19 +1,20 @@
-import React, { FC, ReactNode, useCallback, useEffect, useState } from 'react'
+/* eslint-disable @typescript-eslint/no-explicit-any,react/prop-types */
+import React, { Component, FC, ReactNode, useEffect } from 'react'
 import { useStore } from 'react-redux'
-
-import { ModuleTuple } from '../../store/contracts'
+import { IDynamicallyAddedModule } from 'redux-dynamic-modules-core'
 import { ModuleStoreWithSagaTasks, SagaModule } from '../../store/saga-extension/contracts'
+import { ModuleTuple } from '../../store/contracts'
 
-const renderLoader = (children: ReactNode): ReactNode => {
-  if (children) {
-    if (typeof children === 'function') {
-      return children()
-    }
+interface AddedModulesCleanupProps {
+  cleanup: () => void
+}
 
-    return children
-  }
+interface DynamicModuleLoaderProps {
+  modules: SagaModule[] | ModuleTuple<any>
+}
 
-  return null
+interface DynamicModuleLoaderClassProps extends DynamicModuleLoaderProps {
+  store: ModuleStoreWithSagaTasks
 }
 
 /**
@@ -22,9 +23,9 @@ const renderLoader = (children: ReactNode): ReactNode => {
  * cleanup and allows them to unsubscribe from store before dynamic reducers
  * removing (and avoid errors in selectors)
  */
-export const AddedModulesCleanup: FC<{ cleanup: () => void }> = ({ cleanup }) => {
+export const AddedModulesCleanup: FC<AddedModulesCleanupProps> = ({ cleanup }) => {
   useEffect(() => {
-    return () => {
+    return (): void => {
       cleanup()
     }
   }, [cleanup])
@@ -32,22 +33,42 @@ export const AddedModulesCleanup: FC<{ cleanup: () => void }> = ({ cleanup }) =>
   return null
 }
 
-export const DynamicModuleLoader: FC<{
-  modules: SagaModule[] | ModuleTuple<any>
-  children: ReactNode
-}> = ({ modules, children }) => {
+export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = props => {
   const store = useStore() as ModuleStoreWithSagaTasks
 
-  const [addedModulesRemover] = useState(() => store.addModules(modules))
+  return <DynamicModuleLoaderClass {...props} store={store} />
+}
 
-  const cleanup = useCallback(() => {
-    addedModulesRemover.remove()
-  }, [addedModulesRemover])
+class DynamicModuleLoaderClass extends Component<DynamicModuleLoaderClassProps> {
+  private addedModules?: IDynamicallyAddedModule
 
-  return (
-    <>
-      {renderLoader(children)}
-      <AddedModulesCleanup cleanup={cleanup} />
-    </>
-  )
+  constructor(props: Readonly<DynamicModuleLoaderClassProps>) {
+    super(props)
+
+    this.addModules()
+  }
+
+  private cleanup = (): void => {
+    if (this.addedModules) {
+      this.addedModules.remove()
+      this.addedModules = undefined
+    }
+  }
+
+  private addModules(): void {
+    const { store, modules } = this.props
+
+    this.addedModules = store.addModules(modules)
+  }
+
+  public render(): ReactNode {
+    const { children } = this.props
+
+    return (
+      <>
+        {children}
+        <AddedModulesCleanup cleanup={this.cleanup} />
+      </>
+    )
+  }
 }

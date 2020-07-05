@@ -1,8 +1,10 @@
-import { delay, put, takeLatest } from 'redux-saga/effects'
+import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
 import { ChuckNorrisReducerAction } from './action-creators'
 import { ChuckNorrisActionType } from './action-types'
-import { ChuckNorrisLoadingState } from './state'
+import { ChuckNorrisLoadingState } from './contracts/state'
+import { fetchAsJson } from '../../utils/fetchAsJson'
+import { JokeResponse } from './contracts/api-response'
 
 function* loadChuckNorrisJokeWorker() {
   yield put(ChuckNorrisReducerAction.setLoadingState(ChuckNorrisLoadingState.LOADING))
@@ -10,9 +12,7 @@ function* loadChuckNorrisJokeWorker() {
   yield delay(1000)
 
   try {
-    const res = yield fetch('https://api.chucknorris.io/jokes/random')
-
-    const joke = yield res.json()
+    const joke: JokeResponse = yield call(fetchAsJson, 'https://api.chucknorris.io/jokes/random')
 
     yield put(ChuckNorrisReducerAction.setJoke(joke.value))
   } catch (err) {

@@ -1,6 +1,7 @@
 import { ActionsUnion, createAction } from '../../store/action-helper'
 import { XkcdActionType } from './action-types'
-import { XkcdInfo, XkcdLoadingState } from './state'
+import { XkcdLoadingState } from './contracts/state'
+import { XkcdInfo } from './contracts/api-response'
 
 export const XkcdPublicAction = {
   loadInfo: () => createAction(XkcdActionType.LOAD_INFO),

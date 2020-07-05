@@ -3,7 +3,11 @@ import produce, { Draft } from 'immer'
 
 import { ClockActionsUnion } from './action-creators'
 import { ClockActionType } from './action-types'
-import { clockInitialState, ClockState } from './state'
+import { ClockState } from './contracts/state'
+
+const clockInitialState = {
+  lastUpdate: 0,
+}
 
 export const clockReducer = produce((draft: Draft<ClockState>, action: ClockActionsUnion): void => {
   switch (action.type) {

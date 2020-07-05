@@ -1,9 +1,11 @@
 import { createSelector } from 'reselect'
 
 import { PICSUM_MODULE_NAME } from './index'
-import { PicsumAwareState, PicsumLoadingState } from './state'
+import { PicsumAwareState, PicsumLoadingState } from './contracts/state'
+import { Immutable } from 'immer'
+import { Picture } from './contracts/picture'
 
-export const picsSelector = (state: PicsumAwareState): any[] | undefined => {
+export const picsSelector = (state: PicsumAwareState): Immutable<Picture[]> | undefined => {
   return state[PICSUM_MODULE_NAME].pics
 }
 

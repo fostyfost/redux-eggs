@@ -11,6 +11,11 @@ import { getStore } from './store-initializer'
 
 export const STOREKEY = '__NEXT_REDUX_WRAPPER_STORE__' as const
 
+interface InitialProps {
+  pageProps: any
+  [props: string]: any
+}
+
 export const withRedux = (App: FC<AppPropsType>, rootModules: ModuleTuple) => {
   let initialStore: ModuleStoreWithSagaTasks
 
@@ -21,7 +26,7 @@ export const withRedux = (App: FC<AppPropsType>, rootModules: ModuleTuple) => {
       context,
     })
 
-    const initialProps: { pageProps: any; [props: string]: any } = { pageProps: {} }
+    const initialProps: InitialProps = { pageProps: {} }
 
     if (context.Component.getInitialProps) {
       initialProps.pageProps = await context.Component.getInitialProps({ ...context.ctx, store: initialStore })

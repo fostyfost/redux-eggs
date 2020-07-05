@@ -3,7 +3,11 @@ import produce, { Draft } from 'immer'
 
 import { UsersActionsUnion } from './action-creators'
 import { UsersActionType } from './action-types'
-import { usersInitialState, UsersState } from './state'
+import { UsersState, UsersLoadingState } from './contracts/state'
+
+const usersInitialState: UsersState = {
+  loadingState: UsersLoadingState.NEVER,
+}
 
 export const usersReducer = produce((draft: Draft<UsersState>, action: UsersActionsUnion): void => {
   switch (action.type) {

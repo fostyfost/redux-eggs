@@ -3,7 +3,7 @@ import { ClockActionsUnion } from './action-creators'
 import { CLOCK_MODULE_NAME } from './index'
 import { clockReducer } from './reducer'
 import { startClockWatcher } from './saga'
-import { ClockAwareState } from './state'
+import { ClockAwareState } from './contracts/state'
 
 export const getClockModule = (): SagaModule<ClockAwareState, ClockActionsUnion> => {
   return {

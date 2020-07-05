@@ -3,7 +3,7 @@ import { PicsumActionsUnion, PicsumPublicAction } from './action-creators'
 import { PICSUM_MODULE_NAME } from './index'
 import { picsumReducer } from './reducer'
 import { loadPicsumWatcher } from './saga'
-import { PicsumAwareState } from './state'
+import { PicsumAwareState } from './contracts/state'
 
 export const getPicsumModule = (): SagaModule<PicsumAwareState, PicsumActionsUnion> => {
   return {

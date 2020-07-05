@@ -3,7 +3,7 @@ import { ChuckNorrisActionsUnion, ChuckNorrisPublicAction } from './action-creat
 import { CHUCK_NORRIS_MODULE_NAME } from './index'
 import { chuckNorrisReducer } from './reducer'
 import { loadChuckNorrisJokeWatcher } from './saga'
-import { ChuckNorrisAwareState } from './state'
+import { ChuckNorrisAwareState } from './contracts/state'
 
 export const getChuckNorrisModule = (): SagaModule<ChuckNorrisAwareState, ChuckNorrisActionsUnion> => {
   return {

@@ -1,9 +1,11 @@
 import { createSelector } from 'reselect'
 
 import { XKCD_MODULE_NAME } from './index'
-import { XkcdAwareState, XkcdInfo, XkcdLoadingState } from './state'
+import { XkcdAwareState, XkcdLoadingState } from './contracts/state'
+import { XkcdInfo } from './contracts/api-response'
+import { Immutable } from 'immer'
 
-export const xkcdInfoSelector = (state: XkcdAwareState): XkcdInfo | undefined => {
+export const xkcdInfoSelector = (state: XkcdAwareState): Immutable<XkcdInfo> | undefined => {
   return state[XKCD_MODULE_NAME].info
 }
 

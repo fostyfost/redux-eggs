@@ -3,7 +3,7 @@ import { UsersActionsUnion } from './action-creators'
 import { USERS_MODULE_NAME } from './index'
 import { usersReducer } from './reducer'
 import { loadUsersWatcher } from './saga'
-import { UsersAwareState } from './state'
+import { UsersAwareState } from './contracts/state'
 
 export const getUsersModule = (): SagaModule<UsersAwareState, UsersActionsUnion> => {
   return {

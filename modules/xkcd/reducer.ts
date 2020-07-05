@@ -3,7 +3,11 @@ import produce, { Draft } from 'immer'
 
 import { XkcdActionsUnion } from './action-creators'
 import { XkcdActionType } from './action-types'
-import { xkcdInitialState, XkcdState } from './state'
+import { XkcdState, XkcdLoadingState } from './contracts/state'
+
+const xkcdInitialState: XkcdState = {
+  loadingState: XkcdLoadingState.NEVER,
+}
 
 export const xkcdReducer = produce((draft: Draft<XkcdState>, action: XkcdActionsUnion): void => {
   switch (action.type) {

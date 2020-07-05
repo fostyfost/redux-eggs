@@ -1,9 +1,11 @@
 import { createSelector } from 'reselect'
 
 import { USERS_MODULE_NAME } from './index'
-import { UsersAwareState, UsersLoadingState } from './state'
+import { UsersAwareState, UsersLoadingState } from './contracts/state'
+import { User } from './contracts/user'
+import { Immutable } from 'immer'
 
-export const usersSelector = (state: UsersAwareState): object | undefined => {
+export const usersSelector = (state: UsersAwareState): Immutable<User[]> | undefined => {
   return state[USERS_MODULE_NAME].users
 }
 

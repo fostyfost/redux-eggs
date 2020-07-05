@@ -1,6 +1,6 @@
 import { ActionsUnion, createAction } from '../../store/action-helper'
 import { ChuckNorrisActionType } from './action-types'
-import { ChuckNorrisLoadingState } from './state'
+import { ChuckNorrisLoadingState } from './contracts/state'
 
 export const ChuckNorrisPublicAction = {
   loadJoke: () => createAction(ChuckNorrisActionType.LOAD_JOKE),

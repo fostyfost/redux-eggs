@@ -4,6 +4,7 @@ import { DogReducerAction } from './action-creators'
 import { DogActionType } from './action-types'
 import { DogLoadingState } from './contracts/state'
 import { fetchAsJson } from '../../utils/fetchAsJson'
+import { DogResponse } from './contracts/api-response'
 
 function* loadDogWorker() {
   yield put(DogReducerAction.setLoadingState(DogLoadingState.LOADING))
@@ -11,7 +12,7 @@ function* loadDogWorker() {
   yield delay(1000)
 
   try {
-    const res: { message: string; status: string } = yield call(fetchAsJson, 'https://dog.ceo/api/breeds/image/random')
+    const res: DogResponse = yield call(fetchAsJson, 'https://dog.ceo/api/breeds/image/random')
 
     if (res.status === 'success') {
       yield put(DogReducerAction.setDog(res.message))

@@ -1,4 +1,6 @@
-import { PICSUM_MODULE_NAME } from './index'
+import { PICSUM_MODULE_NAME } from '../index'
+import { Immutable } from 'immer'
+import { Picture } from './picture'
 
 export enum PicsumLoadingState {
   NEVER = 'NEVER',
@@ -10,12 +12,8 @@ export interface PicsumAwareState {
   [PICSUM_MODULE_NAME]: PicsumState
 }
 
-export interface PicsumState {
-  pics?: any[]
+export type PicsumState = Immutable<{
+  pics?: Picture[]
   error?: string
   loadingState: PicsumLoadingState
-}
-
-export const picsumInitialState = {
-  loadingState: PicsumLoadingState.NEVER,
-}
+}>

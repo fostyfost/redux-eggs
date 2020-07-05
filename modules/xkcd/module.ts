@@ -3,7 +3,7 @@ import { XkcdActionsUnion } from './action-creators'
 import { XKCD_MODULE_NAME } from './index'
 import { xkcdReducer } from './reducer'
 import { loadXkcdInfoWatcher } from './saga'
-import { XkcdAwareState } from './state'
+import { XkcdAwareState } from './contracts/state'
 
 export const getXkcdModule = (): SagaModule<XkcdAwareState, XkcdActionsUnion> => {
   return {

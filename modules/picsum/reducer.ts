@@ -3,7 +3,11 @@ import produce, { Draft } from 'immer'
 
 import { PicsumActionsUnion } from './action-creators'
 import { PicsumActionType } from './action-types'
-import { picsumInitialState, PicsumState } from './state'
+import { PicsumState, PicsumLoadingState } from './contracts/state'
+
+const picsumInitialState: PicsumState = {
+  loadingState: PicsumLoadingState.NEVER,
+}
 
 export const picsumReducer = produce((draft: Draft<PicsumState>, action: PicsumActionsUnion): void => {
   switch (action.type) {

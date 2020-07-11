@@ -35,6 +35,10 @@ const links = [
     href: '/chuck-norris',
     label: 'Chuck Norris',
   },
+  {
+    href: 'aviasales',
+    label: 'Aviasales',
+  },
 ]
 
 const Navigation = () => {

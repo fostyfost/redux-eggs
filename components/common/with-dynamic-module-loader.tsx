@@ -1,10 +1,10 @@
 import { NextPage } from 'next'
 import React, { useCallback } from 'react'
+import { useStore } from 'react-redux'
 
 import { ModuleTuple, NextPageWithModules } from '../../store/contracts'
-import { AddedModulesCleanup } from './dynamic-module-loader'
-import { useStore } from 'react-redux'
 import { ModuleStoreWithSagaTasks } from '../../store/saga-extension/contracts'
+import { AddedModulesCleanup } from './dynamic-module-loader'
 
 export const withDynamicModuleLoader = (
   Component: NextPage<any>,
@@ -15,7 +15,7 @@ export const withDynamicModuleLoader = (
 
     const cleanup = useCallback(() => {
       store.removeModules(modules)
-    }, [])
+    }, [store])
 
     return (
       <>

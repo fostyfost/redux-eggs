@@ -1,5 +1,5 @@
 import { AppPropsType } from 'next/dist/next-server/lib/utils'
-import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
+import React, { FC, useRef, useState } from 'react'
 import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
 
@@ -55,24 +55,13 @@ export const withRedux = (App: FC<AppPropsType>, rootModules: ModuleTuple) => {
       return getStore({ rootModules, pageModules: Component.modules })
     })
 
-    const hydrate = useCallback(() => {
-      store.dispatch(hydrateAction(initialState))
-    }, [initialState])
-
-    // apply synchronously on first render (both server side and client side)
     if (isFirstRender.current) {
-      hydrate()
-    }
+      isFirstRender.current = false
 
-    // apply async in case props have changed, on navigation for example
-    useEffect(() => {
-      if (isFirstRender.current) {
-        isFirstRender.current = false
-        return
+      if (initialState) {
+        store.dispatch(hydrateAction(initialState))
       }
-
-      hydrate()
-    }, [hydrate])
+    }
 
     return (
       <Provider store={store}>

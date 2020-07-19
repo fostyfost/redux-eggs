@@ -1,9 +1,9 @@
+import { Immutable } from 'immer'
 import { createSelector } from 'reselect'
 
-import { USERS_MODULE_NAME } from './index'
 import { UsersAwareState, UsersLoadingState } from './contracts/state'
 import { User } from './contracts/user'
-import { Immutable } from 'immer'
+import { USERS_MODULE_NAME } from './index'
 
 export const usersSelector = (state: UsersAwareState): Immutable<User[]> | undefined => {
   return state[USERS_MODULE_NAME].users

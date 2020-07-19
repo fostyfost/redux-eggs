@@ -1,7 +1,7 @@
 import { ActionsUnion, createAction } from '../../store/action-helper'
 import { PicsumActionType } from './action-types'
-import { PicsumLoadingState } from './contracts/state'
 import { Picture } from './contracts/picture'
+import { PicsumLoadingState } from './contracts/state'
 
 export const PicsumPublicAction = {
   loadPics: () => createAction(PicsumActionType.LOAD_PICS),

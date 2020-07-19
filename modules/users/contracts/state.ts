@@ -1,5 +1,6 @@
-import { USERS_MODULE_NAME } from '../index'
 import { Immutable } from 'immer'
+
+import { USERS_MODULE_NAME } from '../index'
 import { User } from './user'
 
 export enum UsersLoadingState {

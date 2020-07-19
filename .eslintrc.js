@@ -10,8 +10,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:react-hooks/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -22,7 +20,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'import'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'react-hooks'],
   rules: {
     'no-console': 'off',
     strict: ['error', 'global'],
@@ -31,5 +29,7 @@ module.exports = {
     'simple-import-sort/sort': 'error',
     'sort-imports': 'off',
     'import/order': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 }

@@ -1,8 +1,9 @@
-import { AVIASALES_MODULE_NAME } from './index'
-import { AviasalesAwareState, AviasalesLoadingState, TicketsMap } from './contracts/state'
-import { Ticket } from './contracts/ticket'
 import { Immutable } from 'immer'
 import { createSelector } from 'reselect'
+
+import { AviasalesAwareState, AviasalesLoadingState, TicketsMap } from './contracts/state'
+import { Ticket } from './contracts/ticket'
+import { AVIASALES_MODULE_NAME } from './index'
 
 export const searchIdSelector = (state: AviasalesAwareState): string | undefined => {
   return state[AVIASALES_MODULE_NAME].searchId

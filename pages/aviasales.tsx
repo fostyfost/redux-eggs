@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 
-import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
 import { Aviasales } from '../components/aviasales'
+import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
 import { getAviasalesModule } from '../modules/aviasales/module'
 import { NextPageWithStore } from '../store/contracts'
 

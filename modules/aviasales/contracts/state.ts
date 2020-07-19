@@ -1,6 +1,7 @@
+import { Immutable } from 'immer'
+
 import { AVIASALES_MODULE_NAME } from '../index'
 import { Ticket } from './ticket'
-import { Immutable } from 'immer'
 
 export enum AviasalesLoadingState {
   NEVER = 'NEVER',

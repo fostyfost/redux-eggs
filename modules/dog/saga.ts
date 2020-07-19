@@ -1,10 +1,10 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
+import { fetchAsJson } from '../../utils/fetchAsJson'
 import { DogReducerAction } from './action-creators'
 import { DogActionType } from './action-types'
-import { DogLoadingState } from './contracts/state'
-import { fetchAsJson } from '../../utils/fetchAsJson'
 import { DogResponse } from './contracts/api-response'
+import { DogLoadingState } from './contracts/state'
 
 function* loadDogWorker() {
   yield put(DogReducerAction.setLoadingState(DogLoadingState.LOADING))

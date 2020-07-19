@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { errorSelector, dogSelector, isDogLoading } from '../modules/dog/selectors'
 import { DogPublicAction } from '../modules/dog/action-creators'
+import { dogSelector, errorSelector, isDogLoading } from '../modules/dog/selectors'
 
 const Dog = () => {
   const isLoading = useSelector(isDogLoading)

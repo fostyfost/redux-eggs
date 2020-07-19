@@ -1,5 +1,6 @@
-import { PICSUM_MODULE_NAME } from '../index'
 import { Immutable } from 'immer'
+
+import { PICSUM_MODULE_NAME } from '../index'
 import { Picture } from './picture'
 
 export enum PicsumLoadingState {

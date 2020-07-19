@@ -3,7 +3,7 @@ import produce, { Draft } from 'immer'
 
 import { DogActionsUnion } from './action-creators'
 import { DogActionType } from './action-types'
-import { DogState, DogLoadingState } from './contracts/state'
+import { DogLoadingState, DogState } from './contracts/state'
 
 const dogInitialState: DogState = {
   loadingState: DogLoadingState.NEVER,

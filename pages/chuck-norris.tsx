@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 
-import { NextPageWithStore } from '../store/contracts'
 import { ChuckNorrisJoke } from '../components/chuck-norris-joke'
+import { NextPageWithStore } from '../store/contracts'
 
 const styles = {
   fontSize: '30px',

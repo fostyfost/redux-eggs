@@ -2,8 +2,9 @@
 import React, { Component, FC, ReactNode, useEffect } from 'react'
 import { useStore } from 'react-redux'
 import { IDynamicallyAddedModule } from 'redux-dynamic-modules-core'
-import { ModuleStoreWithSagaTasks, SagaModule } from '../../store/saga-extension/contracts'
+
 import { ModuleTuple } from '../../store/contracts'
+import { ModuleStoreWithSagaTasks, SagaModule } from '../../store/saga-extension/contracts'
 
 interface AddedModulesCleanupProps {
   cleanup: () => void

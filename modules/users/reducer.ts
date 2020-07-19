@@ -3,7 +3,7 @@ import produce, { Draft } from 'immer'
 
 import { UsersActionsUnion } from './action-creators'
 import { UsersActionType } from './action-types'
-import { UsersState, UsersLoadingState } from './contracts/state'
+import { UsersLoadingState, UsersState } from './contracts/state'
 
 const usersInitialState: UsersState = {
   loadingState: UsersLoadingState.NEVER,

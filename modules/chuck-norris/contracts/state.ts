@@ -1,5 +1,6 @@
-import { CHUCK_NORRIS_MODULE_NAME } from '../index'
 import { Immutable } from 'immer'
+
+import { CHUCK_NORRIS_MODULE_NAME } from '../index'
 
 export enum ChuckNorrisLoadingState {
   NEVER = 'NEVER',

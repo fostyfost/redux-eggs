@@ -1,7 +1,8 @@
 import React from 'react'
-import { Cards } from './cards'
 import { useSelector } from 'react-redux'
+
 import { isTicketsLoadingSelector } from '../../modules/aviasales/selectors'
+import { Cards } from './cards'
 
 const Aviasales = () => {
   const isLoading = useSelector(isTicketsLoadingSelector)

@@ -3,7 +3,7 @@ import produce, { Draft } from 'immer'
 
 import { XkcdActionsUnion } from './action-creators'
 import { XkcdActionType } from './action-types'
-import { XkcdState, XkcdLoadingState } from './contracts/state'
+import { XkcdLoadingState, XkcdState } from './contracts/state'
 
 const xkcdInitialState: XkcdState = {
   loadingState: XkcdLoadingState.NEVER,

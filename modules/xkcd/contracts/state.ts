@@ -1,6 +1,7 @@
+import { Immutable } from 'immer'
+
 import { XKCD_MODULE_NAME } from '../index'
 import { XkcdInfo } from './api-response'
-import { Immutable } from 'immer'
 
 export enum XkcdLoadingState {
   NEVER = 'NEVER',

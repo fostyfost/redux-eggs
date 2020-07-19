@@ -1,7 +1,7 @@
 import { getRefCountedManager, IModuleManager } from 'redux-dynamic-modules-core'
 import { default as createSagaMiddleware } from 'redux-saga'
 
-import { SagaExtension, SagaManager, SagaModule, SagaContext } from './contracts'
+import { SagaContext, SagaExtension, SagaManager, SagaModule } from './contracts'
 import { getSagaManager } from './manager'
 import { sagaEquals } from './saga-equals'
 

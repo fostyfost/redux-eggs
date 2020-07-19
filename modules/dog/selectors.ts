@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 
-import { DOG_MODULE_NAME } from './index'
 import { DogAwareState, DogLoadingState } from './contracts/state'
+import { DOG_MODULE_NAME } from './index'
 
 export const dogSelector = (state: DogAwareState): string | undefined => {
   return state[DOG_MODULE_NAME].dog

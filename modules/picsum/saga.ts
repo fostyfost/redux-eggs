@@ -1,10 +1,10 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
+import { fetchAsJson } from '../../utils/fetchAsJson'
 import { PicsumReducerAction } from './action-creators'
 import { PicsumActionType } from './action-types'
-import { PicsumLoadingState } from './contracts/state'
-import { fetchAsJson } from '../../utils/fetchAsJson'
 import { Picture } from './contracts/picture'
+import { PicsumLoadingState } from './contracts/state'
 
 function* loadPicsumWorker() {
   yield put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADING))

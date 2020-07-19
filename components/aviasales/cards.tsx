@@ -1,7 +1,8 @@
 import React, { memo } from 'react'
-import { Card } from './card'
 import { useSelector } from 'react-redux'
+
 import { ticketsIdsSelector } from '../../modules/aviasales/selectors'
+import { Card } from './card'
 
 const MemoizedCard = memo(Card)
 

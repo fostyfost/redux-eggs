@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-
-import { useInView } from 'react-intersection-observer'
 import dynamic from 'next/dynamic'
+import React, { FC } from 'react'
+import { useInView } from 'react-intersection-observer'
+
 import { ChuckNorrisLoading } from './loading'
 
 const styles = {

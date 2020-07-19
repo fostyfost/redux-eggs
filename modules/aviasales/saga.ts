@@ -1,12 +1,12 @@
+import { nanoid } from 'nanoid'
 import { call, delay, put, select } from 'redux-saga/effects'
 
-import { AviasalesReducerAction } from './action-creators'
-import { isAllTicketLoadedSelector, searchIdSelector } from './selectors'
-import { SearchResponse, TicketsResponse } from './contracts/api-response'
 import { fetchAsJson } from '../../utils/fetchAsJson'
+import { AviasalesReducerAction } from './action-creators'
+import { SearchResponse, TicketsResponse } from './contracts/api-response'
 import { AviasalesLoadingState, TicketsMap } from './contracts/state'
 import { Ticket } from './contracts/ticket'
-import { nanoid } from 'nanoid'
+import { isAllTicketLoadedSelector, searchIdSelector } from './selectors'
 
 function* getTickets() {
   let stop = false

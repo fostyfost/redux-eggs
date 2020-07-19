@@ -1,12 +1,11 @@
+import { PageTransition } from 'next-page-transitions'
 import React, { FC, ReactNode } from 'react'
 
-import { PageTransition } from 'next-page-transitions'
-
 import { Clock } from '../clock'
-import { Xkcd } from '../xkcd'
-import { Navigation } from './navigation'
 import { Dog } from '../dog'
+import { Xkcd } from '../xkcd'
 import { Loader } from './loader'
+import { Navigation } from './navigation'
 
 const TIMEOUT = 400
 

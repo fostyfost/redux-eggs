@@ -44,6 +44,7 @@ const links = [
 const Navigation = () => {
   const router = useRouter()
 
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <nav>
       {links.map(({ href, label }) =>

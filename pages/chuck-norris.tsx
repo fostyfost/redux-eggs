@@ -12,7 +12,7 @@ const styles = {
   justifyContent: 'center',
 }
 
-const IntersectionObserverPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+const ChuckNorrisPage: NextPageWithStore<{ title: string }> = ({ title }) => {
   return (
     <>
       <Head>
@@ -32,8 +32,8 @@ const IntersectionObserverPage: NextPageWithStore<{ title: string }> = ({ title 
   )
 }
 
-IntersectionObserverPage.getInitialProps = () => {
+ChuckNorrisPage.getInitialProps = () => {
   return { title: 'Intersection observer page' }
 }
 
-export default IntersectionObserverPage
+export default ChuckNorrisPage

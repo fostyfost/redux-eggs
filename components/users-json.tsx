@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { errorSelector, isUsersLoading, usersSelector } from '../modules/users/selectors'
 
-const Users = () => {
+const UsersJson = () => {
   const isLoading = useSelector(isUsersLoading)
   const users = useSelector(usersSelector)
   const error = useSelector(errorSelector)
@@ -14,14 +14,12 @@ const Users = () => {
 
   return (
     <div>
-      {users && (
-        <pre>
-          <code>{JSON.stringify(users, null, 2)}</code>
-        </pre>
-      )}
+      <pre>
+        <code>{JSON.stringify(users, null, 2)}</code>
+      </pre>
       {error && <p style={{ color: 'red' }}>Error: {error}</p>}
     </div>
   )
 }
 
-export { Users }
+export { UsersJson }

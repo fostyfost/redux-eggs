@@ -2,10 +2,10 @@ import Head from 'next/head'
 import React from 'react'
 
 import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
-import { Users } from '../components/users'
+import { UsersJson } from '../components/users-json'
 import { UsersPublicAction } from '../modules/users/action-creators'
 import { getUsersModule } from '../modules/users/module'
-import { usersSelector } from '../modules/users/selectors'
+import { isUsersLoaded } from '../modules/users/selectors'
 import { NextPageWithStore } from '../store/contracts'
 
 const UsersPage: NextPageWithStore<{ title: string }> = ({ title }) => {
@@ -16,14 +16,14 @@ const UsersPage: NextPageWithStore<{ title: string }> = ({ title }) => {
       </Head>
       <div>
         <h1>{title}</h1>
-        <Users />
+        <UsersJson />
       </div>
     </>
   )
 }
 
 UsersPage.getInitialProps = context => {
-  if (!usersSelector(context.store.getState())) {
+  if (!isUsersLoaded(context.store.getState())) {
     context.store.dispatch(UsersPublicAction.loadUsers())
   }
 

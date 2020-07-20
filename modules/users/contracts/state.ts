@@ -14,7 +14,7 @@ export interface UsersAwareState {
 }
 
 export type UsersState = Immutable<{
-  users?: User[]
+  users: User[]
   error?: string
   loadingState: UsersLoadingState
 }>

@@ -6,6 +6,7 @@ import { UsersActionType } from './action-types'
 import { UsersLoadingState, UsersState } from './contracts/state'
 
 const usersInitialState: UsersState = {
+  users: [],
   loadingState: UsersLoadingState.NEVER,
 }
 

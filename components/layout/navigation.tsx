@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -20,8 +21,8 @@ const links = [
     label: 'Users page',
   },
   {
-    href: '/users2',
-    label: 'User page 2',
+    href: '/users-ids',
+    label: 'User IDs page',
   },
   {
     href: '/picsum',
@@ -36,7 +37,7 @@ const links = [
     label: 'Chuck Norris',
   },
   {
-    href: 'aviasales',
+    href: '/aviasales',
     label: 'Aviasales',
   },
 ]
@@ -44,7 +45,6 @@ const links = [
 const Navigation = () => {
   const router = useRouter()
 
-  /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <nav>
       {links.map(({ href, label }) =>

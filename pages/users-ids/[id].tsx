@@ -1,20 +1,35 @@
 import Error from 'next/error'
+import Head from 'next/head'
 import React from 'react'
 
 import { withDynamicModuleLoader } from '../../components/common/with-dynamic-module-loader'
 import { User } from '../../components/user'
+import { UsersIds } from '../../components/users-ids'
 import { UsersPublicAction } from '../../modules/users/action-creators'
 import { getUsersModule } from '../../modules/users/module'
 import { getUserById, isUsersLoaded } from '../../modules/users/selectors'
 import { NextPageWithStore } from '../../store/contracts'
 import { waitForLoadedState } from '../../store/wait-for-loaded-state'
 
-const UserPage: NextPageWithStore<{ errorCode?: number; title: string; id: number }> = ({ errorCode, title, id }) => {
-  if (errorCode) {
-    return <Error statusCode={errorCode} />
-  }
+interface Props {
+  errorCode?: number
+  title: string
+  id?: number
+}
 
-  return <User title={title} id={id} />
+const UserPage: NextPageWithStore<Props, Props> = ({ errorCode, title, id }) => {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div>
+        <h1>{title}</h1>
+        <UsersIds />
+        {errorCode ? <Error statusCode={errorCode} /> : !!id && <User id={id} />}
+      </div>
+    </>
+  )
 }
 
 UserPage.getInitialProps = async context => {
@@ -22,7 +37,7 @@ UserPage.getInitialProps = async context => {
     if (context.res) {
       context.res.statusCode = 400
     }
-    return { errorCode: 400 }
+    return { title: '400', errorCode: 400 }
   }
 
   const id = +context.query.id
@@ -31,7 +46,7 @@ UserPage.getInitialProps = async context => {
     if (context.res) {
       context.res.statusCode = 400
     }
-    return { errorCode: 400 }
+    return { title: '500', errorCode: 400 }
   }
 
   if (!isUsersLoaded(context.store.getState())) {
@@ -43,7 +58,7 @@ UserPage.getInitialProps = async context => {
     const user = getUserById(context.store.getState(), id)
     if (!user) {
       context.res.statusCode = 404
-      return { errorCode: 404 }
+      return { title: `User with ID ${id} no found`, errorCode: 404 }
     }
   }
 

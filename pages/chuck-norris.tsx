@@ -12,7 +12,11 @@ const styles = {
   justifyContent: 'center',
 }
 
-const ChuckNorrisPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const ChuckNorrisPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

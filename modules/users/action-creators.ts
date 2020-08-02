@@ -9,7 +9,7 @@ export const UsersPublicAction = {
 
 export const UsersReducerAction = {
   setUsers: (payload: User[]) => createAction(UsersActionType.SET_USERS, payload),
-  setError: (payload: string) => createAction(UsersActionType.SET_ERROR, payload),
+  setError: (payload: string | undefined) => createAction(UsersActionType.SET_ERROR, payload),
   setLoadingState: (payload: UsersLoadingState) => createAction(UsersActionType.SET_LOADING_STATE, payload),
 }
 

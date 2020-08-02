@@ -6,7 +6,11 @@ import { Picsum } from '../components/picsum'
 import { getPicsumModule } from '../modules/picsum/module'
 import { NextPageWithStore } from '../store/contracts'
 
-const PicsumPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const PicsumPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

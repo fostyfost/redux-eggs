@@ -9,6 +9,8 @@ import { DogLoadingState } from './contracts/state'
 function* loadDogWorker() {
   yield put(DogReducerAction.setLoadingState(DogLoadingState.LOADING))
 
+  yield put(DogReducerAction.setError(undefined))
+
   yield delay(1000)
 
   try {

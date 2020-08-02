@@ -6,7 +6,11 @@ import { withDynamicModuleLoader } from '../components/common/with-dynamic-modul
 import { getAviasalesModule } from '../modules/aviasales/module'
 import { NextPageWithStore } from '../store/contracts'
 
-const AviasalesPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const AviasalesPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

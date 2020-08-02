@@ -6,7 +6,11 @@ import { isXkcdInfoLoaded, xkcdInfoTitleSelector } from '../modules/xkcd/selecto
 import { NextPageWithStore } from '../store/contracts'
 import { waitForLoadedState } from '../store/wait-for-loaded-state'
 
-const XkcdPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const XkcdPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

@@ -1,4 +1,4 @@
-import { put } from '@redux-saga/core/effects'
+import { put } from 'redux-saga/effects'
 
 import { XkcdPublicAction } from '../xkcd/action-creators'
 

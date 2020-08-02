@@ -4,7 +4,11 @@ import React from 'react'
 import { Clock } from '../components/clock'
 import { NextPageWithStore } from '../store/contracts'
 
-const ClockPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const ClockPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

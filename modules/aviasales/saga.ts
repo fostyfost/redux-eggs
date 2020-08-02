@@ -1,17 +1,20 @@
 import { nanoid } from 'nanoid'
-import { call, delay, put, select } from 'redux-saga/effects'
+import { call, delay, put, retry, select } from 'redux-saga/effects'
 
-import { fetchAsJson } from '../../utils/fetchAsJson'
 import { AviasalesReducerAction } from './action-creators'
+import { getSearchIdWithApi } from './api/getSearchIdWithApi'
+import { getTicketsWithApi } from './api/getTicketsWithApi'
 import { SearchResponse, TicketsResponse } from './contracts/api-response'
 import { AviasalesLoadingState, TicketsMap } from './contracts/state'
 import { Ticket } from './contracts/ticket'
 import { isAllTicketLoadedSelector, searchIdSelector } from './selectors'
 
+const DELAY_DURATION = 500
+
+const isServer = typeof window === 'undefined'
+
 function* getTickets() {
   let stop = false
-
-  const isServer = typeof window === 'undefined'
 
   yield put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADING))
 
@@ -20,10 +23,7 @@ function* getTickets() {
   while (!stop) {
     // It's long-polling api.
     // We receive data until the response contains a stop field with true as a value.
-    const res: TicketsResponse = yield call(
-      fetchAsJson,
-      `https://front-test.beta.aviasales.ru/tickets?searchId=${searchId}`,
-    )
+    const res: TicketsResponse = yield retry(3, DELAY_DURATION, getTicketsWithApi, searchId)
 
     yield put(
       AviasalesReducerAction.addTickets(
@@ -39,7 +39,7 @@ function* getTickets() {
     if (res.stop) {
       yield put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADED))
     } else if (!isServer) {
-      yield delay(1000)
+      yield delay(DELAY_DURATION)
     }
   }
 }
@@ -50,7 +50,7 @@ function* getSearchId() {
     return savedSearchId
   }
 
-  const res: SearchResponse = yield call(fetchAsJson, 'https://front-test.beta.aviasales.ru/search')
+  const res: SearchResponse = yield retry(3, 500, getSearchIdWithApi)
 
   yield put(AviasalesReducerAction.setSearchId(res.searchId))
 
@@ -66,7 +66,7 @@ export function* aviasalesSaga() {
   try {
     yield call(getTickets)
   } catch (error) {
-    console.log('[Error in `searchWorker`]', error)
+    console.error('[Error in `aviasalesSaga`]', error)
     yield put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADED))
   }
 }

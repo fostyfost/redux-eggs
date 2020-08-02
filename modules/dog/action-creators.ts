@@ -8,7 +8,7 @@ export const DogPublicAction = {
 
 export const DogReducerAction = {
   setDog: (payload: string) => createAction(DogActionType.SET_DOG, payload),
-  setError: (payload: string) => createAction(DogActionType.SET_ERROR, payload),
+  setError: (payload: string | undefined) => createAction(DogActionType.SET_ERROR, payload),
   setLoadingState: (payload: DogLoadingState) => createAction(DogActionType.SET_LOADING_STATE, payload),
 }
 

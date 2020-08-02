@@ -12,14 +12,15 @@ import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly'
 import {
   getMiddlewareManager,
   getRefCountedManager,
+  IDynamicallyAddedModule,
   IExtension,
-  IModule,
   IModuleStore,
 } from 'redux-dynamic-modules-core'
 import { getModuleManager } from 'redux-dynamic-modules-core/lib/Managers/ModuleManager'
 import { flatten } from 'redux-dynamic-modules-core/lib/Utils/Flatten'
 
 import { ModuleTuple } from './contracts'
+import { SagaModule } from './saga-extension/contracts'
 
 type ModuleStoreSettings<S> = {
   initialState?: DeepPartial<S>
@@ -30,8 +31,10 @@ type ModuleStoreSettings<S> = {
 }
 
 export interface AdvancedModuleStore<State> extends IModuleStore<State> {
-  removeModule: (moduleToBeRemoved: IModule<any>) => void
-  removeModules: (moduleToBeRemoved: ModuleTuple) => void
+  addModule: (module: SagaModule<any, any>) => IDynamicallyAddedModule
+  addModules: (modulesToBeAdded: ModuleTuple) => IDynamicallyAddedModule
+  removeModule: (moduleToBeRemoved: SagaModule) => void
+  removeModules: (modulesToBeRemoved: ModuleTuple) => void
   getAddedModules: () => string[]
 }
 
@@ -64,7 +67,7 @@ export function createStore<State>(
 
   const moduleManager = getRefCountedManager(
     getModuleManager<State>(middlewareManager, extensions, advancedCombineReducers),
-    (a: IModule<any>, b: IModule<any>) => a.id === b.id,
+    (a: SagaModule, b: SagaModule) => a.id === b.id,
     a => !!a.retained,
   )
 
@@ -79,7 +82,7 @@ export function createStore<State>(
 
   const addedModulesIds = new Set<string>()
 
-  const _removeModules = (modules: IModule<any>[]) => {
+  const _removeModules = (modules: SagaModule[]) => {
     modules.forEach(module => {
       if (!module.retained) {
         addedModulesIds.delete(module.id)
@@ -105,13 +108,13 @@ export function createStore<State>(
     }
   }
 
-  const addModule = (moduleToBeAdded: IModule<any>) => addModules([moduleToBeAdded])
+  const addModule = (moduleToBeAdded: SagaModule<any, any>) => addModules([moduleToBeAdded])
 
   const removeModules = (modulesToBeRemoved: ModuleTuple) => {
-    _removeModules(flatten(modulesToBeRemoved) as IModule<any>[])
+    _removeModules(flatten(modulesToBeRemoved) as SagaModule[])
   }
 
-  const removeModule = (moduleToBeRemoved: IModule<any>) => {
+  const removeModule = (moduleToBeRemoved: SagaModule) => {
     removeModules([moduleToBeRemoved])
   }
 

@@ -9,6 +9,8 @@ import { ChuckNorrisLoadingState } from './contracts/state'
 function* loadChuckNorrisJokeWorker() {
   yield put(ChuckNorrisReducerAction.setLoadingState(ChuckNorrisLoadingState.LOADING))
 
+  yield put(ChuckNorrisReducerAction.setError(undefined))
+
   yield delay(1000)
 
   try {

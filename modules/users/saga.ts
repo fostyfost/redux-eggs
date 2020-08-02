@@ -9,6 +9,8 @@ import { User } from './contracts/user'
 function* loadUsersWorker() {
   yield put(UsersReducerAction.setLoadingState(UsersLoadingState.LOADING))
 
+  yield put(UsersReducerAction.setError(undefined))
+
   yield delay(1000)
 
   try {

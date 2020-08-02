@@ -8,7 +8,11 @@ import { getUsersModule } from '../modules/users/module'
 import { isUsersLoaded } from '../modules/users/selectors'
 import { NextPageWithStore } from '../store/contracts'
 
-const UsersPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const UsersPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

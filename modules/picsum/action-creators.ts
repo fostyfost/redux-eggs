@@ -9,7 +9,7 @@ export const PicsumPublicAction = {
 
 export const PicsumReducerAction = {
   setPics: (payload: Picture[]) => createAction(PicsumActionType.SET_PICS, payload),
-  setError: (payload: string) => createAction(PicsumActionType.SET_ERROR, payload),
+  setError: (payload: string | undefined) => createAction(PicsumActionType.SET_ERROR, payload),
   setLoadingState: (payload: PicsumLoadingState) => createAction(PicsumActionType.SET_LOADING_STATE, payload),
 }
 

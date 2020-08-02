@@ -3,7 +3,11 @@ import React from 'react'
 
 import { NextPageWithStore } from '../store/contracts'
 
-const IndexPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const IndexPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

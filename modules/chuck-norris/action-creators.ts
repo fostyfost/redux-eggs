@@ -7,8 +7,8 @@ export const ChuckNorrisPublicAction = {
 }
 
 export const ChuckNorrisReducerAction = {
-  setJoke: (payload: any) => createAction(ChuckNorrisActionType.SET_JOKE, payload),
-  setError: (payload: string) => createAction(ChuckNorrisActionType.SET_ERROR, payload),
+  setJoke: (payload: string) => createAction(ChuckNorrisActionType.SET_JOKE, payload),
+  setError: (payload: string | undefined) => createAction(ChuckNorrisActionType.SET_ERROR, payload),
   setLoadingState: (payload: ChuckNorrisLoadingState) => createAction(ChuckNorrisActionType.SET_LOADING_STATE, payload),
 }
 

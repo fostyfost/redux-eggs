@@ -9,6 +9,8 @@ import { PicsumLoadingState } from './contracts/state'
 function* loadPicsumWorker() {
   yield put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADING))
 
+  yield put(PicsumReducerAction.setError(undefined))
+
   yield delay(1000)
 
   try {

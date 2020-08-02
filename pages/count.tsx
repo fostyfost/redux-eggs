@@ -6,7 +6,11 @@ import { Count } from '../components/count'
 import { getCountModule } from '../modules/count/module'
 import { NextPageWithStore } from '../store/contracts'
 
-const CountPage: NextPageWithStore<{ title: string }> = ({ title }) => {
+interface Props {
+  title: string
+}
+
+const CountPage: NextPageWithStore<Props, Props> = ({ title }) => {
   return (
     <>
       <Head>

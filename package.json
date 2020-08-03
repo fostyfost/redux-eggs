@@ -74,7 +74,7 @@
     "babel-jest": "26.1.0",
     "eslint": "7.4.0",
     "eslint-config-react-app": "5.2.1",
-    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-import-resolver-typescript": "2.2.0",
     "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-jsx-a11y": "6.3.1",

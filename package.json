@@ -44,7 +44,7 @@
     }
   },
   "dependencies": {
-    "@next/bundle-analyzer": "9.4.4",
+    "@next/bundle-analyzer": "9.5.2",
     "cross-env": "7.0.2",
     "immer": "7.0.5",
     "nanoid": "3.1.10",

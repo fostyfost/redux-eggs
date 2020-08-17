@@ -48,7 +48,7 @@
     "cross-env": "7.0.2",
     "immer": "7.0.5",
     "nanoid": "3.1.10",
-    "next": "9.4.4",
+    "next": "9.5.2",
     "next-page-transitions": "1.0.0-beta.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",

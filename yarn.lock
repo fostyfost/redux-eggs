@@ -1420,10 +1420,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@next/bundle-analyzer@9.4.4":
-  version "9.4.4"
-  resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-9.4.4.tgz#09ac54a3a2c2a0275a36a502b335100f876997ac"
-  integrity sha512-MRBk0SYyKvnTet3g6vzMbqTGtcGFIwge7XA+iUpZp45wdePYYPCIdSNz4xv1Dk4iPZRKTEMScLprsUPmtXGXnw==
+"@next/bundle-analyzer@9.5.4":
+  version "9.5.4"
+  resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-9.5.4.tgz#f0046a2463c77aa054fcaa33d8a5c5fe222b4823"
+  integrity sha512-GU2rb8K9gjvZqMVvNRq2FN5hdQPCqhod0HTlmRUPi03L2oClYTc0IEIBg63KQ1auVs++av7w7LLrRvGQ/DNv8Q==
   dependencies:
     webpack-bundle-analyzer "3.6.1"
 

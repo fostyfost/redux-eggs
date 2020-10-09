@@ -89,7 +89,7 @@
     "redux-saga-test-plan": "4.0.0-rc.3",
     "ts-loader": "8.0.0",
     "ts-node": "8.10.2",
-    "tslib": "2.0.0",
+    "tslib": "2.0.2",
     "typescript": "3.9.6"
   }
 }

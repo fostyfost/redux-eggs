@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ActionsUnion, createAction } from '@/store/action-helper'
+
 import { CountActionType } from './action-types'
 
 export const CountPublicAction = {

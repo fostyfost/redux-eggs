@@ -1,4 +1,5 @@
-import { SagaModule } from '../../store/saga-extension/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
+
 import { CountActionsUnion } from './action-creators'
 import { CountAwareState } from './contracts/state'
 import { COUNT_MODULE_NAME } from './index'

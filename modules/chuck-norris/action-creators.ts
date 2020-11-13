@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ActionsUnion, createAction } from '@/store/action-helper'
+
 import { ChuckNorrisActionType } from './action-types'
 import { ChuckNorrisLoadingState } from './contracts/state'
 

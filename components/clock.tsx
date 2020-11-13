@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { lastUpdateSelector } from '../modules/clock/selectors'
+import { lastUpdateSelector } from '@/modules/clock/selectors'
 
 const pad = (n: number): string => (n < 10 ? `0${n}` : `${n}`)
 
@@ -13,7 +13,7 @@ const format = (t: Date): string => {
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }
 
-const Clock = () => {
+const Clock: FC = () => {
   const lastUpdate = useSelector(lastUpdateSelector)
 
   return <p>{format(new Date(lastUpdate))}</p>

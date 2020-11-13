@@ -1,9 +1,9 @@
-import React from 'react'
+import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { errorSelector, isUsersLoading, usersSelector } from '../modules/users/selectors'
+import { errorSelector, isUsersLoading, usersSelector } from '@/modules/users/selectors'
 
-const UsersJson = () => {
+const UsersJson: FC = () => {
   const isLoading = useSelector(isUsersLoading)
   const users = useSelector(usersSelector)
   const error = useSelector(errorSelector)

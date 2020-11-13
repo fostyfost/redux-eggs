@@ -1,4 +1,5 @@
-import { SagaModule } from '../../store/saga-extension/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
+
 import { XkcdActionsUnion } from './action-creators'
 import { XkcdAwareState } from './contracts/state'
 import { XKCD_MODULE_NAME } from './index'

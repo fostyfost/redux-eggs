@@ -1,6 +1,7 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
-import { fetchAsJson } from '../../utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetchAsJson'
+
 import { UsersReducerAction } from './action-creators'
 import { UsersActionType } from './action-types'
 import { UsersLoadingState } from './contracts/state'

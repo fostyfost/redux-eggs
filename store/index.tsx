@@ -1,35 +1,33 @@
-import { AppPropsType } from 'next/dist/next-server/lib/utils'
-import React, { FC, useRef, useState } from 'react'
+import { AppInitialProps, AppType } from 'next/dist/next-server/lib/utils'
+import React, { useRef, useState } from 'react'
 import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
 
-import { allSagasDone } from './all-sagas-done'
-import { AppContextWithModules, ModuleTuple, WrapperProps } from './contracts'
-import { hydrateAction } from './hydrate-action'
-import { ModuleStoreWithSagaTasks } from './saga-extension/contracts'
-import { getStore } from './store-initializer'
+import { allSagasDone } from '@/store/all-sagas-done'
+import { AppContextWithModules, ModuleTuple, WrapperProps } from '@/store/contracts'
+import { hydrateAction } from '@/store/hydrate-action'
+import { getStore } from '@/store/store-initializer'
 
-export const STOREKEY = '__NEXT_REDUX_WRAPPER_STORE__' as const
-
-interface InitialProps {
-  pageProps: any
+interface InitialProps extends AppInitialProps {
   [props: string]: any
 }
 
-export const withRedux = (App: FC<AppPropsType>, rootModules: ModuleTuple) => {
-  let initialStore: ModuleStoreWithSagaTasks
-
-  const makeProps = async (context: AppContextWithModules): Promise<WrapperProps> => {
-    initialStore = getStore({
+export const withRedux = (App: AppType, rootModules: ModuleTuple<any>) => {
+  const makeProps = async (
+    context: AppContextWithModules,
+    appProps: AppInitialProps & { [key: string]: any },
+  ): Promise<WrapperProps> => {
+    const initialStore = getStore({
       rootModules,
       pageModules: context.Component.modules,
       context,
     })
 
-    const initialProps: InitialProps = { pageProps: {} }
-
     if (context.Component.getInitialProps) {
-      initialProps.pageProps = await context.Component.getInitialProps({ ...context.ctx, store: initialStore })
+      const pageProps = await context.Component.getInitialProps({ ...context.ctx, store: initialStore })
+      if (pageProps) {
+        appProps.pageProps = { ...appProps.pageProps, ...pageProps }
+      }
     }
 
     if (context.ctx?.req) {
@@ -38,21 +36,28 @@ export const withRedux = (App: FC<AppPropsType>, rootModules: ModuleTuple) => {
     }
 
     return {
-      initialProps,
+      initialProps: appProps,
       initialState: initialStore.getState(),
+      getInitialSsrStore: () => initialStore,
     }
   }
 
-  const Wrapper = ({ initialState, initialProps, Component, ...props }: WrapperProps & AppContextWithModules) => {
+  const Wrapper = ({
+    initialState,
+    initialProps,
+    getInitialSsrStore,
+    Component,
+    ...props
+  }: WrapperProps & AppContextWithModules) => {
     const isFirstRender = useRef(true)
 
     // see https://reactjs.org/docs/hooks-faq.html#how-to-create-expensive-objects-lazily
     const [store] = useState(() => {
-      if (typeof window === 'undefined' && initialStore) {
-        return initialStore
+      if (typeof window === 'undefined' && typeof getInitialSsrStore === 'function') {
+        return getInitialSsrStore()
       }
 
-      return getStore({ rootModules, pageModules: Component.modules })
+      return getStore({ rootModules, pageModules: Component.modules, initialState })
     })
 
     if (isFirstRender.current) {
@@ -73,7 +78,17 @@ export const withRedux = (App: FC<AppPropsType>, rootModules: ModuleTuple) => {
   Wrapper.displayName = 'withRedux(WrappedApp)'
 
   Wrapper.getInitialProps = async (context: AppContextWithModules): Promise<WrapperProps> => {
-    return await makeProps(context)
+    let appProps: InitialProps = { pageProps: {} }
+
+    if (App.getInitialProps) {
+      appProps = await App.getInitialProps(context)
+
+      if (!appProps.pageProps) {
+        appProps.pageProps = { pageProps: {} }
+      }
+    }
+
+    return makeProps(context, appProps)
   }
 
   return Wrapper

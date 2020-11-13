@@ -1,15 +1,14 @@
 import Error from 'next/error'
 import Head from 'next/head'
-import React from 'react'
 
-import { withDynamicModuleLoader } from '../../components/common/with-dynamic-module-loader'
-import { User } from '../../components/user'
-import { UsersIds } from '../../components/users-ids'
-import { UsersPublicAction } from '../../modules/users/action-creators'
-import { getUsersModule } from '../../modules/users/module'
-import { getUserById, isUsersLoaded } from '../../modules/users/selectors'
-import { NextPageWithStore } from '../../store/contracts'
-import { waitForLoadedState } from '../../store/wait-for-loaded-state'
+import { withDynamicModuleLoader } from '@/components/common/with-dynamic-module-loader'
+import { User } from '@/components/user'
+import { UsersIds } from '@/components/users-ids'
+import { UsersPublicAction } from '@/modules/users/action-creators'
+import { getUsersModule } from '@/modules/users/module'
+import { getUserById, isUsersLoaded } from '@/modules/users/selectors'
+import { NextPageWithStore } from '@/store/contracts'
+import { waitForLoadedState } from '@/store/wait-for-loaded-state'
 
 interface Props {
   errorCode?: number

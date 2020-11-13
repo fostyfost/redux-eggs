@@ -1,6 +1,7 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
-import { fetchAsJson } from '../../utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetchAsJson'
+
 import { XkcdReducerAction } from './action-creators'
 import { XkcdActionType } from './action-types'
 import { XkcdLoadingState } from './contracts/state'

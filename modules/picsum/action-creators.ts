@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ActionsUnion, createAction } from '@/store/action-helper'
+
 import { PicsumActionType } from './action-types'
 import { Picture } from './contracts/picture'
 import { PicsumLoadingState } from './contracts/state'

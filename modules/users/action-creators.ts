@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ActionsUnion, createAction } from '@/store/action-helper'
+
 import { UsersActionType } from './action-types'
 import { UsersLoadingState } from './contracts/state'
 import { User } from './contracts/user'

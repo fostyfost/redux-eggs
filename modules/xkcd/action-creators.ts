@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ActionsUnion, createAction } from '@/store/action-helper'
+
 import { XkcdActionType } from './action-types'
 import { XkcdInfo } from './contracts/api-response'
 import { XkcdLoadingState } from './contracts/state'

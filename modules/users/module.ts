@@ -1,4 +1,5 @@
-import { SagaModule } from '../../store/saga-extension/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
+
 import { UsersActionsUnion } from './action-creators'
 import { UsersAwareState } from './contracts/state'
 import { USERS_MODULE_NAME } from './index'

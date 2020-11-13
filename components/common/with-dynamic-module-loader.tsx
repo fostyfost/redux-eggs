@@ -1,11 +1,12 @@
 import { NextPage } from 'next'
-import React, { useCallback, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 import { useStore } from 'react-redux'
 import { flatten } from 'redux-dynamic-modules-core/lib/Utils/Flatten'
 
-import { ModuleTuple, NextPageWithModules } from '../../store/contracts'
-import { ModuleStoreWithSagaTasks, SagaModule } from '../../store/saga-extension/contracts'
-import { AddedModulesCleanup } from './dynamic-module-loader'
+import { ModuleTuple, NextPageWithModules } from '@/store/contracts'
+import { ModuleStoreWithSagaTasks, SagaModule } from '@/store/saga-extension/contracts'
+
+import { AddedModulesCleanup } from './added-modules-cleanup'
 
 export const withDynamicModuleLoader = (
   Component: NextPage<any>,

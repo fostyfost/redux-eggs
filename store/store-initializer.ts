@@ -2,10 +2,9 @@ import produce, { Draft } from 'immer'
 import { AnyAction, combineReducers, ReducersMapObject } from 'redux'
 import { IExtension } from 'redux-dynamic-modules-core'
 
-import { GetStoreParams, ModuleTuple, WindowWithStore } from './contracts'
+import { GetStoreParams, ModuleTuple, STOREKEY, WindowWithStore } from './contracts'
 import { createStore } from './create-store'
 import { HYDRATE } from './hydrate-action'
-import { STOREKEY } from './index'
 import { getLoggerExtension } from './logger-extension'
 import { getSagaExtension } from './saga-extension'
 import { ModuleStoreWithSagaTasks, SagaContext } from './saga-extension/contracts'
@@ -68,12 +67,13 @@ const getExtensions = (): IExtension[] => {
   return extensions
 }
 
+/**
+ * `context` живёт только на сервере,
+ * `initialState` есть после `getInitialProps`
+ */
 export const getStore = ({ rootModules = [], pageModules = [] }: GetStoreParams): ModuleStoreWithSagaTasks => {
   if (typeof window === 'undefined') {
-    return createStoreWithSagaTasks({
-      modules: rootModules.concat(pageModules),
-      extensions: getExtensions(),
-    })
+    return createStoreWithSagaTasks({ modules: rootModules.concat(pageModules), extensions: getExtensions() })
   }
 
   // Memoize store if client

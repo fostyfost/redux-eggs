@@ -1,8 +1,8 @@
-import React, { FC, useCallback } from 'react'
+import { FC, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { XkcdPublicAction } from '../modules/xkcd/action-creators'
-import { errorSelector, isXkcdInfoLoading, xkcdInfoSelector } from '../modules/xkcd/selectors'
+import { XkcdPublicAction } from '@/modules/xkcd/action-creators'
+import { errorSelector, isXkcdInfoLoading, xkcdInfoSelector } from '@/modules/xkcd/selectors'
 
 const Xkcd: FC<{ small?: boolean }> = ({ small }) => {
   const isLoading = useSelector(isXkcdInfoLoading)

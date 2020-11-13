@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ActionsUnion, createAction } from '@/store/action-helper'
+
 import { AviasalesActionType } from './action-types'
 import { AviasalesLoadingState, TicketsMap } from './contracts/state'
 

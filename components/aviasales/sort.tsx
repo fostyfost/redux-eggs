@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 
-const Sort = () => {
-  return <div></div>
+const Sort: FC = () => {
+  return <div>{null}</div>
 }
 
 export { Sort }

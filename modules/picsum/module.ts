@@ -1,4 +1,5 @@
-import { SagaModule } from '../../store/saga-extension/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
+
 import { PicsumActionsUnion, PicsumPublicAction } from './action-creators'
 import { PicsumAwareState } from './contracts/state'
 import { PICSUM_MODULE_NAME } from './index'

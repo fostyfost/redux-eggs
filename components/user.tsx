@@ -1,9 +1,9 @@
 import Error from 'next/error'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { UsersAwareState } from '../modules/users/contracts/state'
-import { getUserById, isUsersLoading } from '../modules/users/selectors'
+import { UsersAwareState } from '@/modules/users/contracts/state'
+import { getUserById, isUsersLoading } from '@/modules/users/selectors'
 
 const User: FC<{ id: number }> = ({ id }) => {
   const isLoading = useSelector(isUsersLoading)

@@ -1,11 +1,10 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
-import React from 'react'
+import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { isUsersLoading, usersIdsSelector } from '../modules/users/selectors'
+import { isUsersLoading, usersIdsSelector } from '@/modules/users/selectors'
 
-const UsersIds = () => {
+const UsersIds: FC = () => {
   const isLoading = useSelector(isUsersLoading)
   const ids = useSelector(usersIdsSelector)
 

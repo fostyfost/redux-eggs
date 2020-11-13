@@ -1,6 +1,7 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
-import { fetchAsJson } from '../../utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetchAsJson'
+
 import { PicsumReducerAction } from './action-creators'
 import { PicsumActionType } from './action-types'
 import { Picture } from './contracts/picture'

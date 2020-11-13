@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 const ChuckNorrisLoading: FC<{ isJoke?: boolean }> = ({ isJoke }) => {
   return <p>Load Chuck Norris {isJoke ? 'joke' : 'chunk'} ...</p>

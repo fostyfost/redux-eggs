@@ -1,6 +1,7 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
-import { fetchAsJson } from '../../utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetchAsJson'
+
 import { DogReducerAction } from './action-creators'
 import { DogActionType } from './action-types'
 import { DogResponse } from './contracts/api-response'

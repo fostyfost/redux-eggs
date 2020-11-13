@@ -1,4 +1,5 @@
-import { SagaModule } from '../../store/saga-extension/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
+
 import { ChuckNorrisActionsUnion, ChuckNorrisPublicAction } from './action-creators'
 import { ChuckNorrisAwareState } from './contracts/state'
 import { CHUCK_NORRIS_MODULE_NAME } from './index'

@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react'
+import { FC, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { DogPublicAction } from '../modules/dog/action-creators'
-import { dogSelector, errorSelector, isDogLoading } from '../modules/dog/selectors'
+import { DogPublicAction } from '@/modules/dog/action-creators'
+import { dogSelector, errorSelector, isDogLoading } from '@/modules/dog/selectors'
 
-const Dog = () => {
+const Dog: FC = () => {
   const isLoading = useSelector(isDogLoading)
   const dog = useSelector(dogSelector)
   const error = useSelector(errorSelector)

@@ -1,12 +1,14 @@
 import dynamic from 'next/dynamic'
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 import { Clock } from '../clock'
 import { Dog } from '../dog'
 import { Xkcd } from '../xkcd'
 import { Navigation } from './navigation'
 
-const PageWrapper = dynamic<{}>(() => import('./page-wrapper').then(mod => mod.PageWrapper), { ssr: true })
+const PageWrapper = dynamic<Record<string, unknown>>(() => import('./page-wrapper').then(mod => mod.PageWrapper), {
+  ssr: true,
+})
 
 const Layout: FC = ({ children }) => {
   return (

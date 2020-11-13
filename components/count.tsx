@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react'
+import { FC, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { CountPublicAction } from '../modules/count/action-creators'
-import { countSelector } from '../modules/count/selectors'
+import { CountPublicAction } from '@/modules/count/action-creators'
+import { countSelector } from '@/modules/count/selectors'
 
-const Count = () => {
+const Count: FC = () => {
   const dispatch = useDispatch()
 
   const dispatchIncrement = useCallback(() => {

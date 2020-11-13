@@ -1,9 +1,9 @@
-import React from 'react'
+import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { errorSelector, isPicsLoading, picsSelector } from '../modules/picsum/selectors'
+import { errorSelector, isPicsLoading, picsSelector } from '@/modules/picsum/selectors'
 
-const Picsum = () => {
+const Picsum: FC = () => {
   const isLoading = useSelector(isPicsLoading)
   const pics = useSelector(picsSelector)
   const error = useSelector(errorSelector)

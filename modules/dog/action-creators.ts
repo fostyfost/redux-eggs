@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '../../store/action-helper'
+import { ActionsUnion, createAction } from '@/store/action-helper'
+
 import { DogActionType } from './action-types'
 import { DogLoadingState } from './contracts/state'
 

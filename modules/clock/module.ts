@@ -1,4 +1,5 @@
-import { SagaModule } from '../../store/saga-extension/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
+
 import { ClockActionsUnion } from './action-creators'
 import { ClockAwareState } from './contracts/state'
 import { CLOCK_MODULE_NAME } from './index'

@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { getChuckNorrisModule } from '../../modules/chuck-norris/module'
-import { errorSelector, isJokeLoading, jokeSelector } from '../../modules/chuck-norris/selectors'
+import { getChuckNorrisModule } from '@/modules/chuck-norris/module'
+import { errorSelector, isJokeLoading, jokeSelector } from '@/modules/chuck-norris/selectors'
+
 import { DynamicModuleLoader } from '../common/dynamic-module-loader'
 import { ChuckNorrisLoading } from './loading'
 

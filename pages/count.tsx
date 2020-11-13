@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import React from 'react'
 
-import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
-import { Count } from '../components/count'
-import { getCountModule } from '../modules/count/module'
-import { NextPageWithStore } from '../store/contracts'
+import { withDynamicModuleLoader } from '@/components/common/with-dynamic-module-loader'
+import { Count } from '@/components/count'
+import { getCountModule } from '@/modules/count/module'
+import { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
   title: string

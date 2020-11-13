@@ -46,7 +46,7 @@ export function createStore<State>(
     initialState = {},
     extensions = [],
     enhancers = [],
-    advancedComposeEnhancers = composeWithDevTools({}),
+    advancedComposeEnhancers = composeWithDevTools({ maxAge: 200 }),
     advancedCombineReducers,
   } = moduleStoreSettings
 
@@ -72,7 +72,7 @@ export function createStore<State>(
   )
 
   // Create store
-  const store = createReduxStore<State, any, {}, {}>(
+  const store = createReduxStore<State, any, unknown, unknown>(
     moduleManager.getReducer as Reducer<State, any>,
     initialState as PreloadedState<State>,
     enhancer as any,

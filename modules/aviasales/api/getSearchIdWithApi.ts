@@ -1,4 +1,5 @@
-import { fetchAsJson } from '../../../utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetchAsJson'
+
 import { SearchResponse } from '../contracts/api-response'
 
 export const getSearchIdWithApi = (): Promise<SearchResponse> => {

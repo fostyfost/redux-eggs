@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import produce, { Draft } from 'immer'
 
 import { CountActionsUnion } from './action-creators'
@@ -10,9 +9,7 @@ const countInitialState: CountState = {
 }
 
 export const countReducer = produce((draft: Draft<CountState>, action: CountActionsUnion): void => {
-  switch (action.type) {
-    case CountActionType.SET_COUNT:
-      draft.count = action.payload
-      break
+  if (action.type === CountActionType.SET_COUNT) {
+    draft.count = action.payload
   }
 }, countInitialState)

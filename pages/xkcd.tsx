@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import React from 'react'
 
-import { Xkcd } from '../components/xkcd'
-import { isXkcdInfoLoaded, xkcdInfoTitleSelector } from '../modules/xkcd/selectors'
-import { NextPageWithStore } from '../store/contracts'
-import { waitForLoadedState } from '../store/wait-for-loaded-state'
+import { Xkcd } from '@/components/xkcd'
+import { isXkcdInfoLoaded, xkcdInfoTitleSelector } from '@/modules/xkcd/selectors'
+import { NextPageWithStore } from '@/store/contracts'
+import { waitForLoadedState } from '@/store/wait-for-loaded-state'
 
 interface Props {
   title: string

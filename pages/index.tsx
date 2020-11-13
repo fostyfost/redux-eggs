@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import React from 'react'
 
-import { NextPageWithStore } from '../store/contracts'
+import { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
   title: string

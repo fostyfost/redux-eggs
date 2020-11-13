@@ -1,4 +1,5 @@
-import { SagaModule } from '../../store/saga-extension/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
+
 import { DogActionsUnion, DogPublicAction } from './action-creators'
 import { DogAwareState } from './contracts/state'
 import { DOG_MODULE_NAME } from './index'

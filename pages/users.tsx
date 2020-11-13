@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import React from 'react'
 
-import { withDynamicModuleLoader } from '../components/common/with-dynamic-module-loader'
-import { UsersJson } from '../components/users-json'
-import { UsersPublicAction } from '../modules/users/action-creators'
-import { getUsersModule } from '../modules/users/module'
-import { isUsersLoaded } from '../modules/users/selectors'
-import { NextPageWithStore } from '../store/contracts'
+import { withDynamicModuleLoader } from '@/components/common/with-dynamic-module-loader'
+import { UsersJson } from '@/components/users-json'
+import { UsersPublicAction } from '@/modules/users/action-creators'
+import { getUsersModule } from '@/modules/users/module'
+import { isUsersLoaded } from '@/modules/users/selectors'
+import { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
   title: string

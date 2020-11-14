@@ -1,11 +1,11 @@
 import { AppInitialProps, AppType } from 'next/dist/next-server/lib/utils'
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
 
+import { StoreAction } from '@/store/action-creators'
 import { allSagasDone } from '@/store/all-sagas-done'
 import { AppContextWithModules, ModuleTuple, WrapperProps } from '@/store/contracts'
-import { hydrateAction } from '@/store/hydrate-action'
 import { getStore } from '@/store/store-initializer'
 
 interface InitialProps extends AppInitialProps {
@@ -31,7 +31,12 @@ export const withRedux = (App: AppType, rootModules: ModuleTuple<any>) => {
     }
 
     if (context.ctx?.req) {
+      // Кидаем этот экшен, чтобы остановить всех подписчиков на каналы,
+      // иначе процессы будут видеть вечно, такая сага должна быть подписана на этот экшен
+      initialStore.dispatch(StoreAction.stopAllTasks())
+      // Затем сообщаем сагам, что они должны завершить свою работу
       initialStore.dispatch(END)
+      // Дожидаемся, когда все саги завершат свою работу
       await allSagasDone(initialStore.sagaTasks.keys.map(key => initialStore.sagaTasks.get(key)))
     }
 
@@ -64,7 +69,7 @@ export const withRedux = (App: AppType, rootModules: ModuleTuple<any>) => {
       isFirstRender.current = false
 
       if (initialState) {
-        store.dispatch(hydrateAction(initialState))
+        store.dispatch(StoreAction.hydrate(initialState))
       }
     }
 

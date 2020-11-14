@@ -5,7 +5,7 @@ import { CountActionType } from './action-types'
 import { countSelector } from './selectors'
 
 function* incrementWorker() {
-  let count = yield select(countSelector)
+  let count: ReturnType<typeof countSelector> = yield select(countSelector)
 
   count += 1
 
@@ -13,7 +13,7 @@ function* incrementWorker() {
 }
 
 function* decrementWatcher() {
-  let count = yield select(countSelector)
+  let count: ReturnType<typeof countSelector> = yield select(countSelector)
 
   count -= 1
 

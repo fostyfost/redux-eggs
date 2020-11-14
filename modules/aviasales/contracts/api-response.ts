@@ -1,4 +1,4 @@
-import { Ticket } from './ticket'
+import { Ticket } from '@/modules/aviasales/contracts/ticket'
 
 export interface SearchResponse {
   searchId: string

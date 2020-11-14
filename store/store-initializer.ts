@@ -2,12 +2,12 @@ import produce, { Draft } from 'immer'
 import { AnyAction, combineReducers, ReducersMapObject } from 'redux'
 import { IExtension } from 'redux-dynamic-modules-core'
 
-import { GetStoreParams, ModuleTuple, STOREKEY, WindowWithStore } from './contracts'
-import { createStore } from './create-store'
-import { HYDRATE } from './hydrate-action'
-import { getLoggerExtension } from './logger-extension'
-import { getSagaExtension } from './saga-extension'
-import { ModuleStoreWithSagaTasks, SagaContext } from './saga-extension/contracts'
+import { StoreActionType } from '@/store/action-types'
+import { GetStoreParams, ModuleTuple, STOREKEY, WindowWithStore } from '@/store/contracts'
+import { createStore } from '@/store/create-store'
+import { getLoggerExtension } from '@/store/logger-extension'
+import { getSagaExtension } from '@/store/saga-extension'
+import { ModuleStoreWithSagaTasks, SagaContext } from '@/store/saga-extension/contracts'
 
 declare const window: WindowWithStore
 
@@ -16,7 +16,7 @@ const combineReducersWithGlobalActions = (reducersMap: ReducersMapObject) => {
     acc[reducerKey] = (state: any, action: AnyAction) => {
       let nextState = state
 
-      if (action.type === HYDRATE && action.payload[reducerKey]) {
+      if (action.type === StoreActionType.HYDRATE && action.payload[reducerKey]) {
         nextState = produce(nextState, (draft: Draft<{ [key: string]: any }>) => {
           Object.entries(action.payload[reducerKey]).forEach(([key, value]) => {
             draft[key] = value

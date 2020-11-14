@@ -4,13 +4,21 @@ import { ChuckNorrisActionType } from './action-types'
 import { ChuckNorrisLoadingState } from './contracts/state'
 
 export const ChuckNorrisPublicAction = {
-  loadJoke: () => createAction(ChuckNorrisActionType.LOAD_JOKE),
+  loadJoke() {
+    return createAction(ChuckNorrisActionType.LOAD_JOKE)
+  },
 }
 
 export const ChuckNorrisReducerAction = {
-  setJoke: (payload: string) => createAction(ChuckNorrisActionType.SET_JOKE, payload),
-  setError: (payload: string | undefined) => createAction(ChuckNorrisActionType.SET_ERROR, payload),
-  setLoadingState: (payload: ChuckNorrisLoadingState) => createAction(ChuckNorrisActionType.SET_LOADING_STATE, payload),
+  setJoke(payload: string) {
+    return createAction(ChuckNorrisActionType.SET_JOKE, payload)
+  },
+  setError(payload: string | undefined) {
+    return createAction(ChuckNorrisActionType.SET_ERROR, payload)
+  },
+  setLoadingState(payload: ChuckNorrisLoadingState) {
+    return createAction(ChuckNorrisActionType.SET_LOADING_STATE, payload)
+  },
 }
 
 export type ChuckNorrisActionsUnion = ActionsUnion<typeof ChuckNorrisReducerAction>

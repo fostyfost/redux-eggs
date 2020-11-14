@@ -19,8 +19,8 @@ import {
 import { getModuleManager } from 'redux-dynamic-modules-core/lib/Managers/ModuleManager'
 import { flatten } from 'redux-dynamic-modules-core/lib/Utils/Flatten'
 
-import { ModuleTuple } from './contracts'
-import { SagaModule } from './saga-extension/contracts'
+import { ModuleTuple } from '@/store/contracts'
+import { SagaModule } from '@/store/saga-extension/contracts'
 
 type ModuleStoreSettings<S> = {
   initialState?: DeepPartial<S>

@@ -3,7 +3,7 @@ import { AppContext } from 'next/app'
 import { Action } from 'redux'
 import { IModule } from 'redux-dynamic-modules-core'
 
-import { ModuleStoreWithSagaTasks, SagaModule } from './saga-extension/contracts'
+import { ModuleStoreWithSagaTasks, SagaModule } from '@/store/saga-extension/contracts'
 
 type ModuleTupleRecursive<Module extends IModule<any> = IModule<any>> = Module | ModuleTuple
 

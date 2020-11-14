@@ -1,7 +1,7 @@
 import { Immutable } from 'immer'
 
-import { AVIASALES_MODULE_NAME } from '../index'
-import { Ticket } from './ticket'
+import { AVIASALES_MODULE_NAME } from '@/modules/aviasales'
+import { Ticket } from '@/modules/aviasales/contracts/ticket'
 
 export enum AviasalesLoadingState {
   NEVER = 'NEVER',
@@ -17,8 +17,16 @@ export type AviasalesState = Immutable<{
   searchId?: string
   tickets: TicketsMap
   loadingState: AviasalesLoadingState
+  sort: Sort[]
+  currentSort: Sort
+  stops: number[]
 }>
 
 export interface TicketsMap {
   [id: string]: Ticket
+}
+
+export enum Sort {
+  CHEAPEST = 'CHEAPEST',
+  FASTEST = 'FASTEST',
 }

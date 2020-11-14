@@ -1,8 +1,8 @@
 import { getMap } from 'redux-dynamic-modules-core'
 import { SagaMiddleware, Task } from 'redux-saga'
 
-import { SagaManager, SagaRegistration, SagaWithArguments } from './contracts'
-import { sagaEquals } from './saga-equals'
+import { SagaManager, SagaRegistration, SagaWithArguments } from '@/store/saga-extension/contracts'
+import { sagaEquals } from '@/store/saga-extension/saga-equals'
 
 const runSaga = (sagaMiddleware: SagaMiddleware<any>, sagaRegistration: SagaRegistration): Task => {
   if (typeof sagaRegistration === 'function') {

@@ -13,10 +13,14 @@ const PageWrapper = dynamic<Record<string, unknown>>(() => import('./page-wrappe
 const Layout: FC = ({ children }) => {
   return (
     <>
-      <Navigation />
-      <Clock />
-      <Xkcd small />
-      <Dog />
+      {process.env.NEXT_PUBLIC_DISABLE_COMMON_MODULE === 'true' ? null : (
+        <>
+          <Navigation />
+          <Clock />
+          <Xkcd small />
+          <Dog />
+        </>
+      )}
       {process.env.NEXT_PUBLIC_USE_NEXT_PAGE_TRANSITIONS === 'true' ? <PageWrapper>{children}</PageWrapper> : children}
     </>
   )

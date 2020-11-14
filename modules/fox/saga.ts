@@ -26,9 +26,5 @@ function* loadFoxWorker() {
 }
 
 export function* loadFoxWatcher() {
-  if (typeof window === 'undefined') {
-    yield call(loadFoxWorker)
-  } else {
-    yield takeLatest(FoxActionType.LOAD_FOX, loadFoxWorker)
-  }
+  yield takeLatest(FoxActionType.LOAD_FOX, loadFoxWorker)
 }

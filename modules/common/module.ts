@@ -8,6 +8,10 @@ import { COMMON_MODULE_NAME } from './index'
 import { commonSaga } from './saga'
 
 export const getCommonModule = (): ModuleTuple<SagaModule<any, any>> => {
+  if (process.env.NEXT_PUBLIC_DISABLE_COMMON_MODULE === 'true') {
+    return []
+  }
+
   return [
     getClockModule(),
     getXkcdModule(),

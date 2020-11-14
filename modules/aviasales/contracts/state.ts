@@ -1,13 +1,10 @@
 import { Immutable } from 'immer'
 
 import { AVIASALES_MODULE_NAME } from '@/modules/aviasales'
+import { AviasalesLoadingState } from '@/modules/aviasales/contracts/loading-state'
+import { Sort } from '@/modules/aviasales/contracts/sort'
 import { Ticket } from '@/modules/aviasales/contracts/ticket'
-
-export enum AviasalesLoadingState {
-  NEVER = 'NEVER',
-  LOADING = 'LOADING',
-  LOADED = 'LOADED',
-}
+import { TicketSegment } from '@/modules/aviasales/contracts/ticket-sement'
 
 export interface AviasalesAwareState {
   [AVIASALES_MODULE_NAME]: AviasalesState
@@ -16,8 +13,8 @@ export interface AviasalesAwareState {
 export type AviasalesState = Immutable<{
   searchId?: string
   tickets: TicketsMap
+  ticketsSegments: TicketsSegmentsMap
   loadingState: AviasalesLoadingState
-  sort: Sort[]
   currentSort: Sort
   stops: number[]
 }>
@@ -26,7 +23,6 @@ export interface TicketsMap {
   [id: string]: Ticket
 }
 
-export enum Sort {
-  CHEAPEST = 'CHEAPEST',
-  FASTEST = 'FASTEST',
+export interface TicketsSegmentsMap {
+  [id: string]: TicketSegment
 }

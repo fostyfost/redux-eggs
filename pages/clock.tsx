@@ -13,10 +13,12 @@ const ClockPage: NextPageWithStore<Props, Props> = ({ title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div>
-        <h1>{title}</h1>
-        <Clock />
-      </div>
+      {process.env.NEXT_PUBLIC_DISABLE_COMMON_MODULE === 'true' ? null : (
+        <div>
+          <h1>{title}</h1>
+          <Clock />
+        </div>
+      )}
     </>
   )
 }

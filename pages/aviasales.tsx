@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { Aviasales } from '@/components/aviasales'
 import { withDynamicModuleLoader } from '@/components/common/with-dynamic-module-loader'
+import { AviasalesPublicAction } from '@/modules/aviasales/events'
 import { getAviasalesModule } from '@/modules/aviasales/module'
 import { NextPageWithStore } from '@/store/contracts'
 
@@ -15,15 +16,14 @@ const AviasalesPage: NextPageWithStore<Props, Props> = ({ title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div>
-        <h1>{title}</h1>
-        <Aviasales />
-      </div>
+      <Aviasales />
     </>
   )
 }
 
 AviasalesPage.getInitialProps = () => {
+  AviasalesPublicAction.getTickets()
+
   return { title: 'Aviasales page' }
 }
 

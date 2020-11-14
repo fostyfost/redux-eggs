@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { Navigation } from '@/components/layout/navigation'
 import { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
@@ -13,6 +14,7 @@ const IndexPage: NextPageWithStore<Props, Props> = ({ title }) => {
         <title>{title}</title>
       </Head>
       <h1>{title}</h1>
+      {process.env.NEXT_PUBLIC_DISABLE_COMMON_MODULE === 'true' ? <Navigation /> : null}
     </>
   )
 }

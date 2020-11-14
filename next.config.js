@@ -1,13 +1,12 @@
-import withBundleAnalyzer from '@next/bundle-analyzer'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const nextConfig = {
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
+  images: {
+    domains: ['pics.avs.io'],
   },
 }
 
-module.exports = withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })(nextConfig)
+module.exports = withBundleAnalyzer(nextConfig)

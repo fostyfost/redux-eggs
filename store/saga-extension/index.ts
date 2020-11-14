@@ -1,7 +1,7 @@
-import { Effect, effectTypes } from '@redux-saga/core/effects'
 import { batch } from 'react-redux'
 import { getRefCountedManager, IModuleManager } from 'redux-dynamic-modules-core'
 import { default as createSagaMiddleware, EffectMiddleware } from 'redux-saga'
+import { Effect, effectTypes } from 'redux-saga/effects'
 
 import { SagaContext, SagaExtension, SagaManager, SagaModule } from '@/store/saga-extension/contracts'
 import { getSagaManager } from '@/store/saga-extension/manager'

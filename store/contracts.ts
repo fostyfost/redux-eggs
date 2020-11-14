@@ -9,7 +9,7 @@ type ModuleTupleRecursive<Module extends IModule<any> = IModule<any>> = Module |
 
 export type ModuleTuple<Module extends IModule<any> = IModule<any>> = Array<ModuleTupleRecursive<Module>>
 
-export const STOREKEY = '__NEXT_REDUX_WRAPPER_STORE__' as const
+export const STOREKEY = '__CUSTOM_NEXT_REDUX_WRAPPER_STORE__' as const
 
 export interface WindowWithStore extends Window {
   [STOREKEY]: ModuleStoreWithSagaTasks

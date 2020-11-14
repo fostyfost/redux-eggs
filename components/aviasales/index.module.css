@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  height: 160px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.logo {
+  position: absolute;
+  top: calc(50% + 7px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 232px;
+  padding: 0 10px 10px;
+}
+
+.container {
+  width: 503px;
+  padding: 0 10px 10px;
+}
+
+.containerTop {
+  padding-bottom: 20px;
+}

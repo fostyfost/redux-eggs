@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import { FC } from 'react'
 
 const links = [
   {
@@ -34,7 +33,11 @@ const links = [
   },
   {
     href: '/chuck-norris',
-    label: 'Chuck Norris',
+    label: 'Chuck Norris page',
+  },
+  {
+    href: '/fox',
+    label: 'Fox page',
   },
   {
     href: '/aviasales',
@@ -42,7 +45,7 @@ const links = [
   },
 ]
 
-const Navigation = () => {
+const Navigation: FC = () => {
   const router = useRouter()
 
   return (

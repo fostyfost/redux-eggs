@@ -22,9 +22,8 @@
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "engines": {
-    "node": ">= 13.12.0",
-    "yarn": ">= 1.22.4",
-    "npm": ">= 6.14.4"
+    "node": ">= 12.18.3",
+    "yarn": ">= 1.22.4"
   },
   "browserslist": {
     "production": [

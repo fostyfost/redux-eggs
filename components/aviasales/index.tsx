@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { FC } from 'react'
 
 import { Cards } from '@/components/aviasales/cards'
@@ -11,8 +12,6 @@ const Aviasales: FC = () => {
   return (
     <>
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-
         :root {
           --main-background: #f3f7fa;
           --primary-color: #4a4a4a;
@@ -55,6 +54,10 @@ const Aviasales: FC = () => {
           clip: rect(0 0 0 0);
         }
       `}</style>
+      <Head>
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap' rel='stylesheet' />
+      </Head>
       <Progress />
       <header className={styles.header}>
         <div className={styles.logo}>
@@ -72,6 +75,7 @@ const Aviasales: FC = () => {
           <Cards />
         </div>
       </main>
+      <footer className={styles.footer} />
     </>
   )
 }

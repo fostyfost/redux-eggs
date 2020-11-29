@@ -8,9 +8,7 @@ import { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
 import { currentSortSelector } from '@/modules/aviasales/selectors'
 
 const SortControls: FC = () => {
-  const currentSort = useSelector<AviasalesAwareState, ReturnType<typeof currentSortSelector>>(state => {
-    return currentSortSelector(state)
-  })
+  const currentSort = useSelector<AviasalesAwareState, ReturnType<typeof currentSortSelector>>(currentSortSelector)
 
   return (
     <div className={styles.container}>

@@ -29,13 +29,12 @@ const Aviasales: FC = () => {
         }
 
         body {
-          font-family: 'Open Sans', 'Helvetica', sans-serif;
-          background-color: var(--main-background);
-          margin: 0;
-
-          font-family: Open Sans;
+          font-family: 'Open Sans', sans-serif;
           font-style: normal;
           font-weight: normal;
+
+          background-color: var(--main-background);
+          margin: 0;
         }
 
         *:focus {

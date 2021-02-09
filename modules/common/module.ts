@@ -1,5 +1,5 @@
-import { ModuleTuple } from '@/store/contracts'
-import { SagaModule } from '@/store/saga-extension/contracts'
+import type { ModuleTuple } from '@/store/contracts'
+import type { SagaModule } from '@/store/saga-extension/contracts'
 
 import { getClockModule } from '../clock/module'
 import { getDogModule } from '../dog/module'

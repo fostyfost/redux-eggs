@@ -1,5 +1,6 @@
 import NProgress from 'nprogress'
-import { FC, useEffect } from 'react'
+import type { FC } from 'react'
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 import { isTicketsLoadingSelector } from '@/modules/aviasales/selectors'

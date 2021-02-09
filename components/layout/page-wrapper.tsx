@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { PageTransition } from 'next-page-transitions'
-import { FC, Fragment } from 'react'
+import type { FC } from 'react'
+import { Fragment } from 'react'
 
 const Loader = () => {
   return (

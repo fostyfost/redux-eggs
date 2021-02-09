@@ -1,4 +1,4 @@
-import { IExtension } from 'redux-dynamic-modules-core'
+import type { IExtension } from 'redux-dynamic-modules-core'
 
 export const getLoggerExtension = (): IExtension | undefined => {
   if (process.env.NODE_ENV === 'development' && process.env.NEXT_PUBLIC_USE_LOGGER_EXTENSION === 'true') {

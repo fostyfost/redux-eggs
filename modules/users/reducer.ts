@@ -1,9 +1,11 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { UsersActionsUnion } from './action-creators'
+import type { UsersActionsUnion } from './action-creators'
 import { UsersActionType } from './action-types'
-import { UsersLoadingState, UsersState } from './contracts/state'
+import type { UsersState } from './contracts/state'
+import { UsersLoadingState } from './contracts/state'
 
 const usersInitialState: UsersState = {
   users: [],

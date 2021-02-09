@@ -1,9 +1,9 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 import { shallowEqual, useSelector } from 'react-redux'
 
 import { Card } from '@/components/aviasales/cards/card'
 import styles from '@/components/aviasales/cards/index.module.css'
-import { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
+import type { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
 import { isAllTicketLoadedSelector, ticketsIdsSelector } from '@/modules/aviasales/selectors'
 
 interface SelectorResult {

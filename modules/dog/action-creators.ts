@@ -1,7 +1,8 @@
-import { ActionsUnion, createAction } from '@/store/action-helper'
+import type { ActionsUnion } from '@/store/action-helper'
+import { createAction } from '@/store/action-helper'
 
 import { DogActionType } from './action-types'
-import { DogLoadingState } from './contracts/state'
+import type { DogLoadingState } from './contracts/state'
 
 export const DogPublicAction = {
   loadDog() {

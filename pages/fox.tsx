@@ -4,9 +4,9 @@ import Head from 'next/head'
 import { withDynamicModuleLoader } from '@/components/common/with-dynamic-module-loader'
 import { FoxPublicAction } from '@/modules/fox/action-creators'
 import { getFoxModule } from '@/modules/fox/module'
-import { NextPageWithStore } from '@/store/contracts'
+import type { NextPageWithStore } from '@/store/contracts'
 
-const Fox = dynamic<Record<string, unknown>>(() => import('../components/fox').then(mod => mod.Fox), { ssr: true })
+const Fox = dynamic<Record<string, unknown>>(() => import('@/components/fox').then(mod => mod.Fox), { ssr: true })
 
 interface Props {
   title: string

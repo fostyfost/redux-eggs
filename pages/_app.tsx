@@ -1,4 +1,4 @@
-import { AppType } from 'next/dist/next-server/lib/utils'
+import type { AppType } from 'next/dist/next-server/lib/utils'
 
 import { Layout } from '@/components/layout'
 import { getCommonModule } from '@/modules/common/module'

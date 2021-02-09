@@ -1,8 +1,9 @@
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { CountActionsUnion } from './action-creators'
+import type { CountActionsUnion } from './action-creators'
 import { CountActionType } from './action-types'
-import { CountState } from './contracts/state'
+import type { CountState } from './contracts/state'
 
 const countInitialState: CountState = {
   count: 0,

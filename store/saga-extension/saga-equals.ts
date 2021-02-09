@@ -1,4 +1,4 @@
-import { SagaRegistration, SagaWithArguments } from '@/store/saga-extension/contracts'
+import type { SagaRegistration, SagaWithArguments } from '@/store/saga-extension/contracts'
 
 export const sagaEquals = (sagaA: SagaRegistration, sagaB: SagaRegistration): boolean => {
   if (typeof sagaA === 'function' && typeof sagaB === 'function') {

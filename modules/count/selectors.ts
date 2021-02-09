@@ -1,4 +1,4 @@
-import { CountAwareState } from './contracts/state'
+import type { CountAwareState } from './contracts/state'
 import { COUNT_MODULE_NAME } from './index'
 
 export const countSelector = (state: CountAwareState): number => {

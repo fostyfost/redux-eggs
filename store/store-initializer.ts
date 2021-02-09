@@ -1,13 +1,16 @@
-import produce, { Draft } from 'immer'
-import { AnyAction, combineReducers, ReducersMapObject } from 'redux'
-import { IExtension } from 'redux-dynamic-modules-core'
+import type { Draft } from 'immer'
+import produce from 'immer'
+import type { AnyAction, ReducersMapObject } from 'redux'
+import { combineReducers } from 'redux'
+import type { IExtension } from 'redux-dynamic-modules-core'
 
 import { StoreActionType } from '@/store/action-types'
-import { GetStoreParams, ModuleTuple, STOREKEY, WindowWithStore } from '@/store/contracts'
+import type { GetStoreParams, ModuleTuple, WindowWithStore } from '@/store/contracts'
+import { STOREKEY } from '@/store/contracts'
 import { createStore } from '@/store/create-store'
 import { getLoggerExtension } from '@/store/logger-extension'
 import { getSagaExtension } from '@/store/saga-extension'
-import { ModuleStoreWithSagaTasks, SagaContext } from '@/store/saga-extension/contracts'
+import type { ModuleStoreWithSagaTasks, SagaContext } from '@/store/saga-extension/contracts'
 
 declare const window: WindowWithStore
 

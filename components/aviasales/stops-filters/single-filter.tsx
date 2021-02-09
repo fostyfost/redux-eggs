@@ -1,4 +1,5 @@
-import { FC, memo, useCallback } from 'react'
+import type { FC } from 'react'
+import { memo, useCallback } from 'react'
 
 import { Checkbox } from '@/components/aviasales/stops-filters/checkbox'
 import { StopsValueToLabelMap } from '@/modules/aviasales/constants'

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { withDynamicModuleLoader } from '@/components/common/with-dynamic-module-loader'
 import { Picsum } from '@/components/picsum'
 import { getPicsumModule } from '@/modules/picsum/module'
-import { NextPageWithStore } from '@/store/contracts'
+import type { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
   title: string

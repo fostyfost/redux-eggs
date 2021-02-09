@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid'
 
 import { MAX_STOPS, SEGMENTS_LENGTH } from '@/modules/aviasales/constants'
-import { RawTicket } from '@/modules/aviasales/contracts/api-response'
-import { TicketsMap, TicketsSegmentsMap } from '@/modules/aviasales/contracts/state'
+import type { RawTicket } from '@/modules/aviasales/contracts/api-response'
+import type { TicketsMap, TicketsSegmentsMap } from '@/modules/aviasales/contracts/state'
 
 interface NormalizationResult {
   ticketsMap: TicketsMap

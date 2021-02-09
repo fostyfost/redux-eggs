@@ -1,6 +1,6 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 
-import { FOX_MODULE_NAME } from '../index'
+import type { FOX_MODULE_NAME } from '../index'
 
 export enum FoxLoadingState {
   NEVER = 'NEVER',

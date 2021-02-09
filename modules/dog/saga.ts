@@ -4,7 +4,7 @@ import { fetchAsJson } from '@/utils/fetchAsJson'
 
 import { DogReducerAction } from './action-creators'
 import { DogActionType } from './action-types'
-import { DogResponse } from './contracts/api-response'
+import type { DogResponse } from './contracts/api-response'
 import { DogLoadingState } from './contracts/state'
 
 function* loadDogWorker() {

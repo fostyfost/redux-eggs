@@ -1,4 +1,4 @@
-import { Task } from 'redux-saga'
+import type { Task } from 'redux-saga'
 
 export const allSagasDone = (sagaTasks: Task[]) => {
   return Promise.all(

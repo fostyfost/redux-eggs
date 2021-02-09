@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { FC } from 'react'
+import type { FC } from 'react'
 
 import { Cards } from '@/components/aviasales/cards'
 import styles from '@/components/aviasales/index.module.css'

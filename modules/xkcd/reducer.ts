@@ -1,9 +1,11 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { XkcdActionsUnion } from './action-creators'
+import type { XkcdActionsUnion } from './action-creators'
 import { XkcdActionType } from './action-types'
-import { XkcdLoadingState, XkcdState } from './contracts/state'
+import type { XkcdState } from './contracts/state'
+import { XkcdLoadingState } from './contracts/state'
 
 const xkcdInitialState: XkcdState = {
   loadingState: XkcdLoadingState.NEVER,

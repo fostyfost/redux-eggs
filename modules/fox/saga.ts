@@ -4,7 +4,7 @@ import { fetchAsJson } from '@/utils/fetchAsJson'
 
 import { FoxReducerAction } from './action-creators'
 import { FoxActionType } from './action-types'
-import { FoxResponse } from './contracts/api-response'
+import type { FoxResponse } from './contracts/api-response'
 import { FoxLoadingState } from './contracts/state'
 
 function* loadFoxWorker() {

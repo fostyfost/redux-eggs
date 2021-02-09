@@ -1,11 +1,11 @@
-import { AppInitialProps, AppType } from 'next/dist/next-server/lib/utils'
+import type { AppInitialProps, AppType } from 'next/dist/next-server/lib/utils'
 import { useRef, useState } from 'react'
 import { Provider } from 'react-redux'
 import { END } from 'redux-saga'
 
 import { StoreAction } from '@/store/action-creators'
 import { allSagasDone } from '@/store/all-sagas-done'
-import { AppContextWithModules, ModuleTuple, WrapperProps } from '@/store/contracts'
+import type { AppContextWithModules, ModuleTuple, WrapperProps } from '@/store/contracts'
 import { getStore } from '@/store/store-initializer'
 
 interface InitialProps extends AppInitialProps {

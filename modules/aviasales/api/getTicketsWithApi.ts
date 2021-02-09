@@ -1,4 +1,4 @@
-import { TicketsResponse } from '@/modules/aviasales/contracts/api-response'
+import type { TicketsResponse } from '@/modules/aviasales/contracts/api-response'
 import { fetchAsJson } from '@/utils/fetchAsJson'
 
 export const getTicketsWithApi = (searchId: string): Promise<TicketsResponse> => {

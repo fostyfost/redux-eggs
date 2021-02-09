@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 import { useSelector } from 'react-redux'
 
 import { lastUpdateSelector } from '@/modules/clock/selectors'

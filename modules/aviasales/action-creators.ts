@@ -1,9 +1,10 @@
-import { AviasalesLoadingState } from '@/modules/aviasales/contracts/loading-state'
-import { Sort } from '@/modules/aviasales/contracts/sort'
-import { ActionsUnion, createAction } from '@/store/action-helper'
+import type { AviasalesLoadingState } from '@/modules/aviasales/contracts/loading-state'
+import type { Sort } from '@/modules/aviasales/contracts/sort'
+import type { ActionsUnion } from '@/store/action-helper'
+import { createAction } from '@/store/action-helper'
 
 import { AviasalesActionType } from './action-types'
-import { TicketsMap, TicketsSegmentsMap } from './contracts/state'
+import type { TicketsMap, TicketsSegmentsMap } from './contracts/state'
 
 export const AviasalesReducerAction = {
   setSearchId(payload: string) {

@@ -1,26 +1,13 @@
-import {
-  applyMiddleware,
-  compose,
-  createStore as createReduxStore,
-  DeepPartial,
-  PreloadedState,
-  Reducer,
-  ReducersMapObject,
-  StoreEnhancer,
-} from 'redux'
+import type { compose, DeepPartial, PreloadedState, Reducer, ReducersMapObject, StoreEnhancer } from 'redux'
+import { applyMiddleware, createStore as createReduxStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly'
-import {
-  getMiddlewareManager,
-  getRefCountedManager,
-  IDynamicallyAddedModule,
-  IExtension,
-  IModuleStore,
-} from 'redux-dynamic-modules-core'
+import type { IDynamicallyAddedModule, IExtension, IModuleStore } from 'redux-dynamic-modules-core'
+import { getMiddlewareManager, getRefCountedManager } from 'redux-dynamic-modules-core'
 import { getModuleManager } from 'redux-dynamic-modules-core/lib/Managers/ModuleManager'
 import { flatten } from 'redux-dynamic-modules-core/lib/Utils/Flatten'
 
-import { ModuleTuple } from '@/store/contracts'
-import { SagaModule } from '@/store/saga-extension/contracts'
+import type { ModuleTuple } from '@/store/contracts'
+import type { SagaModule } from '@/store/saga-extension/contracts'
 
 type ModuleStoreSettings<S> = {
   initialState?: DeepPartial<S>

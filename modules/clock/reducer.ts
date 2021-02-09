@@ -1,9 +1,10 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { ClockActionsUnion } from './action-creators'
+import type { ClockActionsUnion } from './action-creators'
 import { ClockActionType } from './action-types'
-import { ClockState } from './contracts/state'
+import type { ClockState } from './contracts/state'
 
 const clockInitialState = {
   lastUpdate: 0,

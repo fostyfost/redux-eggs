@@ -1,7 +1,7 @@
-import { SagaModule } from '@/store/saga-extension/contracts'
+import type { SagaModule } from '@/store/saga-extension/contracts'
 
-import { FoxActionsUnion } from './action-creators'
-import { FoxAwareState } from './contracts/state'
+import type { FoxActionsUnion } from './action-creators'
+import type { FoxAwareState } from './contracts/state'
 import { FOX_MODULE_NAME } from './index'
 import { foxReducer } from './reducer'
 import { loadFoxWatcher } from './saga'

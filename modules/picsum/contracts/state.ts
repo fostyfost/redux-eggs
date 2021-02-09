@@ -1,7 +1,7 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 
-import { PICSUM_MODULE_NAME } from '../index'
-import { Picture } from './picture'
+import type { PICSUM_MODULE_NAME } from '../index'
+import type { Picture } from './picture'
 
 export enum PicsumLoadingState {
   NEVER = 'NEVER',

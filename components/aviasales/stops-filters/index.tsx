@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 import { useSelector } from 'react-redux'
 
 import { AllFilters } from '@/components/aviasales/stops-filters/all-filters'

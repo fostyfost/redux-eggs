@@ -1,11 +1,12 @@
 import clsx from 'clsx'
 import Image from 'next/image'
-import { FC, memo } from 'react'
+import type { FC } from 'react'
+import { memo } from 'react'
 import { useSelector } from 'react-redux'
 
 import styles from '@/components/aviasales/cards/card.module.css'
 import { Segment } from '@/components/aviasales/cards/segment'
-import { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
+import type { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
 import { getTicketByIdSelector } from '@/modules/aviasales/selectors'
 
 const buildIataSrc = (code: string, options = { width: 99, height: 36 }): string => {

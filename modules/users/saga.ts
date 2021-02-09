@@ -5,7 +5,7 @@ import { fetchAsJson } from '@/utils/fetchAsJson'
 import { UsersReducerAction } from './action-creators'
 import { UsersActionType } from './action-types'
 import { UsersLoadingState } from './contracts/state'
-import { User } from './contracts/user'
+import type { User } from './contracts/user'
 
 function* loadUsersWorker() {
   yield put(UsersReducerAction.setLoadingState(UsersLoadingState.LOADING))

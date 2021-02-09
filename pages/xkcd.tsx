@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import { Xkcd } from '@/components/xkcd'
 import { isXkcdInfoLoaded, xkcdInfoTitleSelector } from '@/modules/xkcd/selectors'
-import { NextPageWithStore } from '@/store/contracts'
+import type { NextPageWithStore } from '@/store/contracts'
 import { waitForLoadedState } from '@/store/wait-for-loaded-state'
 
 const defaultTitle = 'XKCD page'

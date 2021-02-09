@@ -10,9 +10,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
     'prettier',
     'prettier/@typescript-eslint',
-    'plugin:jsx-a11y/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -25,6 +25,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'simple-import-sort', 'react', 'react-hooks'],
   rules: {
+    '@typescript-eslint/consistent-type-imports': ['error'],
     '@typescript-eslint/no-unused-vars': ['error'],
     'jsx-a11y/anchor-is-valid': 'off',
     'react/react-in-jsx-scope': 'off',

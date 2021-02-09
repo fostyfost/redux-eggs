@@ -1,4 +1,4 @@
-import { Store } from 'redux'
+import type { Store } from 'redux'
 
 export const waitForLoadedState = async (store: Store, selector: (state: any) => boolean): Promise<void> => {
   return new Promise(resolve => {

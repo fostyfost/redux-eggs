@@ -1,7 +1,8 @@
-import { SagaModule } from '@/store/saga-extension/contracts'
+import type { SagaModule } from '@/store/saga-extension/contracts'
 
-import { DogActionsUnion, DogPublicAction } from './action-creators'
-import { DogAwareState } from './contracts/state'
+import type { DogActionsUnion } from './action-creators'
+import { DogPublicAction } from './action-creators'
+import type { DogAwareState } from './contracts/state'
 import { DOG_MODULE_NAME } from './index'
 import { dogReducer } from './reducer'
 import { loadDogWatcher } from './saga'

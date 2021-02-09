@@ -1,11 +1,12 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { AviasalesActionsUnion } from '@/modules/aviasales/action-creators'
+import type { AviasalesActionsUnion } from '@/modules/aviasales/action-creators'
 import { AviasalesActionType } from '@/modules/aviasales/action-types'
 import { DEFAULT_SORT, DEFAULT_STOPS } from '@/modules/aviasales/constants'
 import { AviasalesLoadingState } from '@/modules/aviasales/contracts/loading-state'
-import { AviasalesState } from '@/modules/aviasales/contracts/state'
+import type { AviasalesState } from '@/modules/aviasales/contracts/state'
 
 const aviasalesInitialState: AviasalesState = {
   tickets: {},

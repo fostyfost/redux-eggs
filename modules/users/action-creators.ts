@@ -1,8 +1,9 @@
-import { ActionsUnion, createAction } from '@/store/action-helper'
+import type { ActionsUnion } from '@/store/action-helper'
+import { createAction } from '@/store/action-helper'
 
 import { UsersActionType } from './action-types'
-import { UsersLoadingState } from './contracts/state'
-import { User } from './contracts/user'
+import type { UsersLoadingState } from './contracts/state'
+import type { User } from './contracts/user'
 
 export const UsersPublicAction = {
   loadUsers() {

@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect'
 
-import { FoxAwareState, FoxLoadingState } from './contracts/state'
+import type { FoxAwareState } from './contracts/state'
+import { FoxLoadingState } from './contracts/state'
 import { FOX_MODULE_NAME } from './index'
 
 export const foxSelector = (state: FoxAwareState): string | undefined => {

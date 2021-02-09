@@ -1,9 +1,11 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { FoxActionsUnion } from './action-creators'
+import type { FoxActionsUnion } from './action-creators'
 import { FoxActionType } from './action-types'
-import { FoxLoadingState, FoxState } from './contracts/state'
+import type { FoxState } from './contracts/state'
+import { FoxLoadingState } from './contracts/state'
 
 const foxInitialState: FoxState = {
   loadingState: FoxLoadingState.NEVER,

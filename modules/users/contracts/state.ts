@@ -1,7 +1,7 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 
-import { USERS_MODULE_NAME } from '../index'
-import { User } from './user'
+import type { USERS_MODULE_NAME } from '../index'
+import type { User } from './user'
 
 export enum UsersLoadingState {
   NEVER = 'NEVER',

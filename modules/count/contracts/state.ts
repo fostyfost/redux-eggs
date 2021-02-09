@@ -1,6 +1,6 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 
-import { COUNT_MODULE_NAME } from '../index'
+import type { COUNT_MODULE_NAME } from '../index'
 
 export interface CountAwareState {
   [COUNT_MODULE_NAME]: CountState

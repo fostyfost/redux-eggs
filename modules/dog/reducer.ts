@@ -1,9 +1,11 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { DogActionsUnion } from './action-creators'
+import type { DogActionsUnion } from './action-creators'
 import { DogActionType } from './action-types'
-import { DogLoadingState, DogState } from './contracts/state'
+import type { DogState } from './contracts/state'
+import { DogLoadingState } from './contracts/state'
 
 const dogInitialState: DogState = {
   loadingState: DogLoadingState.NEVER,

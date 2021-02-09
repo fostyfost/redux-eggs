@@ -1,13 +1,13 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 import { createSelector } from 'redux-views'
 
 import { AVIASALES_MODULE_NAME } from '@/modules/aviasales'
 import { AVAILABLE_STOPS, MAX_TICKETS_LENGTH_TO_SHOW } from '@/modules/aviasales/constants'
 import { AviasalesLoadingState } from '@/modules/aviasales/contracts/loading-state'
 import { Sort } from '@/modules/aviasales/contracts/sort'
-import { AviasalesAwareState, TicketsMap } from '@/modules/aviasales/contracts/state'
-import { Ticket } from '@/modules/aviasales/contracts/ticket'
-import { TicketSegment } from '@/modules/aviasales/contracts/ticket-sement'
+import type { AviasalesAwareState, TicketsMap } from '@/modules/aviasales/contracts/state'
+import type { Ticket } from '@/modules/aviasales/contracts/ticket'
+import type { TicketSegment } from '@/modules/aviasales/contracts/ticket-sement'
 
 export const searchIdSelector = (state: AviasalesAwareState): string | undefined => {
   return state[AVIASALES_MODULE_NAME].searchId

@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect'
 
-import { ChuckNorrisAwareState, ChuckNorrisLoadingState } from './contracts/state'
+import type { ChuckNorrisAwareState } from './contracts/state'
+import { ChuckNorrisLoadingState } from './contracts/state'
 import { CHUCK_NORRIS_MODULE_NAME } from './index'
 
 export const jokeSelector = (state: ChuckNorrisAwareState): string | undefined => {

@@ -1,8 +1,8 @@
-import { Action, AnyAction, ReducersMapObject } from 'redux'
-import { IExtension, IItemManager, IMap, IModule } from 'redux-dynamic-modules-core'
-import { Task } from 'redux-saga'
+import type { Action, AnyAction, ReducersMapObject } from 'redux'
+import type { IExtension, IItemManager, IMap, IModule } from 'redux-dynamic-modules-core'
+import type { Task } from 'redux-saga'
 
-import { AdvancedModuleStore } from '@/store/create-store'
+import type { AdvancedModuleStore } from '@/store/create-store'
 
 export interface SagaWithArguments<T = any> {
   saga: (argument?: T) => Iterator<any>

@@ -1,4 +1,5 @@
-import { ActionsUnion, createAction } from '@/store/action-helper'
+import type { ActionsUnion } from '@/store/action-helper'
+import { createAction } from '@/store/action-helper'
 import { StoreActionType } from '@/store/action-types'
 
 export const StoreAction = {

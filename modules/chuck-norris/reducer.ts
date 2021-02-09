@@ -1,9 +1,11 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { ChuckNorrisActionsUnion } from './action-creators'
+import type { ChuckNorrisActionsUnion } from './action-creators'
 import { ChuckNorrisActionType } from './action-types'
-import { ChuckNorrisLoadingState, ChuckNorrisState } from './contracts/state'
+import type { ChuckNorrisState } from './contracts/state'
+import { ChuckNorrisLoadingState } from './contracts/state'
 
 const chuckNorrisInitialState: ChuckNorrisState = {
   loadingState: ChuckNorrisLoadingState.NEVER,

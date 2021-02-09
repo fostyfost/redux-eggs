@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import { ChuckNorrisJoke } from '@/components/chuck-norris-joke'
-import { NextPageWithStore } from '@/store/contracts'
+import type { NextPageWithStore } from '@/store/contracts'
 
 const styles = {
   fontSize: '30px',

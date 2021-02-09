@@ -1,7 +1,8 @@
-import { ActionsUnion, createAction } from '@/store/action-helper'
+import type { ActionsUnion } from '@/store/action-helper'
+import { createAction } from '@/store/action-helper'
 
 import { FoxActionType } from './action-types'
-import { FoxLoadingState } from './contracts/state'
+import type { FoxLoadingState } from './contracts/state'
 
 export const FoxPublicAction = {
   loadFox() {

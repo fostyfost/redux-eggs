@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 import { useSelector } from 'react-redux'
 
 import styles from '@/components/aviasales/sort-controls/index.module.css'
 import { SortButton } from '@/components/aviasales/sort-controls/sort-button'
 import { ALLOWED_SORTS } from '@/modules/aviasales/constants'
-import { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
+import type { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
 import { currentSortSelector } from '@/modules/aviasales/selectors'
 
 const SortControls: FC = () => {

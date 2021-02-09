@@ -1,10 +1,10 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 
-import { AVIASALES_MODULE_NAME } from '@/modules/aviasales'
-import { AviasalesLoadingState } from '@/modules/aviasales/contracts/loading-state'
-import { Sort } from '@/modules/aviasales/contracts/sort'
-import { Ticket } from '@/modules/aviasales/contracts/ticket'
-import { TicketSegment } from '@/modules/aviasales/contracts/ticket-sement'
+import type { AVIASALES_MODULE_NAME } from '@/modules/aviasales'
+import type { AviasalesLoadingState } from '@/modules/aviasales/contracts/loading-state'
+import type { Sort } from '@/modules/aviasales/contracts/sort'
+import type { Ticket } from '@/modules/aviasales/contracts/ticket'
+import type { TicketSegment } from '@/modules/aviasales/contracts/ticket-sement'
 
 export interface AviasalesAwareState {
   [AVIASALES_MODULE_NAME]: AviasalesState

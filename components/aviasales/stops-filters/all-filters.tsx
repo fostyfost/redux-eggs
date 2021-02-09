@@ -1,4 +1,5 @@
-import { FC, memo, useCallback, useEffect, useRef, useState } from 'react'
+import type { FC } from 'react'
+import { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 import { Checkbox } from '@/components/aviasales/stops-filters/checkbox'

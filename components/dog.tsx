@@ -1,4 +1,5 @@
-import { FC, useCallback } from 'react'
+import type { FC } from 'react'
+import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { DogPublicAction } from '@/modules/dog/action-creators'

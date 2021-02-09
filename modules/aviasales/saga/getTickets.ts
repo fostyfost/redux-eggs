@@ -1,6 +1,6 @@
 import { all, call, delay, put, retry } from 'redux-saga/effects'
 
-import { YieldReturnType } from '@/@types/redux-saga-call-effect-return-type'
+import type { YieldReturnType } from '@/@types/redux-saga-call-effect-return-type'
 import { AviasalesReducerAction } from '@/modules/aviasales/action-creators'
 import { getTicketsWithApi } from '@/modules/aviasales/api/getTicketsWithApi'
 import { DELAY_LENGTH, MAX_TRIES } from '@/modules/aviasales/constants'

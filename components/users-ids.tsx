@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import type { FC } from 'react'
 import { useSelector } from 'react-redux'
 
 import { isUsersLoading, usersIdsSelector } from '@/modules/users/selectors'

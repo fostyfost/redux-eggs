@@ -3,7 +3,7 @@ import { put, retry, select } from 'redux-saga/effects'
 import { AviasalesReducerAction } from '@/modules/aviasales/action-creators'
 import { getSearchIdWithApi } from '@/modules/aviasales/api/getSearchIdWithApi'
 import { DELAY_LENGTH, MAX_TRIES } from '@/modules/aviasales/constants'
-import { SearchResponse } from '@/modules/aviasales/contracts/api-response'
+import type { SearchResponse } from '@/modules/aviasales/contracts/api-response'
 import { searchIdSelector } from '@/modules/aviasales/selectors'
 
 export function* getSearchId() {

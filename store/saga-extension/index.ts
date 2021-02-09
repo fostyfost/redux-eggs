@@ -1,9 +1,12 @@
 import { batch } from 'react-redux'
-import { getRefCountedManager, IModuleManager } from 'redux-dynamic-modules-core'
-import { default as createSagaMiddleware, EffectMiddleware } from 'redux-saga'
-import { Effect, effectTypes } from 'redux-saga/effects'
+import type { IModuleManager } from 'redux-dynamic-modules-core'
+import { getRefCountedManager } from 'redux-dynamic-modules-core'
+import type { EffectMiddleware } from 'redux-saga'
+import { default as createSagaMiddleware } from 'redux-saga'
+import type { Effect } from 'redux-saga/effects'
+import { effectTypes } from 'redux-saga/effects'
 
-import { SagaContext, SagaExtension, SagaManager, SagaModule } from '@/store/saga-extension/contracts'
+import type { SagaContext, SagaExtension, SagaManager, SagaModule } from '@/store/saga-extension/contracts'
 import { getSagaManager } from '@/store/saga-extension/manager'
 import { sagaEquals } from '@/store/saga-extension/saga-equals'
 

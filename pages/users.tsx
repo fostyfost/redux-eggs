@@ -5,7 +5,7 @@ import { UsersJson } from '@/components/users-json'
 import { UsersPublicAction } from '@/modules/users/action-creators'
 import { getUsersModule } from '@/modules/users/module'
 import { isUsersLoaded } from '@/modules/users/selectors'
-import { NextPageWithStore } from '@/store/contracts'
+import type { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
   title: string

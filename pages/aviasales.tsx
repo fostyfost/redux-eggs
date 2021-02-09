@@ -4,7 +4,7 @@ import { Aviasales } from '@/components/aviasales'
 import { withDynamicModuleLoader } from '@/components/common/with-dynamic-module-loader'
 import { AviasalesPublicAction } from '@/modules/aviasales/events'
 import { getAviasalesModule } from '@/modules/aviasales/module'
-import { NextPageWithStore } from '@/store/contracts'
+import type { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
   title: string

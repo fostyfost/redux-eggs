@@ -1,4 +1,5 @@
-import { FC, memo, useCallback } from 'react'
+import type { FC } from 'react'
+import { memo, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 
 import styles from '@/components/aviasales/sort-controls/sort-button.module.css'

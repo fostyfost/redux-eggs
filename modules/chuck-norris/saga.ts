@@ -4,7 +4,7 @@ import { fetchAsJson } from '@/utils/fetchAsJson'
 
 import { ChuckNorrisReducerAction } from './action-creators'
 import { ChuckNorrisActionType } from './action-types'
-import { JokeResponse } from './contracts/api-response'
+import type { JokeResponse } from './contracts/api-response'
 import { ChuckNorrisLoadingState } from './contracts/state'
 
 function* loadChuckNorrisJokeWorker() {

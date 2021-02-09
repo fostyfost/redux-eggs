@@ -1,9 +1,11 @@
 /* eslint-disable default-case */
-import produce, { Draft } from 'immer'
+import type { Draft } from 'immer'
+import produce from 'immer'
 
-import { PicsumActionsUnion } from './action-creators'
+import type { PicsumActionsUnion } from './action-creators'
 import { PicsumActionType } from './action-types'
-import { PicsumLoadingState, PicsumState } from './contracts/state'
+import type { PicsumState } from './contracts/state'
+import { PicsumLoadingState } from './contracts/state'
 
 const picsumInitialState: PicsumState = {
   loadingState: PicsumLoadingState.NEVER,

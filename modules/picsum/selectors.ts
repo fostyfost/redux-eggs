@@ -1,8 +1,9 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 import { createSelector } from 'reselect'
 
-import { Picture } from './contracts/picture'
-import { PicsumAwareState, PicsumLoadingState } from './contracts/state'
+import type { Picture } from './contracts/picture'
+import type { PicsumAwareState } from './contracts/state'
+import { PicsumLoadingState } from './contracts/state'
 import { PICSUM_MODULE_NAME } from './index'
 
 export const picsSelector = (state: PicsumAwareState): Immutable<Picture[]> | undefined => {

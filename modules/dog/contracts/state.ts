@@ -1,6 +1,6 @@
-import { Immutable } from 'immer'
+import type { Immutable } from 'immer'
 
-import { DOG_MODULE_NAME } from '../index'
+import type { DOG_MODULE_NAME } from '../index'
 
 export enum DogLoadingState {
   NEVER = 'NEVER',

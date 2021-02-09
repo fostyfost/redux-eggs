@@ -1,5 +1,6 @@
-import { Handler } from 'mitt'
-import { buffers, eventChannel, Subscribe } from 'redux-saga'
+import type { Handler } from 'mitt'
+import type { Subscribe } from 'redux-saga'
+import { buffers, eventChannel } from 'redux-saga'
 import { cancel, cancelled, put, select, take, takeLatest } from 'redux-saga/effects'
 
 import { AviasalesReducerAction } from '@/modules/aviasales/action-creators'

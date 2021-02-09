@@ -1,9 +1,10 @@
-import { Component, FC, ReactNode } from 'react'
+import type { FC, ReactNode } from 'react'
+import { Component } from 'react'
 import { useStore } from 'react-redux'
-import { IDynamicallyAddedModule } from 'redux-dynamic-modules-core'
+import type { IDynamicallyAddedModule } from 'redux-dynamic-modules-core'
 
-import { ModuleTuple } from '@/store/contracts'
-import { ModuleStoreWithSagaTasks, SagaModule } from '@/store/saga-extension/contracts'
+import type { ModuleTuple } from '@/store/contracts'
+import type { ModuleStoreWithSagaTasks, SagaModule } from '@/store/saga-extension/contracts'
 
 import { AddedModulesCleanup } from './added-modules-cleanup'
 

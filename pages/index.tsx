@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import { Navigation } from '@/components/layout/navigation'
-import { NextPageWithStore } from '@/store/contracts'
+import type { NextPageWithStore } from '@/store/contracts'
 
 interface Props {
   title: string

@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { FC } from 'react'
+import type { FC } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 import { ChuckNorrisLoading } from './loading'
@@ -25,7 +25,7 @@ const DynamicChuckNorrisJoke = dynamic<Record<string, unknown>>(
   async () => {
     await waitAMomentPlease()
 
-    const mod = await import('./joke')
+    const mod = await import('@/components/chuck-norris-joke/joke')
 
     return mod.Joke
   },

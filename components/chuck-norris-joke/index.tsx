@@ -13,7 +13,7 @@ const styles = {
   justifyContent: 'center',
 }
 
-const waitAMomentPlease = () => {
+const waitAMomentPlease = (): Promise<void> => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve()

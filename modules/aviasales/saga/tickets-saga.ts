@@ -37,7 +37,7 @@ export function* ticketsSaga() {
     yield race([take(StoreActionType.HYDRATE), take(channel)])
   }
 
-  const isLoaded = yield select(isAllTicketLoadedSelector)
+  const isLoaded: ReturnType<typeof isAllTicketLoadedSelector> = yield select(isAllTicketLoadedSelector)
 
   if (!isLoaded) {
     try {

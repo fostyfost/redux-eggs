@@ -15,7 +15,7 @@ export function* getTickets() {
 
   yield put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADING))
 
-  const searchId = yield call(getSearchId)
+  const searchId: YieldReturnType<typeof getSearchId> = yield call(getSearchId)
 
   while (!stop) {
     // It's long-polling api.

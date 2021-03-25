@@ -1,5 +1,6 @@
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 
+import type { XkcdInfo } from '@/modules/xkcd/contracts/api-response'
 import { fetchAsJson } from '@/utils/fetchAsJson'
 
 import { XkcdReducerAction } from './action-creators'
@@ -17,7 +18,7 @@ function* loadXkcdInfoWorker() {
 
   try {
     // Alternative api https://xkcd.com/${getRandomInteger(0, 1000)}/info.0.json
-    const info = yield call(fetchAsJson, `https://xkcd.now.sh/?comic=${getRandomInteger(0, 1000)}`)
+    const info: XkcdInfo = yield call(fetchAsJson, `https://xkcd.now.sh/?comic=${getRandomInteger(0, 1000)}`)
 
     yield put(XkcdReducerAction.setInfo(info))
   } catch (err) {

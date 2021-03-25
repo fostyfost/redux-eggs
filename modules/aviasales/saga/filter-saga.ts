@@ -1,3 +1,4 @@
+import type { Task } from '@redux-saga/types'
 import type { Handler } from 'mitt'
 import type { Subscribe } from 'redux-saga'
 import { buffers, eventChannel } from 'redux-saga'
@@ -29,7 +30,7 @@ const subscribe: Subscribe<ChannelPayload> = emitter => {
 export function* filterSaga() {
   const channel = eventChannel<ChannelPayload>(subscribe, buffers.sliding(1))
 
-  const task = yield takeLatest(channel, function* worker(payload: ChannelPayload) {
+  const task: Task = yield takeLatest(channel, function* worker(payload: ChannelPayload) {
     try {
       if (payload === ChangeStopsMassive.CHECK_ALL) {
         yield put(AviasalesReducerAction.setStops(AVAILABLE_STOPS))
@@ -49,7 +50,9 @@ export function* filterSaga() {
         yield put(AviasalesReducerAction.setStops([...stops, payload]))
       }
     } finally {
-      if (yield cancelled()) {
+      const isCancelled: boolean = yield cancelled()
+
+      if (isCancelled) {
         channel.close()
       }
     }

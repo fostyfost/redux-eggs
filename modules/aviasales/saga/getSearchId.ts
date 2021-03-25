@@ -1,9 +1,9 @@
 import { put, retry, select } from 'redux-saga/effects'
 
+import type { YieldReturnType } from '@/@types/redux-saga-call-effect-return-type'
 import { AviasalesReducerAction } from '@/modules/aviasales/action-creators'
 import { getSearchIdWithApi } from '@/modules/aviasales/api/getSearchIdWithApi'
 import { DELAY_LENGTH, MAX_TRIES } from '@/modules/aviasales/constants'
-import type { SearchResponse } from '@/modules/aviasales/contracts/api-response'
 import { searchIdSelector } from '@/modules/aviasales/selectors'
 
 export function* getSearchId() {
@@ -14,7 +14,7 @@ export function* getSearchId() {
   }
 
   // TODO: Add cancellation
-  const res: SearchResponse = yield retry(MAX_TRIES, DELAY_LENGTH, getSearchIdWithApi)
+  const res: YieldReturnType<typeof getSearchIdWithApi> = yield retry(MAX_TRIES, DELAY_LENGTH, getSearchIdWithApi)
 
   yield put(AviasalesReducerAction.setSearchId(res.searchId))
 

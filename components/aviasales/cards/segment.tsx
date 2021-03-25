@@ -9,7 +9,7 @@ import styles from '@/components/aviasales/cards/segment.module.css'
 import { StopsValueToLabelMap } from '@/modules/aviasales/constants'
 import type { AviasalesAwareState } from '@/modules/aviasales/contracts/state'
 import { getTicketSegmentByIdSelector } from '@/modules/aviasales/selectors'
-console.log('test')
+
 const ROUTE_DATE_FORMAT = 'HH:mm'
 
 const getHumanRouteDates = (date: string, durationInMinutes: number): { from: string; to: string } | undefined => {

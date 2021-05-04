@@ -1,9 +1,13 @@
+// TODO eslint-plugin-import, unicorn
+
 module.exports = {
-  env: {
-    browser: true,
-    commonjs: true,
-    node: true,
-    es6: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   extends: [
     'eslint:recommended',
@@ -14,19 +18,16 @@ module.exports = {
     'prettier',
     'prettier/@typescript-eslint',
   ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-  },
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'react', 'react-hooks'],
+  plugins: [
+    '@typescript-eslint',
+    'simple-import-sort',
+    'react',
+    'react-hooks',
+    'unicorn',
+  ],
   rules: {
-    '@typescript-eslint/consistent-type-imports': ['error'],
-    '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/display-name': 'off',
@@ -58,5 +59,15 @@ module.exports = {
         extensions: ['.ts', '.js', '.jsx', '.tsx'],
       },
     },
+  },
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  env: {
+    browser: true,
+    commonjs: true,
+    node: true,
+    es6: true,
   },
 }

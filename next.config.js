@@ -7,6 +7,10 @@ const nextConfig = {
   images: {
     domains: ['pics.avs.io'],
   },
+  reactStrictMode: true,
+  future: {
+    webpack5: true,
+  },
 }
 
 module.exports = withBundleAnalyzer(nextConfig)

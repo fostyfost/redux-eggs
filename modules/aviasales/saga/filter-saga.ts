@@ -1,6 +1,5 @@
-import type { Task } from '@redux-saga/types'
 import type { Handler } from 'mitt'
-import type { Subscribe } from 'redux-saga'
+import type { Subscribe, Task } from 'redux-saga'
 import { buffers, eventChannel } from 'redux-saga'
 import { cancel, cancelled, put, select, take, takeLatest } from 'redux-saga/effects'
 

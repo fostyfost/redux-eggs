@@ -1147,15 +1147,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/redux@npm:3.6.0":
-  version: 3.6.0
-  resolution: "@types/redux@npm:3.6.0"
-  dependencies:
-    redux: "*"
-  checksum: 3eeccc4977160b5c059d3472a95e567f7c957a7e4a036504d9f1ac0c5a4b03eca67b1361b7e7158a7549a60548a6afa3d8b7ecac66c7bef6e61995fd184b273a
-  languageName: node
-  linkType: hard
-
 "@types/responselike@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/responselike@npm:1.0.0"
@@ -6524,7 +6515,6 @@ __metadata:
     "@types/react": 17.0.5
     "@types/react-dom": 17.0.3
     "@types/react-redux": 7.1.16
-    "@types/redux": 3.6.0
     "@types/redux-logger": 3.0.8
     "@typescript-eslint/eslint-plugin": 4.22.1
     "@typescript-eslint/parser": 4.22.1
@@ -7925,7 +7915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux@npm:*, redux@npm:4.1.0, redux@npm:^4.0.0, redux@npm:^4.0.4":
+"redux@npm:4.1.0, redux@npm:^4.0.0, redux@npm:^4.0.4":
   version: 4.1.0
   resolution: "redux@npm:4.1.0"
   dependencies:

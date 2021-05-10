@@ -5,6 +5,15 @@
 /.pnp
 .pnp.js
 
+# yarn v2 non-zero-install (https://yarnpkg.com/features/zero-installs)
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
 # testing
 /coverage
 

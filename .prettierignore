@@ -1,8 +1,16 @@
-node_modules
-.yarn
-.next
-yarn.lock
-dist
+# CI and vendors
+.github
 .husky
+.vercel
+
+# package managers
+node_modules
 package-lock.json
+.yarn
+yarn.lock
+.yarnrc.yml
+
+# app
+.next
+dist
 public

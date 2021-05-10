@@ -1,5 +1,8 @@
 node_modules
+.yarn
 .next
 yarn.lock
+dist
+.husky
 package-lock.json
 public

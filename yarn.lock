@@ -6487,16 +6487,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-page-transitions@npm:1.0.0-beta.2":
-  version: 1.0.0-beta.2
-  resolution: "next-page-transitions@npm:1.0.0-beta.2"
+"next-page-transitions@npm:1.0.0-canary.1":
+  version: 1.0.0-canary.1
+  resolution: "next-page-transitions@npm:1.0.0-canary.1"
   dependencies:
     prop-types: ^15.6.1
     react-transition-group: ^2.3.1
   peerDependencies:
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: d5a72b5f70d15b93a7e6f539db3dd4bad0c7341854e3100930f1247eb9e4166294dabb99c5c5c7540a8e0da1a3408098ad15df7c6516e2b1f4983a268d13bb65
+  checksum: db64dd4513f5d11b0da848a5da28b93d1f71a821c05b0cfe04f9fb02150e43b96b2ce75392ccb3be4da8fa334c2278cf56441a91f2129c44b8ba198aaf133aeb
   languageName: node
   linkType: hard
 
@@ -6537,7 +6537,7 @@ __metadata:
     mitt: 2.1.0
     nanoid: 3.1.22
     next: 10.2.0
-    next-page-transitions: 1.0.0-beta.2
+    next-page-transitions: 1.0.0-canary.1
     nodemon: 2.0.7
     nprogress: 0.2.0
     prettier: 2.3.0

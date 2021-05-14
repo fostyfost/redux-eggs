@@ -1071,10 +1071,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:15.0.2":
+"@types/node@npm:*":
   version: 15.0.2
   resolution: "@types/node@npm:15.0.2"
   checksum: 273565e1da341b248e08bec105667f0ab8ef89e347a47bbd6e18e35c0946788a53d581e0e3d8b8e3b3b5809db3237fcbf1bbb2251cf1506e5f81622739cb9ff1
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:15.3.0":
+  version: 15.3.0
+  resolution: "@types/node@npm:15.3.0"
+  checksum: fb9d6c4e9be5cc7b972b97bbbe4e111f48be284ae173d6946bc336ffec8dd3bf024a3c2fb0f065e07ae499127b8ff2aa5ab098a37ca03be1b5856ba499d6f2a4
   languageName: node
   linkType: hard
 
@@ -6510,7 +6517,7 @@ __metadata:
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 26.0.23
-    "@types/node": 15.0.2
+    "@types/node": 15.3.0
     "@types/nprogress": 0.2.0
     "@types/react": 17.0.5
     "@types/react-dom": 17.0.3

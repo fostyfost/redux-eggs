@@ -1202,12 +1202,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.3":
-  version: 17.0.3
-  resolution: "@types/react-dom@npm:17.0.3"
+"@types/react-dom@npm:17.0.5":
+  version: 17.0.5
+  resolution: "@types/react-dom@npm:17.0.5"
   dependencies:
     "@types/react": "*"
-  checksum: 102a3ee9ecf96fdd82d37d90860d0b80e160a368117e4e84512c801f8c7f381d7a2b9305f155670f42eab4784d036375cbf16c9905839dd0857e7031ff966803
+  checksum: ff301198c621864e1ee6c566285dc5cdc9eb5d881ca7fe7fcb8ebf29afe0357ffb7f77e401ab81ff444c64ff1375f653eeb28f04cd088a361915dee31cb3f4a8
   languageName: node
   linkType: hard
 
@@ -6609,7 +6609,7 @@ __metadata:
     "@types/node": 15.0.2
     "@types/nprogress": 0.2.0
     "@types/react": 17.0.5
-    "@types/react-dom": 17.0.3
+    "@types/react-dom": 17.0.5
     "@types/react-redux": 7.1.16
     "@types/redux-logger": 3.0.8
     "@typescript-eslint/eslint-plugin": 4.22.1

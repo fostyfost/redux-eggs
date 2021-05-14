@@ -2279,7 +2279,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:2.4.2, chalk@npm:^2.0.0, chalk@npm:^2.3.0":
+"chalk@npm:2.4.2, chalk@npm:^2.0.0":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -5982,14 +5982,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.0.2":
-  version: 1.4.0
-  resolution: "loader-utils@npm:1.4.0"
+"loader-utils@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "loader-utils@npm:2.0.0"
   dependencies:
     big.js: ^5.2.2
     emojis-list: ^3.0.0
-    json5: ^1.0.1
-  checksum: d150b15e7a42ac47d935c8b484b79e44ff6ab4c75df7cc4cb9093350cf014ec0b17bdb60c5d6f91a37b8b218bd63b973e263c65944f58ca2573e402b9a27e717
+    json5: ^2.1.2
+  checksum: 6856423131b50b6f5f259da36f498cfd7fc3c3f8bb17777cf87fdd9159e797d4ba4288d9a96415fd8da62c2906960e88f74711dee72d03a9003bddcd0d364a51
   languageName: node
   linkType: hard
 
@@ -6555,7 +6555,7 @@ __metadata:
     redux-views: 1.0.3
     reselect: 4.0.0
     styled-jsx: 3.4.4
-    ts-loader: 8.0.10
+    ts-loader: 8.2.0
     ts-node: 9.1.1
     tslib: 2.2.0
     typescript: 4.2.4
@@ -8334,7 +8334,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.5":
+"semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5":
   version: 7.3.5
   resolution: "semver@npm:7.3.5"
   dependencies:
@@ -9296,18 +9296,19 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:8.0.10":
-  version: 8.0.10
-  resolution: "ts-loader@npm:8.0.10"
+"ts-loader@npm:8.2.0":
+  version: 8.2.0
+  resolution: "ts-loader@npm:8.2.0"
   dependencies:
-    chalk: ^2.3.0
+    chalk: ^4.1.0
     enhanced-resolve: ^4.0.0
-    loader-utils: ^1.0.2
+    loader-utils: ^2.0.0
     micromatch: ^4.0.0
-    semver: ^6.0.0
+    semver: ^7.3.4
   peerDependencies:
     typescript: "*"
-  checksum: ce5ee8210bb85e505d0bfc53b2617ba6aa8f7d11032cc051f6ac6d4e65c86c10ddb0371a7bbd4939e0b05176ebd65710e423f09b34ea5714f2d8eb17071a0040
+    webpack: "*"
+  checksum: 976504f95f2e4568fc04a596dad7b57d943b23199011c4cb30eba42e7ba12489f9b310839964f5f16b356e4e3f6d28faf7a46d8c62d3934a07db0b23768ea434
   languageName: node
   linkType: hard
 

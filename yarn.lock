@@ -6609,7 +6609,7 @@ __metadata:
     pretty-quick: 3.1.0
     react: 17.0.2
     react-dom: 17.0.2
-    react-intersection-observer: 8.31.1
+    react-intersection-observer: 8.32.0
     react-redux: 7.2.4
     redux: 4.1.0
     redux-devtools-extension: 2.13.9
@@ -7759,12 +7759,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:8.31.1":
-  version: 8.31.1
-  resolution: "react-intersection-observer@npm:8.31.1"
+"react-intersection-observer@npm:8.32.0":
+  version: 8.32.0
+  resolution: "react-intersection-observer@npm:8.32.0"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
-  checksum: 21bc879cc47153d0b5a862f1cbaefa124e54a3b871686df22cb9f8515283befb9b3a15cce3a02a68abb792b7eba7ad1c06e92b9c9bd321aade9f17d324837037
+  checksum: 24eebbbc73511d975627b6563ff168812ec3de5bd251dd4991cf89b2ad04b3c0dd27f8487ea368f87793d117557771d517ccf0625b5c8e944d8ad71a68f079fd
   languageName: node
   linkType: hard
 

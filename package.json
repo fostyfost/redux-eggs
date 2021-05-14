@@ -67,7 +67,7 @@
     "styled-jsx": "3.4.4"
   },
   "devDependencies": {
-    "@babel/core": "7.14.0",
+    "@babel/core": "7.14.2",
     "@types/jest": "26.0.23",
     "@types/node": "15.0.2",
     "@types/nprogress": "0.2.0",

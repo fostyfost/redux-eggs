@@ -3582,15 +3582,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:31.0.0":
-  version: 31.0.0
-  resolution: "eslint-plugin-unicorn@npm:31.0.0"
+"eslint-plugin-unicorn@npm:32.0.1":
+  version: 32.0.1
+  resolution: "eslint-plugin-unicorn@npm:32.0.1"
   dependencies:
     ci-info: ^3.1.1
     clean-regexp: ^1.0.0
     eslint-template-visitor: ^2.3.2
     eslint-utils: ^2.1.0
-    eslint-visitor-keys: ^2.0.0
     import-modules: ^2.1.0
     is-builtin-module: ^3.1.0
     lodash: ^4.17.21
@@ -3602,7 +3601,7 @@ __metadata:
     semver: ^7.3.5
   peerDependencies:
     eslint: ">=7.23.0"
-  checksum: 59b36657a9c1c534a418a8901ddee5bf8b615caf6c6a00052d8b8c7febdb24261ffb8be1126d977887dc12f9b8bd6a67016d7ddc5d3558da3c4b8e81c233ee39
+  checksum: e74051e8b05f66c55355c719e7738495e9fcdaca0beb618c223c65640406c1eb54e10c4858ee80a476f97e199174e265734dbcb35563137e407fe05cb7343454
   languageName: node
   linkType: hard
 
@@ -6593,7 +6592,7 @@ __metadata:
     eslint-plugin-react: 7.23.2
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-simple-import-sort: 7.0.0
-    eslint-plugin-unicorn: 31.0.0
+    eslint-plugin-unicorn: 32.0.1
     husky: 6.0.0
     immer: 9.0.2
     jest: 26.6.3

@@ -53,16 +53,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.14.2":
-  version: 7.14.2
-  resolution: "@babel/core@npm:7.14.2"
+"@babel/core@npm:7.14.3":
+  version: 7.14.3
+  resolution: "@babel/core@npm:7.14.3"
   dependencies:
     "@babel/code-frame": ^7.12.13
-    "@babel/generator": ^7.14.2
+    "@babel/generator": ^7.14.3
     "@babel/helper-compilation-targets": ^7.13.16
     "@babel/helper-module-transforms": ^7.14.2
     "@babel/helpers": ^7.14.0
-    "@babel/parser": ^7.14.2
+    "@babel/parser": ^7.14.3
     "@babel/template": ^7.12.13
     "@babel/traverse": ^7.14.2
     "@babel/types": ^7.14.2
@@ -72,7 +72,7 @@ __metadata:
     json5: ^2.1.2
     semver: ^6.3.0
     source-map: ^0.5.0
-  checksum: 097b44de65166e7649a3418f5464cfefae201ecaa1208d7691fd0df9440bf848955ca3b392446e1befc7cb652a3cdbe5690bf116018fc3a3597c2e30df6aea47
+  checksum: b91ed6adc790428966e134b9b8bfa1f2d54d8867877057ed9f9fcc354475a26d267afd6b0c84ac1a7ac7805bffc7b3353fdd9d894e58ef52c7c7e06f17044fd0
   languageName: node
   linkType: hard
 
@@ -109,6 +109,17 @@ __metadata:
     jsesc: ^2.5.1
     source-map: ^0.5.0
   checksum: 25231a54952a37ab74c1cfee9ffe544cf4a84bc40aaa391b51675aee96647a04a7bbcc17b3aa9a797dbb270a229b9afb8cc44a554627164477c96136177b3a4f
+  languageName: node
+  linkType: hard
+
+"@babel/generator@npm:^7.14.3":
+  version: 7.14.3
+  resolution: "@babel/generator@npm:7.14.3"
+  dependencies:
+    "@babel/types": ^7.14.2
+    jsesc: ^2.5.1
+    source-map: ^0.5.0
+  checksum: 2c104bbe531935d73a66b6c1370da2e986e94154e7e574bd081fe6abe0d493e39d94a38a4c07c415aa90281047f858a51967b74eed83fec17cbca98a657e864a
   languageName: node
   linkType: hard
 
@@ -313,6 +324,15 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: 38ecb2f2288fb1b14a9677a6ea311ae8fe35ec2b4b26f2734ab10619d909e72cc94d527847ce41f49b264e7326b91e6e823b5d870202b4be7c5abb17247ec4c2
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.14.3":
+  version: 7.14.3
+  resolution: "@babel/parser@npm:7.14.3"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 39653900d3a76fba8891fbe3e799f6619d2286dc57be0b95ce8d93e667eec4c52df58603d03fbdc11edcbd0b4110a5f7393538315e02a234178581033dbcb881
   languageName: node
   linkType: hard
 
@@ -6586,7 +6606,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-with-redux-dynamic-modules@workspace:."
   dependencies:
-    "@babel/core": 7.14.2
+    "@babel/core": 7.14.3
     "@babel/runtime": 7.14.0
     "@next/bundle-analyzer": 10.2.2
     "@redux-saga/is": 1.1.2

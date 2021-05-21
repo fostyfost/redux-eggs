@@ -586,13 +586,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/accept@npm:5.0.1":
-  version: 5.0.1
-  resolution: "@hapi/accept@npm:5.0.1"
+"@hapi/accept@npm:5.0.2":
+  version: 5.0.2
+  resolution: "@hapi/accept@npm:5.0.2"
   dependencies:
     "@hapi/boom": 9.x.x
     "@hapi/hoek": 9.x.x
-  checksum: df5544c98921fe17bcbb1750b1ed37dd3b5a46dd5b61b4a80655be7131fa3ac144befc1f35f2ad2bf6c32a363bab36bdcfa7b45ca7d249404a4295b5dcd6214d
+  checksum: 8088cbc245287f52722b2f6c42ae1f21f1f40001453582876b7de0329104427f88a277cd7857458bfc8ade4b9c872c9e5571b94de3c38440e40dbd3d25387954
   languageName: node
   linkType: hard
 
@@ -827,32 +827,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/bundle-analyzer@npm:10.2.0"
+"@next/bundle-analyzer@npm:10.2.2":
+  version: 10.2.2
+  resolution: "@next/bundle-analyzer@npm:10.2.2"
   dependencies:
     webpack-bundle-analyzer: 4.3.0
-  checksum: 1b49315cddbd3c3487046f00c68cca4b0d96dda363e6be8b9c3aa0b30e30d6c7290a96bddc1102378988bbc019720280b242507325e940936a73e9ddc542bce4
+  checksum: 20aafa93b91baa1b436c607492d1e7ed10c38cce08ba19a2aab7800b6bcd902f53287d69bc1540e126d26976e7bc72eeac39b2c969a98651a43d4822437a65e3
   languageName: node
   linkType: hard
 
-"@next/env@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/env@npm:10.2.0"
-  checksum: a55ab502b12c49d90b77c42a20e2eaee2025bf60bafbeabe992cbeba5f64055c5af150176a6a252d7ad63d6dbba90652fd6ccd6ec36b81c11eab9d5bb29f9ea5
+"@next/env@npm:10.2.2":
+  version: 10.2.2
+  resolution: "@next/env@npm:10.2.2"
+  checksum: 14c138b77f8d50bb6ed58e493dfe726af7f103c9aa224c705a021f5006af6e2d0a3f2977afe17c9e4b3e08351e0e8857a13da945c0da0f1bcd198d5c8ff40022
   languageName: node
   linkType: hard
 
-"@next/polyfill-module@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/polyfill-module@npm:10.2.0"
-  checksum: 3addca178310f5b1050183b8475038bf8915d47cf3f78c8f097a2a591fe62860f5a77fe3ed8fb19e2de23480094f578c532cd23dd7c5db1dfc746b88d7fafbbb
+"@next/polyfill-module@npm:10.2.2":
+  version: 10.2.2
+  resolution: "@next/polyfill-module@npm:10.2.2"
+  checksum: 6f09174f9bd667d571f2a1e29a16797bac40b9d26353c2f170a7cb1311d975ead841b6d7bae0c6ecd6d7bb21a53e4f61793899c3af620b3acad38deb5d74b2af
   languageName: node
   linkType: hard
 
-"@next/react-dev-overlay@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/react-dev-overlay@npm:10.2.0"
+"@next/react-dev-overlay@npm:10.2.2":
+  version: 10.2.2
+  resolution: "@next/react-dev-overlay@npm:10.2.2"
   dependencies:
     "@babel/code-frame": 7.12.11
     anser: 1.4.9
@@ -868,20 +868,20 @@ __metadata:
   peerDependencies:
     react: ^16.9.0 || ^17
     react-dom: ^16.9.0 || ^17
-  checksum: a70c0b75cf0ca4fc4e45aa2e6e5a1ffe5eb34ec99b06f8e231cafbad66b0aaf82757ebf3cf917d65e3c738b62bc82f43b22c567ddea0d81a8facea0ddd7b52fd
+  checksum: 43cd65764319bc1534ee319ba22d0c886c7d45f665d2ea7e16b54ab867d7debef17614db13d30dca84a3cb73a8bd3bf366148b75597072763d27650c899f8fff
   languageName: node
   linkType: hard
 
-"@next/react-refresh-utils@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/react-refresh-utils@npm:10.2.0"
+"@next/react-refresh-utils@npm:10.2.2":
+  version: 10.2.2
+  resolution: "@next/react-refresh-utils@npm:10.2.2"
   peerDependencies:
     react-refresh: 0.8.3
     webpack: ^4 || ^5
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: 36ea22701c8c9c6233d747d6f30284f1937552c1f9e744ed281ee7243ec2f4a03197cb851b85a51e013b22cfdf0d279c980f6cefe2d4d27c4e2abeae248b53e1
+  checksum: f333f388e2bc8404cc758e70719200ecd8d763130ef58f3a6f06a87c0bf2ef1e8d2682d890d5035442f72817375257f1aef1007deb0b6dbf4500803f9c5cf75c
   languageName: node
   linkType: hard
 
@@ -2176,22 +2176,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.16.1":
-  version: 4.16.1
-  resolution: "browserslist@npm:4.16.1"
-  dependencies:
-    caniuse-lite: ^1.0.30001173
-    colorette: ^1.2.1
-    electron-to-chromium: ^1.3.634
-    escalade: ^3.1.1
-    node-releases: ^1.1.69
-  bin:
-    browserslist: cli.js
-  checksum: aa4367989d0046487ed94f6318280189ddbf28112870e31aff5405e6dd5a862ad254e70aa3058773a9ffe9ae5ea29d567ce0c5b8a4020c1052b63cd801869847
-  languageName: node
-  linkType: hard
-
-"browserslist@npm:^4.14.5":
+"browserslist@npm:4.16.6, browserslist@npm:^4.14.5":
   version: 4.16.6
   resolution: "browserslist@npm:4.16.6"
   dependencies:
@@ -2359,10 +2344,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001173, caniuse-lite@npm:^1.0.30001179, caniuse-lite@npm:^1.0.30001202, caniuse-lite@npm:^1.0.30001219":
+"caniuse-lite@npm:^1.0.30001202, caniuse-lite@npm:^1.0.30001219":
   version: 1.0.30001227
   resolution: "caniuse-lite@npm:1.0.30001227"
   checksum: 22fdc8d5dedfec4b5b20c74cafff662c0a2782d4de657aff38f4afc6aa476fb38bb639481e379b0665af2061b7c0b4217db9478c1aa978acdccd5d1352181dae
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001228":
+  version: 1.0.30001228
+  resolution: "caniuse-lite@npm:1.0.30001228"
+  checksum: d7ea2234d3ad1841dab6cd0b6ee16e89958f5893ef2e024a7447d6f889f496e40b6dafe000f391b8d4f0c0ef08671dbb5969fd66e6f74d402994865ce5705a53
   languageName: node
   linkType: hard
 
@@ -2619,7 +2611,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorette@npm:^1.2.1, colorette@npm:^1.2.2":
+"colorette@npm:^1.2.2":
   version: 1.2.2
   resolution: "colorette@npm:1.2.2"
   checksum: 69fec14ddaedd0f5b00e4bae40dc4bc61f7050ebdc82983a595d6fd64e650b9dc3c033fff378775683138e992e0ddd8717ac7c7cec4d089679dcfbe3cd921b04
@@ -3238,7 +3230,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.634, electron-to-chromium@npm:^1.3.723":
+"electron-to-chromium@npm:^1.3.723":
   version: 1.3.727
   resolution: "electron-to-chromium@npm:1.3.727"
   checksum: 27e725e497475e998ca597e196e6895a55a24b0ce4c489cac4dfa24f1ff38b8fa54fbdb219d79e562783c8f20615705f1c857ccab91883c2818d6d908054bd37
@@ -6580,7 +6572,7 @@ __metadata:
   dependencies:
     "@babel/core": 7.14.2
     "@babel/runtime": 7.14.0
-    "@next/bundle-analyzer": 10.2.0
+    "@next/bundle-analyzer": 10.2.2
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 26.0.23
@@ -6610,7 +6602,7 @@ __metadata:
     jest: 26.6.3
     mitt: 2.1.0
     nanoid: 3.1.23
-    next: 10.2.0
+    next: 10.2.2
     next-page-transitions: 1.0.0-beta.2
     nodemon: 2.0.7
     nprogress: 0.2.0
@@ -6636,23 +6628,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"next@npm:10.2.0":
-  version: 10.2.0
-  resolution: "next@npm:10.2.0"
+"next@npm:10.2.2":
+  version: 10.2.2
+  resolution: "next@npm:10.2.2"
   dependencies:
     "@babel/runtime": 7.12.5
-    "@hapi/accept": 5.0.1
-    "@next/env": 10.2.0
-    "@next/polyfill-module": 10.2.0
-    "@next/react-dev-overlay": 10.2.0
-    "@next/react-refresh-utils": 10.2.0
+    "@hapi/accept": 5.0.2
+    "@next/env": 10.2.2
+    "@next/polyfill-module": 10.2.2
+    "@next/react-dev-overlay": 10.2.2
+    "@next/react-refresh-utils": 10.2.2
     "@opentelemetry/api": 0.14.0
     assert: 2.0.0
     ast-types: 0.13.2
     browserify-zlib: 0.2.0
-    browserslist: 4.16.1
+    browserslist: 4.16.6
     buffer: 5.6.0
-    caniuse-lite: ^1.0.30001179
+    caniuse-lite: ^1.0.30001228
     chalk: 2.4.2
     chokidar: 3.5.1
     constants-browserify: 1.0.0
@@ -6705,7 +6697,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 6b0800411a9b666c8300ebaea931ab04ff501655338395d67eb2bfcedbb8b360a06cc2582c562b3a4becb2ec1cfc217b15cdf995ed5fbab55e80bec0c13b7751
+  checksum: c1d8f003f5072d6c41d6bde83b29be494960e0bb57d02c63d8961395d4b3771ae1626205804556752a9fb52cb031c31550631d117777d342705c58bba27a0da6
   languageName: node
   linkType: hard
 
@@ -6811,7 +6803,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^1.1.69, node-releases@npm:^1.1.71":
+"node-releases@npm:^1.1.71":
   version: 1.1.71
   resolution: "node-releases@npm:1.1.71"
   checksum: a6ab18069e43d70b811fa7f12b397619f2003f78ac2ed0affa30876880ca3036a191d33679d93baac166afa12a7b1b1716e13f3c82c0f0fa09e2c83db3f91faf

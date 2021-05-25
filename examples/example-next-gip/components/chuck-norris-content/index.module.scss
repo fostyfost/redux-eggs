@@ -1,0 +1,17 @@
+.root {
+  font-size: 50px;
+  display: flex;
+  padding: 30px;
+  min-height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "../../configs/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "exclude": [".next", "next.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}

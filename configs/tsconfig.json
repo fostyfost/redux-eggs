@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "ES2017"],
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "strict": true,
+    "allowJs": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "isolatedModules": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "pretty": true
+  }
+}

@@ -9,8 +9,21 @@ package-lock.json
 .yarn
 yarn.lock
 .yarnrc.yml
+/.pnp
+.pnp.js
+
+# testing
+coverage
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # app
 .next
 dist
 public
+
+# lib
+lib

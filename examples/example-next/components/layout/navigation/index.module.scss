@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+}
+
+.navGroup {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:nth-child(2n-1) {
+    background: #ebebeb;
+  }
+}
+
+.navItem {
+  box-sizing: border-box;
+  padding: 20px;
+  min-width: calc(100% / 3);
+}
+
+.button {
+  display: block;
+  position: fixed;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: monospace;
+  background: white;
+  border: 1px solid black;
+  color: black;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+}

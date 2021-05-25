@@ -1,0 +1,48 @@
+.container {
+  padding: 20px;
+
+  border-radius: var(--primary-border-radius);
+
+  background: var(--white-color);
+
+  box-shadow: var(--default-box-shadow);
+}
+
+.head {
+  align-items: center;
+}
+
+.segmentsContainer {
+  padding-top: 20px;
+}
+
+.col {
+  width: 140px;
+}
+
+.col + .col {
+  padding-left: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row + .row {
+  padding-top: 10px;
+}
+
+.image {
+  display: flex;
+  height: 36px;
+}
+
+.price {
+  font-weight: 600;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  color: var(--secondary-color);
+}

@@ -1,0 +1,17 @@
+.container {
+  padding: 10px 0;
+  border-radius: var(--primary-border-radius);
+  background: var(--white-color);
+  box-shadow: var(--default-box-shadow);
+}
+
+.label {
+  padding: 10px 20px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,23 @@
+.cardsList {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.listItem + .listItem {
+  padding-top: 20px;
+}
+
+.notFound {
+  padding: 20px;
+
+  text-align: center;
+
+  font-weight: 600;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  color: var(--primary-color);
+}

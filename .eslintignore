@@ -1,5 +1,7 @@
 node_modules
+.github
+.husky
+.vercel
 .yarn
 dist
-out
-.next
+coverage

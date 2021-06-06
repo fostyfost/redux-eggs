@@ -3625,14 +3625,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:32.0.1":
-  version: 32.0.1
-  resolution: "eslint-plugin-unicorn@npm:32.0.1"
+"eslint-plugin-unicorn@npm:33.0.1":
+  version: 33.0.1
+  resolution: "eslint-plugin-unicorn@npm:33.0.1"
   dependencies:
     ci-info: ^3.1.1
     clean-regexp: ^1.0.0
     eslint-template-visitor: ^2.3.2
-    eslint-utils: ^2.1.0
+    eslint-utils: ^3.0.0
     import-modules: ^2.1.0
     is-builtin-module: ^3.1.0
     lodash: ^4.17.21
@@ -3644,7 +3644,7 @@ __metadata:
     semver: ^7.3.5
   peerDependencies:
     eslint: ">=7.23.0"
-  checksum: e74051e8b05f66c55355c719e7738495e9fcdaca0beb618c223c65640406c1eb54e10c4858ee80a476f97e199174e265734dbcb35563137e407fe05cb7343454
+  checksum: 9f5add1b626423f614c24dbc5b4e82a0c9e83b6be669c34a5c939f1535b1f23f68323bffe53816dc7995f1ecddc8734aede19090eafa6dbf4d451d68025aa3bb
   languageName: node
   linkType: hard
 
@@ -3679,6 +3679,17 @@ __metadata:
   dependencies:
     eslint-visitor-keys: ^1.1.0
   checksum: 27500938f348da42100d9e6ad03ae29b3de19ba757ae1a7f4a087bdcf83ac60949bbb54286492ca61fac1f5f3ac8692dd21537ce6214240bf95ad0122f24d71d
+  languageName: node
+  linkType: hard
+
+"eslint-utils@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "eslint-utils@npm:3.0.0"
+  dependencies:
+    eslint-visitor-keys: ^2.0.0
+  peerDependencies:
+    eslint: ">=5"
+  checksum: 0668fe02f5adab2e5a367eee5089f4c39033af20499df88fe4e6aba2015c20720404d8c3d6349b6f716b08fdf91b9da4e5d5481f265049278099c4c836ccb619
   languageName: node
   linkType: hard
 
@@ -6660,7 +6671,7 @@ __metadata:
     eslint-plugin-react: 7.23.2
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-simple-import-sort: 7.0.0
-    eslint-plugin-unicorn: 32.0.1
+    eslint-plugin-unicorn: 33.0.1
     husky: 6.0.0
     immer: 9.0.2
     jest: 26.6.3

@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.14.0",
-    "@next/bundle-analyzer": "10.2.2",
+    "@next/bundle-analyzer": "10.2.3",
     "@redux-saga/is": "1.1.2",
     "@redux-saga/symbols": "1.1.2",
     "clsx": "1.1.1",
@@ -50,7 +50,7 @@
     "immer": "9.0.2",
     "mitt": "2.1.0",
     "nanoid": "3.1.23",
-    "next": "10.2.2",
+    "next": "10.2.3",
     "next-page-transitions": "1.0.0-beta.2",
     "nprogress": "0.2.0",
     "react": "17.0.2",

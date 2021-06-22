@@ -847,32 +847,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:10.2.2":
-  version: 10.2.2
-  resolution: "@next/bundle-analyzer@npm:10.2.2"
+"@next/bundle-analyzer@npm:11.0.1":
+  version: 11.0.1
+  resolution: "@next/bundle-analyzer@npm:11.0.1"
   dependencies:
     webpack-bundle-analyzer: 4.3.0
-  checksum: 20aafa93b91baa1b436c607492d1e7ed10c38cce08ba19a2aab7800b6bcd902f53287d69bc1540e126d26976e7bc72eeac39b2c969a98651a43d4822437a65e3
+  checksum: a56ecb0ab22b75a797c44be1de083271c916c73e12531a4d97e0be51bdc8a29fe317f792b2d95cd2798c14fe029935ca5464866ec9b8f5b331e1e6ff0a3c0c7b
   languageName: node
   linkType: hard
 
-"@next/env@npm:10.2.2":
-  version: 10.2.2
-  resolution: "@next/env@npm:10.2.2"
-  checksum: 14c138b77f8d50bb6ed58e493dfe726af7f103c9aa224c705a021f5006af6e2d0a3f2977afe17c9e4b3e08351e0e8857a13da945c0da0f1bcd198d5c8ff40022
+"@next/env@npm:11.0.1":
+  version: 11.0.1
+  resolution: "@next/env@npm:11.0.1"
+  checksum: 56fc85a19f5754e38db7e4bb7cff627f9addbdc12bad60bf1bbdbc744ab294ede5fdfc890579aeb6c1b185af538e3aa93ad5139931b76bb5432055ccf92ad8e6
   languageName: node
   linkType: hard
 
-"@next/polyfill-module@npm:10.2.2":
-  version: 10.2.2
-  resolution: "@next/polyfill-module@npm:10.2.2"
-  checksum: 6f09174f9bd667d571f2a1e29a16797bac40b9d26353c2f170a7cb1311d975ead841b6d7bae0c6ecd6d7bb21a53e4f61793899c3af620b3acad38deb5d74b2af
+"@next/polyfill-module@npm:11.0.1":
+  version: 11.0.1
+  resolution: "@next/polyfill-module@npm:11.0.1"
+  checksum: 563292c39b6bb17db9603445b3f68da2b0996f31a9c567476092d83635ec9d84ffd150c7e1476b4041535197ef150c62756e05d1c6f74127f7cd6868275b3239
   languageName: node
   linkType: hard
 
-"@next/react-dev-overlay@npm:10.2.2":
-  version: 10.2.2
-  resolution: "@next/react-dev-overlay@npm:10.2.2"
+"@next/react-dev-overlay@npm:11.0.1":
+  version: 11.0.1
+  resolution: "@next/react-dev-overlay@npm:11.0.1"
   dependencies:
     "@babel/code-frame": 7.12.11
     anser: 1.4.9
@@ -886,22 +886,22 @@ __metadata:
     stacktrace-parser: 0.1.10
     strip-ansi: 6.0.0
   peerDependencies:
-    react: ^16.9.0 || ^17
-    react-dom: ^16.9.0 || ^17
-  checksum: 43cd65764319bc1534ee319ba22d0c886c7d45f665d2ea7e16b54ab867d7debef17614db13d30dca84a3cb73a8bd3bf366148b75597072763d27650c899f8fff
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  checksum: d03b8700207fbf388a533354e01eb6e9bb7a755f7517262cd23d3f7778efe8f8b60966739482de7e5475f89f56700e599d8f18774f41c792d39a71602f0e352e
   languageName: node
   linkType: hard
 
-"@next/react-refresh-utils@npm:10.2.2":
-  version: 10.2.2
-  resolution: "@next/react-refresh-utils@npm:10.2.2"
+"@next/react-refresh-utils@npm:11.0.1":
+  version: 11.0.1
+  resolution: "@next/react-refresh-utils@npm:11.0.1"
   peerDependencies:
     react-refresh: 0.8.3
     webpack: ^4 || ^5
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: f333f388e2bc8404cc758e70719200ecd8d763130ef58f3a6f06a87c0bf2ef1e8d2682d890d5035442f72817375257f1aef1007deb0b6dbf4500803f9c5cf75c
+  checksum: 8d9a1f246d47bee1722603c3a596cc24b27874f0b282ca0623781eec826c5b7d0e236c6528ad4fe95728693feeeb984ead12c21040d578109b2acec20263a681
   languageName: node
   linkType: hard
 
@@ -939,22 +939,6 @@ __metadata:
     mkdirp: ^1.0.4
     rimraf: ^3.0.2
   checksum: c96381d4a37448ea280951e46233f7e541058cf57a57d4094dd4bdcaae43fa5872b5f2eb6bfb004591a68e29c5877abe3cdc210cb3588cbf20ab2877f31a7de7
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/api@npm:0.14.0":
-  version: 0.14.0
-  resolution: "@opentelemetry/api@npm:0.14.0"
-  dependencies:
-    "@opentelemetry/context-base": ^0.14.0
-  checksum: 856f05b0f21b8714f063eeebf1994d1168b0b13f4999c575ebf1224e2059041565d99e09c3b30fd1d1331ac26aefd452f8fbfff14572038bd95f986287fbfb2d
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/context-base@npm:^0.14.0":
-  version: 0.14.0
-  resolution: "@opentelemetry/context-base@npm:0.14.0"
-  checksum: 4f3b4bd06d5fdffee46d3e6e59e3b49cbe8cc5c957e05e4464585102060709b7dd09008ca293481e3af6be917a646376034a59012a996a3a7601c577e5740083
   languageName: node
   linkType: hard
 
@@ -4715,6 +4699,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"image-size@npm:1.0.0":
+  version: 1.0.0
+  resolution: "image-size@npm:1.0.0"
+  dependencies:
+    queue: 6.0.2
+  bin:
+    image-size: bin/image-size.js
+  checksum: 2d9d1edc43c0fa8effd27c44cd2d1b02ecc963219e78a76ac80b9d363f69c5aa19990cc23a323959ea510742ff07667e231f0852fd57eba5dc5b55432b58106d
+  languageName: node
+  linkType: hard
+
 "immer@npm:9.0.2":
   version: 9.0.2
   resolution: "immer@npm:9.0.2"
@@ -6636,7 +6631,7 @@ __metadata:
   dependencies:
     "@babel/core": 7.14.3
     "@babel/runtime": 7.14.0
-    "@next/bundle-analyzer": 10.2.2
+    "@next/bundle-analyzer": 11.0.1
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 26.0.23
@@ -6666,7 +6661,7 @@ __metadata:
     jest: 26.6.3
     mitt: 2.1.0
     nanoid: 3.1.23
-    next: 10.2.2
+    next: 11.0.1
     next-page-transitions: 1.0.0-beta.2
     nodemon: 2.0.7
     nprogress: 0.2.0
@@ -6692,17 +6687,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"next@npm:10.2.2":
-  version: 10.2.2
-  resolution: "next@npm:10.2.2"
+"next@npm:11.0.1":
+  version: 11.0.1
+  resolution: "next@npm:11.0.1"
   dependencies:
     "@babel/runtime": 7.12.5
     "@hapi/accept": 5.0.2
-    "@next/env": 10.2.2
-    "@next/polyfill-module": 10.2.2
-    "@next/react-dev-overlay": 10.2.2
-    "@next/react-refresh-utils": 10.2.2
-    "@opentelemetry/api": 0.14.0
+    "@next/env": 11.0.1
+    "@next/polyfill-module": 11.0.1
+    "@next/react-dev-overlay": 11.0.1
+    "@next/react-refresh-utils": 11.0.1
     assert: 2.0.0
     ast-types: 0.13.2
     browserify-zlib: 0.2.0
@@ -6720,6 +6714,7 @@ __metadata:
     find-cache-dir: 3.3.1
     get-orientation: 1.1.2
     https-browserify: 1.0.0
+    image-size: 1.0.0
     jest-worker: 27.0.0-next.5
     native-url: 0.3.4
     node-fetch: 2.6.1
@@ -6734,7 +6729,7 @@ __metadata:
     prop-types: 15.7.2
     querystring-es3: 0.2.1
     raw-body: 2.4.1
-    react-is: 16.13.1
+    react-is: 17.0.2
     react-refresh: 0.8.3
     stream-browserify: 3.0.0
     stream-http: 3.1.1
@@ -6749,8 +6744,8 @@ __metadata:
   peerDependencies:
     fibers: ">= 3.1.0"
     node-sass: ^4.0.0 || ^5.0.0
-    react: ^16.6.0 || ^17
-    react-dom: ^16.6.0 || ^17
+    react: ^17.0.2
+    react-dom: ^17.0.2
     sass: ^1.3.0
   peerDependenciesMeta:
     fibers:
@@ -6761,7 +6756,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: c1d8f003f5072d6c41d6bde83b29be494960e0bb57d02c63d8961395d4b3771ae1626205804556752a9fb52cb031c31550631d117777d342705c58bba27a0da6
+  checksum: c6b4747f1a748269b661f73897558c036a9d1d3b7ff878fac1876b06f3d61b42b8991eef2ed90bfbc273f8b40fa5892b94009a69fdff353a9af3583a7740c1ea
   languageName: node
   linkType: hard
 
@@ -7757,6 +7752,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"queue@npm:6.0.2":
+  version: 6.0.2
+  resolution: "queue@npm:6.0.2"
+  dependencies:
+    inherits: ~2.0.3
+  checksum: ebc23639248e4fe40a789f713c20548e513e053b3dc4924b6cb0ad741e3f264dcff948225c8737834dd4f9ec286dbc06a1a7c13858ea382d9379f4303bcc0916
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.0.0, randombytes@npm:^2.0.1, randombytes@npm:^2.0.5":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -7824,17 +7828,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:16.13.1, react-is@npm:^16.13.1, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
-  version: 16.13.1
-  resolution: "react-is@npm:16.13.1"
-  checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
-  languageName: node
-  linkType: hard
-
-"react-is@npm:^17.0.1":
+"react-is@npm:17.0.2, react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^16.13.1, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
+  version: 16.13.1
+  resolution: "react-is@npm:16.13.1"
+  checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
   languageName: node
   linkType: hard
 

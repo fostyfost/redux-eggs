@@ -6490,10 +6490,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mitt@npm:2.1.0":
-  version: 2.1.0
-  resolution: "mitt@npm:2.1.0"
-  checksum: 5b0f698cbff2e47cc3b81b991f1230fadd429bdf4a2d9051d936059ad8090e36932694f299dd52434365463e6c52075026fb2161adcfd52b234b6f5392a514d2
+"mitt@npm:3.0.0":
+  version: 3.0.0
+  resolution: "mitt@npm:3.0.0"
+  checksum: f7be5049d27d18b1dbe9408452d66376fa60ae4a79fe9319869d1b90ae8cbaedadc7e9dab30b32d781411256d468be5538996bb7368941c09009ef6bbfa6bfc7
   languageName: node
   linkType: hard
 
@@ -6664,7 +6664,7 @@ __metadata:
     husky: 6.0.0
     immer: 9.0.2
     jest: 26.6.3
-    mitt: 2.1.0
+    mitt: 3.0.0
     nanoid: 3.1.23
     next: 10.2.2
     next-page-transitions: 1.0.0-beta.2

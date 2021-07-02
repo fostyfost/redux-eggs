@@ -2514,10 +2514,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "ci-info@npm:3.1.1"
-  checksum: 638bc0d84ce5567ce048d77cefb5d606e36b4929cc72c32f2102e24b0ac4fb3e378fee1821d71246f6a2f029c96b3c6c1c183348f894133f788f33cbe82258fa
+"ci-info@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "ci-info@npm:3.2.0"
+  checksum: c68995a94e95ce3f233ff845e62dfc56f2e8ff1e3f5c1361bcdd520cbbc9726d8a54cbc1a685cb9ee19c3c5e71a1dade6dda23eb364b59b8e6c32508a9b761bc
   languageName: node
   linkType: hard
 
@@ -3625,15 +3625,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:32.0.1":
-  version: 32.0.1
-  resolution: "eslint-plugin-unicorn@npm:32.0.1"
+"eslint-plugin-unicorn@npm:34.0.1":
+  version: 34.0.1
+  resolution: "eslint-plugin-unicorn@npm:34.0.1"
   dependencies:
-    ci-info: ^3.1.1
+    ci-info: ^3.2.0
     clean-regexp: ^1.0.0
     eslint-template-visitor: ^2.3.2
-    eslint-utils: ^2.1.0
-    import-modules: ^2.1.0
+    eslint-utils: ^3.0.0
     is-builtin-module: ^3.1.0
     lodash: ^4.17.21
     pluralize: ^8.0.0
@@ -3643,8 +3642,8 @@ __metadata:
     safe-regex: ^2.1.1
     semver: ^7.3.5
   peerDependencies:
-    eslint: ">=7.23.0"
-  checksum: e74051e8b05f66c55355c719e7738495e9fcdaca0beb618c223c65640406c1eb54e10c4858ee80a476f97e199174e265734dbcb35563137e407fe05cb7343454
+    eslint: ">=7.28.0"
+  checksum: c0dd20f62f78104d21cb897bdee13f88277fc08ccaaad35382470e5d626af075e48bd7d0da564b7d656d3237fa7d3eee3063d07f5af4091bdce400c8b9c47601
   languageName: node
   linkType: hard
 
@@ -3679,6 +3678,17 @@ __metadata:
   dependencies:
     eslint-visitor-keys: ^1.1.0
   checksum: 27500938f348da42100d9e6ad03ae29b3de19ba757ae1a7f4a087bdcf83ac60949bbb54286492ca61fac1f5f3ac8692dd21537ce6214240bf95ad0122f24d71d
+  languageName: node
+  linkType: hard
+
+"eslint-utils@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "eslint-utils@npm:3.0.0"
+  dependencies:
+    eslint-visitor-keys: ^2.0.0
+  peerDependencies:
+    eslint: ">=5"
+  checksum: 0668fe02f5adab2e5a367eee5089f4c39033af20499df88fe4e6aba2015c20720404d8c3d6349b6f716b08fdf91b9da4e5d5481f265049278099c4c836ccb619
   languageName: node
   linkType: hard
 
@@ -4748,13 +4758,6 @@ __metadata:
   bin:
     import-local-fixture: fixtures/cli.js
   checksum: c74d9f9484c878cda1de3434613c7ff72d5dadcf20e5482542232d7c2575b713ff88701d6675fcf09a3684cb23fb407c8b333b9cbc59438712723d058d8e976c
-  languageName: node
-  linkType: hard
-
-"import-modules@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "import-modules@npm:2.1.0"
-  checksum: d9ac33dfea5a301c0cdc51455d875c373b2c04eb673488cb6d706474612575763f8ea6353d0b4a5bfffb2a9a06cbf4ecba90d8d9db4aa5f736fa957acbbc851c
   languageName: node
   linkType: hard
 
@@ -6660,7 +6663,7 @@ __metadata:
     eslint-plugin-react: 7.23.2
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-simple-import-sort: 7.0.0
-    eslint-plugin-unicorn: 32.0.1
+    eslint-plugin-unicorn: 34.0.1
     husky: 6.0.0
     immer: 9.0.2
     jest: 26.6.3

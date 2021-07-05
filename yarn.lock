@@ -4715,10 +4715,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"immer@npm:9.0.2":
-  version: 9.0.2
-  resolution: "immer@npm:9.0.2"
-  checksum: ce74a183085451ec31b8726ef1345baf7a315df7ffe7683b231bd491fdd2bb73bf093085a36a5270a27200fbdd052e8572adb38058f0264ee0ec04b3b5d4ba02
+"immer@npm:9.0.5":
+  version: 9.0.5
+  resolution: "immer@npm:9.0.5"
+  checksum: 8199c092bb2d12de00a2264ee0f5170cd7356427aee6e5e012628057c8d063bf8ac9c318c7b3b41a0228b0ceefdef340f76caf4d95b4e4ca3ec27b4bb42de371
   languageName: node
   linkType: hard
 
@@ -6662,7 +6662,7 @@ __metadata:
     eslint-plugin-simple-import-sort: 7.0.0
     eslint-plugin-unicorn: 32.0.1
     husky: 6.0.0
-    immer: 9.0.2
+    immer: 9.0.5
     jest: 26.6.3
     mitt: 2.1.0
     nanoid: 3.1.23

@@ -1300,12 +1300,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/redux-logger@npm:3.0.8":
-  version: 3.0.8
-  resolution: "@types/redux-logger@npm:3.0.8"
+"@types/redux-logger@npm:3.0.9":
+  version: 3.0.9
+  resolution: "@types/redux-logger@npm:3.0.9"
   dependencies:
     redux: ^4.0.0
-  checksum: 68dee8799db09aab2625435008230543f23a6dcf4f29cb8f74d2ec3c723c98765d6ed8fbf1edf2deb440f4a1969082b7d35d9548ab810e9054aa381bc925874c
+  checksum: c41fdc09198fae2d62ff7d6bd029ccae1fed655e6a7abd40614a8db5d6e01adbe565881b2c8d398789804a48259e3399af3939f994a532c11904ba2021799275
   languageName: node
   linkType: hard
 
@@ -6645,7 +6645,7 @@ __metadata:
     "@types/react": 17.0.6
     "@types/react-dom": 17.0.5
     "@types/react-redux": 7.1.16
-    "@types/redux-logger": 3.0.8
+    "@types/redux-logger": 3.0.9
     "@typescript-eslint/eslint-plugin": 4.24.0
     "@typescript-eslint/parser": 4.24.0
     babel-jest: 26.6.3

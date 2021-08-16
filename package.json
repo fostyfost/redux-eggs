@@ -64,7 +64,7 @@
     "redux-saga": "1.1.3",
     "redux-views": "1.0.3",
     "reselect": "4.0.0",
-    "styled-jsx": "3.4.4"
+    "styled-jsx": "4.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.14.3",

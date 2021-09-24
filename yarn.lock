@@ -3120,7 +3120,7 @@ __metadata:
     next: 11.1.0
     react: 17.0.2
     react-dom: 17.0.2
-    react-redux: 7.2.4
+    react-redux: 7.2.5
     react-test-renderer: 17.0.2
     redux: 4.1.1
     rimraf: 3.0.2
@@ -3161,7 +3161,7 @@ __metadata:
     jest: 27.2.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-redux: 7.2.4
+    react-redux: 7.2.5
     redux: 4.1.1
     rimraf: 3.0.2
     rollup: 2.52.8
@@ -12113,6 +12113,27 @@ __metadata:
     react-native:
       optional: true
   checksum: 214fa1a4811f95090b77d96ec7114c322adf388b6d086ebebf50cdaf03549758037283f953d2b920cf6ee2f6ffad8f35e92f1ab959b3f2c957f5075d00e16d0a
+  languageName: node
+  linkType: hard
+
+"react-redux@npm:7.2.5":
+  version: 7.2.5
+  resolution: "react-redux@npm:7.2.5"
+  dependencies:
+    "@babel/runtime": ^7.12.1
+    "@types/react-redux": ^7.1.16
+    hoist-non-react-statics: ^3.3.2
+    loose-envify: ^1.4.0
+    prop-types: ^15.7.2
+    react-is: ^16.13.1
+  peerDependencies:
+    react: ^16.8.3 || ^17
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 04ac4a4178067cbcfc05506dfea9f7e01730093a5752f050567f7ae4a38c03c96da9d8fed051f8ab1ecede5ea8a15ee41c5f6c5eeb7f04f37e4d13e431ec7830
   languageName: node
   linkType: hard
 

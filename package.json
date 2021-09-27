@@ -1,6 +1,5 @@
 {
   "name": "redux-eggs-mono",
-  "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "author": "Fosty Fost",
@@ -20,7 +19,7 @@
     "test": "lerna run --parallel test",
     "test:coverage": "lerna run --parallel test:coverage",
     "prepublish": "lerna run prepublish",
-    "prepare": "husky install",
+    "postinstall": "husky install",
     "pretty-quick": "pretty-quick"
   },
   "engines": {
@@ -43,7 +42,7 @@
     "eslint-plugin-import": "2.23.4",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "eslint-plugin-unicorn": "34.0.1",
-    "husky": "7.0.1",
+    "husky": "7.0.2",
     "lerna": "4.0.0",
     "prettier": "2.3.0",
     "pretty-quick": "3.1.0",

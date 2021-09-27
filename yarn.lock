@@ -3072,7 +3072,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@0.1.0, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@1.0.0, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -3098,9 +3098,9 @@ __metadata:
   resolution: "@redux-eggs/next@workspace:packages/next"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 0.1.0
-    "@redux-eggs/redux": 0.1.0
-    "@redux-eggs/redux-toolkit": 0.1.0
+    "@redux-eggs/core": 1.0.0
+    "@redux-eggs/redux": 1.0.0
+    "@redux-eggs/redux-toolkit": 1.0.0
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.0
@@ -3141,7 +3141,7 @@ __metadata:
   resolution: "@redux-eggs/react@workspace:packages/react"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 0.1.0
+    "@redux-eggs/core": 1.0.0
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/dom": 8.6.0
     "@testing-library/jest-dom": 5.14.1
@@ -3175,12 +3175,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@0.1.0, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@1.0.0, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 0.1.0
+    "@redux-eggs/core": 1.0.0
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
@@ -3200,12 +3200,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@0.1.0, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@1.0.0, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 0.1.0
+    "@redux-eggs/core": 1.0.0
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -3229,7 +3229,7 @@ __metadata:
   resolution: "@redux-eggs/saga-extension@workspace:packages/saga-extension"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 0.1.0
+    "@redux-eggs/core": 1.0.0
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -8158,12 +8158,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:7.0.1":
-  version: 7.0.1
-  resolution: "husky@npm:7.0.1"
+"husky@npm:7.0.2":
+  version: 7.0.2
+  resolution: "husky@npm:7.0.2"
   bin:
     husky: lib/bin.js
-  checksum: b2ea1460f1126ed7161779b1b89f7ec8ae66fb6723e0e9fd47c522f454f4a2ea7e31a21d6ce2eb5d32e9837d232fb0245783425c109df0adab53668f8c8d8fc8
+  checksum: 2ccfe6ddc51dc05ae8ea1e2fbb893344e93a813e00c595d6b5f5e704b7b998d6b0e2adda7c57f99b5e46a60dc07c7d860269a2ea91661c6bacef0eca8e0b8e96
   languageName: node
   linkType: hard
 
@@ -12334,7 +12334,7 @@ __metadata:
     eslint-plugin-import: 2.23.4
     eslint-plugin-simple-import-sort: 7.0.0
     eslint-plugin-unicorn: 34.0.1
-    husky: 7.0.1
+    husky: 7.0.2
     lerna: 4.0.0
     prettier: 2.3.0
     pretty-quick: 3.1.0

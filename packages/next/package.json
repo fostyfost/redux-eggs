@@ -1,6 +1,6 @@
 {
   "name": "@redux-eggs/next",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.server.js",
   "module": "dist/index.server.js",
   "browser": "dist/index.client.js",
@@ -22,9 +22,9 @@
   },
   "devDependencies": {
     "@jest/types": "27.1.1",
-    "@redux-eggs/core": "1.0.1",
-    "@redux-eggs/redux": "1.0.1",
-    "@redux-eggs/redux-toolkit": "1.0.1",
+    "@redux-eggs/core": "1.0.2",
+    "@redux-eggs/redux": "1.0.2",
+    "@redux-eggs/redux-toolkit": "1.0.2",
     "@reduxjs/toolkit": "1.6.1",
     "@rollup/plugin-eslint": "8.0.1",
     "@testing-library/react": "12.1.0",

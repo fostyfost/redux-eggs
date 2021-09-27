@@ -35,8 +35,7 @@ const getDefaultConfig = (tsOptions = {}, addTerser = false) => {
       showBrotliSize: true,
       showGzippedSize: true,
       showMinifiedSize: true,
-      // TODO: enable it after release
-      // showBeforeSizes: 'release',
+      showBeforeSizes: 'release',
     }),
   ]
 

@@ -1260,21 +1260,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:7.15.3, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.13.8, @babel/runtime@npm:^7.6.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+  version: 7.15.3
+  resolution: "@babel/runtime@npm:7.15.3"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 2f0b8d2d4e36035ab1d84af0ec26aafa098536870f27c8e07de0a0e398f7a394fdea68a88165535ffb52ded6a68912bdc3450bdf91f229eb132e1c89470789f5
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:7.15.4, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5":
   version: 7.15.4
   resolution: "@babel/runtime@npm:7.15.4"
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: c40825430400e47c19b97e4142d5315d2910305b9714d44a711472587ee2fd4521fdba5f02ddd9df3902f5e988d9854fa83f4da1e0c091f70f6983fa52480606
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.13.8, @babel/runtime@npm:^7.6.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
-  version: 7.15.3
-  resolution: "@babel/runtime@npm:7.15.3"
-  dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: 2f0b8d2d4e36035ab1d84af0ec26aafa098536870f27c8e07de0a0e398f7a394fdea68a88165535ffb52ded6a68912bdc3450bdf91f229eb132e1c89470789f5
   languageName: node
   linkType: hard
 
@@ -2663,6 +2663,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/env@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/env@npm:11.1.1"
+  checksum: 7ec259d3ba8038cb4911c0780edb776f2591b8f5ddf003738a0a0e7ea5aa9f606c3fb9e2cd25af31f94fc60cd74340a7392abffaf93468b60b124938f04571b2
+  languageName: node
+  linkType: hard
+
 "@next/eslint-plugin-next@npm:11.1.0":
   version: 11.1.0
   resolution: "@next/eslint-plugin-next@npm:11.1.0"
@@ -2676,6 +2683,13 @@ __metadata:
   version: 11.1.0
   resolution: "@next/polyfill-module@npm:11.1.0"
   checksum: 45ce6453d717e74c424e438b8de32fe42795b165fd5e9d60f0bc0cf585c9fcd044b7db2efa90a930303064090bea2a4a10848f64d8301b0dc242e986ff922f55
+  languageName: node
+  linkType: hard
+
+"@next/polyfill-module@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/polyfill-module@npm:11.1.1"
+  checksum: c0ba480a4c3a3e03f0babf2c012f27184e4bf644776ff8e5d085e6a245f89f9c4a6fa88adef9f49258be592c9a78672cede6732ce8f3a5ef7ab2dcd621fb0499
   languageName: node
   linkType: hard
 
@@ -2701,6 +2715,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/react-dev-overlay@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/react-dev-overlay@npm:11.1.1"
+  dependencies:
+    "@babel/code-frame": 7.12.11
+    anser: 1.4.9
+    chalk: 4.0.0
+    classnames: 2.2.6
+    css.escape: 1.5.1
+    data-uri-to-buffer: 3.0.1
+    platform: 1.3.6
+    shell-quote: 1.7.2
+    source-map: 0.8.0-beta.0
+    stacktrace-parser: 0.1.10
+    strip-ansi: 6.0.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  checksum: 719997470227d6a0e9059a93dd649af4ce2319ca04edf8afe3f8e403691a074697bc3f5d8c8f9ab3d3bfe9eb7aad059f8cca6edf8ae1412136ffc23323cdf7f2
+  languageName: node
+  linkType: hard
+
 "@next/react-refresh-utils@npm:11.1.0":
   version: 11.1.0
   resolution: "@next/react-refresh-utils@npm:11.1.0"
@@ -2711,6 +2747,47 @@ __metadata:
     webpack:
       optional: true
   checksum: d4b96574fa982ca7db87887cd3c581602d35c87137b59204d2ecaee68705a6145ad5752a398fc8b780d56257b92c904fd4b1324fe6f73cc90cc362e37aaf5024
+  languageName: node
+  linkType: hard
+
+"@next/react-refresh-utils@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/react-refresh-utils@npm:11.1.1"
+  peerDependencies:
+    react-refresh: 0.8.3
+    webpack: ^4 || ^5
+  peerDependenciesMeta:
+    webpack:
+      optional: true
+  checksum: d3312c8b514efdf31699f48ed64626bffc242b0f5867b1c790b50bef2377a53de71f5db8dd3bddfe99d3b0ba38d879de767e990b2cc91d26c54eeb5148dba400
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-arm64@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/swc-darwin-arm64@npm:11.1.1"
+  checksum: 87a997bd158c5196d919e06f55602ef0f36d9d21a945e85655c297efe69d0dcd525b5eb9c0d31acda8161a32f9afdfbc57b43ea517cd3ec1de9fd8ee6174d925
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-x64@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/swc-darwin-x64@npm:11.1.1"
+  checksum: a3c2ea01a4009777fc546cefb3b076207b8dc8dd5c963e7a6ab1f107666044404a7e14dde95e13a61dec1155656064a97bf0512fb715ab8244c1ca4798963045
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-x64-gnu@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/swc-linux-x64-gnu@npm:11.1.1"
+  checksum: 172e51b2ef18d0c04843df274024149e885b2863f71d8de6e14308adb829cad7b987f410db6b78788c66852ff0845567095aedd4ad232efb04bf77457534d0ba
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:11.1.1":
+  version: 11.1.1
+  resolution: "@next/swc-win32-x64-msvc@npm:11.1.1"
+  checksum: 22044020fd77a03a81ea48fc08cec8351594320130c540648052d6d89e0520d8be7b69f029b0a132bc3db847b02f5821e5e36059ac479e23ba6e0b50d6fd67aa
   languageName: node
   linkType: hard
 
@@ -3072,7 +3149,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@1.0.0, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@1.0.2, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -3098,9 +3175,9 @@ __metadata:
   resolution: "@redux-eggs/next@workspace:packages/next"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.0
-    "@redux-eggs/redux": 1.0.0
-    "@redux-eggs/redux-toolkit": 1.0.0
+    "@redux-eggs/core": 1.0.2
+    "@redux-eggs/redux": 1.0.2
+    "@redux-eggs/redux-toolkit": 1.0.2
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.0
@@ -3115,7 +3192,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     jest: 27.2.1
-    next: 11.1.0
+    next: 11.1.1
     react: 17.0.2
     react-dom: 17.0.2
     react-redux: 7.2.4
@@ -3141,7 +3218,7 @@ __metadata:
   resolution: "@redux-eggs/react@workspace:packages/react"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.0
+    "@redux-eggs/core": 1.0.2
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/dom": 8.6.0
     "@testing-library/jest-dom": 5.14.1
@@ -3175,12 +3252,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@1.0.0, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@1.0.2, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.0
+    "@redux-eggs/core": 1.0.2
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
@@ -3200,12 +3277,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@1.0.0, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@1.0.2, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.0
+    "@redux-eggs/core": 1.0.2
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -3229,7 +3306,7 @@ __metadata:
   resolution: "@redux-eggs/saga-extension@workspace:packages/saga-extension"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.0
+    "@redux-eggs/core": 1.0.2
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -10656,6 +10733,92 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next@npm:11.1.1":
+  version: 11.1.1
+  resolution: "next@npm:11.1.1"
+  dependencies:
+    "@babel/runtime": 7.15.3
+    "@hapi/accept": 5.0.2
+    "@next/env": 11.1.1
+    "@next/polyfill-module": 11.1.1
+    "@next/react-dev-overlay": 11.1.1
+    "@next/react-refresh-utils": 11.1.1
+    "@next/swc-darwin-arm64": 11.1.1
+    "@next/swc-darwin-x64": 11.1.1
+    "@next/swc-linux-x64-gnu": 11.1.1
+    "@next/swc-win32-x64-msvc": 11.1.1
+    "@node-rs/helper": 1.2.1
+    assert: 2.0.0
+    ast-types: 0.13.2
+    browserify-zlib: 0.2.0
+    browserslist: 4.16.6
+    buffer: 5.6.0
+    caniuse-lite: ^1.0.30001228
+    chalk: 2.4.2
+    chokidar: 3.5.1
+    constants-browserify: 1.0.0
+    crypto-browserify: 3.12.0
+    cssnano-simple: 3.0.0
+    domain-browser: 4.19.0
+    encoding: 0.1.13
+    etag: 1.8.1
+    find-cache-dir: 3.3.1
+    get-orientation: 1.1.2
+    https-browserify: 1.0.0
+    image-size: 1.0.0
+    jest-worker: 27.0.0-next.5
+    native-url: 0.3.4
+    node-fetch: 2.6.1
+    node-html-parser: 1.4.9
+    node-libs-browser: ^2.2.1
+    os-browserify: 0.3.0
+    p-limit: 3.1.0
+    path-browserify: 1.0.1
+    pnp-webpack-plugin: 1.6.4
+    postcss: 8.2.15
+    process: 0.11.10
+    querystring-es3: 0.2.1
+    raw-body: 2.4.1
+    react-is: 17.0.2
+    react-refresh: 0.8.3
+    stream-browserify: 3.0.0
+    stream-http: 3.1.1
+    string_decoder: 1.3.0
+    styled-jsx: 4.0.0
+    timers-browserify: 2.0.12
+    tty-browserify: 0.0.1
+    use-subscription: 1.5.1
+    util: 0.12.4
+    vm-browserify: 1.1.2
+    watchpack: 2.1.1
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^4.0.0 || ^5.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    sass: ^1.3.0
+  dependenciesMeta:
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
+    "@next/swc-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+  bin:
+    next: dist/bin/next
+  checksum: d16480aa2fd767160986891fa3fbb621338e0069dd3b755fedc2a44e1a7d81548286ab048a475839d82ef1d7eb750eaf71cb42dd43c0f8702bb55f508bb46aa1
+  languageName: node
+  linkType: hard
+
 "nice-try@npm:^1.0.4":
   version: 1.0.5
   resolution: "nice-try@npm:1.0.5"
@@ -14529,16 +14692,7 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"util@npm:^0.11.0":
-  version: 0.11.1
-  resolution: "util@npm:0.11.1"
-  dependencies:
-    inherits: 2.0.3
-  checksum: 80bee6a2edf5ab08dcb97bfe55ca62289b4e66f762ada201f2c5104cb5e46474c8b334f6504d055c0e6a8fda10999add9bcbd81ba765e7f37b17dc767331aa55
-  languageName: node
-  linkType: hard
-
-"util@npm:^0.12.0":
+"util@npm:0.12.4, util@npm:^0.12.0":
   version: 0.12.4
   resolution: "util@npm:0.12.4"
   dependencies:
@@ -14549,6 +14703,15 @@ typescript@4.3.5:
     safe-buffer: ^5.1.2
     which-typed-array: ^1.1.2
   checksum: 8eac7a6e6b341c0f1b3eb73bbe5dfcae31a7e9699c8fc3266789f3e95f7637946a7700dcf1904dbd3749a58a36760ebf7acf4bb5b717f7468532a8a79f44eff0
+  languageName: node
+  linkType: hard
+
+"util@npm:^0.11.0":
+  version: 0.11.1
+  resolution: "util@npm:0.11.1"
+  dependencies:
+    inherits: 2.0.3
+  checksum: 80bee6a2edf5ab08dcb97bfe55ca62289b4e66f762ada201f2c5104cb5e46474c8b334f6504d055c0e6a8fda10999add9bcbd81ba765e7f37b17dc767331aa55
   languageName: node
   linkType: hard
 

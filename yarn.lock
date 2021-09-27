@@ -1260,7 +1260,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.15.4, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5":
+"@babel/runtime@npm:7.15.4, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5":
   version: 7.15.4
   resolution: "@babel/runtime@npm:7.15.4"
   dependencies:
@@ -2999,7 +2999,6 @@ __metadata:
     mitt: 2.1.0
     nanoid: 3.1.23
     next: 11.1.0
-    next-page-transitions: 1.0.0-beta.2
     nprogress: 0.2.0
     prettier: 2.3.0
     pretty-quick: 3.1.0
@@ -3052,7 +3051,6 @@ __metadata:
     mitt: 2.1.0
     nanoid: 3.1.23
     next: 11.1.0
-    next-page-transitions: 1.0.0-beta.2
     nprogress: 0.2.0
     prettier: 2.3.0
     pretty-quick: 3.1.0
@@ -6318,15 +6316,6 @@ __metadata:
   version: 0.5.7
   resolution: "dom-accessibility-api@npm:0.5.7"
   checksum: 16161688087510bc31e9103be3a0b0b7d3b044fd4ca03059ac97950f391958008198627c688bd94346757169de91c2500903b14ee9e420c006961a25770b8c62
-  languageName: node
-  linkType: hard
-
-"dom-helpers@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "dom-helpers@npm:3.4.0"
-  dependencies:
-    "@babel/runtime": ^7.1.2
-  checksum: 58d9f1c4a96daf77eddc63ae1236b826e1cddd6db66bbf39b18d7e21896d99365b376593352d52a60969d67fa4a8dbef26adc1439fa2c1b355efa37cacbaf637
   languageName: node
   linkType: hard
 
@@ -10594,19 +10583,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-page-transitions@npm:1.0.0-beta.2":
-  version: 1.0.0-beta.2
-  resolution: "next-page-transitions@npm:1.0.0-beta.2"
-  dependencies:
-    prop-types: ^15.6.1
-    react-transition-group: ^2.3.1
-  peerDependencies:
-    react: ">=16.0.0"
-    react-dom: ">=16.0.0"
-  checksum: d5a72b5f70d15b93a7e6f539db3dd4bad0c7341854e3100930f1247eb9e4166294dabb99c5c5c7540a8e0da1a3408098ad15df7c6516e2b1f4983a268d13bb65
-  languageName: node
-  linkType: hard
-
 "next@npm:11.1.0":
   version: 11.1.0
   resolution: "next@npm:11.1.0"
@@ -11865,7 +11841,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -12088,13 +12064,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-lifecycles-compat@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "react-lifecycles-compat@npm:3.0.4"
-  checksum: a904b0fc0a8eeb15a148c9feb7bc17cec7ef96e71188280061fc340043fd6d8ee3ff233381f0e8f95c1cf926210b2c4a31f38182c8f35ac55057e453d6df204f
-  languageName: node
-  linkType: hard
-
 "react-redux@npm:7.2.4":
   version: 7.2.4
   resolution: "react-redux@npm:7.2.4"
@@ -12146,21 +12115,6 @@ __metadata:
   peerDependencies:
     react: 17.0.2
   checksum: e6b5c6ed2a0bde2c34f1ab9523ff9bc4c141a271daf730d6b852374e83acc0155d58ab71a318251e953ebfa65b8bebb9c5dce3eba1ccfcbef7cc4e1e8261c401
-  languageName: node
-  linkType: hard
-
-"react-transition-group@npm:^2.3.1":
-  version: 2.9.0
-  resolution: "react-transition-group@npm:2.9.0"
-  dependencies:
-    dom-helpers: ^3.4.0
-    loose-envify: ^1.4.0
-    prop-types: ^15.6.2
-    react-lifecycles-compat: ^3.0.4
-  peerDependencies:
-    react: ">=15.0.0"
-    react-dom: ">=15.0.0"
-  checksum: d8c9e50aabdc2cfc324e5cdb0ad1c6eecb02e1c0cd007b26d5b30ccf49015e900683dd489348c71fba4055858308d9ba7019e0d37d0e8d37bd46ed098788f670
   languageName: node
   linkType: hard
 

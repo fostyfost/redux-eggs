@@ -13,7 +13,8 @@
     "lint": "eslint src",
     "type-check": "tsc --pretty --noEmit",
     "test": "jest",
-    "test:coverage": "yarn test --coverage"
+    "test:coverage": "yarn test --coverage",
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "@redux-eggs/core": "1.0.0"

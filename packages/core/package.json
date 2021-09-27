@@ -14,7 +14,8 @@
     "lint": "eslint src",
     "type-check": "tsc --pretty --noEmit",
     "test": "jest",
-    "test:coverage": "yarn test --coverage"
+    "test:coverage": "yarn test --coverage",
+    "prepublish": "yarn run build"
   },
   "devDependencies": {
     "@jest/types": "27.1.1",

@@ -19,6 +19,7 @@
     "type-check": "lerna run --parallel type-check",
     "test": "lerna run --parallel test",
     "test:coverage": "lerna run --parallel test:coverage",
+    "prepublish": "lerna run prepublish",
     "prepare": "husky install",
     "pretty-quick": "pretty-quick"
   },

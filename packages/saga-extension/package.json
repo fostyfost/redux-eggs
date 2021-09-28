@@ -1,6 +1,6 @@
 {
   "name": "@redux-eggs/saga-extension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -21,7 +21,7 @@
     "prepublish": "yarn run build"
   },
   "dependencies": {
-    "@redux-eggs/core": "1.0.3"
+    "@redux-eggs/core": "1.0.4"
   },
   "devDependencies": {
     "@jest/types": "27.1.1",

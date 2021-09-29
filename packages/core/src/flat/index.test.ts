@@ -29,4 +29,7 @@ test('Flat helper tests', () => {
   const result2: Egg[] = [{ id: '50' }, { id: '40' }, { id: '30' }, { id: '20' }, { id: '10' }]
 
   expect(flat(eggTuple2)).toEqual(result2)
+
+  // @ts-ignore
+  expect(flat()).toEqual([])
 })

@@ -3,6 +3,7 @@ import * as Redux from 'redux'
 import { combineReducers, compose } from 'redux'
 
 import type { Egg, EggTuple, Extension } from '@/contracts'
+import * as EggTray from '@/egg-tray'
 import * as MiddlewareTray from '@/middleware-tray'
 import type { StoreCreator } from '@/store'
 import { buildStore, REDUCE_ACTION_TYPE } from '@/store'
@@ -72,6 +73,90 @@ describe('Tests for store builder', () => {
     eggs.forEach(egg => expect(store.getEggCount(egg)).toBe(0))
     expect(Object.keys(store.getState())).toEqual([])
     spyOnDispatch.mockClear()
+  })
+
+  test('Eggs without ID are not allowed', () => {
+    const addMock = jest.fn()
+    const removeMock = jest.fn()
+
+    const clearMocks = () => {
+      addMock.mockClear()
+      removeMock.mockClear()
+    }
+
+    const originalTrayResult = { ...EggTray.getEggTray() }
+
+    const spyOnEggTray = jest.spyOn(EggTray, 'getEggTray')
+    spyOnEggTray.mockImplementationOnce(() => ({
+      ...originalTrayResult,
+      add(eggs: Egg[]) {
+        originalTrayResult.add(eggs)
+        addMock(eggs)
+      },
+      remove(eggs: Egg[]) {
+        originalTrayResult.remove(eggs)
+        removeMock(eggs)
+      },
+    }))
+
+    const store = buildStore<Store>(reducer => Redux.createStore(reducer), combineReducers, compose)
+
+    // @ts-ignore
+    store.addEggs()
+    expect(addMock).not.toBeCalled()
+    expect(removeMock).not.toBeCalled()
+
+    // @ts-ignore
+    store.addEggs([{}, {}, {}])
+    expect(addMock).not.toBeCalled()
+    expect(removeMock).not.toBeCalled()
+
+    // @ts-ignore
+    store.addEggs([{ id: 'egg1' }, {}, {}])
+    expect(addMock).toBeCalledTimes(1)
+    expect(addMock).toBeCalledWith([{ id: 'egg1' }])
+    expect(removeMock).not.toBeCalled()
+    clearMocks()
+
+    // @ts-ignore
+    store.addEggs([{}, [{}, [{}, {}, [{ id: 'egg2' }, [[{ id: 'egg1' }]]]]]])
+    expect(addMock).toBeCalledTimes(1)
+    expect(addMock).toBeCalledWith([{ id: 'egg2' }, { id: 'egg1' }])
+    expect(removeMock).not.toBeCalled()
+    clearMocks()
+
+    expect(store.getEggs()).toEqual([
+      { count: 2, value: { id: 'egg1' } },
+      { count: 1, value: { id: 'egg2' } },
+    ])
+
+    // @ts-ignore
+    store.removeEggs()
+    expect(addMock).not.toBeCalled()
+    expect(removeMock).not.toBeCalled()
+
+    // @ts-ignore
+    store.removeEggs([{}, {}, {}])
+    expect(addMock).not.toBeCalled()
+    expect(removeMock).not.toBeCalled()
+
+    // @ts-ignore
+    store.removeEggs([{ id: 'egg1' }, {}, {}])
+    expect(addMock).not.toBeCalled()
+    expect(removeMock).toBeCalledTimes(1)
+    expect(removeMock).toBeCalledWith([{ id: 'egg1' }])
+    clearMocks()
+
+    // @ts-ignore
+    store.removeEggs([{}, [{}, [{}, {}, [{ id: 'egg2' }, [[{ id: 'egg1' }]]]]]])
+    expect(addMock).not.toBeCalled()
+    expect(removeMock).toBeCalledTimes(1)
+    expect(removeMock).toBeCalledWith([{ id: 'egg2' }, { id: 'egg1' }])
+    clearMocks()
+
+    expect(store.getEggs()).toEqual([])
+
+    spyOnEggTray.mockRestore()
   })
 
   test('Store is initialized with middlewares from extensions and middleware from middlewares tray', () => {

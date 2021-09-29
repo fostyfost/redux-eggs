@@ -60,48 +60,52 @@ export const buildStore = <S extends Store = Store>(
     beforeEvent: 'beforeAdd' | 'beforeRemove',
     afterEvent: 'afterAdd' | 'afterRemove',
   ): void => {
-    const actionEggs: Egg[] = []
-    const middlewares: Middleware[] = []
-    const reducers: ReducerEntry[] = []
+    const validEggs = eggs.filter(egg => egg.id)
 
-    const isAdd = method === 'add'
+    if (validEggs.length) {
+      const actionEggs: Egg[] = []
+      const middlewares: Middleware[] = []
+      const reducers: ReducerEntry[] = []
 
-    eggs.forEach(egg => {
-      const count = eggTray.getCount(egg)
+      const isAdd = method === 'add'
 
-      if ((isAdd && !count) || (!isAdd && count === 1)) {
-        actionEggs.push(egg)
+      validEggs.forEach(egg => {
+        const count = eggTray.getCount(egg)
 
-        if (egg.middlewares?.length) {
-          middlewares.push(...egg.middlewares)
+        if ((isAdd && !count) || (!isAdd && count === 1)) {
+          actionEggs.push(egg)
+
+          if (egg.middlewares?.length) {
+            middlewares.push(...egg.middlewares)
+          }
+
+          if (egg.reducerMap) {
+            reducers.push(...Object.entries(egg.reducerMap))
+          }
+        }
+      })
+
+      const actionEggsLength = actionEggs.length
+
+      if (actionEggsLength) {
+        ext[beforeEvent].forEach(handler => handler(actionEggs, store))
+
+        actionEggs.forEach(egg => egg[beforeEvent]?.(store))
+
+        if (reducerTray[method](reducers).length) {
+          store.dispatch({ type: REDUCE_ACTION_TYPE })
         }
 
-        if (egg.reducerMap) {
-          reducers.push(...Object.entries(egg.reducerMap))
-        }
-      }
-    })
-
-    const actionEggsLength = actionEggs.length
-
-    if (actionEggsLength) {
-      ext[beforeEvent].forEach(handler => handler(actionEggs, store))
-
-      actionEggs.forEach(egg => egg[beforeEvent]?.(store))
-
-      if (reducerTray[method](reducers).length) {
-        store.dispatch({ type: REDUCE_ACTION_TYPE })
+        middlewareTray[method](middlewares)
       }
 
-      middlewareTray[method](middlewares)
-    }
+      eggTray[method](validEggs)
 
-    eggTray[method](eggs)
+      if (actionEggsLength) {
+        ext[afterEvent].forEach(handler => handler(actionEggs, store))
 
-    if (actionEggsLength) {
-      ext[afterEvent].forEach(handler => handler(actionEggs, store))
-
-      actionEggs.forEach(egg => egg[afterEvent]?.(store))
+        actionEggs.forEach(egg => egg[afterEvent]?.(store))
+      }
     }
   }
 

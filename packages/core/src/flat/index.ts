@@ -13,7 +13,9 @@ export const flat = (tuple: EggTuple): Egg[] => {
     })
   }
 
-  flat(tuple)
+  if (Array.isArray(tuple)) {
+    flat(tuple)
+  }
 
   return result
 }

@@ -3001,7 +3001,7 @@ __metadata:
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 27.0.2
-    "@types/node": 15.3.0
+    "@types/node": 16.10.2
     "@types/nprogress": 0.2.0
     "@types/react": 17.0.24
     "@types/react-dom": 17.0.5
@@ -3051,7 +3051,7 @@ __metadata:
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 27.0.2
-    "@types/node": 15.3.0
+    "@types/node": 16.10.2
     "@types/nprogress": 0.2.0
     "@types/react": 17.0.24
     "@types/react-dom": 17.0.5
@@ -3098,7 +3098,7 @@ __metadata:
     jest: 27.2.1
     redux: 4.1.1
     rimraf: 3.0.2
-    rollup: 2.52.8
+    rollup: 2.57.0
     rollup-plugin-filesize: 9.1.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
@@ -3120,7 +3120,7 @@ __metadata:
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.0
     "@types/jest": 27.0.2
-    "@types/node": 16.6.1
+    "@types/node": 16.10.2
     "@types/react": 17.0.24
     "@types/react-dom": 17.0.9
     "@types/react-redux": 7.1.18
@@ -3137,7 +3137,7 @@ __metadata:
     react-test-renderer: 17.0.2
     redux: 4.1.1
     rimraf: 3.0.2
-    rollup: 2.52.8
+    rollup: 2.57.0
     rollup-plugin-filesize: 9.1.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
@@ -3177,7 +3177,7 @@ __metadata:
     react-redux: 7.2.5
     redux: 4.1.1
     rimraf: 3.0.2
-    rollup: 2.52.8
+    rollup: 2.57.0
     rollup-plugin-filesize: 9.1.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
@@ -3203,7 +3203,7 @@ __metadata:
     jest: 27.2.1
     redux: 4.1.1
     rimraf: 3.0.2
-    rollup: 2.52.8
+    rollup: 2.57.0
     rollup-plugin-filesize: 9.1.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
@@ -3227,7 +3227,7 @@ __metadata:
     jest: 27.2.1
     redux: 4.1.1
     rimraf: 3.0.2
-    rollup: 2.52.8
+    rollup: 2.57.0
     rollup-plugin-filesize: 9.1.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
@@ -3253,7 +3253,7 @@ __metadata:
     redux: 4.1.1
     redux-saga: 1.1.3
     rimraf: 3.0.2
-    rollup: 2.52.8
+    rollup: 2.57.0
     rollup-plugin-filesize: 9.1.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
@@ -3611,17 +3611,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:16.6.1":
+"@types/node@npm:*":
   version: 16.6.1
   resolution: "@types/node@npm:16.6.1"
   checksum: c13aa0da0c2bf9070e521d1b537ba38f64b213dd1b8aeec66c279fc21f8c0ccaf380364f6dc2ec8f84440c4cd1460b67dfe47de2cafcb6eaf4b648817cb27dc4
   languageName: node
   linkType: hard
 
-"@types/node@npm:15.3.0":
-  version: 15.3.0
-  resolution: "@types/node@npm:15.3.0"
-  checksum: fb9d6c4e9be5cc7b972b97bbbe4e111f48be284ae173d6946bc336ffec8dd3bf024a3c2fb0f065e07ae499127b8ff2aa5ab098a37ca03be1b5856ba499d6f2a4
+"@types/node@npm:16.10.2":
+  version: 16.10.2
+  resolution: "@types/node@npm:16.10.2"
+  checksum: 83c1c3c68e7500103908c3f16094e458879c840a719c15b6ea577f81fe1f24a1b3473bb6c8e8091fe79a82543ca7639c6b1088fcf80292ec091d1d1c9504a87e
   languageName: node
   linkType: hard
 
@@ -12681,9 +12681,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"rollup@npm:2.52.8":
-  version: 2.52.8
-  resolution: "rollup@npm:2.52.8"
+"rollup@npm:2.57.0":
+  version: 2.57.0
+  resolution: "rollup@npm:2.57.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -12691,7 +12691,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 871c54fe0f36e80d93ba5162d8d8c4d0285b0f061e5cc46b164b45f1525251132419ca9014019153feb38a1e7e9faf75af0c468e3b43216802389ccc231da763
+  checksum: 72427487d1f956ac1431b0db7a88ea542475630c9f0cc279a2f6be68138107bff00506d49d189780f77f189a17dcf83ee7be712a58145a6a910a3e23deb5f85d
   languageName: node
   linkType: hard
 

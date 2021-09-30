@@ -58,7 +58,6 @@ const config = [
     output: {
       file: './dist/index.server.js',
       format: 'es',
-      strict: true,
     },
   },
   {
@@ -67,7 +66,6 @@ const config = [
     output: {
       file: './dist/index.client.js',
       format: 'es',
-      strict: true,
     },
   },
 ]

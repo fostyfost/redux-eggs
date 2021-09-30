@@ -3087,7 +3087,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@1.0.3, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@1.0.4, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -3113,9 +3113,9 @@ __metadata:
   resolution: "@redux-eggs/next@workspace:packages/next"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.3
-    "@redux-eggs/redux": 1.0.3
-    "@redux-eggs/redux-toolkit": 1.0.3
+    "@redux-eggs/core": 1.0.4
+    "@redux-eggs/redux": 1.0.4
+    "@redux-eggs/redux-toolkit": 1.0.4
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.0
@@ -3127,7 +3127,7 @@ __metadata:
     "@types/react-test-renderer": 17.0.1
     "@wessberg/rollup-plugin-ts": 1.3.14
     eslint: 7.32.0
-    eslint-plugin-react: 7.26.0
+    eslint-plugin-react: 7.26.1
     eslint-plugin-react-hooks: 4.2.0
     jest: 27.2.1
     next: 11.1.2
@@ -3156,7 +3156,7 @@ __metadata:
   resolution: "@redux-eggs/react@workspace:packages/react"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.3
+    "@redux-eggs/core": 1.0.4
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/dom": 8.6.0
     "@testing-library/jest-dom": 5.14.1
@@ -3169,7 +3169,7 @@ __metadata:
     "@types/testing-library__jest-dom": 5.14.1
     "@wessberg/rollup-plugin-ts": 1.3.14
     eslint: 7.32.0
-    eslint-plugin-react: 7.26.0
+    eslint-plugin-react: 7.26.1
     eslint-plugin-react-hooks: 4.2.0
     jest: 27.2.1
     react: 17.0.2
@@ -3190,12 +3190,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@1.0.3, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@1.0.4, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.3
+    "@redux-eggs/core": 1.0.4
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
@@ -3215,12 +3215,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@1.0.3, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@1.0.4, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.3
+    "@redux-eggs/core": 1.0.4
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -3244,7 +3244,7 @@ __metadata:
   resolution: "@redux-eggs/saga-extension@workspace:packages/saga-extension"
   dependencies:
     "@jest/types": 27.1.1
-    "@redux-eggs/core": 1.0.3
+    "@redux-eggs/core": 1.0.4
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -6763,7 +6763,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:7.26.0, eslint-plugin-react@npm:^7.23.1":
+"eslint-plugin-react@npm:7.26.1":
+  version: 7.26.1
+  resolution: "eslint-plugin-react@npm:7.26.1"
+  dependencies:
+    array-includes: ^3.1.3
+    array.prototype.flatmap: ^1.2.4
+    doctrine: ^2.1.0
+    estraverse: ^5.2.0
+    jsx-ast-utils: ^2.4.1 || ^3.0.0
+    minimatch: ^3.0.4
+    object.entries: ^1.1.4
+    object.fromentries: ^2.0.4
+    object.hasown: ^1.0.0
+    object.values: ^1.1.4
+    prop-types: ^15.7.2
+    resolve: ^2.0.0-next.3
+    semver: ^6.3.0
+    string.prototype.matchall: ^4.0.5
+  peerDependencies:
+    eslint: ^3 || ^4 || ^5 || ^6 || ^7
+  checksum: 856eec868fe45de941f86f5e197a4da1421246bef2dcc88802e78ceedaa067edefd84352483bf595a56054022594f6c3ea93a5fb49aac6830b31d09754ab9237
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-react@npm:^7.23.1":
   version: 7.26.0
   resolution: "eslint-plugin-react@npm:7.26.0"
   dependencies:

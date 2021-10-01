@@ -4,7 +4,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 const config = {
   input: './src/index.ts',
-  external: ['node:process', 'node:path', 'node:fs', 'node:util'],
+  external: ['process', 'path', 'fs', 'util'],
   plugins: [
     peerDepsExternal({ includeDependencies: true }),
     eslint({

@@ -2,14 +2,14 @@ import brotli from 'brotli-size'
 import CliTable from 'cli-table'
 import colors from 'colors/safe'
 import fileSize from 'filesize'
+import fs from 'fs'
 import gzip from 'gzip-size'
-import fs from 'node:fs'
-import path from 'node:path'
-import * as process from 'node:process'
-import util from 'node:util'
 import pacote from 'pacote'
+import path from 'path'
+import * as process from 'process'
 import type { NormalizedOutputOptions, OutputChunk, OutputPlugin } from 'rollup'
 import terser from 'terser'
+import util from 'util'
 
 type FileSizeValue = number
 type FileSizeSymbol = string

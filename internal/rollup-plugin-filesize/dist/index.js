@@ -6,13 +6,13 @@ var brotli = require('brotli-size');
 var CliTable = require('cli-table');
 var colors = require('colors/safe');
 var fileSize = require('filesize');
+var fs = require('fs');
 var gzip = require('gzip-size');
-var fs = require('node:fs');
-var path = require('node:path');
-var process = require('node:process');
-var util = require('node:util');
 var pacote = require('pacote');
+var path = require('path');
+var process = require('process');
 var terser = require('terser');
+var util = require('util');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -38,13 +38,13 @@ var brotli__default = /*#__PURE__*/_interopDefaultLegacy(brotli);
 var CliTable__default = /*#__PURE__*/_interopDefaultLegacy(CliTable);
 var colors__default = /*#__PURE__*/_interopDefaultLegacy(colors);
 var fileSize__default = /*#__PURE__*/_interopDefaultLegacy(fileSize);
-var gzip__default = /*#__PURE__*/_interopDefaultLegacy(gzip);
 var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
+var gzip__default = /*#__PURE__*/_interopDefaultLegacy(gzip);
+var pacote__default = /*#__PURE__*/_interopDefaultLegacy(pacote);
 var path__default = /*#__PURE__*/_interopDefaultLegacy(path);
 var process__namespace = /*#__PURE__*/_interopNamespace(process);
-var util__default = /*#__PURE__*/_interopDefaultLegacy(util);
-var pacote__default = /*#__PURE__*/_interopDefaultLegacy(pacote);
 var terser__default = /*#__PURE__*/_interopDefaultLegacy(terser);
+var util__default = /*#__PURE__*/_interopDefaultLegacy(util);
 
 const white = colors__default["default"]['white'];
 const whiteBold = white.bold;

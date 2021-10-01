@@ -13,6 +13,7 @@
   "homepage": "https://github.com/fostyfost/redux-eggs",
   "scripts": {
     "build": "lerna run --stream --concurrency 1 --sort build",
+    "build:size": "lerna run --stream --concurrency 1 --sort build:size",
     "clean": "lerna run --parallel clean",
     "lint": "lerna run --parallel lint",
     "type-check": "lerna run --parallel type-check",
@@ -29,6 +30,7 @@
   "packageManager": "yarn@3.0.2",
   "workspaces": [
     "examples/*",
+    "internal/*",
     "packages/*"
   ],
   "devDependencies": {

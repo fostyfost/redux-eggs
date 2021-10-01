@@ -34,3 +34,4 @@ lerna-debug.log
 # lib
 lib
 dist
+file-size-cache

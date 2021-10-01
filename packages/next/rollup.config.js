@@ -1,6 +1,6 @@
+import { filesize } from '@redux-eggs-internal/rollup-plugin-filesize'
 import eslint from '@rollup/plugin-eslint'
 import ts from '@wessberg/rollup-plugin-ts'
-import filesize from 'rollup-plugin-filesize'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import { terser } from 'rollup-plugin-terser'
 
@@ -31,12 +31,7 @@ const getDefaultConfig = (tsOptions = {}, addTerser = false) => {
       exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
       ...tsOptions,
     }),
-    filesize({
-      showBrotliSize: true,
-      showGzippedSize: true,
-      showMinifiedSize: true,
-      showBeforeSizes: 'release',
-    }),
+    filesize(),
   ]
 
   if (addTerser) {

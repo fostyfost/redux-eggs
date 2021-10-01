@@ -25,7 +25,7 @@ function* loadDogWorker() {
     } else {
       yield put(DogReducerAction.setError(res.message))
     }
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Error in `loadDogWorker`]', error)
     yield put(DogReducerAction.setError(error.message))
   } finally {

@@ -21,7 +21,7 @@ function* loadFoxWorker() {
     const res: FoxResponse = yield call(fetchAsJson, 'https://randomfox.ca/floof/')
 
     yield put(FoxReducerAction.setFox(res.image))
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Error in `loadFoxWorker`]', error)
     yield put(FoxReducerAction.setError(error.message))
   } finally {

@@ -23,7 +23,7 @@ function* loadChuckNorrisJokeWorker() {
     const joke: JokeResponse = yield call(fetchAsJson, 'https://api.chucknorris.io/jokes/random')
 
     yield put(ChuckNorrisReducerAction.setJoke(joke.value))
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Error in `loadChuckNorrisJokeWorker`]', error)
     yield put(ChuckNorrisReducerAction.setError(error.message))
   } finally {

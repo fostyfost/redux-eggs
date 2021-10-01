@@ -33,7 +33,7 @@ function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAc
         body: response.body,
       }),
     )
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Error in `loadActivePostWorker`]', error)
     yield put(ActivePostReducerAction.setError(error.message))
   } finally {

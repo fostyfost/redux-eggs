@@ -21,7 +21,7 @@ function* loadPicsumWorker() {
     const pics: Picture[] = yield call(fetchAsJson, 'https://picsum.photos/v2/list')
 
     yield put(PicsumReducerAction.setPics(pics))
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Error in `loadPicsumWorker`]', error)
     yield put(PicsumReducerAction.setError(error.message))
   } finally {

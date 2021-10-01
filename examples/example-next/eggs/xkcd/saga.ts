@@ -29,7 +29,7 @@ function* loadXkcdInfoWorker() {
     const info: XkcdInfo = yield call(fetchAsJson, `https://xkcd.now.sh/?comic=${getRandomInteger(0, 1000)}`)
 
     yield put(XkcdReducerAction.setInfo(info))
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Error in `loadXkcdInfoWorker`]', error)
     yield put(XkcdReducerAction.setError(error.message))
   } finally {

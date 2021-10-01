@@ -31,7 +31,7 @@ function* loadPostsWorker() {
         })),
       ),
     )
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Error in `loadPostsWorker`]', error)
     yield put(PostsReducerAction.setError(error.message))
   } finally {

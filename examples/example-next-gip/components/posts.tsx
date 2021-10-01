@@ -1,4 +1,4 @@
-import { EggsLoader } from '@redux-eggs/react'
+import { getInjector } from '@redux-eggs/react'
 import NextLink from 'next/link'
 import type { FC } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -32,7 +32,7 @@ export const Posts: FC<Props> = ({ rootUrl }) => {
   return isLoading ? <div>Posts are loading ...</div> : <LoadedPosts rootUrl={rootUrl} />
 }
 
-const eggs = [getPostsEgg({ afterAdd: store => store.dispatch(PostsPublicAction.loadPosts()) })]
+const Injector = getInjector([getPostsEgg({ afterAdd: store => store.dispatch(PostsPublicAction.loadPosts()) })])
 
 export const DynamicPosts: FC<Props> = ({ rootUrl }) => {
   const [ref, inView] = useInView()
@@ -40,9 +40,9 @@ export const DynamicPosts: FC<Props> = ({ rootUrl }) => {
   return (
     <div ref={ref}>
       {inView ? (
-        <EggsLoader eggs={eggs}>
+        <Injector.Wrapper>
           <Posts rootUrl={rootUrl} />
-        </EggsLoader>
+        </Injector.Wrapper>
       ) : null}
     </div>
   )

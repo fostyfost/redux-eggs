@@ -41,7 +41,7 @@
     "rollup-plugin-terser": "7.0.2",
     "ts-jest": "27.0.5",
     "tslib": "2.3.1",
-    "typescript": "4.3.5"
+    "typescript": "4.4.3"
   },
   "peerDependencies": {
     "redux-saga": "^1.1.0"

@@ -3216,7 +3216,7 @@ __metadata:
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
     "@redux-eggs/core": 1.0.5
     "@rollup/plugin-eslint": 8.0.1
-    "@testing-library/dom": 8.6.0
+    "@testing-library/dom": 8.7.1
     "@testing-library/jest-dom": 5.14.1
     "@testing-library/react": 12.1.1
     "@testing-library/user-event": 13.2.1
@@ -3449,9 +3449,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:8.6.0":
-  version: 8.6.0
-  resolution: "@testing-library/dom@npm:8.6.0"
+"@testing-library/dom@npm:8.7.1":
+  version: 8.7.1
+  resolution: "@testing-library/dom@npm:8.7.1"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
@@ -3461,7 +3461,7 @@ __metadata:
     dom-accessibility-api: ^0.5.6
     lz-string: ^1.4.4
     pretty-format: ^27.0.2
-  checksum: 72a3a74b4415e49724e7b3b9c92b8dbbde3604e1bd857e9473e15a00984f6a412b57ec67dbfa0a1635e1a009e79b0d7c7a8002dd1247eb0a7731e07cf138bc1e
+  checksum: 9d8dc39affe183e2a6ef843d65a886928978332cfb097bf456c567702d9fa0dfa3efc5e7fbf8bbdacc4af4652151c3712b5c1345ff6ea99fa597cad4443125f2
   languageName: node
   linkType: hard
 

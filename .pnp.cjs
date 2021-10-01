@@ -7557,7 +7557,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     '@rollup/plugin-eslint',
                     'virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1',
                   ],
-                  ['@testing-library/dom', 'npm:8.6.0'],
+                  ['@testing-library/dom', 'npm:8.7.1'],
                   ['@testing-library/jest-dom', 'npm:5.14.1'],
                   [
                     '@testing-library/react',
@@ -7637,7 +7637,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     '@rollup/plugin-eslint',
                     'virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1',
                   ],
-                  ['@testing-library/dom', 'npm:8.6.0'],
+                  ['@testing-library/dom', 'npm:8.7.1'],
                   ['@testing-library/jest-dom', 'npm:5.14.1'],
                   [
                     '@testing-library/react',
@@ -8406,12 +8406,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
               },
             ],
             [
-              'npm:8.6.0',
+              'npm:8.7.1',
               {
                 packageLocation:
-                  './.yarn/cache/@testing-library-dom-npm-8.6.0-a0483da91a-72a3a74b44.zip/node_modules/@testing-library/dom/',
+                  './.yarn/cache/@testing-library-dom-npm-8.7.1-08c6d31ac7-9d8dc39aff.zip/node_modules/@testing-library/dom/',
                 packageDependencies: [
-                  ['@testing-library/dom', 'npm:8.6.0'],
+                  ['@testing-library/dom', 'npm:8.7.1'],
                   ['@babel/code-frame', 'npm:7.14.5'],
                   ['@babel/runtime', 'npm:7.15.4'],
                   ['@types/aria-query', 'npm:4.2.2'],
@@ -8512,7 +8512,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     'virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.2.1',
                   ],
                   ['@babel/runtime', 'npm:7.15.4'],
-                  ['@testing-library/dom', 'npm:8.6.0'],
+                  ['@testing-library/dom', 'npm:8.7.1'],
                   ['@types/testing-library__dom', null],
                 ],
                 packagePeers: ['@testing-library/dom', '@types/testing-library__dom'],

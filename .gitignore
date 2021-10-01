@@ -2,17 +2,17 @@
 
 # dependencies
 node_modules
-/.pnp
-.pnp.js
+# /.pnp
+# .pnp.js
 
 # yarn v2 non-zero-install (https://yarnpkg.com/features/zero-installs)
 .yarn/*
+!.yarn/cache
 !.yarn/patches
-!.yarn/releases
 !.yarn/plugins
+!.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-.pnp.*
 
 # testing
 coverage

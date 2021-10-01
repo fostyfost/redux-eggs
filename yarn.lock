@@ -3114,7 +3114,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@1.0.4, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@1.0.5, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -3142,9 +3142,9 @@ __metadata:
   dependencies:
     "@jest/types": 27.1.1
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.4
-    "@redux-eggs/redux": 1.0.4
-    "@redux-eggs/redux-toolkit": 1.0.4
+    "@redux-eggs/core": 1.0.5
+    "@redux-eggs/redux": 1.0.5
+    "@redux-eggs/redux-toolkit": 1.0.5
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.0
@@ -3186,7 +3186,7 @@ __metadata:
   dependencies:
     "@jest/types": 27.1.1
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.4
+    "@redux-eggs/core": 1.0.5
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/dom": 8.6.0
     "@testing-library/jest-dom": 5.14.1
@@ -3220,13 +3220,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@1.0.4, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@1.0.5, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
     "@jest/types": 27.1.1
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.4
+    "@redux-eggs/core": 1.0.5
     "@reduxjs/toolkit": 1.6.1
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
@@ -3246,13 +3246,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@1.0.4, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@1.0.5, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 27.1.1
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.4
+    "@redux-eggs/core": 1.0.5
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -3277,7 +3277,7 @@ __metadata:
   dependencies:
     "@jest/types": 27.1.1
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.4
+    "@redux-eggs/core": 1.0.5
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14

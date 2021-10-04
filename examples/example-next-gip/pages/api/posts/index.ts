@@ -1,7 +1,7 @@
 import type { NextApiHandler } from 'next'
 
 import type { PostsResponseItem } from '@/eggs/posts/contracts/api-response'
-import { fetchAsJson } from '@/utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetch-as-json'
 
 const handler: NextApiHandler = async (_, res) => {
   try {

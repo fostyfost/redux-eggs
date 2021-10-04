@@ -1,7 +1,8 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
 import type { PostsResponseItem } from '@/eggs/posts/contracts/api-response'
-import { fetchAsJson } from '@/utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetch-as-json'
+import { getServerHost } from '@/utils/get-server-host'
 
 import { PostsReducerAction } from './action-creators'
 import { PostsActionType } from './action-types'
@@ -20,7 +21,7 @@ function* loadPostsWorker() {
   try {
     const responseItems: PostsResponseItem[] = yield call(
       fetchAsJson,
-      typeof window === 'undefined' ? `http://localhost:${process.env.PORT}/api/posts` : '/api/posts',
+      typeof window === 'undefined' ? `${getServerHost()}/api/posts` : '/api/posts',
     )
 
     yield put(

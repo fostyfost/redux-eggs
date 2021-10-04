@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "cross-env PORT=3020 next",
     "build": "next build",
-    "start": "cross-env PORT=3001 next start",
+    "start": "cross-env PORT=3021 next start",
     "analyze": "cross-env ANALYZE=true yarn build",
     "lint": "next lint",
     "type-check": "tsc --pretty --noEmit",

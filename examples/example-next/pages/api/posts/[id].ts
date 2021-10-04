@@ -1,7 +1,7 @@
 import type { NextApiHandler, NextApiResponse } from 'next'
 
 import type { PostsResponseItem } from '@/eggs/posts/contracts/api-response'
-import { fetchAsJson } from '@/utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetch-as-json'
 
 const sendError = (res: NextApiResponse, id: string): void => {
   res.status(404).json({ message: `Post with id ${id} not found.` })

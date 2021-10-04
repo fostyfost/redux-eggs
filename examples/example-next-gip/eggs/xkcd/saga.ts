@@ -1,6 +1,6 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
-import { fetchAsJson } from '@/utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetch-as-json'
 
 import { XkcdReducerAction } from './action-creators'
 import { XkcdActionType } from './action-types'

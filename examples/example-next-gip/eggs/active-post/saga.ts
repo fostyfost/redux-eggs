@@ -1,6 +1,7 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
-import { fetchAsJson } from '@/utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetch-as-json'
+import { getServerHost } from '@/utils/get-server-host'
 
 import type { ActivePostPublicAction } from './action-creators'
 import { ActivePostReducerAction } from './action-creators'
@@ -21,9 +22,7 @@ function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAc
   try {
     const response: ActivePostResponseItem = yield call(
       fetchAsJson,
-      typeof window === 'undefined'
-        ? `http://localhost:${process.env.PORT}/api/posts/${payload}`
-        : `/api/posts/${payload}`,
+      typeof window === 'undefined' ? `${getServerHost()}/api/posts/${payload}` : `/api/posts/${payload}`,
     )
 
     yield put(

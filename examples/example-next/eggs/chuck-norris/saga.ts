@@ -1,6 +1,6 @@
 import { call, delay, put, select, takeLatest } from 'redux-saga/effects'
 
-import { fetchAsJson } from '@/utils/fetchAsJson'
+import { fetchAsJson } from '@/utils/fetch-as-json'
 
 import { ChuckNorrisReducerAction } from './action-creators'
 import { ChuckNorrisActionType } from './action-types'

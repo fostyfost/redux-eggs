@@ -33,6 +33,8 @@ const UserPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ti
 const wrapper = wrapperInitializer.getPageWrapper([getUsersEgg()])
 
 export const getStaticPaths = wrapper.wrapGetStaticPaths(store => async () => {
+  store.addEggs([getUsersEgg()])
+
   store.dispatch(UsersPublicAction.loadUsers())
 
   await waitForLoadedState(store, isUsersLoaded)
@@ -45,34 +47,36 @@ export const getStaticPaths = wrapper.wrapGetStaticPaths(store => async () => {
   }
 })
 
-export const getStaticProps: GetStaticProps<Props, InferGetStaticPathsQueryType<typeof getStaticPaths>> =
-  wrapper.wrapGetStaticProps(store => async context => {
-    const id = Number(context.params?.id)
+export const getStaticProps: GetStaticProps<
+  Props,
+  InferGetStaticPathsQueryType<typeof getStaticPaths>
+> = wrapper.wrapGetStaticProps(store => async context => {
+  const id = Number(context.params?.id)
 
-    if (!id) {
-      return {
-        notFound: true,
-      }
-    }
-
-    store.dispatch(UsersPublicAction.loadUsers())
-
-    await waitForLoadedState(store, isUsersLoaded)
-
-    const user = getUserById(store.getState(), id)
-
-    if (!user) {
-      return {
-        notFound: true,
-      }
-    }
-
+  if (!id) {
     return {
-      props: {
-        title: `This is page of user with ID: ${id}`,
-        id,
-      },
+      notFound: true,
     }
-  })
+  }
+
+  store.dispatch(UsersPublicAction.loadUsers())
+
+  await waitForLoadedState(store, isUsersLoaded)
+
+  const user = getUserById(store.getState(), id)
+
+  if (!user) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      title: `This is page of user with ID: ${id}`,
+      id,
+    },
+  }
+})
 
 export default wrapper.wrapPage(UserPage)

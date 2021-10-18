@@ -3,6 +3,8 @@ node_modules
 .husky
 .vercel
 .yarn
+.pnp.cjs
+.pnp.js
 dist
 coverage
 file-size-cache

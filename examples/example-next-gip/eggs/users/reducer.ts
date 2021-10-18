@@ -6,12 +6,12 @@ import { UsersActionType } from '@/eggs/users/action-types'
 import type { UsersState } from '@/eggs/users/contracts/state'
 import { UsersLoadingState } from '@/eggs/users/contracts/state'
 
+export const USERS_REDUCER_KEY = 'users' as const
+
 const initialState: UsersState = {
   users: [],
   loadingState: UsersLoadingState.NEVER,
 }
-
-export const USERS_REDUCER_KEY = 'users' as const
 
 export const usersReducer = produce((draft: Draft<UsersState>, action: UsersActionsUnion): void => {
   switch (action.type) {

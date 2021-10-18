@@ -6,11 +6,11 @@ import { ActivePostActionType } from '@/eggs/active-post/action-types'
 import type { ActivePostState } from '@/eggs/active-post/contracts/state'
 import { ActivePostLoadingState } from '@/eggs/active-post/contracts/state'
 
+export const ACTIVE_POST_REDUCER_KEY = 'active-post' as const
+
 const initialState: ActivePostState = {
   loadingState: ActivePostLoadingState.NEVER,
 }
-
-export const ACTIVE_POST_REDUCER_KEY = 'active-post' as const
 
 export const activePostReducer = produce((draft: Draft<ActivePostState>, action: ActivePostActionsUnion): void => {
   switch (action.type) {

@@ -6,11 +6,11 @@ import { ChuckNorrisActionType } from '@/eggs/chuck-norris/action-types'
 import type { ChuckNorrisState } from '@/eggs/chuck-norris/contracts/state'
 import { ChuckNorrisLoadingState } from '@/eggs/chuck-norris/contracts/state'
 
+export const CHUCK_NORRIS_REDUCER_KEY = 'chuck-norris' as const
+
 const initialState: ChuckNorrisState = {
   loadingState: ChuckNorrisLoadingState.NEVER,
 }
-
-export const CHUCK_NORRIS_REDUCER_KEY = 'chuck-norris' as const
 
 export const chuckNorrisReducer = produce((draft: Draft<ChuckNorrisState>, action: ChuckNorrisActionsUnion): void => {
   switch (action.type) {

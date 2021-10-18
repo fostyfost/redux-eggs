@@ -7,6 +7,8 @@ import { DEFAULT_SORT, DEFAULT_STOPS } from '@/eggs/aviasales/constants'
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
 import type { AviasalesState } from '@/eggs/aviasales/contracts/state'
 
+export const AVIASALES_REDUCER_KEY = 'aviasales' as const
+
 const initialState: AviasalesState = {
   tickets: {},
   ticketsSegments: {},
@@ -14,8 +16,6 @@ const initialState: AviasalesState = {
   currentSort: DEFAULT_SORT,
   stops: DEFAULT_STOPS,
 }
-
-export const AVIASALES_REDUCER_KEY = 'aviasales' as const
 
 export const aviasalesReducer = produce((draft: Draft<AviasalesState>, action: AviasalesActionsUnion): void => {
   switch (action.type) {

@@ -6,11 +6,11 @@ import { XkcdActionType } from '@/eggs/xkcd/action-types'
 import type { XkcdState } from '@/eggs/xkcd/contracts/state'
 import { XkcdLoadingState } from '@/eggs/xkcd/contracts/state'
 
+export const XKCD_REDUCER_KEY = 'xkcd' as const
+
 const initialState: XkcdState = {
   loadingState: XkcdLoadingState.NEVER,
 }
-
-export const XKCD_REDUCER_KEY = 'xkcd' as const
 
 export const xkcdReducer = produce((draft: Draft<XkcdState>, action: XkcdActionsUnion): void => {
   switch (action.type) {

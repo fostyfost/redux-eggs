@@ -6,11 +6,11 @@ import { DogActionType } from '@/eggs/dog/action-types'
 import type { DogState } from '@/eggs/dog/contracts/state'
 import { DogLoadingState } from '@/eggs/dog/contracts/state'
 
+export const DOG_REDUCER_KEY = 'dog' as const
+
 const initialState: DogState = {
   loadingState: DogLoadingState.NEVER,
 }
-
-export const DOG_REDUCER_KEY = 'dog' as const
 
 export const dogReducer = produce((draft: Draft<DogState>, action: DogActionsUnion): void => {
   switch (action.type) {

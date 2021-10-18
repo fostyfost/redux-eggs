@@ -1,6 +1,6 @@
 export enum PicsumActionType {
-  LOAD_PICS = 'picsum-egg/LOAD_PICS',
-  SET_PICS = 'picsum-egg/SET_PICS',
-  SET_ERROR = 'picsum-egg/SET_ERROR',
-  SET_LOADING_STATE = 'picsum-egg/SET_LOADING_STATE',
+  LOAD_PICS = 'picsum/LOAD_PICS',
+  SET_PICS = 'picsum/SET_PICS',
+  SET_ERROR = 'picsum/SET_ERROR',
+  SET_LOADING_STATE = 'picsum/SET_LOADING_STATE',
 }

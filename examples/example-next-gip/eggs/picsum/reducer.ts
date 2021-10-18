@@ -6,11 +6,11 @@ import { PicsumActionType } from '@/eggs/picsum/action-types'
 import type { PicsumState } from '@/eggs/picsum/contracts/state'
 import { PicsumLoadingState } from '@/eggs/picsum/contracts/state'
 
+export const PICSUM_REDUCER_KEY = 'picsum' as const
+
 const initialState: PicsumState = {
   loadingState: PicsumLoadingState.NEVER,
 }
-
-export const PICSUM_REDUCER_KEY = 'picsum' as const
 
 export const picsumReducer = produce((draft: Draft<PicsumState>, action: PicsumActionsUnion): void => {
   switch (action.type) {

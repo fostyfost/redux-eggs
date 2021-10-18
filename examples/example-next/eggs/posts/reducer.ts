@@ -6,12 +6,12 @@ import { PostsActionType } from '@/eggs/posts/action-types'
 import type { PostsState } from '@/eggs/posts/contracts/state'
 import { PostsLoadingState } from '@/eggs/posts/contracts/state'
 
+export const POSTS_REDUCER_KEY = 'posts' as const
+
 const initialState: PostsState = {
   posts: [],
   loadingState: PostsLoadingState.NEVER,
 }
-
-export const POSTS_REDUCER_KEY = 'posts' as const
 
 export const postsReducer = produce((draft: Draft<PostsState>, action: PostsActionsUnion): void => {
   switch (action.type) {

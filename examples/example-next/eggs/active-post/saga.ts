@@ -7,7 +7,6 @@ import type { ActivePostResponseItem } from '@/eggs/active-post/contracts/api-re
 import { ActivePostLoadingState } from '@/eggs/active-post/contracts/state'
 import { errorSelector } from '@/eggs/active-post/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
-import { getServerHost } from '@/utils/get-server-host'
 
 function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAction.loadActivePost>) {
   yield put(ActivePostReducerAction.setLoadingState(ActivePostLoadingState.LOADING))
@@ -19,18 +18,24 @@ function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAc
   }
 
   try {
-    const response: ActivePostResponseItem = yield call(
+    const responseItems: ActivePostResponseItem[] = yield call(
       fetchAsJson,
-      typeof window === 'undefined' ? `${getServerHost()}/api/posts/${payload}` : `/api/posts/${payload}`,
+      'https://jsonplaceholder.typicode.com/posts',
     )
 
-    yield put(
-      ActivePostReducerAction.setActivePost({
-        id: `${response.id}`,
-        title: response.title,
-        body: response.body,
-      }),
-    )
+    const post = responseItems.slice(0, 10).find(post => `${post.id}` === payload)
+
+    if (post) {
+      yield put(
+        ActivePostReducerAction.setActivePost({
+          id: `${post.id}`,
+          title: post.title,
+          body: post.body,
+        }),
+      )
+    } else {
+      yield put(ActivePostReducerAction.setError(`Post #${payload} not found`))
+    }
   } catch (error: any) {
     console.error('[Error in `loadActivePostWorker`]', error)
     yield put(ActivePostReducerAction.setError(error.message))

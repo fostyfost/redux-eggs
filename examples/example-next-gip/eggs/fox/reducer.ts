@@ -6,11 +6,11 @@ import { FoxActionType } from '@/eggs/fox/action-types'
 import type { FoxState } from '@/eggs/fox/contracts/state'
 import { FoxLoadingState } from '@/eggs/fox/contracts/state'
 
+export const FOX_REDUCER_KEY = 'fox' as const
+
 const initialState: FoxState = {
   loadingState: FoxLoadingState.NEVER,
 }
-
-export const FOX_REDUCER_KEY = 'fox' as const
 
 export const foxReducer = produce((draft: Draft<FoxState>, action: FoxActionsUnion): void => {
   switch (action.type) {

@@ -3,8 +3,8 @@ import mitt from 'mitt'
 export const AviasalesEventEmitter = mitt()
 
 export enum AviasalesEvent {
-  GET_TICKETS = 'aviasales-egg/GET_TICKETS',
-  CHANGE_STOPS = 'aviasales-egg/CHANGE_STOPS',
+  GET_TICKETS = 'aviasales/GET_TICKETS',
+  CHANGE_STOPS = 'aviasales/CHANGE_STOPS',
 }
 
 export enum ChangeStopsMassive {

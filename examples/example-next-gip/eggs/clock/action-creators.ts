@@ -9,8 +9,8 @@ export const ClockPublicAction = {
 }
 
 export const ClockReducerAction = {
-  tickClock() {
-    return createAction(ClockActionType.TICK_CLOCK, Date.now())
+  tickClock(payload: number) {
+    return createAction(ClockActionType.TICK_CLOCK, payload)
   },
 }
 

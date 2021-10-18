@@ -6,7 +6,6 @@ import type { PostsResponseItem } from '@/eggs/posts/contracts/api-response'
 import { PostsLoadingState } from '@/eggs/posts/contracts/state'
 import { errorSelector } from '@/eggs/posts/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
-import { getServerHost } from '@/utils/get-server-host'
 
 function* loadPostsWorker() {
   yield put(PostsReducerAction.setLoadingState(PostsLoadingState.LOADING))
@@ -18,14 +17,11 @@ function* loadPostsWorker() {
   }
 
   try {
-    const responseItems: PostsResponseItem[] = yield call(
-      fetchAsJson,
-      typeof window === 'undefined' ? `${getServerHost()}/api/posts` : '/api/posts',
-    )
+    const responseItems: PostsResponseItem[] = yield call(fetchAsJson, 'https://jsonplaceholder.typicode.com/posts')
 
     yield put(
       PostsReducerAction.setPosts(
-        responseItems.map(responseItem => ({
+        responseItems.slice(0, 10).map(responseItem => ({
           id: `${responseItem.id}`,
           title: responseItem.title,
         })),

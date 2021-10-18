@@ -1,6 +1,6 @@
 import type { Immutable } from 'immer'
 
-import type { CHUCK_NORRIS_MODULE_NAME } from '../index'
+import type { CHUCK_NORRIS_REDUCER_KEY } from '@/eggs/chuck-norris/reducer'
 
 export enum ChuckNorrisLoadingState {
   NEVER = 'NEVER',
@@ -9,7 +9,7 @@ export enum ChuckNorrisLoadingState {
 }
 
 export interface ChuckNorrisAwareState {
-  [CHUCK_NORRIS_MODULE_NAME]: ChuckNorrisState
+  [CHUCK_NORRIS_REDUCER_KEY]: ChuckNorrisState
 }
 
 export type ChuckNorrisState = Immutable<{

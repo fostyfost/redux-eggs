@@ -1,13 +1,13 @@
 import type { Immutable } from 'immer'
 import { createSelector } from 'reselect'
 
-import type { UsersAwareState } from './contracts/state'
-import { UsersLoadingState } from './contracts/state'
-import type { User } from './contracts/user'
-import { USERS_MODULE_NAME } from './index'
+import type { UsersAwareState } from '@/eggs/users/contracts/state'
+import { UsersLoadingState } from '@/eggs/users/contracts/state'
+import type { User } from '@/eggs/users/contracts/user'
+import { USERS_REDUCER_KEY } from '@/eggs/users/reducer'
 
 export const usersSelector = (state: UsersAwareState): Immutable<User[]> => {
-  return state[USERS_MODULE_NAME].users
+  return state[USERS_REDUCER_KEY].users
 }
 
 export const usersIdsSelector = createSelector(usersSelector, users => users.map(user => user.id))
@@ -24,11 +24,11 @@ export const getUserById = (state: UsersAwareState, id: number): User | undefine
 }
 
 export const errorSelector = (state: UsersAwareState): string | undefined => {
-  return state[USERS_MODULE_NAME].error
+  return state[USERS_REDUCER_KEY].error
 }
 
 export const loadingStateSelector = (state: UsersAwareState): UsersLoadingState => {
-  return state[USERS_MODULE_NAME].loadingState
+  return state[USERS_REDUCER_KEY].loadingState
 }
 
 export const isUsersLoading = createSelector(loadingStateSelector, (loadingState: UsersLoadingState): boolean => {

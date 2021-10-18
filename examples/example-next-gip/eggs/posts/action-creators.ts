@@ -1,9 +1,8 @@
+import { PostsActionType } from '@/eggs/posts/action-types'
+import type { PostsLoadingState } from '@/eggs/posts/contracts/state'
+import type { PostsItem } from '@/eggs/posts/contracts/state'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { PostsActionType } from './action-types'
-import type { PostsLoadingState } from './contracts/state'
-import type { PostsItem } from './contracts/state'
 
 export const PostsPublicAction = {
   loadPosts() {

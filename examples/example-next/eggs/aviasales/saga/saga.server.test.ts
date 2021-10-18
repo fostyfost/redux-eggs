@@ -8,14 +8,13 @@ import { expectSaga } from 'redux-saga-test-plan'
 import * as matchers from 'redux-saga-test-plan/matchers'
 import { dynamic } from 'redux-saga-test-plan/providers'
 
-import { AVIASALES_MODULE_NAME } from '@/eggs/aviasales'
 import { AviasalesReducerAction } from '@/eggs/aviasales/action-creators'
 import * as api from '@/eggs/aviasales/api/getTicketsWithApi'
 import { DEFAULT_SORT, DEFAULT_STOPS } from '@/eggs/aviasales/constants'
 import type { TicketsResponse } from '@/eggs/aviasales/contracts/api-response'
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
 import type { TicketsMap, TicketsSegmentsMap } from '@/eggs/aviasales/contracts/state'
-import { aviasalesReducer } from '@/eggs/aviasales/reducer'
+import { AVIASALES_REDUCER_KEY, aviasalesReducer } from '@/eggs/aviasales/reducer'
 import { aviasalesSaga } from '@/eggs/aviasales/saga'
 import { filterSaga } from '@/eggs/aviasales/saga/filter-saga'
 import { getSearchId } from '@/eggs/aviasales/saga/getSearchId'
@@ -159,10 +158,10 @@ describe('`aviasalesSaga` tests', () => {
       ])
       .withReducer(
         combineReducers({
-          [AVIASALES_MODULE_NAME]: aviasalesReducer,
+          [AVIASALES_REDUCER_KEY]: aviasalesReducer,
         }),
         {
-          [AVIASALES_MODULE_NAME]: {
+          [AVIASALES_REDUCER_KEY]: {
             tickets: {},
             ticketsSegments: {},
             loadingState: AviasalesLoadingState.NEVER,
@@ -176,7 +175,7 @@ describe('`aviasalesSaga` tests', () => {
       .put(AviasalesReducerAction.addTicketsSegments(clone(ticketsSegments)))
       .put(AviasalesReducerAction.addTickets(clone(tickets)))
       .hasFinalState({
-        [AVIASALES_MODULE_NAME]: {
+        [AVIASALES_REDUCER_KEY]: {
           tickets,
           ticketsSegments,
           loadingState: AviasalesLoadingState.LOADING,

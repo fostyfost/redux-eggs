@@ -1,8 +1,7 @@
+import { ChuckNorrisActionType } from '@/eggs/chuck-norris/action-types'
+import type { ChuckNorrisLoadingState } from '@/eggs/chuck-norris/contracts/state'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { ChuckNorrisActionType } from './action-types'
-import type { ChuckNorrisLoadingState } from './contracts/state'
 
 export const ChuckNorrisPublicAction = {
   loadJoke() {

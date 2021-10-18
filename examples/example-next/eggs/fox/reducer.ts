@@ -1,14 +1,16 @@
 import type { Draft } from 'immer'
 import produce from 'immer'
 
-import type { FoxActionsUnion } from './action-creators'
-import { FoxActionType } from './action-types'
-import type { FoxState } from './contracts/state'
-import { FoxLoadingState } from './contracts/state'
+import type { FoxActionsUnion } from '@/eggs/fox/action-creators'
+import { FoxActionType } from '@/eggs/fox/action-types'
+import type { FoxState } from '@/eggs/fox/contracts/state'
+import { FoxLoadingState } from '@/eggs/fox/contracts/state'
 
-const foxInitialState: FoxState = {
+const initialState: FoxState = {
   loadingState: FoxLoadingState.NEVER,
 }
+
+export const FOX_REDUCER_KEY = 'fox' as const
 
 export const foxReducer = produce((draft: Draft<FoxState>, action: FoxActionsUnion): void => {
   switch (action.type) {
@@ -24,4 +26,4 @@ export const foxReducer = produce((draft: Draft<FoxState>, action: FoxActionsUni
       draft.loadingState = action.payload
       break
   }
-}, foxInitialState)
+}, initialState)

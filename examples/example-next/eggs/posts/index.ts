@@ -1,11 +1,8 @@
 import type { Egg, EggEventHandler } from '@redux-eggs/redux'
 
+import { POSTS_REDUCER_KEY, postsReducer } from '@/eggs/posts/reducer'
+import { loadPostsWatcher } from '@/eggs/posts/saga'
 import type { AppStore } from '@/store'
-
-import { postsReducer } from './reducer'
-import { loadPostsWatcher } from './saga'
-
-export const POSTS_MODULE_NAME = 'posts-egg' as const
 
 export interface PostsEggParams {
   afterAdd?: EggEventHandler<AppStore>
@@ -13,9 +10,9 @@ export interface PostsEggParams {
 
 export const getPostsEgg = ({ afterAdd }: PostsEggParams = {}): Egg<AppStore> => {
   return {
-    id: POSTS_MODULE_NAME,
+    id: 'posts',
     reducerMap: {
-      [POSTS_MODULE_NAME]: postsReducer,
+      [POSTS_REDUCER_KEY]: postsReducer,
     },
     sagas: [loadPostsWatcher],
     afterAdd,

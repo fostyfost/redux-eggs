@@ -1,15 +1,17 @@
 import type { Draft } from 'immer'
 import produce from 'immer'
 
-import type { PostsActionsUnion } from './action-creators'
-import { PostsActionType } from './action-types'
-import type { PostsState } from './contracts/state'
-import { PostsLoadingState } from './contracts/state'
+import type { PostsActionsUnion } from '@/eggs/posts/action-creators'
+import { PostsActionType } from '@/eggs/posts/action-types'
+import type { PostsState } from '@/eggs/posts/contracts/state'
+import { PostsLoadingState } from '@/eggs/posts/contracts/state'
 
-const postsInitialState: PostsState = {
+const initialState: PostsState = {
   posts: [],
   loadingState: PostsLoadingState.NEVER,
 }
+
+export const POSTS_REDUCER_KEY = 'posts' as const
 
 export const postsReducer = produce((draft: Draft<PostsState>, action: PostsActionsUnion): void => {
   switch (action.type) {
@@ -25,4 +27,4 @@ export const postsReducer = produce((draft: Draft<PostsState>, action: PostsActi
       draft.loadingState = action.payload
       break
   }
-}, postsInitialState)
+}, initialState)

@@ -1,9 +1,9 @@
 import type { Immutable } from 'immer'
 
-import type { COUNT_MODULE_NAME } from '../index'
+import type { COUNT_REDUCER_KEY } from '@/eggs/count/reducer'
 
 export interface CountAwareState {
-  [COUNT_MODULE_NAME]: CountState
+  [COUNT_REDUCER_KEY]: CountState
 }
 
 export type CountState = Immutable<{

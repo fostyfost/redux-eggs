@@ -1,7 +1,7 @@
 import { delay, put, takeLatest } from 'redux-saga/effects'
 
-import { ClockPublicAction, ClockReducerAction } from './action-creators'
-import { ClockActionType } from './action-types'
+import { ClockPublicAction, ClockReducerAction } from '@/eggs/clock/action-creators'
+import { ClockActionType } from '@/eggs/clock/action-types'
 
 function* clockWorker() {
   while (true) {

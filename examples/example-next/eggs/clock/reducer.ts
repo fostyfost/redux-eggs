@@ -1,13 +1,15 @@
 import type { Draft } from 'immer'
 import produce from 'immer'
 
-import type { ClockActionsUnion } from './action-creators'
-import { ClockActionType } from './action-types'
-import type { ClockState } from './contracts/state'
+import type { ClockActionsUnion } from '@/eggs/clock/action-creators'
+import { ClockActionType } from '@/eggs/clock/action-types'
+import type { ClockState } from '@/eggs/clock/contracts/state'
 
-const clockInitialState = {
+const initialState: ClockState = {
   lastUpdate: 0,
 }
+
+export const CLOCK_REDUCER_KEY = 'clock' as const
 
 export const clockReducer = produce((draft: Draft<ClockState>, action: ClockActionsUnion): void => {
   switch (action.type) {
@@ -15,4 +17,4 @@ export const clockReducer = produce((draft: Draft<ClockState>, action: ClockActi
       draft.lastUpdate = action.payload
       break
   }
-}, clockInitialState)
+}, initialState)

@@ -1,12 +1,11 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
+import { FoxReducerAction } from '@/eggs/fox/action-creators'
+import { FoxActionType } from '@/eggs/fox/action-types'
+import type { FoxResponse } from '@/eggs/fox/contracts/api-response'
+import { FoxLoadingState } from '@/eggs/fox/contracts/state'
+import { errorSelector } from '@/eggs/fox/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
-
-import { FoxReducerAction } from './action-creators'
-import { FoxActionType } from './action-types'
-import type { FoxResponse } from './contracts/api-response'
-import { FoxLoadingState } from './contracts/state'
-import { errorSelector } from './selectors'
 
 function* loadFoxWorker() {
   yield put(FoxReducerAction.setLoadingState(FoxLoadingState.LOADING))

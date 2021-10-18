@@ -1,14 +1,16 @@
 import type { Draft } from 'immer'
 import produce from 'immer'
 
-import type { DogActionsUnion } from './action-creators'
-import { DogActionType } from './action-types'
-import type { DogState } from './contracts/state'
-import { DogLoadingState } from './contracts/state'
+import type { DogActionsUnion } from '@/eggs/dog/action-creators'
+import { DogActionType } from '@/eggs/dog/action-types'
+import type { DogState } from '@/eggs/dog/contracts/state'
+import { DogLoadingState } from '@/eggs/dog/contracts/state'
 
-const dogInitialState: DogState = {
+const initialState: DogState = {
   loadingState: DogLoadingState.NEVER,
 }
+
+export const DOG_REDUCER_KEY = 'dog' as const
 
 export const dogReducer = produce((draft: Draft<DogState>, action: DogActionsUnion): void => {
   switch (action.type) {
@@ -24,4 +26,4 @@ export const dogReducer = produce((draft: Draft<DogState>, action: DogActionsUni
       draft.loadingState = action.payload
       break
   }
-}, dogInitialState)
+}, initialState)

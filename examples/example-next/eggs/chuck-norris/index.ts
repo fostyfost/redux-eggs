@@ -1,19 +1,16 @@
 import type { Egg } from '@redux-eggs/redux'
 
 import { ChuckNorrisPublicAction } from '@/eggs/chuck-norris/action-creators'
-
-import { chuckNorrisReducer } from './reducer'
-import { loadChuckNorrisJokeWatcher } from './saga'
-
-export const CHUCK_NORRIS_MODULE_NAME = 'chuck-norris-egg' as const
+import { CHUCK_NORRIS_REDUCER_KEY, chuckNorrisReducer } from '@/eggs/chuck-norris/reducer'
+import { loadChuckNorrisJokeWatcher } from '@/eggs/chuck-norris/saga'
 
 const log = console.log
 
 export const getChuckNorrisEgg = (): Egg => {
   return {
-    id: CHUCK_NORRIS_MODULE_NAME,
+    id: 'chuck-norris',
     reducerMap: {
-      [CHUCK_NORRIS_MODULE_NAME]: chuckNorrisReducer,
+      [CHUCK_NORRIS_REDUCER_KEY]: chuckNorrisReducer,
     },
     sagas: [loadChuckNorrisJokeWatcher],
     afterAdd(store) {

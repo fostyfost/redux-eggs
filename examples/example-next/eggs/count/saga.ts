@@ -1,8 +1,8 @@
 import { put, select, takeEvery, takeLatest } from 'redux-saga/effects'
 
-import { CountReducerAction } from './action-creators'
-import { CountActionType } from './action-types'
-import { countSelector } from './selectors'
+import { CountReducerAction } from '@/eggs/count/action-creators'
+import { CountActionType } from '@/eggs/count/action-types'
+import { countSelector } from '@/eggs/count/selectors'
 
 function* incrementWorker() {
   let count: ReturnType<typeof countSelector> = yield select(countSelector)

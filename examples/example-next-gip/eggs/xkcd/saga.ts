@@ -1,13 +1,12 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
+import { XkcdReducerAction } from '@/eggs/xkcd/action-creators'
+import { XkcdActionType } from '@/eggs/xkcd/action-types'
+import type { XkcdInfo } from '@/eggs/xkcd/contracts/api-response'
+import { XkcdLoadingState } from '@/eggs/xkcd/contracts/state'
+import { errorSelector, xkcdInfoSelector } from '@/eggs/xkcd/selectors'
+import { getRandomInteger } from '@/eggs/xkcd/utils/random-integer'
 import { fetchAsJson } from '@/utils/fetch-as-json'
-
-import { XkcdReducerAction } from './action-creators'
-import { XkcdActionType } from './action-types'
-import type { XkcdInfo } from './contracts/api-response'
-import { XkcdLoadingState } from './contracts/state'
-import { errorSelector, xkcdInfoSelector } from './selectors'
-import { getRandomInteger } from './utils/random-integer'
 
 function* loadXkcdInfoWorker() {
   yield put(XkcdReducerAction.setLoadingState(XkcdLoadingState.LOADING))

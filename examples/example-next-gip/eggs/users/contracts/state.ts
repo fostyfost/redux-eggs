@@ -1,7 +1,7 @@
 import type { Immutable } from 'immer'
 
-import type { USERS_MODULE_NAME } from '../index'
-import type { User } from './user'
+import type { User } from '@/eggs/users/contracts/user'
+import type { USERS_REDUCER_KEY } from '@/eggs/users/reducer'
 
 export enum UsersLoadingState {
   NEVER = 'NEVER',
@@ -10,7 +10,7 @@ export enum UsersLoadingState {
 }
 
 export interface UsersAwareState {
-  [USERS_MODULE_NAME]: UsersState
+  [USERS_REDUCER_KEY]: UsersState
 }
 
 export type UsersState = Immutable<{

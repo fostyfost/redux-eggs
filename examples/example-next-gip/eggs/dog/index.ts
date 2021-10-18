@@ -1,15 +1,13 @@
 import type { Egg } from '@redux-eggs/redux'
 
-import { dogReducer } from './reducer'
-import { loadDogWatcher } from './saga'
-
-export const DOG_MODULE_NAME = 'dog-egg' as const
+import { DOG_REDUCER_KEY, dogReducer } from '@/eggs/dog/reducer'
+import { loadDogWatcher } from '@/eggs/dog/saga'
 
 export const getDogEgg = (): Egg => {
   return {
-    id: DOG_MODULE_NAME,
+    id: 'dog',
     reducerMap: {
-      [DOG_MODULE_NAME]: dogReducer,
+      [DOG_REDUCER_KEY]: dogReducer,
     },
     sagas: [loadDogWatcher],
   }

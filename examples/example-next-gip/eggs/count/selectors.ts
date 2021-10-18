@@ -1,6 +1,6 @@
-import type { CountAwareState } from './contracts/state'
-import { COUNT_MODULE_NAME } from './index'
+import type { CountAwareState } from '@/eggs/count/contracts/state'
+import { COUNT_REDUCER_KEY } from '@/eggs/count/reducer'
 
 export const countSelector = (state: CountAwareState): number => {
-  return state[COUNT_MODULE_NAME].count
+  return state[COUNT_REDUCER_KEY].count
 }

@@ -1,9 +1,8 @@
+import { XkcdActionType } from '@/eggs/xkcd/action-types'
+import type { XkcdInfo } from '@/eggs/xkcd/contracts/api-response'
+import type { XkcdLoadingState } from '@/eggs/xkcd/contracts/state'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { XkcdActionType } from './action-types'
-import type { XkcdInfo } from './contracts/api-response'
-import type { XkcdLoadingState } from './contracts/state'
 
 export const XkcdPublicAction = {
   loadInfo() {

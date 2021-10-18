@@ -1,6 +1,6 @@
 import type { Immutable } from 'immer'
 
-import type { FOX_MODULE_NAME } from '../index'
+import type { FOX_REDUCER_KEY } from '@/eggs/fox/reducer'
 
 export enum FoxLoadingState {
   NEVER = 'NEVER',
@@ -9,7 +9,7 @@ export enum FoxLoadingState {
 }
 
 export interface FoxAwareState {
-  [FOX_MODULE_NAME]: FoxState
+  [FOX_REDUCER_KEY]: FoxState
 }
 
 export type FoxState = Immutable<{

@@ -1,14 +1,13 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
+import type { ActivePostPublicAction } from '@/eggs/active-post/action-creators'
+import { ActivePostReducerAction } from '@/eggs/active-post/action-creators'
+import { ActivePostActionType } from '@/eggs/active-post/action-types'
+import type { ActivePostResponseItem } from '@/eggs/active-post/contracts/api-response'
+import { ActivePostLoadingState } from '@/eggs/active-post/contracts/state'
+import { errorSelector } from '@/eggs/active-post/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
 import { getServerHost } from '@/utils/get-server-host'
-
-import type { ActivePostPublicAction } from './action-creators'
-import { ActivePostReducerAction } from './action-creators'
-import { ActivePostActionType } from './action-types'
-import type { ActivePostResponseItem } from './contracts/api-response'
-import { ActivePostLoadingState } from './contracts/state'
-import { errorSelector } from './selectors'
 
 function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAction.loadActivePost>) {
   yield put(ActivePostReducerAction.setLoadingState(ActivePostLoadingState.LOADING))

@@ -1,9 +1,8 @@
+import { UsersActionType } from '@/eggs/users/action-types'
+import type { UsersLoadingState } from '@/eggs/users/contracts/state'
+import type { User } from '@/eggs/users/contracts/user'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { UsersActionType } from './action-types'
-import type { UsersLoadingState } from './contracts/state'
-import type { User } from './contracts/user'
 
 export const UsersPublicAction = {
   loadUsers() {

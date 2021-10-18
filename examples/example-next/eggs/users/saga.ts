@@ -1,12 +1,11 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
+import { UsersReducerAction } from '@/eggs/users/action-creators'
+import { UsersActionType } from '@/eggs/users/action-types'
+import { UsersLoadingState } from '@/eggs/users/contracts/state'
+import type { User } from '@/eggs/users/contracts/user'
+import { errorSelector } from '@/eggs/users/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
-
-import { UsersReducerAction } from './action-creators'
-import { UsersActionType } from './action-types'
-import { UsersLoadingState } from './contracts/state'
-import type { User } from './contracts/user'
-import { errorSelector } from './selectors'
 
 function* loadUsersWorker() {
   yield put(UsersReducerAction.setLoadingState(UsersLoadingState.LOADING))

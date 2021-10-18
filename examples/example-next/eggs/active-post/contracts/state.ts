@@ -1,6 +1,6 @@
 import type { Immutable } from 'immer'
 
-import type { ACTIVE_POST_MODULE_NAME } from '../index'
+import type { ACTIVE_POST_REDUCER_KEY } from '@/eggs/active-post/reducer'
 
 export enum ActivePostLoadingState {
   NEVER = 'NEVER',
@@ -9,7 +9,7 @@ export enum ActivePostLoadingState {
 }
 
 export interface ActivePostAwareState {
-  [ACTIVE_POST_MODULE_NAME]: ActivePostState
+  [ACTIVE_POST_REDUCER_KEY]: ActivePostState
 }
 
 export interface ActivePost {

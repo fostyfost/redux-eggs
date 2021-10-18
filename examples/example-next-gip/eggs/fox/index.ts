@@ -1,15 +1,13 @@
 import type { Egg } from '@redux-eggs/redux'
 
-import { foxReducer } from './reducer'
-import { loadFoxWatcher } from './saga'
-
-export const FOX_MODULE_NAME = 'fox-egg' as const
+import { FOX_REDUCER_KEY, foxReducer } from '@/eggs/fox/reducer'
+import { loadFoxWatcher } from '@/eggs/fox/saga'
 
 export const getFoxEgg = (): Egg => {
   return {
-    id: FOX_MODULE_NAME,
+    id: 'fox',
     reducerMap: {
-      [FOX_MODULE_NAME]: foxReducer,
+      [FOX_REDUCER_KEY]: foxReducer,
     },
     sagas: [loadFoxWatcher],
   }

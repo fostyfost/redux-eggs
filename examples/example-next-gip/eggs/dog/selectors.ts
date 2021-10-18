@@ -1,19 +1,19 @@
 import { createSelector } from 'reselect'
 
-import type { DogAwareState } from './contracts/state'
-import { DogLoadingState } from './contracts/state'
-import { DOG_MODULE_NAME } from './index'
+import type { DogAwareState } from '@/eggs/dog/contracts/state'
+import { DogLoadingState } from '@/eggs/dog/contracts/state'
+import { DOG_REDUCER_KEY } from '@/eggs/dog/reducer'
 
 export const dogSelector = (state: DogAwareState): string | undefined => {
-  return state[DOG_MODULE_NAME].dog
+  return state[DOG_REDUCER_KEY].dog
 }
 
 export const errorSelector = (state: DogAwareState): string | undefined => {
-  return state[DOG_MODULE_NAME].error
+  return state[DOG_REDUCER_KEY].error
 }
 
 export const loadingStateSelector = (state: DogAwareState): DogLoadingState => {
-  return state[DOG_MODULE_NAME].loadingState
+  return state[DOG_REDUCER_KEY].loadingState
 }
 
 export const isDogLoading = createSelector(loadingStateSelector, (loadingState: DogLoadingState): boolean => {

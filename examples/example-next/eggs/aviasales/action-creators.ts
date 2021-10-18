@@ -1,10 +1,9 @@
+import { AviasalesActionType } from '@/eggs/aviasales/action-types'
 import type { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
 import type { Sort } from '@/eggs/aviasales/contracts/sort'
+import type { TicketsMap, TicketsSegmentsMap } from '@/eggs/aviasales/contracts/state'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { AviasalesActionType } from './action-types'
-import type { TicketsMap, TicketsSegmentsMap } from './contracts/state'
 
 export const AviasalesReducerAction = {
   setSearchId(payload: string) {

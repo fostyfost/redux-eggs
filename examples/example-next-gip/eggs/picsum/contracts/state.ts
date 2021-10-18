@@ -1,7 +1,7 @@
 import type { Immutable } from 'immer'
 
-import type { PICSUM_MODULE_NAME } from '../index'
-import type { Picture } from './picture'
+import type { Picture } from '@/eggs/picsum/contracts/picture'
+import type { PICSUM_REDUCER_KEY } from '@/eggs/picsum/reducer'
 
 export enum PicsumLoadingState {
   NEVER = 'NEVER',
@@ -10,7 +10,7 @@ export enum PicsumLoadingState {
 }
 
 export interface PicsumAwareState {
-  [PICSUM_MODULE_NAME]: PicsumState
+  [PICSUM_REDUCER_KEY]: PicsumState
 }
 
 export type PicsumState = Immutable<{

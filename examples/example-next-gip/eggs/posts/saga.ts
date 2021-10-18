@@ -1,13 +1,12 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
+import { PostsReducerAction } from '@/eggs/posts/action-creators'
+import { PostsActionType } from '@/eggs/posts/action-types'
 import type { PostsResponseItem } from '@/eggs/posts/contracts/api-response'
+import { PostsLoadingState } from '@/eggs/posts/contracts/state'
+import { errorSelector } from '@/eggs/posts/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
 import { getServerHost } from '@/utils/get-server-host'
-
-import { PostsReducerAction } from './action-creators'
-import { PostsActionType } from './action-types'
-import { PostsLoadingState } from './contracts/state'
-import { errorSelector } from './selectors'
 
 function* loadPostsWorker() {
   yield put(PostsReducerAction.setLoadingState(PostsLoadingState.LOADING))

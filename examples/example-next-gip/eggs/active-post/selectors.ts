@@ -1,20 +1,20 @@
 import type { Immutable } from 'immer'
 import { createSelector } from 'reselect'
 
-import type { ActivePost, ActivePostAwareState } from './contracts/state'
-import { ActivePostLoadingState } from './contracts/state'
-import { ACTIVE_POST_MODULE_NAME } from './index'
+import type { ActivePost, ActivePostAwareState } from '@/eggs/active-post/contracts/state'
+import { ActivePostLoadingState } from '@/eggs/active-post/contracts/state'
+import { ACTIVE_POST_REDUCER_KEY } from '@/eggs/active-post/reducer'
 
 export const activePostSelector = (state: ActivePostAwareState): Immutable<ActivePost> | undefined => {
-  return state[ACTIVE_POST_MODULE_NAME].activePost
+  return state[ACTIVE_POST_REDUCER_KEY].activePost
 }
 
 export const errorSelector = (state: ActivePostAwareState): string | undefined => {
-  return state[ACTIVE_POST_MODULE_NAME].error
+  return state[ACTIVE_POST_REDUCER_KEY].error
 }
 
 export const loadingStateSelector = (state: ActivePostAwareState): ActivePostLoadingState => {
-  return state[ACTIVE_POST_MODULE_NAME].loadingState
+  return state[ACTIVE_POST_REDUCER_KEY].loadingState
 }
 
 export const isActivePostLoading = createSelector(

@@ -1,15 +1,13 @@
 import type { Egg } from '@redux-eggs/redux'
 
-import { countReducer } from './reducer'
-import { countWatcher } from './saga'
-
-export const COUNT_MODULE_NAME = 'count-egg' as const
+import { COUNT_REDUCER_KEY, countReducer } from '@/eggs/count/reducer'
+import { countWatcher } from '@/eggs/count/saga'
 
 export const getCountEgg = (): Egg => {
   return {
-    id: COUNT_MODULE_NAME,
+    id: 'count',
     reducerMap: {
-      [COUNT_MODULE_NAME]: countReducer,
+      [COUNT_REDUCER_KEY]: countReducer,
     },
     sagas: [countWatcher],
   }

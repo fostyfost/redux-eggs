@@ -1,12 +1,11 @@
 import { call, delay, put, select, takeLatest } from 'redux-saga/effects'
 
+import { ChuckNorrisReducerAction } from '@/eggs/chuck-norris/action-creators'
+import { ChuckNorrisActionType } from '@/eggs/chuck-norris/action-types'
+import type { JokeResponse } from '@/eggs/chuck-norris/contracts/api-response'
+import { ChuckNorrisLoadingState } from '@/eggs/chuck-norris/contracts/state'
+import { errorSelector } from '@/eggs/chuck-norris/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
-
-import { ChuckNorrisReducerAction } from './action-creators'
-import { ChuckNorrisActionType } from './action-types'
-import type { JokeResponse } from './contracts/api-response'
-import { ChuckNorrisLoadingState } from './contracts/state'
-import { errorSelector } from './selectors'
 
 function* loadChuckNorrisJokeWorker() {
   yield put(ChuckNorrisReducerAction.setLoadingState(ChuckNorrisLoadingState.LOADING))

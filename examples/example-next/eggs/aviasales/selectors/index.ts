@@ -1,28 +1,28 @@
 import type { Immutable } from 'immer'
 import { createSelector } from 'redux-views'
 
-import { AVIASALES_MODULE_NAME } from '@/eggs/aviasales'
 import { AVAILABLE_STOPS, MAX_TICKETS_LENGTH_TO_SHOW } from '@/eggs/aviasales/constants'
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
 import { Sort } from '@/eggs/aviasales/contracts/sort'
 import type { AviasalesAwareState, TicketsMap } from '@/eggs/aviasales/contracts/state'
 import type { Ticket } from '@/eggs/aviasales/contracts/ticket'
 import type { TicketSegment } from '@/eggs/aviasales/contracts/ticket-sement'
+import { AVIASALES_REDUCER_KEY } from '@/eggs/aviasales/reducer'
 
 export const searchIdSelector = (state: AviasalesAwareState): string | undefined => {
-  return state[AVIASALES_MODULE_NAME].searchId
+  return state[AVIASALES_REDUCER_KEY].searchId
 }
 
 export const ticketsSelector = (state: AviasalesAwareState): Immutable<TicketsMap> => {
-  return state[AVIASALES_MODULE_NAME].tickets
+  return state[AVIASALES_REDUCER_KEY].tickets
 }
 
 export const currentSortSelector = (state: AviasalesAwareState): Sort => {
-  return state[AVIASALES_MODULE_NAME].currentSort
+  return state[AVIASALES_REDUCER_KEY].currentSort
 }
 
 export const stopsSelector = (state: AviasalesAwareState): Immutable<number[]> => {
-  return state[AVIASALES_MODULE_NAME].stops
+  return state[AVIASALES_REDUCER_KEY].stops
 }
 
 export const ticketsArraySelector = createSelector(
@@ -47,18 +47,18 @@ export const ticketsIdsSelector = createSelector([ticketsArraySelector], (ticket
 })
 
 export const getTicketByIdSelector = (state: AviasalesAwareState, id: string): Immutable<Ticket> | undefined => {
-  return state[AVIASALES_MODULE_NAME].tickets[id]
+  return state[AVIASALES_REDUCER_KEY].tickets[id]
 }
 
 export const getTicketSegmentByIdSelector = (
   state: AviasalesAwareState,
   id: string,
 ): Immutable<TicketSegment> | undefined => {
-  return state[AVIASALES_MODULE_NAME].ticketsSegments[id]
+  return state[AVIASALES_REDUCER_KEY].ticketsSegments[id]
 }
 
 export const loadingStateSelector = (state: AviasalesAwareState): AviasalesLoadingState => {
-  return state[AVIASALES_MODULE_NAME].loadingState
+  return state[AVIASALES_REDUCER_KEY].loadingState
 }
 
 export const isTicketsLoadingSelector = createSelector(

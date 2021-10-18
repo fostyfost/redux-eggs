@@ -1,7 +1,6 @@
+import { CountActionType } from '@/eggs/count/action-types'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { CountActionType } from './action-types'
 
 export const CountPublicAction = {
   increment() {

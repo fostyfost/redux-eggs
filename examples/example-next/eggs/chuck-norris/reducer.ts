@@ -1,14 +1,16 @@
 import type { Draft } from 'immer'
 import produce from 'immer'
 
-import type { ChuckNorrisActionsUnion } from './action-creators'
-import { ChuckNorrisActionType } from './action-types'
-import type { ChuckNorrisState } from './contracts/state'
-import { ChuckNorrisLoadingState } from './contracts/state'
+import type { ChuckNorrisActionsUnion } from '@/eggs/chuck-norris/action-creators'
+import { ChuckNorrisActionType } from '@/eggs/chuck-norris/action-types'
+import type { ChuckNorrisState } from '@/eggs/chuck-norris/contracts/state'
+import { ChuckNorrisLoadingState } from '@/eggs/chuck-norris/contracts/state'
 
-const chuckNorrisInitialState: ChuckNorrisState = {
+const initialState: ChuckNorrisState = {
   loadingState: ChuckNorrisLoadingState.NEVER,
 }
+
+export const CHUCK_NORRIS_REDUCER_KEY = 'chuck-norris' as const
 
 export const chuckNorrisReducer = produce((draft: Draft<ChuckNorrisState>, action: ChuckNorrisActionsUnion): void => {
   switch (action.type) {
@@ -24,4 +26,4 @@ export const chuckNorrisReducer = produce((draft: Draft<ChuckNorrisState>, actio
       draft.loadingState = action.payload
       break
   }
-}, chuckNorrisInitialState)
+}, initialState)

@@ -1,15 +1,13 @@
 import type { Egg } from '@redux-eggs/redux'
 
-import { clockReducer } from './reducer'
-import { startClockWatcher } from './saga'
-
-export const CLOCK_MODULE_NAME = 'clock-egg' as const
+import { CLOCK_REDUCER_KEY, clockReducer } from '@/eggs/clock/reducer'
+import { startClockWatcher } from '@/eggs/clock/saga'
 
 export const getClockEgg = (): Egg => {
   return {
-    id: CLOCK_MODULE_NAME,
+    id: 'clock',
     reducerMap: {
-      [CLOCK_MODULE_NAME]: clockReducer,
+      [CLOCK_REDUCER_KEY]: clockReducer,
     },
     sagas: [startClockWatcher],
   }

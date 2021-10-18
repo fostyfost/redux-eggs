@@ -1,17 +1,14 @@
 import type { Egg } from '@redux-eggs/redux'
 
 import { XkcdPublicAction } from '@/eggs/xkcd/action-creators'
-
-import { xkcdReducer } from './reducer'
-import { loadXkcdInfoWatcher } from './saga'
-
-export const XKCD_MODULE_NAME = 'xkcd-egg' as const
+import { XKCD_REDUCER_KEY, xkcdReducer } from '@/eggs/xkcd/reducer'
+import { loadXkcdInfoWatcher } from '@/eggs/xkcd/saga'
 
 export const getXkcdEgg = (): Egg => {
   return {
-    id: XKCD_MODULE_NAME,
+    id: 'xkcd',
     reducerMap: {
-      [XKCD_MODULE_NAME]: xkcdReducer,
+      [XKCD_REDUCER_KEY]: xkcdReducer,
     },
     sagas: [loadXkcdInfoWatcher],
     afterAdd(store) {

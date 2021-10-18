@@ -1,9 +1,8 @@
+import { ActivePostActionType } from '@/eggs/active-post/action-types'
+import type { ActivePostLoadingState } from '@/eggs/active-post/contracts/state'
+import type { ActivePost } from '@/eggs/active-post/contracts/state'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { ActivePostActionType } from './action-types'
-import type { ActivePostLoadingState } from './contracts/state'
-import type { ActivePost } from './contracts/state'
 
 export const ActivePostPublicAction = {
   loadActivePost(payload: string) {

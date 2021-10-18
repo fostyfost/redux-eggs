@@ -1,9 +1,8 @@
+import { PicsumActionType } from '@/eggs/picsum/action-types'
+import type { Picture } from '@/eggs/picsum/contracts/picture'
+import type { PicsumLoadingState } from '@/eggs/picsum/contracts/state'
 import type { ActionsUnion } from '@/store/action-helper'
 import { createAction } from '@/store/action-helper'
-
-import { PicsumActionType } from './action-types'
-import type { Picture } from './contracts/picture'
-import type { PicsumLoadingState } from './contracts/state'
 
 export const PicsumPublicAction = {
   loadPics() {

@@ -1,6 +1,6 @@
-import type { ClockAwareState } from './contracts/state'
-import { CLOCK_MODULE_NAME } from './index'
+import type { ClockAwareState } from '@/eggs/clock/contracts/state'
+import { CLOCK_REDUCER_KEY } from '@/eggs/clock/reducer'
 
 export const lastUpdateSelector = (state: ClockAwareState): number => {
-  return state[CLOCK_MODULE_NAME].lastUpdate
+  return state[CLOCK_REDUCER_KEY].lastUpdate
 }

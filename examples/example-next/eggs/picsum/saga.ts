@@ -1,12 +1,11 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
+import { PicsumReducerAction } from '@/eggs/picsum/action-creators'
+import { PicsumActionType } from '@/eggs/picsum/action-types'
+import type { Picture } from '@/eggs/picsum/contracts/picture'
+import { PicsumLoadingState } from '@/eggs/picsum/contracts/state'
+import { errorSelector } from '@/eggs/picsum/selectors'
 import { fetchAsJson } from '@/utils/fetch-as-json'
-
-import { PicsumReducerAction } from './action-creators'
-import { PicsumActionType } from './action-types'
-import type { Picture } from './contracts/picture'
-import { PicsumLoadingState } from './contracts/state'
-import { errorSelector } from './selectors'
 
 function* loadPicsumWorker() {
   yield put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADING))

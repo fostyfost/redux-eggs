@@ -172,6 +172,7 @@ export function createWrapperInitializer<S extends AnyStore = AnyStore>(
 
         wrapGetServerSideProps: wrap as PageWrapper<S>['wrapGetServerSideProps'],
 
+        // TODO: Add error for unwrapped GSP or GSSP pages
         wrapPage<T extends NextPage<any, any> = NextPage>(page: T): T {
           const eggsConfig: EggsConfig = {
             __eggs: pageEggs,

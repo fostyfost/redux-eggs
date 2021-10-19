@@ -27,7 +27,7 @@
     "@redux-eggs/core": "1.0.5",
     "@redux-eggs/redux": "1.0.5",
     "@redux-eggs/redux-toolkit": "1.0.5",
-    "@reduxjs/toolkit": "1.6.1",
+    "@reduxjs/toolkit": "1.6.2",
     "@rollup/plugin-eslint": "8.0.1",
     "@testing-library/react": "12.1.1",
     "@types/jest": "27.0.2",

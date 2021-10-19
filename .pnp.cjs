@@ -4487,6 +4487,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["read-package-json-fast", "npm:2.0.3"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@npmcli-run-script-npm-2.0.0-244659a556-c016ea9411.zip/node_modules/@npmcli/run-script/",
+          "packageDependencies": [
+            ["@npmcli/run-script", "npm:2.0.0"],
+            ["@npmcli/node-gyp", "npm:1.0.2"],
+            ["@npmcli/promise-spawn", "npm:1.3.2"],
+            ["node-gyp", "npm:8.2.0"],
+            ["read-package-json-fast", "npm:2.0.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@octokit/auth-token", [
@@ -4857,7 +4868,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.3"],
             ["gzip-size", "npm:6.0.0"],
-            ["pacote", "npm:11.3.5"],
+            ["pacote", "npm:12.0.2"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.58.0"],
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],
@@ -4886,7 +4897,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.3"],
             ["gzip-size", "npm:6.0.0"],
-            ["pacote", "npm:11.3.5"],
+            ["pacote", "npm:12.0.2"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.58.0"],
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],
@@ -11282,6 +11293,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimatch", "npm:3.0.4"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.0.1", {
+          "packageLocation": "./.yarn/cache/ignore-walk-npm-4.0.1-e301e7e75f-903cd5cb68.zip/node_modules/ignore-walk/",
+          "packageDependencies": [
+            ["ignore-walk", "npm:4.0.1"],
+            ["minimatch", "npm:3.0.4"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["image-size", [
@@ -14143,6 +14162,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["which", "npm:2.0.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:8.2.0", {
+          "packageLocation": "./.yarn/unplugged/node-gyp-npm-8.2.0-c783adf325/node_modules/node-gyp/",
+          "packageDependencies": [
+            ["node-gyp", "npm:8.2.0"],
+            ["env-paths", "npm:2.2.1"],
+            ["glob", "npm:7.1.7"],
+            ["graceful-fs", "npm:4.2.8"],
+            ["make-fetch-happen", "npm:8.0.14"],
+            ["nopt", "npm:5.0.0"],
+            ["npmlog", "npm:4.1.2"],
+            ["rimraf", "npm:3.0.2"],
+            ["semver", "npm:7.3.5"],
+            ["tar", "npm:6.1.11"],
+            ["which", "npm:2.0.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["node-html-parser", [
@@ -14359,6 +14395,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-packlist", "npm:2.2.2"],
             ["glob", "npm:7.1.7"],
             ["ignore-walk", "npm:3.0.4"],
+            ["npm-bundled", "npm:1.1.2"],
+            ["npm-normalize-package-bin", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/npm-packlist-npm-3.0.0-9671ff7386-8550ecdec5.zip/node_modules/npm-packlist/",
+          "packageDependencies": [
+            ["npm-packlist", "npm:3.0.0"],
+            ["glob", "npm:7.1.7"],
+            ["ignore-walk", "npm:4.0.1"],
             ["npm-bundled", "npm:1.1.2"],
             ["npm-normalize-package-bin", "npm:1.0.1"]
           ],
@@ -14884,6 +14931,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mkdirp", "npm:1.0.4"],
             ["npm-package-arg", "npm:8.1.5"],
             ["npm-packlist", "npm:2.2.2"],
+            ["npm-pick-manifest", "npm:6.1.1"],
+            ["npm-registry-fetch", "npm:11.0.0"],
+            ["promise-retry", "npm:2.0.1"],
+            ["read-package-json-fast", "npm:2.0.3"],
+            ["rimraf", "npm:3.0.2"],
+            ["ssri", "npm:8.0.1"],
+            ["tar", "npm:6.1.8"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:12.0.2", {
+          "packageLocation": "./.yarn/cache/pacote-npm-12.0.2-16610c8675-db2a338525.zip/node_modules/pacote/",
+          "packageDependencies": [
+            ["pacote", "npm:12.0.2"],
+            ["@npmcli/git", "npm:2.1.0"],
+            ["@npmcli/installed-package-contents", "npm:1.0.7"],
+            ["@npmcli/promise-spawn", "npm:1.3.2"],
+            ["@npmcli/run-script", "npm:2.0.0"],
+            ["cacache", "npm:15.2.0"],
+            ["chownr", "npm:2.0.0"],
+            ["fs-minipass", "npm:2.1.0"],
+            ["infer-owner", "npm:1.0.4"],
+            ["minipass", "npm:3.1.3"],
+            ["mkdirp", "npm:1.0.4"],
+            ["npm-package-arg", "npm:8.1.5"],
+            ["npm-packlist", "npm:3.0.0"],
             ["npm-pick-manifest", "npm:6.1.1"],
             ["npm-registry-fetch", "npm:11.0.0"],
             ["promise-retry", "npm:2.0.1"],
@@ -17589,6 +17662,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mkdirp", "npm:0.5.5"],
             ["safe-buffer", "npm:5.2.1"],
             ["yallist", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.1.11", {
+          "packageLocation": "./.yarn/cache/tar-npm-6.1.11-e6ac3cba9c-a04c07bb9e.zip/node_modules/tar/",
+          "packageDependencies": [
+            ["tar", "npm:6.1.11"],
+            ["chownr", "npm:2.0.0"],
+            ["fs-minipass", "npm:2.1.0"],
+            ["minipass", "npm:3.1.3"],
+            ["minizlib", "npm:2.1.2"],
+            ["mkdirp", "npm:1.0.4"],
+            ["yallist", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }],

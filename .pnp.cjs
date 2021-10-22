@@ -4255,7 +4255,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/react-dev-overlay", "virtual:c68590ea2cbf040862e5fcf1e60c5eb84da0553a68f14578a28f376334e76278ff41466996853e15e773574dba4ac77b2d1a9239cf60cc75685d4970d442576e#npm:11.1.2"],
             ["@babel/code-frame", "npm:7.12.11"],
             ["@types/react", "npm:17.0.26"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["anser", "npm:1.4.9"],
             ["chalk", "npm:4.0.0"],
             ["classnames", "npm:2.2.6"],
@@ -4938,7 +4938,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/next", null],
             ["@types/node", "npm:16.10.2"],
             ["@types/react", "npm:17.0.26"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["@types/react-redux", "npm:7.1.16"],
             ["@types/react-test-renderer", "npm:17.0.1"],
             ["@wessberg/rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:1.3.14"],
@@ -4986,7 +4986,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.0.2"],
             ["@types/node", "npm:16.10.2"],
             ["@types/react", "npm:17.0.26"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["@types/react-redux", "npm:7.1.18"],
             ["@types/react-test-renderer", "npm:17.0.1"],
             ["@wessberg/rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:1.3.14"],
@@ -5027,7 +5027,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.2.1"],
             ["@types/jest", "npm:27.0.2"],
             ["@types/react", "npm:17.0.26"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["@types/react-redux", "npm:7.1.16"],
             ["@types/testing-library__jest-dom", "npm:5.14.1"],
             ["@wessberg/rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:1.3.14"],
@@ -5070,7 +5070,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.2.1"],
             ["@types/jest", "npm:27.0.2"],
             ["@types/react", "npm:17.0.26"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["@types/react-redux", "npm:7.1.18"],
             ["@types/testing-library__jest-dom", "npm:5.14.1"],
             ["@wessberg/rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:1.3.14"],
@@ -5611,7 +5611,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.15.4"],
             ["@testing-library/dom", "npm:8.5.0"],
             ["@types/react", "npm:17.0.26"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#npm:17.0.2"]
           ],
@@ -5977,18 +5977,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react-dom", [
-        ["npm:17.0.5", {
-          "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.5-63db13d4bc-ff301198c6.zip/node_modules/@types/react-dom/",
+        ["npm:17.0.10", {
+          "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.10-aea5504608-cc7d8d5b77.zip/node_modules/@types/react-dom/",
           "packageDependencies": [
-            ["@types/react-dom", "npm:17.0.5"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["@types/react", "npm:17.0.18"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:17.0.9", {
-          "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.9-046b4282f3-b7e898e1a2.zip/node_modules/@types/react-dom/",
+        ["npm:17.0.5", {
+          "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.5-63db13d4bc-ff301198c6.zip/node_modules/@types/react-dom/",
           "packageDependencies": [
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.5"],
             ["@types/react", "npm:17.0.18"]
           ],
           "linkType": "HARD",
@@ -13999,7 +13999,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/fibers", null],
             ["@types/node-sass", null],
             ["@types/react", "npm:17.0.26"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["@types/sass", null],
             ["assert", "npm:2.0.0"],
             ["ast-types", "npm:0.13.2"],

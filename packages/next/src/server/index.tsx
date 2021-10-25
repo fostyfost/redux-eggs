@@ -87,7 +87,7 @@ export function createWrapperInitializer<S extends AnyStore = AnyStore>(
 
             static getInitialProps = AppComponent.getInitialProps
 
-            render = (): JSX.Element => {
+            render(): JSX.Element {
               return (
                 <Provider store={this.store as any}>
                   <AppComponent {...this.props} />

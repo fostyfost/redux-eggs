@@ -91,7 +91,7 @@ export const createWrapperInitializer = <S extends AnyStore = AnyStore>(
               hydrate(props.pageProps.__eggsState)
             }
 
-            shouldComponentUpdate = (nextProps: Readonly<AppProps>): boolean => {
+            shouldComponentUpdate(nextProps: Readonly<AppProps>): boolean {
               add(nextProps.Component)
 
               if (!nextProps.Component.getInitialProps) {
@@ -101,7 +101,7 @@ export const createWrapperInitializer = <S extends AnyStore = AnyStore>(
               return true
             }
 
-            render = (): JSX.Element => {
+            render(): JSX.Element {
               delete this.props.pageProps.__eggsState
 
               return (
@@ -111,7 +111,7 @@ export const createWrapperInitializer = <S extends AnyStore = AnyStore>(
               )
             }
 
-            componentDidUpdate = (prevProps: Readonly<AppProps>): void => {
+            componentDidUpdate(prevProps: Readonly<AppProps>): void {
               const prevComponent: NextPage & EggsConfig = prevProps.Component
 
               if (prevComponent.__eggs?.length && this.props.Component !== prevComponent) {

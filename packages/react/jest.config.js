@@ -4,7 +4,7 @@
 const config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  coveragePathIgnorePatterns: ['file-size-cache', 'node_modules'],
+  testPathIgnorePatterns: ['<rootDir>/file-size-cache/', '<rootDir>/node_modules/'],
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
   },

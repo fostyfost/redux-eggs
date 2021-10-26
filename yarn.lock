@@ -3036,11 +3036,11 @@ __metadata:
     "@babel/core": 7.15.0
     "@babel/runtime": 7.15.4
     "@next/bundle-analyzer": latest
-    "@redux-eggs/core": "workspace:*"
-    "@redux-eggs/next": "workspace:*"
-    "@redux-eggs/react": "workspace:*"
-    "@redux-eggs/redux": "workspace:*"
-    "@redux-eggs/saga-extension": "workspace:*"
+    "@redux-eggs/core": latest
+    "@redux-eggs/next": latest
+    "@redux-eggs/react": latest
+    "@redux-eggs/redux": latest
+    "@redux-eggs/saga-extension": latest
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 27.0.2
@@ -3087,11 +3087,11 @@ __metadata:
     "@babel/core": 7.15.0
     "@babel/runtime": 7.15.4
     "@next/bundle-analyzer": latest
-    "@redux-eggs/core": "workspace:*"
-    "@redux-eggs/next": "workspace:*"
-    "@redux-eggs/react": "workspace:*"
-    "@redux-eggs/redux-toolkit": "workspace:*"
-    "@redux-eggs/saga-extension": "workspace:*"
+    "@redux-eggs/core": latest
+    "@redux-eggs/next": latest
+    "@redux-eggs/react": latest
+    "@redux-eggs/redux-toolkit": latest
+    "@redux-eggs/saga-extension": latest
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@reduxjs/toolkit": 1.6.2
@@ -3137,11 +3137,11 @@ __metadata:
     "@babel/core": 7.15.0
     "@babel/runtime": 7.15.4
     "@next/bundle-analyzer": latest
-    "@redux-eggs/core": "workspace:*"
-    "@redux-eggs/next": "workspace:*"
-    "@redux-eggs/react": "workspace:*"
-    "@redux-eggs/redux": "workspace:*"
-    "@redux-eggs/saga-extension": "workspace:*"
+    "@redux-eggs/core": latest
+    "@redux-eggs/next": latest
+    "@redux-eggs/react": latest
+    "@redux-eggs/redux": latest
+    "@redux-eggs/saga-extension": latest
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 27.0.2
@@ -3208,7 +3208,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@1.0.5, @redux-eggs/core@workspace:*, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@1.0.6, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -3230,14 +3230,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/next@workspace:*, @redux-eggs/next@workspace:packages/next":
+"@redux-eggs/core@npm:latest":
+  version: 1.0.6
+  resolution: "@redux-eggs/core@npm:1.0.6"
+  checksum: 8ccd8db92a8864ba4c583ba8ab5b88d5f1f39bcb1448c2aa64be75175d40d3e55eb801642efb6b7b126c42a5127eedf35fb82e9dbbe3547f5e854d28c0bf9a30
+  languageName: node
+  linkType: hard
+
+"@redux-eggs/next@npm:latest":
+  version: 1.0.6
+  resolution: "@redux-eggs/next@npm:1.0.6"
+  peerDependencies:
+    "@redux-eggs/core": ^1.0.5
+    next: ">=11.1.0"
+    react: ^16.8.3 || ^17.0.0
+    react-redux: ^7.0.0
+  checksum: 3851385216b77a255b011045088ee768495d2cb8770a7e3269bb95c52c2fb7148a248893d33597aae667273808a3e792eede8284b5d4d7f20f185304d1edbb0c
+  languageName: node
+  linkType: hard
+
+"@redux-eggs/next@workspace:packages/next":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/next@workspace:packages/next"
   dependencies:
     "@jest/types": 27.2.5
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.5
-    "@redux-eggs/redux": 1.0.5
+    "@redux-eggs/core": 1.0.6
+    "@redux-eggs/redux": 1.0.6
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.2
     "@types/jest": 27.0.2
@@ -3273,13 +3292,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/react@workspace:*, @redux-eggs/react@workspace:packages/react":
+"@redux-eggs/react@npm:latest":
+  version: 1.0.6
+  resolution: "@redux-eggs/react@npm:1.0.6"
+  peerDependencies:
+    "@redux-eggs/core": ^1.0.5
+    react: ^16.8.3 || ^17.0.0
+    react-redux: ^7.0.0
+  checksum: da9eec4a702461c7212e60fd9c23580940654b65e9615104b06e4899c1b243df756d89277ae5a6ad1bc67f3db6e88a18b56eb9fb81bc7d27b32e7b41fb9dff21
+  languageName: node
+  linkType: hard
+
+"@redux-eggs/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/react@workspace:packages/react"
   dependencies:
     "@jest/types": 27.2.5
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.5
+    "@redux-eggs/core": 1.0.6
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/dom": 8.10.1
     "@testing-library/jest-dom": 5.14.1
@@ -3314,13 +3344,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@workspace:*, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@npm:latest":
+  version: 1.0.6
+  resolution: "@redux-eggs/redux-toolkit@npm:1.0.6"
+  peerDependencies:
+    "@redux-eggs/core": ^1.0.5
+    "@reduxjs/toolkit": ^1.6.0
+  checksum: 913ac8788488f8fbe9d1bed0cc02f0f183b07ff3a20eec26b76cedfdb0af203e6085d7ba0b602b8e6629427fffc396491cb0af78846fa6e300d53dd909d0c416
+  languageName: node
+  linkType: hard
+
+"@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
     "@jest/types": 27.2.5
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.5
+    "@redux-eggs/core": 1.0.6
     "@reduxjs/toolkit": 1.6.2
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
@@ -3341,13 +3381,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@1.0.5, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@1.0.6, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 27.2.5
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.5
+    "@redux-eggs/core": 1.0.6
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14
@@ -3367,13 +3407,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/saga-extension@workspace:*, @redux-eggs/saga-extension@workspace:packages/saga-extension":
+"@redux-eggs/redux@npm:latest":
+  version: 1.0.6
+  resolution: "@redux-eggs/redux@npm:1.0.6"
+  peerDependencies:
+    "@redux-eggs/core": ^1.0.5
+    redux: ^4.0.0
+  checksum: 494c7f38e29bce7a371731347e83ec3c5c41ffbdceca8a636a62fff5a52578136a5fad541b296d9d00deda0953488b2284463fe39839d9ee136dea204b6fef75
+  languageName: node
+  linkType: hard
+
+"@redux-eggs/saga-extension@npm:latest":
+  version: 1.0.6
+  resolution: "@redux-eggs/saga-extension@npm:1.0.6"
+  peerDependencies:
+    "@redux-eggs/core": ^1.0.5
+    redux-saga: ^1.1.0
+  checksum: 8a01e51298c29bf8cd144f806bf18a9a8e9f00a5cdb8166fd2d37de4086e6a4c47a64f8435a1b6053d614dc7f617ae94b62f59e0a6c2d9dbd388b186c83acfcf
+  languageName: node
+  linkType: hard
+
+"@redux-eggs/saga-extension@workspace:packages/saga-extension":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/saga-extension@workspace:packages/saga-extension"
   dependencies:
     "@jest/types": 27.2.5
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.5
+    "@redux-eggs/core": 1.0.6
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.2
     "@wessberg/rollup-plugin-ts": 1.3.14

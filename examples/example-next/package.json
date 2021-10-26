@@ -26,11 +26,11 @@
     ]
   },
   "dependencies": {
-    "@redux-eggs/core": "workspace:*",
-    "@redux-eggs/next": "workspace:*",
-    "@redux-eggs/react": "workspace:*",
-    "@redux-eggs/redux": "workspace:*",
-    "@redux-eggs/saga-extension": "workspace:*",
+    "@redux-eggs/core": "latest",
+    "@redux-eggs/next": "latest",
+    "@redux-eggs/react": "latest",
+    "@redux-eggs/redux": "latest",
+    "@redux-eggs/saga-extension": "latest",
     "@redux-saga/is": "1.1.2",
     "@redux-saga/symbols": "1.1.2",
     "clsx": "1.1.1",

@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { FOX_REDUCER_KEY, foxReducer } from '@/eggs/fox/reducer'
 import { loadFoxWatcher } from '@/eggs/fox/saga'

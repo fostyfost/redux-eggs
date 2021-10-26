@@ -1,4 +1,4 @@
-import type { Egg, EggEventHandler } from '@redux-eggs/redux'
+import type { Egg, EggEventHandler } from '@redux-eggs/core'
 
 import { POSTS_REDUCER_KEY, postsReducer } from '@/eggs/posts/reducer'
 import { loadPostsWatcher } from '@/eggs/posts/saga'

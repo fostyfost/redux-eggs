@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { ChuckNorrisPublicAction } from '@/eggs/chuck-norris/action-creators'
 import { CHUCK_NORRIS_REDUCER_KEY, chuckNorrisReducer } from '@/eggs/chuck-norris/reducer'

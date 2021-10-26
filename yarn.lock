@@ -3036,6 +3036,7 @@ __metadata:
     "@babel/core": 7.15.0
     "@babel/runtime": 7.15.4
     "@next/bundle-analyzer": latest
+    "@redux-eggs/core": "workspace:*"
     "@redux-eggs/next": "workspace:*"
     "@redux-eggs/react": "workspace:*"
     "@redux-eggs/redux": "workspace:*"
@@ -3086,6 +3087,7 @@ __metadata:
     "@babel/core": 7.15.0
     "@babel/runtime": 7.15.4
     "@next/bundle-analyzer": latest
+    "@redux-eggs/core": "workspace:*"
     "@redux-eggs/next": "workspace:*"
     "@redux-eggs/react": "workspace:*"
     "@redux-eggs/redux-toolkit": "workspace:*"
@@ -3135,6 +3137,7 @@ __metadata:
     "@babel/core": 7.15.0
     "@babel/runtime": 7.15.4
     "@next/bundle-analyzer": latest
+    "@redux-eggs/core": "workspace:*"
     "@redux-eggs/next": "workspace:*"
     "@redux-eggs/react": "workspace:*"
     "@redux-eggs/redux": "workspace:*"
@@ -3205,7 +3208,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@1.0.5, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@1.0.5, @redux-eggs/core@workspace:*, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -3235,8 +3238,6 @@ __metadata:
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
     "@redux-eggs/core": 1.0.5
     "@redux-eggs/redux": 1.0.5
-    "@redux-eggs/redux-toolkit": 1.0.5
-    "@reduxjs/toolkit": 1.6.2
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.2
     "@types/jest": 27.0.2
@@ -3265,6 +3266,7 @@ __metadata:
     tslib: 2.3.1
     typescript: 4.4.4
   peerDependencies:
+    "@redux-eggs/core": ^1.0.5
     next: ">=11.1.0"
     react: ^16.8.3 || ^17.0.0
     react-redux: ^7.0.0
@@ -3306,12 +3308,13 @@ __metadata:
     tslib: 2.3.1
     typescript: 4.4.4
   peerDependencies:
+    "@redux-eggs/core": ^1.0.5
     react: ^16.8.3 || ^17.0.0
     react-redux: ^7.0.0
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@1.0.5, @redux-eggs/redux-toolkit@workspace:*, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@workspace:*, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
@@ -3333,6 +3336,7 @@ __metadata:
     tslib: 2.3.1
     typescript: 4.4.4
   peerDependencies:
+    "@redux-eggs/core": ^1.0.5
     "@reduxjs/toolkit": ^1.6.0
   languageName: unknown
   linkType: soft
@@ -3358,6 +3362,7 @@ __metadata:
     tslib: 2.3.1
     typescript: 4.4.4
   peerDependencies:
+    "@redux-eggs/core": ^1.0.5
     redux: ^4.0.0
   languageName: unknown
   linkType: soft
@@ -3385,6 +3390,7 @@ __metadata:
     tslib: 2.3.1
     typescript: 4.4.4
   peerDependencies:
+    "@redux-eggs/core": ^1.0.5
     redux-saga: ^1.1.0
   languageName: unknown
   linkType: soft

@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux-toolkit'
+import type { Egg } from '@redux-eggs/core'
 
 import { loadXkcdInfoWatcher } from '@/eggs/xkcd/saga'
 import { XKCD_SLICE, XkcdPublicAction, xkcdReducer } from '@/eggs/xkcd/slice'

@@ -5,8 +5,6 @@ import { combineReducers, compose, configureStore } from '@reduxjs/toolkit'
 import type { EnhancerOptions } from '@reduxjs/toolkit/dist/devtoolsExtension'
 import type { CurriedGetDefaultMiddleware } from '@reduxjs/toolkit/dist/getDefaultMiddleware'
 
-export * from '@redux-eggs/core'
-
 export type StoreWithEggs<Ext = Record<string, never>> = EnhancedStore & EggExt & Ext
 
 export interface StoreCreatorSettings {

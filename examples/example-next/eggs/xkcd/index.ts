@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { XkcdPublicAction } from '@/eggs/xkcd/action-creators'
 import { XKCD_REDUCER_KEY, xkcdReducer } from '@/eggs/xkcd/reducer'

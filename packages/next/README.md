@@ -13,13 +13,13 @@ Redux Eggs wrapper for [Next.js](https://nextjs.org/) applications.
 If you are using **Yarn**, run
 
 ```shell
-yarn add @redux-eggs/next
+yarn add @redux-eggs/core @redux-eggs/next
 ```
 
 If you are using **NPM**, run
 
 ```shell
-npm install --save @redux-eggs/next
+npm install --save @redux-eggs/core @redux-eggs/next
 ```
 
 `// TODO`

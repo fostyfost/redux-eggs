@@ -11,13 +11,13 @@
 If you are using **Yarn**, run
 
 ```shell
-yarn add @redux-eggs/saga-extension
+yarn add @redux-eggs/core @redux-eggs/saga-extension
 ```
 
 If you are using **NPM**, run
 
 ```shell
-npm install --save @redux-eggs/saga-extension
+npm install --save @redux-eggs/core @redux-eggs/saga-extension
 ```
 
 `// TODO`

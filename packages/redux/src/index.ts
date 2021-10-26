@@ -3,8 +3,6 @@ import { buildStore } from '@redux-eggs/core'
 import type { Store } from 'redux'
 import { applyMiddleware, combineReducers, compose, createStore as createReduxStore } from 'redux'
 
-export * from '@redux-eggs/core'
-
 export type StoreWithEggs<Ext = Record<string, never>> = Store & EggExt & Ext
 
 export interface StoreCreatorOptions {

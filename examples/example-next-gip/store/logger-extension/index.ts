@@ -1,4 +1,4 @@
-import type { Extension } from '@redux-eggs/redux'
+import type { Extension } from '@redux-eggs/core'
 import type { Middleware } from 'redux'
 
 export const getLoggerExtension = (): Extension => {

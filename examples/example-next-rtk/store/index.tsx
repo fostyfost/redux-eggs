@@ -1,5 +1,5 @@
+import type { EggExt } from '@redux-eggs/core'
 import { createWrapperInitializer } from '@redux-eggs/next'
-import type { EggExt } from '@redux-eggs/redux-toolkit'
 import { createStore } from '@redux-eggs/redux-toolkit'
 import type { SagaExt } from '@redux-eggs/saga-extension'
 import { getSagaExtension } from '@redux-eggs/saga-extension'

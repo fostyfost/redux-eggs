@@ -2,8 +2,10 @@
  * @jest-environment jsdom
  */
 
-import type { Egg, StoreCreatorOptions } from '@redux-eggs/redux'
-import { createStore, REDUCE_ACTION_TYPE } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
+import { REDUCE_ACTION_TYPE } from '@redux-eggs/core'
+import type { StoreCreatorOptions } from '@redux-eggs/redux'
+import { createStore } from '@redux-eggs/redux'
 import type { RenderResult } from '@testing-library/react'
 import { act, render } from '@testing-library/react'
 import type { NextPage } from 'next'

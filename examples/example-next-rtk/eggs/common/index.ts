@@ -1,4 +1,4 @@
-import type { EggTuple } from '@redux-eggs/redux-toolkit'
+import type { EggTuple } from '@redux-eggs/core'
 
 import { getXkcdEgg } from '@/eggs/xkcd'
 

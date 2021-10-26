@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@redux-eggs/core": "workspace:*",
     "@redux-eggs/next": "workspace:*",
     "@redux-eggs/react": "workspace:*",
     "@redux-eggs/redux-toolkit": "workspace:*",

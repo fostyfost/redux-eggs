@@ -2,7 +2,7 @@
  * @jest-environment node
  */
 
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 import { createStore as createReduxStore, createStore } from '@redux-eggs/redux'
 import type {
   GetServerSideProps,
@@ -1566,31 +1566,33 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
           }
         })
 
-        const getStaticProps: GetStaticProps<Props, InferGetStaticPathsQueryType<typeof getStaticPaths>> =
-          wrapper.wrapGetStaticProps(() => context => {
-            if (context.params?.q === '404') {
-              return {
-                notFound: true,
-              }
-            }
-
-            if (context.params?.q === '308') {
-              return {
-                redirect: {
-                  permanent: true,
-                  destination: '/',
-                },
-                revalidate: 1,
-              }
-            }
-
+        const getStaticProps: GetStaticProps<
+          Props,
+          InferGetStaticPathsQueryType<typeof getStaticPaths>
+        > = wrapper.wrapGetStaticProps(() => context => {
+          if (context.params?.q === '404') {
             return {
-              props: {
-                num: 123,
+              notFound: true,
+            }
+          }
+
+          if (context.params?.q === '308') {
+            return {
+              redirect: {
+                permanent: true,
+                destination: '/',
               },
               revalidate: 1,
             }
-          })
+          }
+
+          return {
+            props: {
+              num: 123,
+            },
+            revalidate: 1,
+          }
+        })
 
         expect((wrapper.wrapPage(PageComponent) as EggsConfig).__eggs).toEqual([])
         expect(await getStaticPaths({} as any)).toEqual({ paths: [{ params: { q: 'query' } }], fallback: false })

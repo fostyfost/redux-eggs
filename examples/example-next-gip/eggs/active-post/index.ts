@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { ACTIVE_POST_REDUCER_KEY, activePostReducer } from '@/eggs/active-post/reducer'
 import { loadActivePostWatcher } from '@/eggs/active-post/saga'

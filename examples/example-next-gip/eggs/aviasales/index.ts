@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { AVIASALES_REDUCER_KEY, aviasalesReducer } from '@/eggs/aviasales/reducer'
 import { aviasalesSaga } from '@/eggs/aviasales/saga'

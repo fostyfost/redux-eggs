@@ -9,13 +9,13 @@
 If you are using **Yarn**, run
 
 ```shell
-yarn add @redux-eggs/redux
+yarn add @redux-eggs/core @redux-eggs/redux
 ```
 
 If you are using **NPM**, run
 
 ```shell
-npm install --save @redux-eggs/redux
+npm install --save @redux-eggs/core @redux-eggs/redux
 ```
 
 `// TODO`

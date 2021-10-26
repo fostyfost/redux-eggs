@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux-toolkit'
+import type { Egg } from '@redux-eggs/core'
 
 import { loadChuckNorrisJokeWatcher } from '@/eggs/chuck-norris/saga'
 import { CHUCK_NORRIS_SLICE, ChuckNorrisPublicAction, chuckNorrisReducer } from '@/eggs/chuck-norris/slice'

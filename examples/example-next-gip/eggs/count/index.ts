@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { COUNT_REDUCER_KEY, countReducer } from '@/eggs/count/reducer'
 import { countWatcher } from '@/eggs/count/saga'

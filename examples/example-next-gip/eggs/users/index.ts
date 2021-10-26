@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { USERS_REDUCER_KEY, usersReducer } from '@/eggs/users/reducer'
 import { loadUsersWatcher } from '@/eggs/users/saga'

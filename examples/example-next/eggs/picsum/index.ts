@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { PICSUM_REDUCER_KEY, picsumReducer } from '@/eggs/picsum/reducer'
 import { loadPicsumWatcher } from '@/eggs/picsum/saga'

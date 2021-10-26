@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux'
+import type { Egg } from '@redux-eggs/core'
 
 import { CLOCK_REDUCER_KEY, clockReducer } from '@/eggs/clock/reducer'
 import { startClockWatcher } from '@/eggs/clock/saga'

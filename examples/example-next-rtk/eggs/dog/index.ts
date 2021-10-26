@@ -1,4 +1,4 @@
-import type { Egg } from '@redux-eggs/redux-toolkit'
+import type { Egg } from '@redux-eggs/core'
 
 import { loadDogWatcher } from '@/eggs/dog/saga'
 import { DOG_SLICE, dogReducer } from '@/eggs/dog/slice'

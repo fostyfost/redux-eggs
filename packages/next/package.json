@@ -26,8 +26,6 @@
     "@redux-eggs-internal/rollup-plugin-filesize": "1.0.0",
     "@redux-eggs/core": "1.0.5",
     "@redux-eggs/redux": "1.0.5",
-    "@redux-eggs/redux-toolkit": "1.0.5",
-    "@reduxjs/toolkit": "1.6.2",
     "@rollup/plugin-eslint": "8.0.1",
     "@testing-library/react": "12.1.2",
     "@types/jest": "27.0.2",
@@ -57,6 +55,7 @@
     "typescript": "4.4.4"
   },
   "peerDependencies": {
+    "@redux-eggs/core": "^1.0.5",
     "next": ">=11.1.0",
     "react": "^16.8.3 || ^17.0.0",
     "react-redux": "^7.0.0"

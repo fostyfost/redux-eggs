@@ -1260,7 +1260,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.15.4, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5":
+"@babel/runtime@npm:7.15.4, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4":
   version: 7.15.4
   resolution: "@babel/runtime@npm:7.15.4"
   dependencies:
@@ -3274,7 +3274,7 @@ __metadata:
     next: 11.1.2
     react: 17.0.2
     react-dom: 17.0.2
-    react-redux: 7.2.5
+    react-redux: 7.2.6
     react-test-renderer: 17.0.2
     redux: 4.1.1
     rimraf: 3.0.2
@@ -3328,7 +3328,7 @@ __metadata:
     jest: 27.3.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-redux: 7.2.5
+    react-redux: 7.2.6
     redux: 4.1.1
     rimraf: 3.0.2
     rollup: 2.58.1
@@ -3922,7 +3922,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-redux@npm:7.1.20":
+"@types/react-redux@npm:7.1.20, @types/react-redux@npm:^7.1.20":
   version: 7.1.20
   resolution: "@types/react-redux@npm:7.1.20"
   dependencies:
@@ -12530,6 +12530,27 @@ __metadata:
     react-native:
       optional: true
   checksum: 04ac4a4178067cbcfc05506dfea9f7e01730093a5752f050567f7ae4a38c03c96da9d8fed051f8ab1ecede5ea8a15ee41c5f6c5eeb7f04f37e4d13e431ec7830
+  languageName: node
+  linkType: hard
+
+"react-redux@npm:7.2.6":
+  version: 7.2.6
+  resolution: "react-redux@npm:7.2.6"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    "@types/react-redux": ^7.1.20
+    hoist-non-react-statics: ^3.3.2
+    loose-envify: ^1.4.0
+    prop-types: ^15.7.2
+    react-is: ^17.0.2
+  peerDependencies:
+    react: ^16.8.3 || ^17
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 0bf142ce0d0b80aef955650fd5e9489fca32d94f19ee23893b332f1b01ceee7bd3623337c942cbda642667d1dc9de5ac869c3c1946afa6cf2046407b57d24741
   languageName: node
   linkType: hard
 

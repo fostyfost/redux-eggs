@@ -4225,6 +4225,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["virtual:c68590ea2cbf040862e5fcf1e60c5eb84da0553a68f14578a28f376334e76278ff41466996853e15e773574dba4ac77b2d1a9239cf60cc75685d4970d442576e#npm:11.1.2", {
+          "packageLocation": "./.yarn/__virtual__/@next-react-dev-overlay-virtual-763a119a80/0/cache/@next-react-dev-overlay-npm-11.1.2-01dc118fd7-6b2215c90c.zip/node_modules/@next/react-dev-overlay/",
+          "packageDependencies": [
+            ["@next/react-dev-overlay", "virtual:c68590ea2cbf040862e5fcf1e60c5eb84da0553a68f14578a28f376334e76278ff41466996853e15e773574dba4ac77b2d1a9239cf60cc75685d4970d442576e#npm:11.1.2"],
+            ["@babel/code-frame", "npm:7.12.11"],
+            ["@types/react", "npm:17.0.32"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["anser", "npm:1.4.9"],
+            ["chalk", "npm:4.0.0"],
+            ["classnames", "npm:2.2.6"],
+            ["css.escape", "npm:1.5.1"],
+            ["data-uri-to-buffer", "npm:3.0.1"],
+            ["platform", "npm:1.3.6"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#npm:17.0.2"],
+            ["shell-quote", "npm:1.7.2"],
+            ["source-map", "npm:0.8.0-beta.0"],
+            ["stacktrace-parser", "npm:0.1.10"],
+            ["strip-ansi", "npm:6.0.0"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:e44d871b1c259051109af5ca0e4c138b140ea8d9e5dd9d71e92f9f0a56ee51341f812b984fae9c918d16ea1f582c2ccdfc499bb6e596b3e19a05d3ddf51f0f81#npm:11.1.2", {
           "packageLocation": "./.yarn/__virtual__/@next-react-dev-overlay-virtual-2928149ab2/0/cache/@next-react-dev-overlay-npm-11.1.2-01dc118fd7-6b2215c90c.zip/node_modules/@next/react-dev-overlay/",
           "packageDependencies": [
@@ -4936,7 +4964,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.0.2"],
             ["@types/node", "npm:16.10.2"],
             ["@types/react", "npm:17.0.32"],
-            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/react-dom", "npm:17.0.11"],
             ["@types/react-redux", "npm:7.1.20"],
             ["@types/react-test-renderer", "npm:17.0.1"],
             ["@wessberg/rollup-plugin-ts", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:1.3.14"],
@@ -5005,7 +5033,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:f596c1487d35c01c9688e3cc7392fbb6256788e10bfb54ac8f8a2764d6648b77425837060aec58c17e45539ad1b6fc1743b1f9b672ccd3e36dca893158c5f811#npm:13.5.0"],
             ["@types/jest", "npm:27.0.2"],
             ["@types/react", "npm:17.0.32"],
-            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/react-dom", "npm:17.0.11"],
             ["@types/react-redux", "npm:7.1.20"],
             ["@types/testing-library__jest-dom", "npm:5.14.1"],
             ["@wessberg/rollup-plugin-ts", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:1.3.14"],
@@ -5455,7 +5483,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.15.4"],
             ["@testing-library/dom", "npm:8.5.0"],
             ["@types/react", "npm:17.0.32"],
-            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/react-dom", "npm:17.0.11"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#npm:17.0.2"]
           ],
@@ -5825,6 +5853,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.10-aea5504608-cc7d8d5b77.zip/node_modules/@types/react-dom/",
           "packageDependencies": [
             ["@types/react-dom", "npm:17.0.10"],
+            ["@types/react", "npm:17.0.18"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:17.0.11", {
+          "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.11-fc2e584a96-4d5730dffb.zip/node_modules/@types/react-dom/",
+          "packageDependencies": [
+            ["@types/react-dom", "npm:17.0.11"],
             ["@types/react", "npm:17.0.18"]
           ],
           "linkType": "HARD",
@@ -14037,7 +14073,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/accept", "npm:5.0.2"],
             ["@next/env", "npm:11.1.2"],
             ["@next/polyfill-module", "npm:11.1.2"],
-            ["@next/react-dev-overlay", "virtual:e44d871b1c259051109af5ca0e4c138b140ea8d9e5dd9d71e92f9f0a56ee51341f812b984fae9c918d16ea1f582c2ccdfc499bb6e596b3e19a05d3ddf51f0f81#npm:11.1.2"],
+            ["@next/react-dev-overlay", "virtual:c68590ea2cbf040862e5fcf1e60c5eb84da0553a68f14578a28f376334e76278ff41466996853e15e773574dba4ac77b2d1a9239cf60cc75685d4970d442576e#npm:11.1.2"],
             ["@next/react-refresh-utils", "virtual:e44d871b1c259051109af5ca0e4c138b140ea8d9e5dd9d71e92f9f0a56ee51341f812b984fae9c918d16ea1f582c2ccdfc499bb6e596b3e19a05d3ddf51f0f81#npm:11.1.2"],
             ["@next/swc-darwin-arm64", "npm:11.1.2"],
             ["@next/swc-darwin-x64", "npm:11.1.2"],
@@ -14047,7 +14083,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/fibers", null],
             ["@types/node-sass", null],
             ["@types/react", "npm:17.0.32"],
-            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/react-dom", "npm:17.0.11"],
             ["@types/sass", null],
             ["assert", "npm:2.0.0"],
             ["ast-types", "npm:0.13.2"],

@@ -4999,7 +4999,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],
             ["@redux-eggs/core", "workspace:packages/core"],
             ["@rollup/plugin-eslint", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:8.0.1"],
-            ["@testing-library/dom", "npm:8.10.1"],
+            ["@testing-library/dom", "npm:8.11.1"],
             ["@testing-library/jest-dom", "npm:5.14.1"],
             ["@testing-library/react", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:12.1.2"],
             ["@testing-library/user-event", "virtual:f596c1487d35c01c9688e3cc7392fbb6256788e10bfb54ac8f8a2764d6648b77425837060aec58c17e45539ad1b6fc1743b1f9b672ccd3e36dca893158c5f811#npm:13.5.0"],
@@ -5391,10 +5391,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@testing-library/dom", [
-        ["npm:8.10.1", {
-          "packageLocation": "./.yarn/cache/@testing-library-dom-npm-8.10.1-12438798e3-c11da16d98.zip/node_modules/@testing-library/dom/",
+        ["npm:8.11.1", {
+          "packageLocation": "./.yarn/cache/@testing-library-dom-npm-8.11.1-d1ef937c19-082104b104.zip/node_modules/@testing-library/dom/",
           "packageDependencies": [
-            ["@testing-library/dom", "npm:8.10.1"],
+            ["@testing-library/dom", "npm:8.11.1"],
             ["@babel/code-frame", "npm:7.14.5"],
             ["@babel/runtime", "npm:7.15.4"],
             ["@types/aria-query", "npm:4.2.2"],
@@ -5481,7 +5481,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@testing-library/user-event", "virtual:f596c1487d35c01c9688e3cc7392fbb6256788e10bfb54ac8f8a2764d6648b77425837060aec58c17e45539ad1b6fc1743b1f9b672ccd3e36dca893158c5f811#npm:13.5.0"],
             ["@babel/runtime", "npm:7.15.4"],
-            ["@testing-library/dom", "npm:8.10.1"],
+            ["@testing-library/dom", "npm:8.11.1"],
             ["@types/testing-library__dom", null]
           ],
           "packagePeers": [

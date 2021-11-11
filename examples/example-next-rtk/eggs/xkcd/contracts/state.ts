@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { XkcdInfo } from '@/eggs/xkcd/contracts/api-response'
 import type { XKCD_SLICE } from '@/eggs/xkcd/slice'
 
@@ -13,8 +11,8 @@ export interface XkcdAwareState {
   [XKCD_SLICE]: XkcdState
 }
 
-export type XkcdState = Immutable<{
+export interface XkcdState {
   info?: XkcdInfo
   error?: string
   loadingState: XkcdLoadingState
-}>
+}

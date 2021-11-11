@@ -1,11 +1,10 @@
-import type { Immutable } from 'immer'
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit'
 
 import type { PostsAwareState, PostsItem } from '@/eggs/posts/contracts/state'
 import { PostsLoadingState } from '@/eggs/posts/contracts/state'
 import { POSTS_SLICE } from '@/eggs/posts/slice'
 
-export const postsSelector = (state: PostsAwareState): Immutable<PostsItem[]> => {
+export const postsSelector = (state: PostsAwareState): PostsItem[] => {
   return state[POSTS_SLICE].posts
 }
 

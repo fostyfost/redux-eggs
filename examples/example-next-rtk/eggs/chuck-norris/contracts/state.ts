@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { CHUCK_NORRIS_SLICE } from '@/eggs/chuck-norris/slice'
 
 export enum ChuckNorrisLoadingState {
@@ -12,8 +10,8 @@ export interface ChuckNorrisAwareState {
   [CHUCK_NORRIS_SLICE]: ChuckNorrisState
 }
 
-export type ChuckNorrisState = Immutable<{
+export interface ChuckNorrisState {
   joke?: string
   error?: string
   loadingState: ChuckNorrisLoadingState
-}>
+}

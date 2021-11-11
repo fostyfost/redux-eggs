@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit'
 
 import type { ChuckNorrisAwareState } from '@/eggs/chuck-norris/contracts/state'
 import { ChuckNorrisLoadingState } from '@/eggs/chuck-norris/contracts/state'

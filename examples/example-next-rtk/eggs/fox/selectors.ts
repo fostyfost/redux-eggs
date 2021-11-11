@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit'
 
 import type { FoxAwareState } from '@/eggs/fox/contracts/state'
 import { FoxLoadingState } from '@/eggs/fox/contracts/state'

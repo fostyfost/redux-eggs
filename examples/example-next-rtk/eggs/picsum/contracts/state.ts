@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { Picture } from '@/eggs/picsum/contracts/picture'
 import type { PICSUM_SLICE } from '@/eggs/picsum/slice'
 
@@ -13,8 +11,8 @@ export interface PicsumAwareState {
   [PICSUM_SLICE]: PicsumState
 }
 
-export type PicsumState = Immutable<{
+export interface PicsumState {
   pics?: Picture[]
   error?: string
   loadingState: PicsumLoadingState
-}>
+}

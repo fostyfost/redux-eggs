@@ -1,12 +1,11 @@
-import type { Immutable } from 'immer'
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit'
 
 import type { XkcdInfo } from '@/eggs/xkcd/contracts/api-response'
 import type { XkcdAwareState } from '@/eggs/xkcd/contracts/state'
 import { XkcdLoadingState } from '@/eggs/xkcd/contracts/state'
 import { XKCD_SLICE } from '@/eggs/xkcd/slice'
 
-export const xkcdInfoSelector = (state: XkcdAwareState): Immutable<XkcdInfo> | undefined => {
+export const xkcdInfoSelector = (state: XkcdAwareState): XkcdInfo | undefined => {
   return state[XKCD_SLICE].info
 }
 

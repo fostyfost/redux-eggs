@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { ACTIVE_POST_SLICE } from '@/eggs/active-post/slice'
 
 export enum ActivePostLoadingState {
@@ -18,8 +16,8 @@ export interface ActivePost {
   body: string
 }
 
-export type ActivePostState = Immutable<{
+export interface ActivePostState {
   activePost?: ActivePost
   error?: string
   loadingState: ActivePostLoadingState
-}>
+}

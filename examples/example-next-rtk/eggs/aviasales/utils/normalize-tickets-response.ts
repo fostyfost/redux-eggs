@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid'
+import { nanoid } from '@reduxjs/toolkit'
 
 import { MAX_STOPS, SEGMENTS_LENGTH } from '@/eggs/aviasales/constants'
 import type { RawTicket } from '@/eggs/aviasales/contracts/api-response'

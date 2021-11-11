@@ -2,8 +2,7 @@
  * @jest-environment node
  */
 
-import { combineReducers } from '@reduxjs/toolkit'
-import { nanoid } from 'nanoid'
+import { combineReducers, nanoid } from '@reduxjs/toolkit'
 import { expectSaga } from 'redux-saga-test-plan'
 import * as matchers from 'redux-saga-test-plan/matchers'
 import { dynamic } from 'redux-saga-test-plan/providers'

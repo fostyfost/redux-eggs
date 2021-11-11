@@ -1,12 +1,11 @@
-import type { Immutable } from 'immer'
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit'
 
 import type { UsersAwareState } from '@/eggs/users/contracts/state'
 import { UsersLoadingState } from '@/eggs/users/contracts/state'
 import type { User } from '@/eggs/users/contracts/user'
 import { USERS_SLICE } from '@/eggs/users/slice'
 
-export const usersSelector = (state: UsersAwareState): Immutable<User[]> => {
+export const usersSelector = (state: UsersAwareState): User[] => {
   return state[USERS_SLICE].users
 }
 

@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid'
+import { nanoid } from '@reduxjs/toolkit'
 
 import { normalizeTicketsResponse } from '@/eggs/aviasales/utils/normalize-tickets-response'
 

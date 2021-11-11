@@ -1,9 +1,9 @@
+import { createSelector } from '@reduxjs/toolkit'
 import type { NextPage } from 'next'
 import Error from 'next/error'
 import Head from 'next/head'
 import type { FC } from 'react'
 import { useSelector } from 'react-redux'
-import { createSelector } from 'reselect'
 
 import { ActivePost } from '@/components/active-post'
 import { DynamicPosts } from '@/components/posts'

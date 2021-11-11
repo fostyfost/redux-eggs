@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { DOG_SLICE } from '@/eggs/dog/slice'
 
 export enum DogLoadingState {
@@ -12,8 +10,8 @@ export interface DogAwareState {
   [DOG_SLICE]: DogState
 }
 
-export type DogState = Immutable<{
+export interface DogState {
   dog?: string
   error?: string
   loadingState: DogLoadingState
-}>
+}

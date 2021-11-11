@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { FOX_SLICE } from '@/eggs/fox/slice'
 
 export enum FoxLoadingState {
@@ -12,8 +10,8 @@ export interface FoxAwareState {
   [FOX_SLICE]: FoxState
 }
 
-export type FoxState = Immutable<{
+export interface FoxState {
   fox?: string
   error?: string
   loadingState: FoxLoadingState
-}>
+}

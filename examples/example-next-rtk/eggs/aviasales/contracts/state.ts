@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
 import type { Sort } from '@/eggs/aviasales/contracts/sort'
 import type { Ticket } from '@/eggs/aviasales/contracts/ticket'
@@ -10,14 +8,14 @@ export interface AviasalesAwareState {
   [AVIASALES_SLICE]: AviasalesState
 }
 
-export type AviasalesState = Immutable<{
+export interface AviasalesState {
   searchId?: string
   tickets: TicketsMap
   ticketsSegments: TicketsSegmentsMap
   loadingState: AviasalesLoadingState
   currentSort: Sort
   stops: number[]
-}>
+}
 
 export interface TicketsMap {
   [id: string]: Ticket

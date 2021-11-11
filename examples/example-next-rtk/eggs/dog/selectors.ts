@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit'
 
 import type { DogAwareState } from '@/eggs/dog/contracts/state'
 import { DogLoadingState } from '@/eggs/dog/contracts/state'

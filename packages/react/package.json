@@ -37,7 +37,7 @@
     "@wessberg/rollup-plugin-ts": "1.3.14",
     "cross-env": "7.0.3",
     "eslint": "7.32.0",
-    "eslint-plugin-react": "7.26.1",
+    "eslint-plugin-react": "7.27.1",
     "eslint-plugin-react-hooks": "4.2.0",
     "jest": "27.3.1",
     "react": "17.0.2",

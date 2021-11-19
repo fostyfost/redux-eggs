@@ -3200,7 +3200,7 @@ __metadata:
     rimraf: 3.0.2
     rollup: 2.58.1
     rollup-plugin-peer-deps-external: 2.2.4
-    terser: 5.9.0
+    terser: 5.10.0
     tslib: 2.3.1
     typescript: 4.4.4
   peerDependencies:
@@ -14281,16 +14281,21 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"terser@npm:5.9.0":
-  version: 5.9.0
-  resolution: "terser@npm:5.9.0"
+"terser@npm:5.10.0":
+  version: 5.10.0
+  resolution: "terser@npm:5.10.0"
   dependencies:
     commander: ^2.20.0
     source-map: ~0.7.2
     source-map-support: ~0.5.20
+  peerDependencies:
+    acorn: ^8.5.0
+  peerDependenciesMeta:
+    acorn:
+      optional: true
   bin:
     terser: bin/terser
-  checksum: 11c1246b1991015a8881742878af779e3863fad42f626ffda957dbf28c94bf51e7994cffb9ffbec86ff3c23ab45ffa6d79d453c15e664306e35fc7b2c4eee5f4
+  checksum: 1080faeb6d5cd155bb39d9cc41d20a590eafc9869560d5285f255f6858604dcd135311e344188a106f87fedb12d096ad3799cfc2e65acd470b85d468b1c7bd4c
   languageName: node
   linkType: hard
 

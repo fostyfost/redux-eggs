@@ -4823,7 +4823,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.58.1"],
             ["rollup-plugin-peer-deps-external", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:2.2.4"],
-            ["terser", "npm:5.9.0"],
+            ["terser", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:5.10.0"],
             ["tslib", "npm:2.3.1"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
           ],
@@ -4852,7 +4852,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.58.1"],
             ["rollup-plugin-peer-deps-external", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:2.2.4"],
-            ["terser", "npm:5.9.0"],
+            ["terser", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:5.10.0"],
             ["tslib", "npm:2.3.1"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
           ],
@@ -17785,6 +17785,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["terser", [
+        ["npm:5.10.0", {
+          "packageLocation": "./.yarn/cache/terser-npm-5.10.0-1690d2acb8-1080faeb6d.zip/node_modules/terser/",
+          "packageDependencies": [
+            ["terser", "npm:5.10.0"]
+          ],
+          "linkType": "SOFT",
+        }],
         ["npm:5.7.1", {
           "packageLocation": "./.yarn/cache/terser-npm-5.7.1-94e625130b-9354af5c22.zip/node_modules/terser/",
           "packageDependencies": [
@@ -17795,13 +17802,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:5.9.0", {
-          "packageLocation": "./.yarn/cache/terser-npm-5.9.0-16d6a713ce-11c1246b19.zip/node_modules/terser/",
+        ["virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:5.10.0", {
+          "packageLocation": "./.yarn/__virtual__/terser-virtual-b43392e927/0/cache/terser-npm-5.10.0-1690d2acb8-1080faeb6d.zip/node_modules/terser/",
           "packageDependencies": [
-            ["terser", "npm:5.9.0"],
+            ["terser", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:5.10.0"],
+            ["@types/acorn", null],
+            ["acorn", null],
             ["commander", "npm:2.20.3"],
             ["source-map", "npm:0.7.3"],
             ["source-map-support", "npm:0.5.20"]
+          ],
+          "packagePeers": [
+            "@types/acorn",
+            "acorn"
           ],
           "linkType": "HARD",
         }]

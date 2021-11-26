@@ -1,8 +1,12 @@
 # Redux Eggs for Redux
 
-⚠️ Minimum supported versions of **peer dependencies**:
+_Redux Eggs_ wrapper for [Redux](https://redux.js.org/).
 
-- `redux` 4.0.0 and newer
+Contents:
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
 
 ## Installation:
 
@@ -18,4 +22,67 @@ If you are using **NPM**, run
 npm install --save @redux-eggs/core @redux-eggs/redux
 ```
 
-`// TODO`
+⚠️ Minimum supported versions of **peer dependencies**:
+
+- `redux` 4.0.0 and newer
+
+## Usage
+
+Create your store:
+
+```typescript
+import { createStore } from '@redux-eggs/redux'
+
+export const store = createStore()
+```
+
+Add reducer to `egg`:
+
+```typescript
+// my-egg.js
+import { myReducer } from '../my-reducer'
+
+export const getMyEgg = () => {
+  return {
+    id: 'my-egg',
+    reducersMap: {
+      myState: myReducer,
+      // ...
+    },
+    // ...
+  }
+}
+
+// my-another-egg.js
+import { myAnotherReducer } from '../my-another-reducer'
+
+export const getMyAnotherEgg = () => {
+  return {
+    id: 'my-another-egg',
+    reducersMap: {
+      myAnotherState: myAnotherReducer,
+      // ...
+    },
+    // ...
+  }
+}
+```
+
+Add `egg` to your store:
+
+```typescript
+import { getMyEgg } from '../eggs/my-egg'
+
+// Somewhere in your application
+store.addEggs([getMyEgg()])
+
+// Somewhere else
+import { getMyAnotherEgg } from '../eggs/my-another-egg'
+
+// Somewhere in your application
+store.addEggs([getMyAnotherEgg()])
+```
+
+## Examples
+
+See examples [here](https://github.com/fostyfost/redux-eggs/tree/main/docs/examples.md).

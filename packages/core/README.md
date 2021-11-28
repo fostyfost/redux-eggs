@@ -2,9 +2,12 @@
 
 This package includes logic for creating Redux store and adding/removing/counting `eggs`.
 
+Contents:
+
 - [Intro](#intro)
 - [Installation](#installation)
 - [API Reference](#api-reference)
+- [Glossary](https://github.com/fostyfost/redux-eggs/tree/main/docs/glossary.md)
 
 ## Intro
 
@@ -92,7 +95,7 @@ const myMiddleware = store => next => action => {
 }
 ```
 
-### `getCounter([equalityCheck], [checkIsEternal])`
+### `getCounter([equalityCheck], [keepCheck])`
 
 This function will be useful for developers of extensions for _Redux Eggs_. All details you can
 find [here](https://github.com/fostyfost/redux-eggs/tree/main/docs/core-counter.md).

@@ -2,10 +2,10 @@ import type { Egg, EggTuple } from '@/contracts'
 
 const isArray = Array.isArray
 
-export const flat = (tuple: EggTuple): Egg[] => {
+export const flat = (tuple: EggTuple<any>): Egg<any>[] => {
   const result: Egg[] = []
 
-  const flatten = (tuple: EggTuple): void => {
+  const flatten = (tuple: EggTuple<any>): void => {
     tuple.forEach(item => {
       if (isArray(item)) {
         flatten(item)

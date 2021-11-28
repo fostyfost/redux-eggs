@@ -6,7 +6,8 @@ Contents:
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
+- [Glossary](https://github.com/fostyfost/redux-eggs/tree/main/docs/glossary.md)
+- [Examples](https://github.com/fostyfost/redux-eggs/tree/main/docs/examples.md)
 
 ## Installation:
 
@@ -80,7 +81,3 @@ const remove = store.addEggs([
 // ...later
 remove()
 ```
-
-## Examples
-
-See examples [here](https://github.com/fostyfost/redux-eggs/tree/main/docs/examples.md).

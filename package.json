@@ -24,30 +24,30 @@
     "pretty-quick": "pretty-quick"
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=16",
     "yarn": ">=3"
   },
-  "packageManager": "yarn@3.0.2",
+  "packageManager": "yarn@3.1.1",
   "workspaces": [
     "examples/*",
     "internal/*",
     "packages/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "13.2.1",
-    "@commitlint/config-conventional": "13.2.0",
-    "@typescript-eslint/eslint-plugin": "5.1.0",
-    "@typescript-eslint/parser": "5.1.0",
+    "@commitlint/cli": "15.0.0",
+    "@commitlint/config-conventional": "15.0.0",
+    "@typescript-eslint/eslint-plugin": "5.5.0",
+    "@typescript-eslint/parser": "5.5.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-import-resolver-typescript": "2.5.0",
-    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-import": "2.25.3",
     "eslint-plugin-simple-import-sort": "7.0.0",
-    "eslint-plugin-unicorn": "37.0.1",
+    "eslint-plugin-unicorn": "39.0.0",
     "husky": "7.0.4",
     "lerna": "4.0.0",
-    "prettier": "2.4.1",
-    "pretty-quick": "3.1.1",
-    "typescript": "4.4.4"
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.2",
+    "typescript": "4.5.2"
   }
 }

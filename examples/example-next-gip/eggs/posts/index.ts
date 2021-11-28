@@ -11,7 +11,7 @@ export interface PostsEggParams {
 export const getPostsEgg = ({ afterAdd }: PostsEggParams = {}): Egg<AppStore> => {
   return {
     id: 'posts',
-    reducerMap: {
+    reducersMap: {
       [POSTS_REDUCER_KEY]: postsReducer,
     },
     sagas: [loadPostsWatcher],

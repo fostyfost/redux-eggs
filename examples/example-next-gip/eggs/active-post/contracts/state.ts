@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { ACTIVE_POST_REDUCER_KEY } from '@/eggs/active-post/reducer'
 
 export enum ActivePostLoadingState {
@@ -18,8 +16,8 @@ export interface ActivePost {
   body: string
 }
 
-export type ActivePostState = Immutable<{
+export interface ActivePostState {
   activePost?: ActivePost
   error?: string
   loadingState: ActivePostLoadingState
-}>
+}

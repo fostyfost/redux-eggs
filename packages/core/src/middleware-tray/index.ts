@@ -4,16 +4,16 @@ import { getCounter } from '@/counter'
 
 interface Item {
   mid: Middleware
-  applied: ReturnType<Middleware>
+  act: ReturnType<Middleware>
 }
 
-export type GetMiddlewareTray = (composeMiddlewares: typeof compose) => {
+export interface MiddlewareTray {
   mid: Middleware
   add(middlewares: Middleware[]): void
   remove(middlewares: Middleware[]): void
 }
 
-export const getMiddlewareTray: GetMiddlewareTray = composeMiddlewares => {
+export const getMiddlewareTray = <T extends typeof compose = typeof compose>(composeMiddlewares: T): MiddlewareTray => {
   const counter = getCounter<Middleware>()
   let items: Item[] = []
   let api: MiddlewareAPI
@@ -21,13 +21,13 @@ export const getMiddlewareTray: GetMiddlewareTray = composeMiddlewares => {
   return {
     mid(store): ReturnType<Middleware> {
       api = store
-      return next => action => composeMiddlewares<Middleware>(...items.map(item => item.applied))(next)(action)
+      return next => action => composeMiddlewares<Middleware>(...items.map(item => item.act))(next)(action)
     },
 
     add(middlewaresToAdd: Middleware[]): void {
       middlewaresToAdd.forEach(mid => {
         if (!counter.getCount(mid)) {
-          items.push({ mid, applied: mid(api) })
+          items.push({ mid, act: mid(api) })
         }
 
         counter.add(mid)
@@ -35,12 +35,12 @@ export const getMiddlewareTray: GetMiddlewareTray = composeMiddlewares => {
     },
 
     remove(middlewaresToRemove: Middleware[]): void {
-      middlewaresToRemove.forEach(middleware => {
-        if (counter.getCount(middleware) === 1) {
-          items = items.filter(item => middleware !== item.mid)
+      middlewaresToRemove.forEach(mid => {
+        if (counter.getCount(mid) === 1) {
+          items = items.filter(item => mid !== item.mid)
         }
 
-        counter.remove(middleware)
+        counter.remove(mid)
       })
     },
   }

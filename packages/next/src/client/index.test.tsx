@@ -48,11 +48,11 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     }
   }
 
-  const egg1: Egg = { id: 'egg1', reducerMap: { reducer1: (state = {}) => state } }
-  const egg2: Egg = { id: 'egg2', reducerMap: { reducer2: (state = {}) => state } }
-  const egg3: Egg = { id: 'egg3', reducerMap: { reducer3: (state = {}) => state } }
-  const egg4: Egg = { id: 'egg4', reducerMap: { reducer4: (state = {}) => state } }
-  const egg5: Egg = { id: 'egg5', reducerMap: { reducer5: (state = {}) => state } }
+  const egg1: Egg = { id: 'egg1', reducersMap: { reducer1: (state = {}) => state } }
+  const egg2: Egg = { id: 'egg2', reducersMap: { reducer2: (state = {}) => state } }
+  const egg3: Egg = { id: 'egg3', reducersMap: { reducer3: (state = {}) => state } }
+  const egg4: Egg = { id: 'egg4', reducersMap: { reducer4: (state = {}) => state } }
+  const egg5: Egg = { id: 'egg5', reducersMap: { reducer5: (state = {}) => state } }
 
   test('Store is created once', () => {
     const store = createAnyStore()

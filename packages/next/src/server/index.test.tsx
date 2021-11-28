@@ -28,11 +28,11 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
   describe('`createWrapperInitializer` tests', () => {
     const createAnyStore = () => createStore()
 
-    const egg1: Egg = { id: 'egg1', reducerMap: { reducer1: (state = {}) => state } }
-    const egg2: Egg = { id: 'egg2', reducerMap: { reducer2: (state = {}) => state } }
-    const egg3: Egg = { id: 'egg3', reducerMap: { reducer3: (state = {}) => state } }
-    const egg4: Egg = { id: 'egg4', reducerMap: { reducer4: (state = {}) => state } }
-    const egg5: Egg = { id: 'egg5', reducerMap: { reducer5: (state = {}) => state } }
+    const egg1: Egg = { id: 'egg1', reducersMap: { reducer1: (state = {}) => state } }
+    const egg2: Egg = { id: 'egg2', reducersMap: { reducer2: (state = {}) => state } }
+    const egg3: Egg = { id: 'egg3', reducersMap: { reducer3: (state = {}) => state } }
+    const egg4: Egg = { id: 'egg4', reducersMap: { reducer4: (state = {}) => state } }
+    const egg5: Egg = { id: 'egg5', reducersMap: { reducer5: (state = {}) => state } }
 
     test('Wrapped Page contains `eggs`', () => {
       const wrapperInitializer = createWrapperInitializer(createAnyStore)
@@ -1600,12 +1600,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('Empty props in `StaticPropsFn`', async () => {
-        const PageComponent: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-          // @ts-ignore
-          never,
-        }) => {
-          return noop(never)
-        }
+        const PageComponent: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ never }: any) => noop(never)
 
         const wrapper = wrapperInitializer.getPageWrapper()
 
@@ -1665,12 +1660,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('Empty object as `StaticPropsFn`', async () => {
-        const PageComponent: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-          // @ts-ignore
-          never,
-        }) => {
-          return noop(never)
-        }
+        const PageComponent: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ never }: any) => noop(never)
 
         const wrapper = wrapperInitializer.getPageWrapper()
 
@@ -1681,12 +1671,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('Without `StaticPropsFn`', async () => {
-        const PageComponent: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-          // @ts-ignore
-          never,
-        }) => {
-          return noop(never)
-        }
+        const PageComponent: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ never }: any) => noop(never)
 
         const wrapper = wrapperInitializer.getPageWrapper()
 
@@ -1780,10 +1765,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('Empty props in `ServerSidePropsFn`', async () => {
-        const PageComponent: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = ({
-          // @ts-ignore
-          never,
-        }) => {
+        const PageComponent: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ never }: any) => {
           return noop(never)
         }
 
@@ -1837,10 +1819,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('Empty object as `ServerSidePropsFn`', async () => {
-        const PageComponent: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = ({
-          // @ts-ignore
-          never,
-        }) => {
+        const PageComponent: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ never }: any) => {
           return noop(never)
         }
 
@@ -1853,10 +1832,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('Without `ServerSidePropsFn`', async () => {
-        const PageComponent: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = ({
-          // @ts-ignore
-          never,
-        }) => {
+        const PageComponent: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ never }: any) => {
           return noop(never)
         }
 
@@ -1925,12 +1901,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('`InitialPagePropsFn` with `GIP` and empty props', async () => {
-        const PageComponent: NextPage = ({
-          // @ts-ignore
-          never,
-        }) => {
-          return noop(never)
-        }
+        const PageComponent: NextPage = ({ never }: any) => noop(never)
 
         const wrapper = wrapperInitializer.getPageWrapper()
 
@@ -1966,12 +1937,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       })
 
       test('Without `InitialPagePropsFn`', async () => {
-        const PageComponent: NextPage = ({
-          // @ts-ignore
-          never,
-        }) => {
-          return noop(never)
-        }
+        const PageComponent: NextPage = ({ never }: any) => noop(never)
 
         const wrapper = wrapperInitializer.getPageWrapper()
 

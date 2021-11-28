@@ -1,14 +1,13 @@
 import type { Extension } from '@redux-eggs/core'
-import type { Middleware } from '@reduxjs/toolkit'
 
-export const getLoggerExtension = (): Extension => {
-  const middlewares: Middleware[] = []
+export const getLoggerExtension = (): Extension<any> => {
+  const ext: Extension = {}
 
   if (process.env.NODE_ENV === 'development' && process.env.NEXT_PUBLIC_USE_LOGGER_EXTENSION === 'true') {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { createLogger } = require('redux-logger')
 
-    middlewares.push(
+    ext.middlewares = [
       createLogger({
         level: {
           action() {
@@ -19,8 +18,48 @@ export const getLoggerExtension = (): Extension => {
           return !logEntry.error
         },
       }),
-    )
+    ]
+
+    ext.beforeAdd = [
+      (eggs, store) => {
+        console.log(
+          'beforeAdd',
+          eggs.map(egg => egg.id),
+          store.getEggs().map(egg => egg.value.id),
+        )
+      },
+    ]
+
+    ext.afterAdd = [
+      (eggs, store) => {
+        console.log(
+          'afterAdd',
+          eggs.map(egg => egg.id),
+          store.getEggs().map(egg => egg.value.id),
+        )
+      },
+    ]
+
+    ext.afterAdd = [
+      (eggs, store) => {
+        console.log(
+          'beforeRemove',
+          eggs.map(egg => egg.id),
+          store.getEggs().map(egg => egg.value.id),
+        )
+      },
+    ]
+
+    ext.afterAdd = [
+      (eggs, store) => {
+        console.log(
+          'afterRemove',
+          eggs.map(egg => egg.id),
+          store.getEggs().map(egg => egg.value.id),
+        )
+      },
+    ]
   }
 
-  return { middlewares }
+  return ext
 }

@@ -9,7 +9,7 @@ import * as matchers from 'redux-saga-test-plan/matchers'
 import { dynamic } from 'redux-saga-test-plan/providers'
 
 import { AviasalesReducerAction } from '@/eggs/aviasales/action-creators'
-import * as api from '@/eggs/aviasales/api/getTicketsWithApi'
+import * as api from '@/eggs/aviasales/api/get-tickets-with-api'
 import { DEFAULT_SORT, DEFAULT_STOPS } from '@/eggs/aviasales/constants'
 import type { TicketsResponse } from '@/eggs/aviasales/contracts/api-response'
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
@@ -17,13 +17,12 @@ import type { TicketsMap, TicketsSegmentsMap } from '@/eggs/aviasales/contracts/
 import { AVIASALES_REDUCER_KEY, aviasalesReducer } from '@/eggs/aviasales/reducer'
 import { aviasalesSaga } from '@/eggs/aviasales/saga'
 import { filterSaga } from '@/eggs/aviasales/saga/filter-saga'
-import { getSearchId } from '@/eggs/aviasales/saga/getSearchId'
+import { getSearchId } from '@/eggs/aviasales/saga/get-search-id'
 
 jest.mock('nanoid')
 
 afterAll(() => {
-  // @ts-ignore
-  nanoid.mockRestore()
+  ;(nanoid as any).mockRestore()
 })
 
 const response: TicketsResponse = {
@@ -132,8 +131,7 @@ describe('`aviasalesSaga` tests', () => {
   test('Saga should get tickets one time', async () => {
     let id = 0
 
-    // @ts-ignore
-    nanoid.mockImplementation(() => String(++id))
+    ;(nanoid as any).mockImplementation(() => String(++id))
 
     let count = 0
 

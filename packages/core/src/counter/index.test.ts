@@ -1,4 +1,4 @@
-import type { CountedItem } from '@/counter'
+import type { CounterItem } from '@/contracts'
 import { getCounter } from '@/counter'
 
 describe('Tests for counter', () => {
@@ -123,76 +123,76 @@ describe('Tests for counter', () => {
     expect(counter.getItems()).toEqual([])
   })
 
-  test('Counter works with `eternal` items', () => {
+  test('Counter works with eternal items', () => {
     interface Item {
       value: number
-      eternal?: boolean
+      keep?: boolean
     }
 
     const values: Item[] = [
       {
         value: 1,
-        eternal: true,
+        keep: true,
       },
       {
         value: 2,
-        eternal: false,
+        keep: false,
       },
       {
         value: 3,
       },
       {
         value: 4,
-        eternal: true,
+        keep: true,
       },
       {
         value: 5,
-        eternal: true,
+        keep: true,
       },
     ]
 
-    const checkIsEternal = (item: Item): boolean => !!item.eternal
-    const counter = getCounter<Item>(undefined, checkIsEternal)
+    const keepCheck = (item: Item): boolean => !!item.keep
+    const counter = getCounter<Item>(undefined, keepCheck)
 
     values.forEach(item => expect(counter.getCount(item)).toBe(0))
     expect(counter.getItems()).toEqual([])
 
-    const mapper = (value: Item, expectedCount: number): CountedItem<Item> => {
+    const mapper = (value: Item, expectedCount: number): CounterItem<Item> => {
       return {
         value,
-        count: checkIsEternal(value) ? Infinity : expectedCount,
+        count: keepCheck(value) ? Infinity : expectedCount,
       }
     }
 
-    const filter = (item: CountedItem<Item>) => item.count > 0
+    const filter = (item: CounterItem<Item>) => item.count > 0
 
     values.forEach(item => {
       counter.add(item)
-      expect(counter.getCount(item)).toBe(checkIsEternal(item) ? Infinity : 1)
+      expect(counter.getCount(item)).toBe(keepCheck(item) ? Infinity : 1)
     })
     expect(counter.getItems()).toEqual(values.map(value => mapper(value, 1)).filter(filter))
 
     values.forEach(item => {
       counter.add(item)
-      expect(counter.getCount(item)).toBe(checkIsEternal(item) ? Infinity : 2)
+      expect(counter.getCount(item)).toBe(keepCheck(item) ? Infinity : 2)
     })
     expect(counter.getItems()).toEqual(values.map(value => mapper(value, 2)).filter(filter))
 
     values.forEach(item => {
       counter.remove(item)
-      expect(counter.getCount(item)).toBe(checkIsEternal(item) ? Infinity : 1)
+      expect(counter.getCount(item)).toBe(keepCheck(item) ? Infinity : 1)
     })
     expect(counter.getItems()).toEqual(values.map(value => mapper(value, 1)).filter(filter))
 
     values.forEach(item => {
       counter.remove(item)
-      expect(counter.getCount(item)).toBe(checkIsEternal(item) ? Infinity : 0)
+      expect(counter.getCount(item)).toBe(keepCheck(item) ? Infinity : 0)
     })
     expect(counter.getItems()).toEqual(values.map(value => mapper(value, 0)).filter(filter))
 
     values.forEach(item => {
       counter.remove(item)
-      expect(counter.getCount(item)).toBe(checkIsEternal(item) ? Infinity : 0)
+      expect(counter.getCount(item)).toBe(keepCheck(item) ? Infinity : 0)
     })
     expect(counter.getItems()).toEqual(values.map(value => mapper(value, 0)).filter(filter))
   })

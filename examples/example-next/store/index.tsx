@@ -1,7 +1,5 @@
-import type { EggExt } from '@redux-eggs/core'
 import { createWrapperInitializer } from '@redux-eggs/next'
 import { createStore } from '@redux-eggs/redux'
-import type { SagaExt } from '@redux-eggs/saga-extension'
 import { getSagaExtension } from '@redux-eggs/saga-extension'
 import { batch } from 'react-redux'
 import type { AnyAction, ReducersMapObject, Store } from 'redux'
@@ -13,8 +11,6 @@ import { effectTypes } from 'redux-saga/effects'
 
 import { StoreActionType } from '@/store/action-types'
 import { getLoggerExtension } from '@/store/logger-extension'
-
-export type AppStore = Store & EggExt & SagaExt
 
 const combiner = (reducersMap: ReducersMapObject) => {
   const combinedReducer = combineReducers(reducersMap)
@@ -43,13 +39,15 @@ const batchAllPuts: EffectMiddleware = next => effect => {
   next(effect)
 }
 
-const createAppStore = (): AppStore => {
-  return createStore<AppStore>({
+const createAppStore = () => {
+  return createStore<Store & { test: number }>({
     extensions: [getSagaExtension({ effectMiddlewares: [batchAllPuts] }), getLoggerExtension()],
     combiner,
     composer: composeWithDevTools({ maxAge: 200 }),
   })
 }
+
+export type AppStore = ReturnType<typeof createAppStore>
 
 export const wrapperInitializer = createWrapperInitializer(createAppStore, {
   hydrationActionType: StoreActionType.HYDRATE,

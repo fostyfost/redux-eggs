@@ -5,6 +5,6 @@ export interface EggsConfigValue {
 }
 
 export interface EggsConfig {
-  __eggs?: EggTuple
+  __eggs?: EggTuple<any>
   __eggsConfig?: EggsConfigValue
 }

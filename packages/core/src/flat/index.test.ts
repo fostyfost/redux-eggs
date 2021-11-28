@@ -30,6 +30,5 @@ test('Flat helper tests', () => {
 
   expect(flat(eggTuple2)).toEqual(result2)
 
-  // @ts-ignore
-  expect(flat()).toEqual([])
+  expect(flat(undefined as unknown as EggTuple)).toEqual([])
 })

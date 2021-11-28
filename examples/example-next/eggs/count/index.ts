@@ -2,11 +2,12 @@ import type { Egg } from '@redux-eggs/core'
 
 import { COUNT_REDUCER_KEY, countReducer } from '@/eggs/count/reducer'
 import { countWatcher } from '@/eggs/count/saga'
+import type { AppStore } from '@/store'
 
-export const getCountEgg = (): Egg => {
+export const getCountEgg = (): Egg<AppStore> => {
   return {
     id: 'count',
-    reducerMap: {
+    reducersMap: {
       [COUNT_REDUCER_KEY]: countReducer,
     },
     sagas: [countWatcher],

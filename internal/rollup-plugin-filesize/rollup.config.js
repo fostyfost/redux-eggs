@@ -1,6 +1,6 @@
 import eslint from '@rollup/plugin-eslint'
-import ts from '@wessberg/rollup-plugin-ts'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import ts from 'rollup-plugin-ts'
 
 const config = {
   input: './src/index.ts',

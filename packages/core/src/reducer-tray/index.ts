@@ -4,15 +4,17 @@ import { getCounter } from '@/counter'
 
 export type ReducerEntry = [string, Reducer]
 
-export type GetReducersStore = (reducerCombiner: typeof combineReducers) => {
+export interface ReducersTray {
   reducer: Reducer
   add(entries: ReducerEntry[]): string[]
   remove(entries: ReducerEntry[]): string[]
 }
 
-export const getReducerTray: GetReducersStore = reducerCombiner => {
+export const getReducerTray = <T extends typeof combineReducers = typeof combineReducers>(
+  reducerCombiner: T,
+): ReducersTray => {
   const counter = getCounter<string>()
-  const map: ReducersMapObject = {}
+  const reducersMap: ReducersMapObject = {}
   let combinedReducer: Reducer
   let keysToRemove: string[] = []
 
@@ -26,7 +28,7 @@ export const getReducerTray: GetReducersStore = reducerCombiner => {
         keysToRemove = []
       }
 
-      return (Object.keys(map).length ? combinedReducer : () => ({}))(nextState, action)
+      return (Object.keys(reducersMap).length ? combinedReducer : () => ({}))(nextState, action)
     },
 
     add(entries: ReducerEntry[]): string[] {
@@ -34,7 +36,7 @@ export const getReducerTray: GetReducersStore = reducerCombiner => {
 
       entries.forEach(([key, reducer]) => {
         if (!counter.getCount(key)) {
-          map[key] = reducer
+          reducersMap[key] = reducer
           addedKeys.push(key)
         }
 
@@ -42,7 +44,7 @@ export const getReducerTray: GetReducersStore = reducerCombiner => {
       })
 
       if (addedKeys.length) {
-        combinedReducer = reducerCombiner(map)
+        combinedReducer = reducerCombiner(reducersMap)
       }
 
       return addedKeys
@@ -51,7 +53,7 @@ export const getReducerTray: GetReducersStore = reducerCombiner => {
     remove(entries: ReducerEntry[]): string[] {
       entries.forEach(([key]) => {
         if (counter.getCount(key) === 1) {
-          delete map[key]
+          delete reducersMap[key]
           keysToRemove.push(key)
         }
 
@@ -59,7 +61,7 @@ export const getReducerTray: GetReducersStore = reducerCombiner => {
       })
 
       if (keysToRemove.length) {
-        combinedReducer = reducerCombiner(map)
+        combinedReducer = reducerCombiner(reducersMap)
       }
 
       return [...keysToRemove]

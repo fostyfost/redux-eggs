@@ -1,25 +1,25 @@
-import type { EggExt, Extension } from '@redux-eggs/core'
+import type { Extension, WithEggExt } from '@redux-eggs/core'
 import { buildStore } from '@redux-eggs/core'
-import type { EnhancedStore } from '@reduxjs/toolkit'
+import type { AnyAction, EnhancedStore, Store } from '@reduxjs/toolkit'
 import { combineReducers, compose, configureStore } from '@reduxjs/toolkit'
 import type { EnhancerOptions } from '@reduxjs/toolkit/dist/devtoolsExtension'
-import type { CurriedGetDefaultMiddleware } from '@reduxjs/toolkit/dist/getDefaultMiddleware'
+import type { CurriedGetDefaultMiddleware, ThunkMiddlewareFor } from '@reduxjs/toolkit/dist/getDefaultMiddleware'
 
-export type StoreWithEggs<Ext = Record<string, never>> = EnhancedStore & EggExt & Ext
+export type DefaultEnhancedStore = EnhancedStore<any, AnyAction, [ThunkMiddlewareFor<any>]>
 
-export interface StoreCreatorSettings {
+export interface StoreCreatorOptions {
   combiner?: typeof combineReducers
   defaultMiddlewareOptions?: Parameters<CurriedGetDefaultMiddleware>[0]
   devTools?: boolean | EnhancerOptions
-  extensions?: Extension[]
+  extensions?: Extension<any>[]
 }
 
-export const createStore = <S extends EnhancedStore = EnhancedStore>({
+export const createStore = <S extends Store = DefaultEnhancedStore>({
   combiner = combineReducers,
   defaultMiddlewareOptions,
   devTools,
   extensions,
-}: StoreCreatorSettings = {}): S & EggExt => {
+}: StoreCreatorOptions = {}): WithEggExt<S> => {
   return buildStore<S>(
     (reducer, middlewareEnhancer, enhancersFromExtensions, middlewaresFromExtensions) => {
       return configureStore({

@@ -22,15 +22,15 @@ describe('Tests for `createStore` with Redux', () => {
   })
 
   test('Eggs are added and removed correctly', () => {
-    const reducerMap1 = { egg1: () => ({}) }
-    const reducerMap2 = { egg2: () => ({}) }
-    const reducerMap3 = { egg3: () => ({}) }
+    const reducersMap1 = { egg1: () => ({}) }
+    const reducersMap2 = { egg2: () => ({}) }
+    const reducersMap3 = { egg3: () => ({}) }
 
     const eggs: Egg[] = [
-      { id: 'egg1', reducerMap: reducerMap1 },
-      { id: 'egg2', reducerMap: reducerMap2 },
-      { id: 'egg3', reducerMap: reducerMap3 },
-      { id: 'egg4', reducerMap: { ...reducerMap1, ...reducerMap2, ...reducerMap3 } },
+      { id: 'egg1', reducersMap: reducersMap1 },
+      { id: 'egg2', reducersMap: reducersMap2 },
+      { id: 'egg3', reducersMap: reducersMap3 },
+      { id: 'egg4', reducersMap: { ...reducersMap1, ...reducersMap2, ...reducersMap3 } },
       { id: 'egg5' },
     ]
 
@@ -167,9 +167,9 @@ describe('Tests for `createStore` with Redux', () => {
 
   test('Store is initialized with custom `combiner`', () => {
     const callback = jest.fn()
-    const combiner = (reducers: ReducersMapObject) => {
-      callback({ ...reducers })
-      return Redux.combineReducers(reducers)
+    const combiner = (reducersMap: ReducersMapObject) => {
+      callback({ ...reducersMap })
+      return Redux.combineReducers(reducersMap)
     }
 
     expect(callback).not.toBeCalled()
@@ -182,8 +182,8 @@ describe('Tests for `createStore` with Redux', () => {
     const reducer2: Reducer = () => ({})
     const reducer3: Reducer = () => ({})
 
-    const egg1: Egg = { id: 'egg1', reducerMap: { reducer1, reducer2 } }
-    const egg2: Egg = { id: 'egg2', reducerMap: { reducer3 } }
+    const egg1: Egg = { id: 'egg1', reducersMap: { reducer1, reducer2 } }
+    const egg2: Egg = { id: 'egg2', reducersMap: { reducer3 } }
 
     store.addEggs([egg1, egg2])
     expect(callback).toBeCalledTimes(1)
@@ -246,7 +246,7 @@ describe('Tests for `createStore` with Redux', () => {
   })
 
   test('Extension events must be fired when eggs has been added or removed', () => {
-    const egg1: Egg = { id: 'egg1', reducerMap: { egg1: () => ({}) } }
+    const egg1: Egg = { id: 'egg1', reducersMap: { egg1: () => ({}) } }
     const egg2: Egg = { id: 'egg2' }
     const egg3: Egg = { id: 'egg3' }
     const egg4: Egg = { id: 'egg4' }

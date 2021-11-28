@@ -2,13 +2,14 @@ import type { Egg } from '@redux-eggs/core'
 
 import { loadChuckNorrisJokeWatcher } from '@/eggs/chuck-norris/saga'
 import { CHUCK_NORRIS_SLICE, ChuckNorrisPublicAction, chuckNorrisReducer } from '@/eggs/chuck-norris/slice'
+import type { AppStore } from '@/store'
 
 const log = console.log
 
-export const getChuckNorrisEgg = (): Egg => {
+export const getChuckNorrisEgg = (): Egg<AppStore> => {
   return {
     id: 'chuck-norris',
-    reducerMap: {
+    reducersMap: {
       [CHUCK_NORRIS_SLICE]: chuckNorrisReducer,
     },
     sagas: [loadChuckNorrisJokeWatcher],

@@ -6,6 +6,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   plugins: ['@typescript-eslint', 'simple-import-sort', 'unicorn'],
   rules: {
+    'unicorn/filename-case': 'error',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',

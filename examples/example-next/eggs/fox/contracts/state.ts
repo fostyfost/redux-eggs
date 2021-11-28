@@ -1,5 +1,3 @@
-import type { Immutable } from 'immer'
-
 import type { FOX_REDUCER_KEY } from '@/eggs/fox/reducer'
 
 export enum FoxLoadingState {
@@ -12,8 +10,8 @@ export interface FoxAwareState {
   [FOX_REDUCER_KEY]: FoxState
 }
 
-export type FoxState = Immutable<{
+export interface FoxState {
   fox?: string
   error?: string
   loadingState: FoxLoadingState
-}>
+}

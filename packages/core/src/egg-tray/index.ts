@@ -1,18 +1,17 @@
-import type { Egg } from '@/contracts'
-import type { CountedItem } from '@/counter'
+import type { CounterItem, Egg } from '@/contracts'
 import { getCounter } from '@/counter'
 
-export type GetEggsStore = () => {
-  getItems(): CountedItem<Egg>[]
-  getCount(egg: Egg): number
-  add(eggs: Egg[]): void
-  remove(eggs: Egg[]): void
+export interface EggTray {
+  getItems(): CounterItem<Egg<any>>[]
+  getCount(egg: Egg<any>): number
+  add(eggs: Egg<any>[]): void
+  remove(eggs: Egg<any>[]): void
 }
 
-export const getEggTray: GetEggsStore = () => {
-  const counter = getCounter<Egg>(
+export const getEggTray = () => {
+  const counter = getCounter<Egg<any>>(
     (left, right) => left.id === right.id,
-    item => !!item.eternal,
+    item => !!item.keep,
   )
 
   return {
@@ -20,11 +19,11 @@ export const getEggTray: GetEggsStore = () => {
 
     getCount: counter.getCount,
 
-    add(eggsToAdd: Egg[]): void {
+    add(eggsToAdd: Egg<any>[]): void {
       eggsToAdd.forEach(egg => counter.add(egg))
     },
 
-    remove(eggsToRemove: Egg[]): void {
+    remove(eggsToRemove: Egg<any>[]): void {
       eggsToRemove.forEach(egg => counter.remove(egg))
     },
   }

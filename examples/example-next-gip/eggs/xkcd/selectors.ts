@@ -1,4 +1,3 @@
-import type { Immutable } from 'immer'
 import { createSelector } from 'reselect'
 
 import type { XkcdInfo } from '@/eggs/xkcd/contracts/api-response'
@@ -6,7 +5,7 @@ import type { XkcdAwareState } from '@/eggs/xkcd/contracts/state'
 import { XkcdLoadingState } from '@/eggs/xkcd/contracts/state'
 import { XKCD_REDUCER_KEY } from '@/eggs/xkcd/reducer'
 
-export const xkcdInfoSelector = (state: XkcdAwareState): Immutable<XkcdInfo> | undefined => {
+export const xkcdInfoSelector = (state: XkcdAwareState): XkcdInfo | undefined => {
   return state[XKCD_REDUCER_KEY].info
 }
 

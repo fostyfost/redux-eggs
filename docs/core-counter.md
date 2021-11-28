@@ -1,6 +1,25 @@
-# `getCounter([equalityCheck], [checkIsEternal])`
+# `getCounter([equalityCheck], [keepCheck])`
 
 This function allows you to create `counter` to count the additions of values.
+
+```typescript
+declare const getCounter: <T = unknown>(
+  equalityCheck?: (left: T, right: T) => boolean,
+  keepCheck?: (value: T) => boolean,
+) => Counter<T>
+
+interface Counter<T = unknown> {
+  getCount(item: T): number
+  getItems(): CounterItem<T>[]
+  add(item: T): void
+  remove(item: T): void
+}
+
+interface CounterItem<T> {
+  value: T
+  count: number
+}
+```
 
 ## Arguments
 
@@ -41,13 +60,13 @@ myCounter.add(obj1) // count of obj1 is 2, count of obj2 is 1
 myCounter.add(obj2) // count of obj1 is 2, count of obj2 is 2
 ```
 
-### `checkIsEternal(value)`
+### `keepCheck(value)`
 
 Optional. This is a function that checks if `value` should be in `counter` forever. It is useful for cases when `value`
 cannot be removed from `counter` for some reason. By default, it returns `false`.
 
 ```typescript
-const defaultCheckIsEternal = () => false
+const defaultKeepCheck = () => false
 ```
 
 It accepts `value` of any type and returns `true` if the `value` should be in `counter` forever, otherwise, it
@@ -58,13 +77,13 @@ Example:
 ```typescript
 import { getCounter } from '@redux-eggs/core'
 
-const myCheckIsEternal = value => value.isEternal === true
+const myKeepCheck = value => value.keep === true
 
-const myCounter = getCounter(undefined, myCheckIsEternal)
+const myCounter = getCounter(undefined, myKeepCheck)
 
 const obj1 = {
   id: 'aaa',
-  isEternal: true,
+  keep: true,
   // ...
 }
 

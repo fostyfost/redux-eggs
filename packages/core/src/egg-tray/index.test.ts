@@ -32,13 +32,13 @@ describe('Tests for eggs tray', () => {
 
     const egg1: Egg = {
       id: 'egg1',
-      reducerMap: { ['test-1-1']: reducer1, ['test-1-2']: reducer2 },
+      reducersMap: { ['test-1-1']: reducer1, ['test-1-2']: reducer2 },
       middlewares: [middleware1, middleware2],
     }
 
     const egg2: Egg = {
       id: 'egg2',
-      reducerMap: { ['test-2']: reducer3 },
+      reducersMap: { ['test-2']: reducer3 },
     }
 
     const egg3: Egg = {
@@ -116,20 +116,20 @@ describe('Tests for eggs tray', () => {
 
     const egg1: Egg = {
       id: 'egg1',
-      eternal: true,
-      reducerMap: { ['test-1-1']: reducer1, ['test-1-2']: reducer2 },
+      keep: true,
+      reducersMap: { ['test-1-1']: reducer1, ['test-1-2']: reducer2 },
       middlewares: [middleware1, middleware2],
     }
 
     const egg2: Egg = {
       id: 'egg2',
-      eternal: true,
-      reducerMap: { ['test-2']: reducer3 },
+      keep: true,
+      reducersMap: { ['test-2']: reducer3 },
     }
 
     const egg3: Egg = {
       id: 'egg3',
-      eternal: true,
+      keep: true,
       middlewares: [middleware3],
     }
 

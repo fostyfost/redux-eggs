@@ -1,4 +1,3 @@
-import type { Immutable } from 'immer'
 import { createSelector } from 'reselect'
 
 import type { UsersAwareState } from '@/eggs/users/contracts/state'
@@ -6,7 +5,7 @@ import { UsersLoadingState } from '@/eggs/users/contracts/state'
 import type { User } from '@/eggs/users/contracts/user'
 import { USERS_REDUCER_KEY } from '@/eggs/users/reducer'
 
-export const usersSelector = (state: UsersAwareState): Immutable<User[]> => {
+export const usersSelector = (state: UsersAwareState): User[] => {
   return state[USERS_REDUCER_KEY].users
 }
 

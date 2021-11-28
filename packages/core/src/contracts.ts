@@ -1,42 +1,56 @@
 import type { Middleware, ReducersMapObject, Store, StoreEnhancer } from 'redux'
 
-import type { CountedItem } from '@/counter'
+/**
+ * Checks if type `T` is the `any` type.
+ * @see https://stackoverflow.com/a/49928360/3406963
+ * @see https://github.com/dsherret/conditional-type-checks/blob/main/mod.ts
+ */
+type IsAny<T> = 0 extends 1 & T ? true : false
 
-export type EggEventHandler<S extends Store = Store> = (store: S) => void
+export type WithEggExt<S> = IsAny<S> extends false
+  ? S extends Store<any, any>
+    ? S extends EggExt
+      ? S
+      : EggExt & S
+    : EggExt & Store
+  : EggExt & Store
+
+export type EggEventHandler<S extends Store = Store> = (store: WithEggExt<S>) => void
 
 export interface Egg<S extends Store = Store> {
   readonly id: string
-  reducerMap?: ReducersMapObject<any, any>
+  reducersMap?: ReducersMapObject<any, any>
   middlewares?: Middleware[]
-  readonly eternal?: boolean
+  readonly keep?: boolean
   beforeAdd?: EggEventHandler<S>
   afterAdd?: EggEventHandler<S>
   beforeRemove?: EggEventHandler<S>
   afterRemove?: EggEventHandler<S>
-  // TODO: [key: string]: any
 }
 
-export type EggTuple = (Egg<any> | EggTuple)[]
+export type EggTuple<S extends Store = Store> = (Egg<S> | EggTuple<S>)[]
 
-export type ExtensionEventHandler<S extends Store = Store> = (eggs: Egg<S>[], store: S) => void
+export type ExtensionEventHandler<S extends Store = Store> = (eggs: Egg<S>[], store: WithEggExt<S>) => void
 
-export interface ExtensionEventHandlers<S extends Store = Store> {
+export interface Extension<S extends Store = Store> {
+  middlewares?: Middleware[]
+  enhancers?: StoreEnhancer<any, any>[]
   beforeAdd?: ExtensionEventHandler<S>[]
   afterAdd?: ExtensionEventHandler<S>[]
   beforeRemove?: ExtensionEventHandler<S>[]
   afterRemove?: ExtensionEventHandler<S>[]
 }
 
-export interface Extension<S extends Store = Store> extends ExtensionEventHandlers<S> {
-  middlewares?: Middleware[]
-  enhancers?: StoreEnhancer<any, any>[]
-}
-
 export type RemoveAddedEggs = () => void
 
-export type EggExt = {
-  getEggs(): CountedItem<Egg>[]
-  getEggCount(egg: Egg): number
-  addEggs(eggsToBeAdded: EggTuple): RemoveAddedEggs
-  removeEggs(eggsToBeRemoved: EggTuple): void
+export interface EggExt {
+  getEggs(): CounterItem<Egg<any>>[]
+  getEggCount(egg: Egg<any>): number
+  addEggs(eggsToBeAdded: EggTuple<any>): RemoveAddedEggs
+  removeEggs(eggsToBeRemoved: EggTuple<any>): void
+}
+
+export interface CounterItem<T> {
+  value: T
+  count: number
 }

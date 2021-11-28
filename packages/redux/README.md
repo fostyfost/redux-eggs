@@ -6,7 +6,8 @@ Contents:
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
+- [Glossary](https://github.com/fostyfost/redux-eggs/tree/main/docs/glossary.md)
+- [Examples](https://github.com/fostyfost/redux-eggs/tree/main/docs/examples.md)
 
 ## Installation:
 
@@ -82,7 +83,3 @@ import { getMyAnotherEgg } from '../eggs/my-another-egg'
 // Somewhere in your application
 store.addEggs([getMyAnotherEgg()])
 ```
-
-## Examples
-
-See examples [here](https://github.com/fostyfost/redux-eggs/tree/main/docs/examples.md).

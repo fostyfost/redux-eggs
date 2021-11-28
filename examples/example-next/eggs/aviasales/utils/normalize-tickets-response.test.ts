@@ -5,16 +5,14 @@ import { normalizeTicketsResponse } from '@/eggs/aviasales/utils/normalize-ticke
 jest.mock('nanoid')
 
 afterAll(() => {
-  // @ts-ignore
-  nanoid.mockRestore()
+  ;(nanoid as any).mockRestore()
 })
 
 describe('`normalizeTicketsResponse` tests', () => {
   test('should work', () => {
     let id = 0
 
-    // @ts-ignore
-    nanoid.mockImplementation(() => String(++id))
+    ;(nanoid as any).mockImplementation(() => String(++id))
 
     const result = normalizeTicketsResponse([
       {

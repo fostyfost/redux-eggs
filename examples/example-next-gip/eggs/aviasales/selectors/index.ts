@@ -1,4 +1,3 @@
-import type { Immutable } from 'immer'
 import { createSelector } from 'redux-views'
 
 import { AVAILABLE_STOPS, MAX_TICKETS_LENGTH_TO_SHOW } from '@/eggs/aviasales/constants'
@@ -13,7 +12,7 @@ export const searchIdSelector = (state: AviasalesAwareState): string | undefined
   return state[AVIASALES_REDUCER_KEY].searchId
 }
 
-export const ticketsSelector = (state: AviasalesAwareState): Immutable<TicketsMap> => {
+export const ticketsSelector = (state: AviasalesAwareState): TicketsMap => {
   return state[AVIASALES_REDUCER_KEY].tickets
 }
 
@@ -21,13 +20,13 @@ export const currentSortSelector = (state: AviasalesAwareState): Sort => {
   return state[AVIASALES_REDUCER_KEY].currentSort
 }
 
-export const stopsSelector = (state: AviasalesAwareState): Immutable<number[]> => {
+export const stopsSelector = (state: AviasalesAwareState): number[] => {
   return state[AVIASALES_REDUCER_KEY].stops
 }
 
 export const ticketsArraySelector = createSelector(
   [ticketsSelector, stopsSelector, currentSortSelector],
-  (tickets: Immutable<TicketsMap>, stops, currentSort: Sort): Immutable<Ticket>[] => {
+  (tickets: TicketsMap, stops, currentSort: Sort): Ticket[] => {
     let filteredTickets = Object.values(tickets).filter(
       ticket => stops.includes(ticket.stops[0]) && stops.includes(ticket.stops[1]),
     )
@@ -42,18 +41,15 @@ export const ticketsArraySelector = createSelector(
   },
 )
 
-export const ticketsIdsSelector = createSelector([ticketsArraySelector], (tickets: Immutable<Ticket>[]): string[] => {
+export const ticketsIdsSelector = createSelector([ticketsArraySelector], (tickets: Ticket[]): string[] => {
   return tickets.map(ticket => ticket.id)
 })
 
-export const getTicketByIdSelector = (state: AviasalesAwareState, id: string): Immutable<Ticket> | undefined => {
+export const getTicketByIdSelector = (state: AviasalesAwareState, id: string): Ticket | undefined => {
   return state[AVIASALES_REDUCER_KEY].tickets[id]
 }
 
-export const getTicketSegmentByIdSelector = (
-  state: AviasalesAwareState,
-  id: string,
-): Immutable<TicketSegment> | undefined => {
+export const getTicketSegmentByIdSelector = (state: AviasalesAwareState, id: string): TicketSegment | undefined => {
   return state[AVIASALES_REDUCER_KEY].ticketsSegments[id]
 }
 
@@ -73,6 +69,6 @@ export const isAllTicketLoadedSelector = createSelector(
 
 const availableStopsAsString = AVAILABLE_STOPS.join(',')
 
-export const isAllStopsSelectedSelector = createSelector([stopsSelector], (stops: Immutable<number[]>): boolean => {
+export const isAllStopsSelectedSelector = createSelector([stopsSelector], (stops: number[]): boolean => {
   return [...stops].sort().join(',') === availableStopsAsString
 })

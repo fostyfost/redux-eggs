@@ -19,8 +19,8 @@ describe('Tests for Eggs Injector Component', () => {
   type Egg1AwareState = { reducer1: { text: string } }
   type Egg2AwareState = { reducer2: { text: string } }
 
-  const egg1: Egg = { id: 'egg1', reducerMap: { reducer1: getReducer({ text: 'find-me-1' }) } }
-  const egg2: Egg = { id: 'egg2', reducerMap: { reducer2: getReducer({ text: 'find-me-2' }) } }
+  const egg1: Egg = { id: 'egg1', reducersMap: { reducer1: getReducer({ text: 'find-me-1' }) } }
+  const egg2: Egg = { id: 'egg2', reducersMap: { reducer2: getReducer({ text: 'find-me-2' }) } }
 
   const createAnyStore = () => buildStore<Store>(reducer => createStore(reducer), combineReducers, compose)
 

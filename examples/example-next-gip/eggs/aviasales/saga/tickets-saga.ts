@@ -6,7 +6,7 @@ import { call, put, race, select, take } from 'redux-saga/effects'
 import { AviasalesReducerAction } from '@/eggs/aviasales/action-creators'
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
 import { AviasalesEvent, AviasalesEventEmitter } from '@/eggs/aviasales/events'
-import { getTickets } from '@/eggs/aviasales/saga/getTickets'
+import { getTickets } from '@/eggs/aviasales/saga/get-tickets'
 import { isAllTicketLoadedSelector } from '@/eggs/aviasales/selectors'
 import { StoreActionType } from '@/store/action-types'
 

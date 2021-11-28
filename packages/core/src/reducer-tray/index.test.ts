@@ -99,9 +99,9 @@ describe('Tests for reducer tray', () => {
     let combinedKeys: string[] = []
 
     const combiner = jest.fn()
-    combiner.mockImplementation((reducers: ReducersMapObject): ReturnType<typeof combineReducers> => {
-      combinedKeys = Object.keys(reducers)
-      return combineReducers(reducers)
+    combiner.mockImplementation((reducersMap: ReducersMapObject): ReturnType<typeof combineReducers> => {
+      combinedKeys = Object.keys(reducersMap)
+      return combineReducers(reducersMap)
     })
 
     const tray = getReducerTray(combiner)

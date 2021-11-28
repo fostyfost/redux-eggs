@@ -1,12 +1,12 @@
-import type { EggTuple } from '@redux-eggs/core'
+import type { EggTuple, WithEggExt } from '@redux-eggs/core'
 import type { NextPage, NextPageContext } from 'next'
 import type { AppContext, AppProps } from 'next/app'
 import React from 'react'
 import { Provider } from 'react-redux'
+import type { Store } from 'redux'
 
 import { HYDRATE_ACTION_TYPE } from '@/action-types'
 import type {
-  AnyStore,
   AppWrapperOptions,
   BeforeResult,
   PageWrapper,
@@ -17,12 +17,12 @@ import type { EggsConfig } from '@/contracts-internal'
 
 export * from '@/action-types'
 
-export const createWrapperInitializer = <S extends AnyStore = AnyStore>(
+export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggExt<Store>>(
   storeCreator: () => S,
   options: WrapperInitializerOptions = {},
-): WrapperInitializerResults<S> => {
+): WrapperInitializerResults<S> {
   let anyStore: S
-  let appEggsLocal: EggTuple = []
+  let appEggsLocal: EggTuple<any> = []
   let appHasGetInitialProps = false
   let beforeResult: BeforeResult<S> | undefined
   let prevPage: (NextPage & EggsConfig) | undefined
@@ -38,7 +38,7 @@ export const createWrapperInitializer = <S extends AnyStore = AnyStore>(
     if (nextPage !== prevPage) {
       const pageEggs = nextPage.__eggs || []
 
-      anyStore.addEggs(prevPage ? pageEggs : ([] as EggTuple).concat(appEggsLocal, pageEggs))
+      anyStore.addEggs(prevPage ? pageEggs : ([] as EggTuple<any>).concat(appEggsLocal, pageEggs))
 
       prevPage = nextPage
     }
@@ -55,7 +55,7 @@ export const createWrapperInitializer = <S extends AnyStore = AnyStore>(
   }
 
   return {
-    getAppWrapper(appEggs: EggTuple = [], options: AppWrapperOptions<S> = {}) {
+    getAppWrapper(appEggs: EggTuple<any> = [], options: AppWrapperOptions<S> = {}) {
       appEggsLocal = appEggs
 
       beforeResult = options.beforeResult
@@ -123,7 +123,7 @@ export const createWrapperInitializer = <S extends AnyStore = AnyStore>(
       }
     },
 
-    getPageWrapper(pageEggs: EggTuple = []): PageWrapper<S> {
+    getPageWrapper(pageEggs: EggTuple<any> = []): PageWrapper<S> {
       let currentPage: NextPage & EggsConfig
 
       return {

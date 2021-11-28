@@ -69,6 +69,10 @@ const getTable = async (info: Info) => {
     table.push(getRow('Minified size', info.minSize, info.minSizeBefore))
   }
 
+  if (info.gzipSize) {
+    table.push(getRow('Gzip size', info.gzipSize, info.gzipSizeBefore))
+  }
+
   if (info.brotliSize) {
     table.push(getRow('Brotli size', info.brotliSize, info.brotliSizeBefore))
   }

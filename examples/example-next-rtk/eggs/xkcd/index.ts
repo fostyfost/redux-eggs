@@ -2,11 +2,12 @@ import type { Egg } from '@redux-eggs/core'
 
 import { loadXkcdInfoWatcher } from '@/eggs/xkcd/saga'
 import { XKCD_SLICE, XkcdPublicAction, xkcdReducer } from '@/eggs/xkcd/slice'
+import type { AppStore } from '@/store'
 
-export const getXkcdEgg = (): Egg => {
+export const getXkcdEgg = (): Egg<AppStore> => {
   return {
     id: 'xkcd',
-    reducerMap: {
+    reducersMap: {
       [XKCD_SLICE]: xkcdReducer,
     },
     sagas: [loadXkcdInfoWatcher],

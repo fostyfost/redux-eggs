@@ -1,58 +1,55 @@
-export interface CountedItem<T> {
-  value: T
-  count: number
-}
+import type { CounterItem } from '@/contracts'
 
 export interface Counter<T = unknown> {
   getCount(item: T): number
-  getItems(): CountedItem<T>[]
+  getItems(): CounterItem<T>[]
   add(item: T): void
   remove(item: T): void
 }
 
 const defaultEqualityCheck = <T>(left: T, right: T): boolean => left === right
 
-const defaultCheckIsEternal = (): boolean => false
+const defaultKeepCheck = (): boolean => false
 
 export const getCounter = <T = unknown>(
   equalityCheck: (left: T, right: T) => boolean = defaultEqualityCheck,
-  checkIsEternal: (value: T) => boolean = defaultCheckIsEternal,
+  keepCheck: (value: T) => boolean = defaultKeepCheck,
 ): Counter<T> => {
-  const countedItems: CountedItem<T>[] = []
+  const items: CounterItem<T>[] = []
 
-  const getItem = (value: T): [CountedItem<T> | undefined, number] => {
-    const index = countedItems.findIndex(item => equalityCheck(item.value, value))
-    return [countedItems[index], index]
+  const getItem = (value: T): [CounterItem<T> | undefined, number] => {
+    const index = items.findIndex(item => equalityCheck(item.value, value))
+    return [items[index], index]
   }
 
   return {
     getCount(value: T): number {
-      const [storeItem] = getItem(value)
-      return storeItem?.count || 0
+      const [item] = getItem(value)
+      return item?.count || 0
     },
 
     getItems() {
-      return [...countedItems]
+      return [...items]
     },
 
     add(value: T): void {
-      const [countedItem] = getItem(value)
+      const [item] = getItem(value)
 
-      if (countedItem && !checkIsEternal(countedItem.value)) {
-        countedItem.count += 1
-      } else if (!countedItem) {
-        countedItems.push({ value, count: checkIsEternal(value) ? Infinity : 1 })
+      if (item && !keepCheck(item.value)) {
+        item.count += 1
+      } else if (!item) {
+        items.push({ value, count: keepCheck(value) ? Infinity : 1 })
       }
     },
 
     remove(value: T): void {
-      const [countedItem, index] = getItem(value)
+      const [item, index] = getItem(value)
 
-      if (countedItem && !checkIsEternal(countedItem.value)) {
-        if (countedItem.count > 1) {
-          countedItem.count -= 1
+      if (item && !keepCheck(item.value)) {
+        if (item.count > 1) {
+          item.count -= 1
         } else {
-          countedItems.splice(index, 1)
+          items.splice(index, 1)
         }
       }
     },

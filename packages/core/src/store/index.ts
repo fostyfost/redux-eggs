@@ -1,6 +1,6 @@
 import type { combineReducers, compose, Middleware, Reducer, Store, StoreEnhancer } from 'redux'
 
-import type { Egg, EggExt, EggTuple, Extension, RemoveAddedEggs } from '@/contracts'
+import type { Egg, EggTuple, Extension, RemoveAddedEggs, WithEggExt } from '@/contracts'
 import { getEggTray } from '@/egg-tray'
 import { flat } from '@/flat'
 import { getMiddlewareTray } from '@/middleware-tray'
@@ -28,9 +28,9 @@ export const REDUCE_ACTION_TYPE = '@@eggs/reduce'
 export const buildStore = <S extends Store = Store>(
   storeCreator: StoreCreator<S>,
   combiner: typeof combineReducers,
-  composeMiddleware: typeof compose,
-  extensions: Extension[] = [],
-): S & EggExt => {
+  composeMiddlewares: typeof compose,
+  extensions: Extension<S>[] = [],
+): WithEggExt<S> => {
   const ext = extensions.reduce<Required<Extension>>(
     (acc, extension) => {
       extensionFields.forEach(field => {
@@ -49,13 +49,13 @@ export const buildStore = <S extends Store = Store>(
   )
 
   const eggTray = getEggTray()
-  const middlewareTray = getMiddlewareTray(composeMiddleware)
+  const middlewareTray = getMiddlewareTray(composeMiddlewares)
   const reducerTray = getReducerTray(combiner)
 
-  const store = storeCreator(reducerTray.reducer, middlewareTray.mid, ext.enhancers, ext.middlewares)
+  const store = storeCreator(reducerTray.reducer, middlewareTray.mid, ext.enhancers, ext.middlewares) as WithEggExt<S>
 
   const action = (
-    eggs: Egg[],
+    eggs: Egg<any>[],
     method: 'add' | 'remove',
     beforeEvent: 'beforeAdd' | 'beforeRemove',
     afterEvent: 'afterAdd' | 'afterRemove',
@@ -63,7 +63,7 @@ export const buildStore = <S extends Store = Store>(
     const validEggs = eggs.filter(egg => egg.id)
 
     if (validEggs.length) {
-      const actionEggs: Egg[] = []
+      const actionEggs: Egg<any>[] = []
       const middlewares: Middleware[] = []
       const reducers: ReducerEntry[] = []
 
@@ -79,8 +79,8 @@ export const buildStore = <S extends Store = Store>(
             middlewares.push(...egg.middlewares)
           }
 
-          if (egg.reducerMap) {
-            reducers.push(...Object.entries(egg.reducerMap))
+          if (egg.reducersMap) {
+            reducers.push(...Object.entries(egg.reducersMap))
           }
         }
       })
@@ -109,21 +109,21 @@ export const buildStore = <S extends Store = Store>(
     }
   }
 
-  const add = (eggs: Egg[]): void => action(eggs, 'add', 'beforeAdd', 'afterAdd')
-  const remove = (eggs: Egg[]): void => action(eggs, 'remove', 'beforeRemove', 'afterRemove')
+  const add = (eggs: Egg<any>[]): void => action(eggs, 'add', 'beforeAdd', 'afterAdd')
+  const remove = (eggs: Egg<any>[]): void => action(eggs, 'remove', 'beforeRemove', 'afterRemove')
 
   return Object.assign(store, {
     getEggs: eggTray.getItems,
 
     getEggCount: eggTray.getCount,
 
-    addEggs(eggsToBeAdded: EggTuple): RemoveAddedEggs {
+    addEggs(eggsToBeAdded: EggTuple<S>): RemoveAddedEggs {
       const flattenedEggs = flat(eggsToBeAdded)
       add(flattenedEggs)
       return (): void => remove([...flattenedEggs].reverse())
     },
 
-    removeEggs(eggsToBeRemoved: EggTuple): void {
+    removeEggs(eggsToBeRemoved: EggTuple<S>): void {
       remove(flat(eggsToBeRemoved))
     },
   })

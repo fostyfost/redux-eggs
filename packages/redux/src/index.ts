@@ -1,21 +1,19 @@
-import type { EggExt, Extension } from '@redux-eggs/core'
+import type { Extension, WithEggExt } from '@redux-eggs/core'
 import { buildStore } from '@redux-eggs/core'
 import type { Store } from 'redux'
 import { applyMiddleware, combineReducers, compose, createStore as createReduxStore } from 'redux'
 
-export type StoreWithEggs<Ext = Record<string, never>> = Store & EggExt & Ext
-
 export interface StoreCreatorOptions {
   combiner?: typeof combineReducers
   composer?: typeof compose
-  extensions?: Extension[]
+  extensions?: Extension<any>[]
 }
 
 export const createStore = <S extends Store = Store>({
   combiner = combineReducers,
   composer = compose,
   extensions,
-}: StoreCreatorOptions = {}): S & EggExt => {
+}: StoreCreatorOptions = {}): WithEggExt<S> => {
   return buildStore<S>(
     (reducer, middlewareEnhancer, enhancersFromExtensions, middlewaresFromExtensions) => {
       return createReduxStore(

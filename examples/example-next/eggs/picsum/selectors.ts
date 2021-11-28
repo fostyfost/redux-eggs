@@ -1,4 +1,3 @@
-import type { Immutable } from 'immer'
 import { createSelector } from 'reselect'
 
 import type { Picture } from '@/eggs/picsum/contracts/picture'
@@ -6,7 +5,7 @@ import type { PicsumAwareState } from '@/eggs/picsum/contracts/state'
 import { PicsumLoadingState } from '@/eggs/picsum/contracts/state'
 import { PICSUM_REDUCER_KEY } from '@/eggs/picsum/reducer'
 
-export const picsSelector = (state: PicsumAwareState): Immutable<Picture[]> | undefined => {
+export const picsSelector = (state: PicsumAwareState): Picture[] | undefined => {
   return state[PICSUM_REDUCER_KEY].pics
 }
 

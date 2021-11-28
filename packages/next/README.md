@@ -7,7 +7,8 @@ Contents:
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
+- [Glossary](https://github.com/fostyfost/redux-eggs/tree/main/docs/glossary.md)
+- [Examples](https://github.com/fostyfost/redux-eggs/tree/main/docs/examples.md)
 
 ## Installation:
 
@@ -197,7 +198,3 @@ PostsPage.getInitialProps = wrapper.wrapGetInitialProps(store => () => {
 
 export default PostsPage
 ```
-
-## Examples
-
-See examples [here](https://github.com/fostyfost/redux-eggs/tree/main/docs/examples.md).

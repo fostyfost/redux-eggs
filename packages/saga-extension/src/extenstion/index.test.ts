@@ -2,13 +2,11 @@ import type { Egg } from '@redux-eggs/core'
 import { buildStore } from '@redux-eggs/core'
 import type { Handler } from 'mitt'
 import mitt from 'mitt'
-import type { Store } from 'redux'
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
 import type { SagaIterator, Subscribe } from 'redux-saga'
 import * as ReduxSaga from 'redux-saga'
-import { call, getContext, put, take, takeEvery } from 'redux-saga/effects'
+import { call, fork, getContext, put, take, takeEvery } from 'redux-saga/effects'
 
-import type { SagaExt } from '@/contracts'
 import { getSagaExtension } from '@/extenstion'
 import * as SagaTray from '@/tray'
 
@@ -96,7 +94,7 @@ describe('Saga extension tests', () => {
 
     expect(spyOnSagaTray).not.toBeCalled()
 
-    const store = buildStore<Store & SagaExt>(
+    const store = buildStore(
       (reducer, middlewareEnhancer, enhancersFromExtensions, middlewaresFromExtensions) => {
         return createStore(
           reducer,
@@ -339,7 +337,7 @@ describe('Saga extension tests', () => {
     const egg1: Egg = { id: 'egg1', sagas: [saga1, saga2] }
     const egg2: Egg = { id: 'egg2', sagas: [saga3, saga4] }
 
-    const store = buildStore<Store & SagaExt>(
+    const store = buildStore(
       (reducer, middlewareEnhancer, enhancersFromExtensions, middlewaresFromExtensions) => {
         return createStore(
           reducer,
@@ -364,14 +362,25 @@ describe('Saga extension tests', () => {
   })
 
   test('... but we can work around this limitation', () => {
-    const eventEmitter = mitt<{ started: 'saga1' | 'saga2' | 'saga3' | 'saga4' }>()
+    const eventEmitter = mitt<{ started: string }>()
 
     const callback1 = jest.fn()
     const callback2 = jest.fn()
     const callback3 = jest.fn()
     const callback4 = jest.fn()
 
+    function* emit(name: string) {
+      ;((yield getContext('sagas')) as string[]).push(name)
+      eventEmitter.emit('started', name)
+    }
+
     const waitSaga = function* waitSaga(name: string): SagaIterator {
+      const context: string[] = yield getContext('sagas')
+
+      if (context.includes(name)) {
+        return
+      }
+
       const subscribe: Subscribe<string> = emitter => {
         const handler: Handler<string> = payload => {
           if (payload === name) {
@@ -393,48 +402,34 @@ describe('Saga extension tests', () => {
     }
 
     const saga1 = function* saga1(): SagaIterator {
-      const context: string[] = yield getContext('sagas')
-
-      if (!context.includes('saga2')) {
-        yield call(waitSaga, 'saga2')
-      }
+      yield call(waitSaga, 'saga2')
 
       yield put({ type: 'ACTION-FROM-SAGA-1' })
       yield call(callback1)
 
-      context.push('saga1')
+      yield fork(emit, 'saga1')
     }
 
     const saga2 = function* saga2(): SagaIterator {
-      const context: string[] = yield getContext('sagas')
-
-      if (!context.includes('saga3')) {
-        yield call(waitSaga, 'saga3')
-      }
+      yield call(waitSaga, 'saga3')
 
       yield takeEvery('ACTION-FROM-SAGA-1', function* worker() {
         yield put({ type: 'ACTION-FROM-SAGA-2' })
         yield call(callback2)
       })
 
-      context.push('saga2')
-      eventEmitter.emit('started', 'saga2')
+      yield fork(emit, 'saga2')
     }
 
     const saga3 = function* saga3(): SagaIterator {
-      const context: string[] = yield getContext('sagas')
-
-      if (!context.includes('saga4')) {
-        yield call(waitSaga, 'saga4')
-      }
+      yield call(waitSaga, 'saga4')
 
       yield takeEvery('ACTION-FROM-SAGA-2', function* worker() {
         yield put({ type: 'ACTION-FROM-SAGA-3' })
         yield call(callback3)
       })
 
-      context.push('saga3')
-      eventEmitter.emit('started', 'saga3')
+      yield fork(emit, 'saga3')
     }
 
     const saga4 = function* saga4(): SagaIterator {
@@ -442,16 +437,13 @@ describe('Saga extension tests', () => {
         yield call(callback4)
       })
 
-      // noinspection JSMismatchedCollectionQueryUpdate
-      const context: string[] = yield getContext('sagas')
-      context.push('saga4')
-      eventEmitter.emit('started', 'saga4')
+      yield fork(emit, 'saga4')
     }
 
     const egg1: Egg = { id: 'egg1', sagas: [saga1, saga2] }
     const egg2: Egg = { id: 'egg2', sagas: [saga3, saga4] }
 
-    const store = buildStore<Store & SagaExt>(
+    const store = buildStore(
       (reducer, middlewareEnhancer, enhancersFromExtensions, middlewaresFromExtensions) => {
         return createStore(
           reducer,

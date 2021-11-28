@@ -1,8 +1,8 @@
 import { filesize } from '@redux-eggs-internal/rollup-plugin-filesize'
 import eslint from '@rollup/plugin-eslint'
-import ts from '@wessberg/rollup-plugin-ts'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import { terser } from 'rollup-plugin-terser'
+import ts from 'rollup-plugin-ts'
 
 /**
  * @type {object}

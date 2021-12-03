@@ -3319,7 +3319,7 @@ __metadata:
     "@types/react": 17.0.32
     "@types/react-dom": 17.0.10
     "@types/react-redux": 7.1.20
-    "@types/testing-library__jest-dom": 5.14.1
+    "@types/testing-library__jest-dom": 5.14.2
     "@wessberg/rollup-plugin-ts": 1.3.14
     cross-env: 7.0.3
     eslint: 7.32.0
@@ -4016,7 +4016,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/testing-library__jest-dom@npm:5.14.1, @types/testing-library__jest-dom@npm:^5.9.1":
+"@types/testing-library__jest-dom@npm:5.14.2":
+  version: 5.14.2
+  resolution: "@types/testing-library__jest-dom@npm:5.14.2"
+  dependencies:
+    "@types/jest": "*"
+  checksum: e08715a565cc189112a6611485d779a0f1ceb546a9d4601b21aacff7596d7acf8b7c702e4c5f825677431ff601df3e635887dc8a5735da1a263cc857eb7c3833
+  languageName: node
+  linkType: hard
+
+"@types/testing-library__jest-dom@npm:^5.9.1":
   version: 5.14.1
   resolution: "@types/testing-library__jest-dom@npm:5.14.1"
   dependencies:

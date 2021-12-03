@@ -5007,7 +5007,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.32"],
             ["@types/react-dom", "npm:17.0.10"],
             ["@types/react-redux", "npm:7.1.20"],
-            ["@types/testing-library__jest-dom", "npm:5.14.1"],
+            ["@types/testing-library__jest-dom", "npm:5.14.2"],
             ["@wessberg/rollup-plugin-ts", "virtual:e03537f0610ccdc90c861fcd75e266426ff958fa850927ed3715c42c8af8d580b415c517f8289f233ca685697f633024654a0e2e5ff641f9955f3d04cfe46307#npm:1.3.14"],
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:7.32.0"],
@@ -5916,6 +5916,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-testing-library__jest-dom-npm-5.14.1-f3ff511550-77fe7ad3a9.zip/node_modules/@types/testing-library__jest-dom/",
           "packageDependencies": [
             ["@types/testing-library__jest-dom", "npm:5.14.1"],
+            ["@types/jest", "npm:27.0.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:5.14.2", {
+          "packageLocation": "./.yarn/cache/@types-testing-library__jest-dom-npm-5.14.2-639cce59b8-e08715a565.zip/node_modules/@types/testing-library__jest-dom/",
+          "packageDependencies": [
+            ["@types/testing-library__jest-dom", "npm:5.14.2"],
             ["@types/jest", "npm:27.0.2"]
           ],
           "linkType": "HARD",

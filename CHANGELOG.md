@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/fostyfost/redux-eggs/compare/v1.0.6...v2.0.0) (2021-12-04)
+
+### Bug Fixes
+
+- **examples:** use latest version for `@redux-eggs/*`-packages ([50c9262](https://github.com/fostyfost/redux-eggs/commit/50c92627aeaf3c623a7b5d4ac6016c28d937e64c))
+
+- feat!: version 2 ([9b96c3d](https://github.com/fostyfost/redux-eggs/commit/9b96c3d764513b68938fffebe785b0d9dd015a50))
+
+### Features
+
+- **@redux-eggs/core:** refactor `flat`-util ([be6d766](https://github.com/fostyfost/redux-eggs/commit/be6d7665d49552bf19d54bc81556e23e2c6dd048))
+- **examples:** improve `next-rtk`-example ([cb68599](https://github.com/fostyfost/redux-eggs/commit/cb68599b03170276182e29f00ba4a62c84e7b2c9))
+
+### BREAKING CHANGES
+
+- use `reducersMap` instead of `reducerMap` in your `eggs`.
+- use `StoreCreatorOptions` instead of `StoreCreatorSettings`.
+- `ExtensionEventHandlers` was removed.
+- use `keep` instead of `eternal` in `egg` object.
+- use `CounterItem` instead of `CountedItem` for item of `counter`.
+  Another changes:
+- refactor examples
+- refactor tests
+- remove `@ts-ignore`
+- improve `jest-config`
+- improve `rollup-plugin-filesize`
+- add some info to `package.json`
+- update `yarn`
+
 ## [1.0.6](https://github.com/fostyfost/redux-eggs/compare/v1.0.5...v1.0.6) (2021-10-26)
 
 ### Bug Fixes

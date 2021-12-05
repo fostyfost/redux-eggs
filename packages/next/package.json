@@ -1,6 +1,6 @@
 {
   "name": "@redux-eggs/next",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "author": "Fosty Fost",
   "repository": {
@@ -34,8 +34,8 @@
   "devDependencies": {
     "@jest/types": "27.4.2",
     "@redux-eggs-internal/rollup-plugin-filesize": "1.0.0",
-    "@redux-eggs/core": "2.0.0",
-    "@redux-eggs/redux": "2.0.0",
+    "@redux-eggs/core": "2.1.0",
+    "@redux-eggs/redux": "2.1.0",
     "@rollup/plugin-eslint": "8.0.1",
     "@testing-library/react": "12.1.2",
     "@types/jest": "27.0.3",

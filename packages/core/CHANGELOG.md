@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/fostyfost/redux-eggs/compare/v2.0.0...v2.1.0) (2021-12-05)
+
+### Features
+
+- **@redux-eggs/core:** improve types of `eggs` and `extensions` ([7773229](https://github.com/fostyfost/redux-eggs/commit/77732292feaee0e3ddf741e42f57dacdc94f51b2))
+- **examples:** fix examples ([4707f92](https://github.com/fostyfost/redux-eggs/commit/4707f924deb7da84ebd7eb0a59ec2807b509c43f))
+
 # [2.0.0](https://github.com/fostyfost/redux-eggs/compare/v1.0.6...v2.0.0) (2021-12-04)
 
 - feat!: version 2 ([9b96c3d](https://github.com/fostyfost/redux-eggs/commit/9b96c3d764513b68938fffebe785b0d9dd015a50))

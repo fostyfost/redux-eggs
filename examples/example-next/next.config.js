@@ -18,6 +18,11 @@ const nextConfig = {
     domains: ['pics.avs.io'],
   },
   reactStrictMode: true,
+  // TODO: WIP
+  experimental: {
+    swcFileReading: false,
+    esmExternals: false,
+  },
 }
 
 module.exports = withBundleAnalyzer(nextConfig)

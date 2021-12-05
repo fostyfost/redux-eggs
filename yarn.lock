@@ -2191,11 +2191,11 @@ __metadata:
   dependencies:
     "@jest/types": 27.4.2
     "@next/bundle-analyzer": 12.0.7
-    "@redux-eggs/core": 2.0.0
-    "@redux-eggs/next": 2.0.0
-    "@redux-eggs/react": 2.0.0
-    "@redux-eggs/redux": 2.0.0
-    "@redux-eggs/saga-extension": 2.0.0
+    "@redux-eggs/core": "npm:2.0.0"
+    "@redux-eggs/next": "npm:2.0.0"
+    "@redux-eggs/react": "npm:2.0.0"
+    "@redux-eggs/redux": "npm:2.0.0"
+    "@redux-eggs/saga-extension": "npm:2.0.0"
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 27.0.3
@@ -2241,11 +2241,11 @@ __metadata:
   dependencies:
     "@jest/types": 27.4.2
     "@next/bundle-analyzer": 12.0.7
-    "@redux-eggs/core": 2.0.0
-    "@redux-eggs/next": 2.0.0
-    "@redux-eggs/react": 2.0.0
-    "@redux-eggs/redux-toolkit": 2.0.0
-    "@redux-eggs/saga-extension": 2.0.0
+    "@redux-eggs/core": "npm:2.0.0"
+    "@redux-eggs/next": "npm:2.0.0"
+    "@redux-eggs/react": "npm:2.0.0"
+    "@redux-eggs/redux-toolkit": "npm:2.0.0"
+    "@redux-eggs/saga-extension": "npm:2.0.0"
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@reduxjs/toolkit": 1.6.2
@@ -2287,11 +2287,11 @@ __metadata:
   dependencies:
     "@jest/types": 27.4.2
     "@next/bundle-analyzer": 12.0.7
-    "@redux-eggs/core": 2.0.0
-    "@redux-eggs/next": 2.0.0
-    "@redux-eggs/react": 2.0.0
-    "@redux-eggs/redux": 2.0.0
-    "@redux-eggs/saga-extension": 2.0.0
+    "@redux-eggs/core": "npm:2.0.0"
+    "@redux-eggs/next": "npm:2.0.0"
+    "@redux-eggs/react": "npm:2.0.0"
+    "@redux-eggs/redux": "npm:2.0.0"
+    "@redux-eggs/saga-extension": "npm:2.0.0"
     "@redux-saga/is": 1.1.2
     "@redux-saga/symbols": 1.1.2
     "@types/jest": 27.0.3
@@ -2358,7 +2358,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@2.0.0, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@2.0.0, @redux-eggs/core@npm:2.0.0, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -2380,7 +2380,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/next@2.0.0, @redux-eggs/next@workspace:packages/next":
+"@redux-eggs/next@npm:2.0.0, @redux-eggs/next@workspace:packages/next":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/next@workspace:packages/next"
   dependencies:
@@ -2423,7 +2423,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/react@2.0.0, @redux-eggs/react@workspace:packages/react":
+"@redux-eggs/react@npm:2.0.0, @redux-eggs/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/react@workspace:packages/react"
   dependencies:
@@ -2464,7 +2464,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@2.0.0, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@npm:2.0.0, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
@@ -2491,7 +2491,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@2.0.0, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@2.0.0, @redux-eggs/redux@npm:2.0.0, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
@@ -2517,7 +2517,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/saga-extension@2.0.0, @redux-eggs/saga-extension@workspace:packages/saga-extension":
+"@redux-eggs/saga-extension@npm:2.0.0, @redux-eggs/saga-extension@workspace:packages/saga-extension":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/saga-extension@workspace:packages/saga-extension"
   dependencies:

@@ -2368,7 +2368,7 @@ __metadata:
     "@types/jest": 27.0.3
     cross-env: 7.0.3
     jest: 27.4.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2406,7 +2406,7 @@ __metadata:
     react-dom: 17.0.2
     react-redux: 7.2.6
     react-test-renderer: 17.0.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2448,7 +2448,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     react-redux: 7.2.6
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2476,7 +2476,7 @@ __metadata:
     "@types/jest": 27.0.3
     cross-env: 7.0.3
     jest: 27.4.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2502,7 +2502,7 @@ __metadata:
     "@types/jest": 27.0.3
     cross-env: 7.0.3
     jest: 27.4.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2529,7 +2529,7 @@ __metadata:
     cross-env: 7.0.3
     jest: 27.4.2
     mitt: 3.0.0
-    redux: 4.1.1
+    redux: 4.1.2
     redux-saga: 1.1.3
     rimraf: 3.0.2
     rollup: 2.60.2
@@ -10802,7 +10802,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux@npm:^4.0.0, redux@npm:^4.0.4, redux@npm:^4.1.0":
+"redux@npm:4.1.2, redux@npm:^4.0.0, redux@npm:^4.0.4, redux@npm:^4.1.0":
   version: 4.1.2
   resolution: "redux@npm:4.1.2"
   dependencies:

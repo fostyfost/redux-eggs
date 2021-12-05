@@ -2220,7 +2220,7 @@ __metadata:
     react-dom: 17.0.2
     react-intersection-observer: 8.32.0
     react-redux: 7.2.6
-    redux: 4.1.1
+    redux: 4.1.2
     redux-devtools-extension: 2.13.9
     redux-logger: 3.0.6
     redux-saga: 1.1.3
@@ -2316,7 +2316,7 @@ __metadata:
     react-dom: 17.0.2
     react-intersection-observer: 8.32.0
     react-redux: 7.2.6
-    redux: 4.1.1
+    redux: 4.1.2
     redux-devtools-extension: 2.13.9
     redux-logger: 3.0.6
     redux-saga: 1.1.3
@@ -2368,7 +2368,7 @@ __metadata:
     "@types/jest": 27.0.3
     cross-env: 7.0.3
     jest: 27.4.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2406,7 +2406,7 @@ __metadata:
     react-dom: 17.0.2
     react-redux: 7.2.6
     react-test-renderer: 17.0.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2448,7 +2448,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     react-redux: 7.2.6
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2476,7 +2476,7 @@ __metadata:
     "@types/jest": 27.0.3
     cross-env: 7.0.3
     jest: 27.4.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2502,7 +2502,7 @@ __metadata:
     "@types/jest": 27.0.3
     cross-env: 7.0.3
     jest: 27.4.2
-    redux: 4.1.1
+    redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.60.2
     rollup-plugin-peer-deps-external: 2.2.4
@@ -2529,7 +2529,7 @@ __metadata:
     cross-env: 7.0.3
     jest: 27.4.2
     mitt: 3.0.0
-    redux: 4.1.1
+    redux: 4.1.2
     redux-saga: 1.1.3
     rimraf: 3.0.2
     rollup: 2.60.2
@@ -10793,16 +10793,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux@npm:4.1.1":
-  version: 4.1.1
-  resolution: "redux@npm:4.1.1"
-  dependencies:
-    "@babel/runtime": ^7.9.2
-  checksum: 99519438a5d20b69404ad3816307ccc189f16df04b64c50d82c415ec488ea68b656d7a2fc81b6345e8d90f095344dfea68246500f72613d76464986660bc0485
-  languageName: node
-  linkType: hard
-
-"redux@npm:^4.0.0, redux@npm:^4.0.4, redux@npm:^4.1.0":
+"redux@npm:4.1.2, redux@npm:^4.0.0, redux@npm:^4.0.4, redux@npm:^4.1.0":
   version: 4.1.2
   resolution: "redux@npm:4.1.2"
   dependencies:

@@ -4,8 +4,8 @@
 
 import type { Egg, EggTuple, Extension } from '@redux-eggs/core'
 import { REDUCE_ACTION_TYPE } from '@redux-eggs/core'
-import type { Action, Middleware, Reducer, ReducersMapObject, Store, StoreEnhancer } from '@reduxjs/toolkit'
 import * as ReduxToolkit from '@reduxjs/toolkit'
+import type { Action, Middleware, Reducer, ReducersMapObject, Store, StoreEnhancer } from 'redux'
 import * as Redux from 'redux'
 
 import { createStore } from '@/index'
@@ -740,12 +740,12 @@ describe('Tests for `createStore` with Redux Toolkit (Server-side)', () => {
     const value1 = 'some-value-1'
     const value2 = 'some-value-2'
 
-    const enhanceStore1: StoreEnhancer<any> = createStore => (reducer, preloadedState) => {
+    const enhanceStore1: StoreEnhancer = createStore => (reducer, preloadedState) => {
       const store = createStore(reducer, preloadedState)
       return { ...store, method1, value1 }
     }
 
-    const enhanceStore2: StoreEnhancer<any> = createStore => (reducer, preloadedState) => {
+    const enhanceStore2: StoreEnhancer = createStore => (reducer, preloadedState) => {
       const store = createStore(reducer, preloadedState)
       return { ...store, method2, value2 }
     }

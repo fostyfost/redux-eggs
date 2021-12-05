@@ -13,7 +13,7 @@ export interface SagaTray {
 }
 
 export const getSagaTray = (sagaMiddleware: SagaMiddleware): SagaTray => {
-  const counter = getCounter()
+  const counter = getCounter<Saga>()
 
   let items: Item[] = []
 

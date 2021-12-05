@@ -8,7 +8,7 @@ import type { Middleware, ReducersMapObject, Store, StoreEnhancer } from 'redux'
 type IsAny<T> = 0 extends 1 & T ? true : false
 
 export type WithEggExt<S> = IsAny<S> extends false
-  ? S extends Store<any, any>
+  ? S extends Store
     ? S extends EggExt
       ? S
       : EggExt & S
@@ -20,7 +20,7 @@ export type EggEventHandler<S extends Store = Store> = (store: WithEggExt<S>) =>
 export interface Egg<S extends Store = Store> {
   readonly id: string
   reducersMap?: ReducersMapObject<any, any>
-  middlewares?: Middleware[]
+  middlewares?: Middleware<any, any, any>[]
   readonly keep?: boolean
   beforeAdd?: EggEventHandler<S>
   afterAdd?: EggEventHandler<S>
@@ -33,7 +33,7 @@ export type EggTuple<S extends Store = Store> = (Egg<S> | EggTuple<S>)[]
 export type ExtensionEventHandler<S extends Store = Store> = (eggs: Egg<S>[], store: WithEggExt<S>) => void
 
 export interface Extension<S extends Store = Store> {
-  middlewares?: Middleware[]
+  middlewares?: Middleware<any, any, any>[]
   enhancers?: StoreEnhancer<any, any>[]
   beforeAdd?: ExtensionEventHandler<S>[]
   afterAdd?: ExtensionEventHandler<S>[]

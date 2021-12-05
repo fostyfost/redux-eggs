@@ -8,10 +8,10 @@ import type { ReducerEntry } from '@/reducer-tray'
 import { getReducerTray } from '@/reducer-tray'
 
 export type StoreCreator<S extends Store = Store> = (
-  reducer: Reducer,
-  middlewareEnhancer: Middleware,
+  reducer: Reducer<any, any>,
+  middlewareEnhancer: Middleware<any, any, any>,
   enhancersFromExtensions: StoreEnhancer<any, any>[],
-  middlewaresFromExtensions: Middleware[],
+  middlewaresFromExtensions: Middleware<any, any, any>[],
 ) => S
 
 const extensionFields: Array<keyof Extension extends any ? keyof Extension : never> = [

@@ -1,19 +1,23 @@
-import { nanoid } from '@reduxjs/toolkit'
-
 import { normalizeTicketsResponse } from '@/eggs/aviasales/utils/normalize-tickets-response'
 
-jest.mock('nanoid')
+let id = 0
+
+jest.mock('@reduxjs/toolkit', () => {
+  const originalModule = jest.requireActual('@reduxjs/toolkit')
+
+  return {
+    __esModule: true,
+    ...originalModule,
+    nanoid: () => String(++id),
+  }
+})
 
 afterAll(() => {
-  ;(nanoid as any).mockRestore()
+  jest.unmock('@reduxjs/toolkit')
 })
 
 describe('`normalizeTicketsResponse` tests', () => {
   test('should work', () => {
-    let id = 0
-
-    ;(nanoid as any).mockImplementation(() => String(++id))
-
     const result = normalizeTicketsResponse([
       {
         price: 38006,

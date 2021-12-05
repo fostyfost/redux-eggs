@@ -2,7 +2,7 @@
  * @jest-environment node
  */
 
-import { combineReducers, nanoid } from '@reduxjs/toolkit'
+import { combineReducers } from '@reduxjs/toolkit'
 import { expectSaga } from 'redux-saga-test-plan'
 import * as matchers from 'redux-saga-test-plan/matchers'
 import { dynamic } from 'redux-saga-test-plan/providers'
@@ -17,10 +17,20 @@ import { filterSaga } from '@/eggs/aviasales/saga/filter-saga'
 import { getSearchId } from '@/eggs/aviasales/saga/get-search-id'
 import { AVIASALES_SLICE, aviasalesReducer, AviasalesReducerAction } from '@/eggs/aviasales/slice'
 
-jest.mock('nanoid')
+let id = 0
+
+jest.mock('@reduxjs/toolkit', () => {
+  const originalModule = jest.requireActual('@reduxjs/toolkit')
+
+  return {
+    __esModule: true,
+    ...originalModule,
+    nanoid: () => String(++id),
+  }
+})
 
 afterAll(() => {
-  ;(nanoid as any).mockRestore()
+  jest.unmock('@reduxjs/toolkit')
 })
 
 const response: TicketsResponse = {
@@ -127,10 +137,6 @@ const clone = (obj: any) => JSON.parse(JSON.stringify(obj))
 
 describe('`aviasalesSaga` tests', () => {
   test('Saga should get tickets one time', async () => {
-    let id = 0
-
-    ;(nanoid as any).mockImplementation(() => String(++id))
-
     let count = 0
 
     const retryTester = jest.fn()

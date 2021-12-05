@@ -1,6 +1,6 @@
 import { createWrapperInitializer } from '@redux-eggs/next'
+import type { DefaultEnhancedStore } from '@redux-eggs/redux-toolkit'
 import { createStore } from '@redux-eggs/redux-toolkit'
-import type { DefaultEnhancedStore } from '@redux-eggs/redux-toolkit/src'
 import { getSagaExtension } from '@redux-eggs/saga-extension'
 import type { AnyAction, ReducersMapObject } from '@reduxjs/toolkit'
 import { combineReducers } from '@reduxjs/toolkit'

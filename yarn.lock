@@ -2344,7 +2344,7 @@ __metadata:
     colors: 1.4.0
     eslint: 7.32.0
     filesize: 8.0.6
-    gzip-size: 6.0.0
+    gzip-size: 7.0.0
     pacote: 12.0.2
     rimraf: 3.0.2
     rollup: 2.60.2
@@ -6667,7 +6667,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gzip-size@npm:6.0.0, gzip-size@npm:^6.0.0":
+"gzip-size@npm:7.0.0":
+  version: 7.0.0
+  resolution: "gzip-size@npm:7.0.0"
+  dependencies:
+    duplexer: ^0.1.2
+  checksum: 52d0bf586307082428b99f7b04d56d756d640e1f84d4a56debf9fb8c972d9db679143b067dd4024ebef42e9f6787e9dc8b9dcad344372b9dc87e55d942276f49
+  languageName: node
+  linkType: hard
+
+"gzip-size@npm:^6.0.0":
   version: 6.0.0
   resolution: "gzip-size@npm:6.0.0"
   dependencies:

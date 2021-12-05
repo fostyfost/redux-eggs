@@ -3100,7 +3100,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colors", "npm:1.4.0"],
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
-            ["gzip-size", "npm:6.0.0"],
+            ["gzip-size", "npm:7.0.0"],
             ["pacote", "npm:12.0.2"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.60.2"],
@@ -3129,7 +3129,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colors", "npm:1.4.0"],
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
-            ["gzip-size", "npm:6.0.0"],
+            ["gzip-size", "npm:7.0.0"],
             ["pacote", "npm:12.0.2"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.60.2"],
@@ -8478,6 +8478,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/gzip-size-npm-6.0.0-d5b52fdbf1-2df97f3596.zip/node_modules/gzip-size/",
           "packageDependencies": [
             ["gzip-size", "npm:6.0.0"],
+            ["duplexer", "npm:0.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.0.0", {
+          "packageLocation": "./.yarn/cache/gzip-size-npm-7.0.0-cc99ecf165-52d0bf5863.zip/node_modules/gzip-size/",
+          "packageDependencies": [
+            ["gzip-size", "npm:7.0.0"],
             ["duplexer", "npm:0.1.2"]
           ],
           "linkType": "HARD",

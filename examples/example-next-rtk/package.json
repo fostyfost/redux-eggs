@@ -26,11 +26,11 @@
     ]
   },
   "dependencies": {
-    "@redux-eggs/core": "npm:2.0.0",
-    "@redux-eggs/next": "npm:2.0.0",
-    "@redux-eggs/react": "npm:2.0.0",
-    "@redux-eggs/redux-toolkit": "npm:2.0.0",
-    "@redux-eggs/saga-extension": "npm:2.0.0",
+    "@redux-eggs/core": "workspace:*",
+    "@redux-eggs/next": "workspace:*",
+    "@redux-eggs/react": "workspace:*",
+    "@redux-eggs/redux-toolkit": "workspace:*",
+    "@redux-eggs/saga-extension": "workspace:*",
     "@redux-saga/is": "1.1.2",
     "@redux-saga/symbols": "1.1.2",
     "@reduxjs/toolkit": "1.6.2",

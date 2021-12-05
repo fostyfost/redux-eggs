@@ -20,7 +20,7 @@ import type { Middleware, ReducersMapObject, Store } from 'redux'
 interface Egg<S extends Store = Store> {
   readonly id: string
   reducersMap?: ReducersMapObject<any, any>
-  middlewares?: Middleware[]
+  middlewares?: Middleware<any, any, any>[]
   readonly keep?: boolean
   beforeAdd?: EggEventHandler<S>
   afterAdd?: EggEventHandler<S>
@@ -147,7 +147,7 @@ import type { Egg, WithEggExt } from '@redux-eggs/contracts'
 import type { Middleware, Store, StoreEnhancer } from 'redux'
 
 export interface Extension<S extends Store = Store> {
-  middlewares?: Middleware[]
+  middlewares?: Middleware<any, any, any>[]
   enhancers?: StoreEnhancer<any, any>[]
   beforeAdd?: ExtensionEventHandler<S>[]
   afterAdd?: ExtensionEventHandler<S>[]

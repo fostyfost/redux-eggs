@@ -1852,10 +1852,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/env@npm:12.0.6"
-  checksum: 982607ab1c446b22cb9539d8a65b2e23cfe5e6c54a22a59a13b875c35036955ab4ab0c1ec2cf7e264ed6c50078dbc278363c6c69a9bd066fb9562a2d374aeee5
+"@next/env@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/env@npm:12.0.7"
+  checksum: 98258ead3fd384ead612385c89aad4f4bbcb71fdd28a2e8c8abaa7cbdc63070edb849efc859b3d45215aa5c37cb256fb8cb4958708ea2e1f4b3e968102eba93b
   languageName: node
   linkType: hard
 
@@ -1875,10 +1875,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/polyfill-module@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/polyfill-module@npm:12.0.6"
-  checksum: f1b116b9685431e3474243c2a02cf8b67187eefcce4c5094e1eaab5dae850b45f3c816d3170efd7988f46284b986adeae5514c590313f5932dd6187fb58ee773
+"@next/polyfill-module@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/polyfill-module@npm:12.0.7"
+  checksum: 6bf5bd8746eb8419196160b3e7f87b30ca25499bc40b125d82677401f853c4e2adf7b7f1fdf0b686ad24293839a3b78c2b36805802330ee9d09163a1a12c8e36
   languageName: node
   linkType: hard
 
@@ -1904,9 +1904,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/react-dev-overlay@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/react-dev-overlay@npm:12.0.6"
+"@next/react-dev-overlay@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/react-dev-overlay@npm:12.0.7"
   dependencies:
     "@babel/code-frame": 7.12.11
     anser: 1.4.9
@@ -1926,7 +1926,7 @@ __metadata:
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: 9189ae8a31f1fbabc08cccef83da9048582cf117ff32a96fa99d5bcea4b8b7e5e984710d4f9bbcd998ddd9eb5e45c887735ea3454bc62970c20d979c9cc6c2ed
+  checksum: 47caa6a8a3494f8cff9b3f212c9a3197a7c6b020cf685852248db92e4625e03f378bfbc9a39bf7b2fc0595535dfe2cfea9b00a228644ce79b36dbb4ee5cb1219
   languageName: node
   linkType: hard
 
@@ -1943,22 +1943,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/react-refresh-utils@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/react-refresh-utils@npm:12.0.6"
+"@next/react-refresh-utils@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/react-refresh-utils@npm:12.0.7"
   peerDependencies:
     react-refresh: 0.8.3
     webpack: ^4 || ^5
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: cc479e6761ec2010a0403d6b67b1403d2305edc797c45016d46ea0fc999ae0534fa2a8453b29220511ae308137eb1bf7b9b72eacac551978399acf5c689284d5
+  checksum: 04d29941089bd402fc276ad8e17195bc4636c92f9eb25cc75b3d4a81d9be128cb9917271b9ae6d2998b2e3219b80ff54a623366cd6696711664a1d4161f14bc1
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-android-arm64@npm:12.0.6"
+"@next/swc-android-arm64@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-android-arm64@npm:12.0.7"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
@@ -1970,9 +1970,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-darwin-arm64@npm:12.0.6"
+"@next/swc-darwin-arm64@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-darwin-arm64@npm:12.0.7"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -1984,30 +1984,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-darwin-x64@npm:12.0.6"
+"@next/swc-darwin-x64@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-darwin-x64@npm:12.0.7"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.0.6"
+"@next/swc-linux-arm-gnueabihf@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.0.7"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-linux-arm64-gnu@npm:12.0.6"
+"@next/swc-linux-arm64-gnu@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.0.7"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-linux-arm64-musl@npm:12.0.6"
+"@next/swc-linux-arm64-musl@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-linux-arm64-musl@npm:12.0.7"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
@@ -2019,30 +2019,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-linux-x64-gnu@npm:12.0.6"
+"@next/swc-linux-x64-gnu@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-linux-x64-gnu@npm:12.0.7"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-linux-x64-musl@npm:12.0.6"
+"@next/swc-linux-x64-musl@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-linux-x64-musl@npm:12.0.7"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-win32-arm64-msvc@npm:12.0.6"
+"@next/swc-win32-arm64-msvc@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.0.7"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-win32-ia32-msvc@npm:12.0.6"
+"@next/swc-win32-ia32-msvc@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.0.7"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
@@ -2054,9 +2054,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:12.0.6":
-  version: 12.0.6
-  resolution: "@next/swc-win32-x64-msvc@npm:12.0.6"
+"@next/swc-win32-x64-msvc@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/swc-win32-x64-msvc@npm:12.0.7"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2503,7 +2503,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@1.0.6, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@2.0.0, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -2550,8 +2550,8 @@ __metadata:
   dependencies:
     "@jest/types": 27.4.2
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.6
-    "@redux-eggs/redux": 1.0.6
+    "@redux-eggs/core": 2.0.0
+    "@redux-eggs/redux": 2.0.0
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/react": 12.1.2
     "@types/jest": 27.0.3
@@ -2565,7 +2565,7 @@ __metadata:
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
     jest: 27.4.2
-    next: 12.0.6
+    next: 12.0.7
     react: 17.0.2
     react-dom: 17.0.2
     react-redux: 7.2.6
@@ -2604,7 +2604,7 @@ __metadata:
   dependencies:
     "@jest/types": 27.4.2
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.6
+    "@redux-eggs/core": 2.0.0
     "@rollup/plugin-eslint": 8.0.1
     "@testing-library/dom": 8.11.1
     "@testing-library/jest-dom": 5.16.0
@@ -2655,7 +2655,7 @@ __metadata:
   dependencies:
     "@jest/types": 27.4.2
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.6
+    "@redux-eggs/core": 2.0.0
     "@reduxjs/toolkit": 1.6.2
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.3
@@ -2676,13 +2676,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@1.0.6, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@2.0.0, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 27.4.2
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.6
+    "@redux-eggs/core": 2.0.0
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.3
     cross-env: 7.0.3
@@ -2728,7 +2728,7 @@ __metadata:
   dependencies:
     "@jest/types": 27.4.2
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 1.0.6
+    "@redux-eggs/core": 2.0.0
     "@rollup/plugin-eslint": 8.0.1
     "@types/jest": 27.0.3
     cross-env: 7.0.3
@@ -10242,28 +10242,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.0.6":
-  version: 12.0.6
-  resolution: "next@npm:12.0.6"
+"next@npm:12.0.7":
+  version: 12.0.7
+  resolution: "next@npm:12.0.7"
   dependencies:
     "@babel/runtime": 7.15.4
     "@hapi/accept": 5.0.2
     "@napi-rs/triples": 1.0.3
-    "@next/env": 12.0.6
-    "@next/polyfill-module": 12.0.6
-    "@next/react-dev-overlay": 12.0.6
-    "@next/react-refresh-utils": 12.0.6
-    "@next/swc-android-arm64": 12.0.6
-    "@next/swc-darwin-arm64": 12.0.6
-    "@next/swc-darwin-x64": 12.0.6
-    "@next/swc-linux-arm-gnueabihf": 12.0.6
-    "@next/swc-linux-arm64-gnu": 12.0.6
-    "@next/swc-linux-arm64-musl": 12.0.6
-    "@next/swc-linux-x64-gnu": 12.0.6
-    "@next/swc-linux-x64-musl": 12.0.6
-    "@next/swc-win32-arm64-msvc": 12.0.6
-    "@next/swc-win32-ia32-msvc": 12.0.6
-    "@next/swc-win32-x64-msvc": 12.0.6
+    "@next/env": 12.0.7
+    "@next/polyfill-module": 12.0.7
+    "@next/react-dev-overlay": 12.0.7
+    "@next/react-refresh-utils": 12.0.7
+    "@next/swc-android-arm64": 12.0.7
+    "@next/swc-darwin-arm64": 12.0.7
+    "@next/swc-darwin-x64": 12.0.7
+    "@next/swc-linux-arm-gnueabihf": 12.0.7
+    "@next/swc-linux-arm64-gnu": 12.0.7
+    "@next/swc-linux-arm64-musl": 12.0.7
+    "@next/swc-linux-x64-gnu": 12.0.7
+    "@next/swc-linux-x64-musl": 12.0.7
+    "@next/swc-win32-arm64-msvc": 12.0.7
+    "@next/swc-win32-ia32-msvc": 12.0.7
+    "@next/swc-win32-x64-msvc": 12.0.7
     acorn: 8.5.0
     assert: 2.0.0
     browserify-zlib: 0.2.0
@@ -10344,7 +10344,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 04d4fc5e01310b75b831889de52a52ae23712b7be1c0b1d9c238d51c3bb6e4a997909fbefd532454f24d5e62a47fdf13a6330b3aa6b9f164597874927c176ef0
+  checksum: 78a0ebd697b71e76f4ffaf6ba093390a16a15a750978acfc976cb32759bee18b5da82e8d2fc0170135105bb55c8c5fe86f7cbd0d45ab5b7255161d57deafa93f
   languageName: node
   linkType: hard
 

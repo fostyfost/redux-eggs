@@ -2340,7 +2340,7 @@ __metadata:
     "@types/node": 16.11.11
     "@types/pacote": 11.1.1
     brotli-size: 4.0.0
-    cli-table: 0.3.9
+    cli-table: 0.3.11
     colors: 1.4.0
     eslint: 7.32.0
     filesize: 8.0.6
@@ -4295,13 +4295,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cli-table@npm:0.3.9":
-  version: 0.3.9
-  resolution: "cli-table@npm:0.3.9"
+"cli-table@npm:0.3.11":
+  version: 0.3.11
+  resolution: "cli-table@npm:0.3.11"
   dependencies:
     colors: 1.0.3
-    strip-ansi: ^6.0.1
-  checksum: a2bbbae7066cab2963b4869f7d3ab67726465d859c43539921097386847f62492401701e3914ff906c3d0c8bfbb80baa0bffd6b6a889c30ad90783b0fe24f991
+  checksum: 59fb61f992ac9bc8610ed98c72bf7f5d396c5afb42926b6747b46b0f8bb98a0dfa097998e77542ac334c1eb7c18dbf4f104d5783493273c5ec4c34084aa7c663
   languageName: node
   linkType: hard
 

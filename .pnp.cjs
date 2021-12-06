@@ -3096,7 +3096,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/pacote", "npm:11.1.1"],
             ["@types/rollup", null],
             ["brotli-size", "npm:4.0.0"],
-            ["cli-table", "npm:0.3.9"],
+            ["cli-table", "npm:0.3.11"],
             ["colors", "npm:1.4.0"],
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
@@ -3125,7 +3125,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.11"],
             ["@types/pacote", "npm:11.1.1"],
             ["brotli-size", "npm:4.0.0"],
-            ["cli-table", "npm:0.3.9"],
+            ["cli-table", "npm:0.3.11"],
             ["colors", "npm:1.4.0"],
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
@@ -5687,12 +5687,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["cli-table", [
-        ["npm:0.3.9", {
-          "packageLocation": "./.yarn/cache/cli-table-npm-0.3.9-fa4a05fc46-a2bbbae706.zip/node_modules/cli-table/",
+        ["npm:0.3.11", {
+          "packageLocation": "./.yarn/cache/cli-table-npm-0.3.11-f912789cff-59fb61f992.zip/node_modules/cli-table/",
           "packageDependencies": [
-            ["cli-table", "npm:0.3.9"],
-            ["colors", "npm:1.0.3"],
-            ["strip-ansi", "npm:6.0.1"]
+            ["cli-table", "npm:0.3.11"],
+            ["colors", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]

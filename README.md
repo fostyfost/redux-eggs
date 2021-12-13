@@ -13,6 +13,7 @@ Contents:
   - [Redux](#redux)
   - [Redux Toolkit](#redux-toolkit)
   - [Redux-Saga extension](#redux-saga-extension)
+- [Thanks](#thanks)
 
 ## Intro
 
@@ -22,8 +23,8 @@ the size of your Redux store and the first-load JavaScript by adding only the cu
 You no longer have to add all reducers and middlewares at once when creating your Redux store. If you need some kind of
 reducer or middleware, you can dynamically add these constructs at runtime exactly when your application requires it.
 You will be able to create reusable constructs with reducers and middlewares so that you can easily connect them in
-different parts of your application. Moreover, if you need reusable parts of the Redux store in different projects,
-you can also create separate reusable packages and use them in your projects.
+different parts of your application. Moreover, if you need reusable parts of the Redux store in different projects, you
+can also create separate reusable packages and use them in your projects.
 
 If you are familiar with [Redux Dynamic Modules](https://github.com/microsoft/redux-dynamic-modules), then most likely
 you know what is going on here.
@@ -79,3 +80,14 @@ with [Redux Toolkit](https://redux-toolkit.js.org/).
 remove [sagas](https://redux-saga.js.org/) from your Redux store.
 
 [More details here](https://github.com/fostyfost/redux-eggs/tree/main/packages/saga-extension#readme).
+
+## Thanks
+
+<a href="https://www.jetbrains.com/community/opensource/" target='_blank' rel="noreferrer">
+  <img
+    src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" 
+    alt="JetBrains" 
+    width="200"
+    height="200"
+  />
+</a>

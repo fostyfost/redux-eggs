@@ -83,7 +83,7 @@ remove [sagas](https://redux-saga.js.org/) from your Redux store.
 
 ## Thanks
 
-<a href="https://www.jetbrains.com/community/opensource/" target='_blank' rel="noreferrer">
+<a href="https://www.jetbrains.com/community/opensource/" target="_blank" rel="noreferrer">
   <img
     src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" 
     alt="JetBrains" 

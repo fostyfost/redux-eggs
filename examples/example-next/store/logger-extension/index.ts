@@ -40,7 +40,7 @@ export const getLoggerExtension = (): Extension<any> => {
       },
     ]
 
-    ext.afterAdd = [
+    ext.beforeRemove = [
       (eggs, store) => {
         console.log(
           'beforeRemove',
@@ -50,7 +50,7 @@ export const getLoggerExtension = (): Extension<any> => {
       },
     ]
 
-    ext.afterAdd = [
+    ext.afterRemove = [
       (eggs, store) => {
         console.log(
           'afterRemove',

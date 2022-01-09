@@ -2688,7 +2688,7 @@ __metadata:
     "@types/pacote": 11.1.1
     brotli-size: 4.0.0
     cli-table: 0.3.9
-    colors: 1.4.0
+    colors: 1.4.2
     eslint: 7.32.0
     filesize: 8.0.6
     gzip-size: 6.0.0
@@ -4865,10 +4865,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colors@npm:1.4.0":
-  version: 1.4.0
-  resolution: "colors@npm:1.4.0"
-  checksum: 98aa2c2418ad87dedf25d781be69dc5fc5908e279d9d30c34d8b702e586a0474605b3a189511482b9d5ed0d20c867515d22749537f7bc546256c6014f3ebdcec
+"colors@npm:1.4.2":
+  version: 1.4.2
+  resolution: "colors@npm:1.4.2"
+  checksum: 94d0d40efd6f807e459056a359ff09419ac4f193b47711bc84038fefea7be3f2a9418d07086ec488543122ef5b552fdc87b50a1d874c0cc54823aabb5e8640a5
   languageName: node
   linkType: hard
 

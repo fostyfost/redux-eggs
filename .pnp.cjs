@@ -3545,7 +3545,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rollup", null],
             ["brotli-size", "npm:4.0.0"],
             ["cli-table", "npm:0.3.9"],
-            ["colors", "npm:1.4.0"],
+            ["colors", "npm:1.4.2"],
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
             ["gzip-size", "npm:6.0.0"],
@@ -3574,7 +3574,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/pacote", "npm:11.1.1"],
             ["brotli-size", "npm:4.0.0"],
             ["cli-table", "npm:0.3.9"],
-            ["colors", "npm:1.4.0"],
+            ["colors", "npm:1.4.2"],
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
             ["gzip-size", "npm:6.0.0"],
@@ -6397,10 +6397,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:1.4.0", {
-          "packageLocation": "./.yarn/cache/colors-npm-1.4.0-7e2cf12234-98aa2c2418.zip/node_modules/colors/",
+        ["npm:1.4.2", {
+          "packageLocation": "./.yarn/cache/colors-npm-1.4.2-c6da5c3e01-94d0d40efd.zip/node_modules/colors/",
           "packageDependencies": [
-            ["colors", "npm:1.4.0"]
+            ["colors", "npm:1.4.2"]
           ],
           "linkType": "HARD",
         }]

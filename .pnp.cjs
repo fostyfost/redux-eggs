@@ -3541,7 +3541,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@types/cli-table", "npm:0.3.0"],
             ["@types/node", "npm:16.11.11"],
-            ["@types/pacote", "npm:11.1.1"],
+            ["@types/pacote", "npm:11.1.3"],
             ["@types/rollup", null],
             ["brotli-size", "npm:4.0.0"],
             ["cli-table", "npm:0.3.9"],
@@ -3571,7 +3571,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@types/cli-table", "npm:0.3.0"],
             ["@types/node", "npm:16.11.11"],
-            ["@types/pacote", "npm:11.1.1"],
+            ["@types/pacote", "npm:11.1.3"],
             ["brotli-size", "npm:4.0.0"],
             ["cli-table", "npm:0.3.9"],
             ["colors", "npm:1.4.0"],
@@ -4485,10 +4485,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/pacote", [
-        ["npm:11.1.1", {
-          "packageLocation": "./.yarn/cache/@types-pacote-npm-11.1.1-1d9ff4fc00-d268c83f0e.zip/node_modules/@types/pacote/",
+        ["npm:11.1.3", {
+          "packageLocation": "./.yarn/cache/@types-pacote-npm-11.1.3-f5f6e458a1-b726ebe9b4.zip/node_modules/@types/pacote/",
           "packageDependencies": [
-            ["@types/pacote", "npm:11.1.1"],
+            ["@types/pacote", "npm:11.1.3"],
             ["@types/node", "npm:16.11.11"],
             ["@types/npm-registry-fetch", "npm:8.0.2"],
             ["@types/npmlog", "npm:4.1.3"],

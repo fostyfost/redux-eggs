@@ -3679,7 +3679,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.11"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
-            ["@types/react-redux", "npm:7.1.20"],
+            ["@types/react-redux", "npm:7.1.22"],
             ["@types/react-test-renderer", "npm:17.0.1"],
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:7.32.0"],
@@ -3766,7 +3766,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.0.3"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
-            ["@types/react-redux", "npm:7.1.20"],
+            ["@types/react-redux", "npm:7.1.22"],
             ["@types/testing-library__jest-dom", "npm:5.14.2"],
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:7.32.0"],
@@ -4551,6 +4551,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-redux-npm-7.1.20-ba4ce86545-5e0405d0d3.zip/node_modules/@types/react-redux/",
           "packageDependencies": [
             ["@types/react-redux", "npm:7.1.20"],
+            ["@types/hoist-non-react-statics", "npm:3.3.1"],
+            ["@types/react", "npm:17.0.37"],
+            ["hoist-non-react-statics", "npm:3.3.2"],
+            ["redux", "npm:4.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.1.22", {
+          "packageLocation": "./.yarn/cache/@types-react-redux-npm-7.1.22-e8a8c4cb6c-eef458c0cd.zip/node_modules/@types/react-redux/",
+          "packageDependencies": [
+            ["@types/react-redux", "npm:7.1.22"],
             ["@types/hoist-non-react-statics", "npm:3.3.1"],
             ["@types/react", "npm:17.0.37"],
             ["hoist-non-react-statics", "npm:3.3.2"],

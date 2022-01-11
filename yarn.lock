@@ -2741,7 +2741,7 @@ __metadata:
     "@types/node": 16.11.11
     "@types/react": 17.0.37
     "@types/react-dom": 17.0.11
-    "@types/react-redux": 7.1.20
+    "@types/react-redux": 7.1.22
     "@types/react-test-renderer": 17.0.1
     cross-env: 7.0.3
     eslint: 7.32.0
@@ -2785,7 +2785,7 @@ __metadata:
     "@types/jest": 27.0.3
     "@types/react": 17.0.37
     "@types/react-dom": 17.0.11
-    "@types/react-redux": 7.1.20
+    "@types/react-redux": 7.1.22
     "@types/testing-library__jest-dom": 5.14.2
     cross-env: 7.0.3
     eslint: 7.32.0
@@ -3339,6 +3339,18 @@ __metadata:
     hoist-non-react-statics: ^3.3.0
     redux: ^4.0.0
   checksum: 5e0405d0d312f1b5e2dd48ab5833d3226295931fe8d276bd0891fafe4dd7ba9efbc74b1e8b30685ba96e9dc1a63d57444ae335785ce6fda96900d5fc9f800dcf
+  languageName: node
+  linkType: hard
+
+"@types/react-redux@npm:7.1.22":
+  version: 7.1.22
+  resolution: "@types/react-redux@npm:7.1.22"
+  dependencies:
+    "@types/hoist-non-react-statics": ^3.3.0
+    "@types/react": "*"
+    hoist-non-react-statics: ^3.3.0
+    redux: ^4.0.0
+  checksum: eef458c0cda27eabd8d458b7fc40553aab8d2f218145b896b9059b86d88680ae479079aee13683f2a0f35774f20346b732e91182252402bd8777455e004561c9
   languageName: node
   linkType: hard
 

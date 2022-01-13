@@ -1,7 +1,7 @@
 import type { Handler } from 'mitt'
 import type { Subscribe } from 'redux-saga'
 import { buffers, eventChannel } from 'redux-saga'
-import { call, put, race, select, take } from 'redux-saga/effects'
+import { call, put, race, select, take } from 'typed-redux-saga'
 
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
 import { AviasalesEvent, AviasalesEventEmitter } from '@/eggs/aviasales/events'
@@ -34,17 +34,17 @@ export function* ticketsSaga() {
     channel = eventChannel<ChannelPayload>(subscribe, buffers.sliding(1))
 
     // На клиенте дождемся наступления гидратации или события в канале
-    yield race([take(StoreActionType.HYDRATE), take(channel)])
+    yield* race([take(StoreActionType.HYDRATE), take(channel)])
   }
 
-  const isLoaded: ReturnType<typeof isAllTicketLoadedSelector> = yield select(isAllTicketLoadedSelector)
+  const isLoaded = yield* select(isAllTicketLoadedSelector)
 
   if (!isLoaded) {
     try {
-      yield call(getTickets)
+      yield* call(getTickets)
     } catch (error) {
       console.error('[Error in `ticketsSaga`]', error)
-      yield put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADED))
+      yield* put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADED))
     } finally {
       if (channel) {
         channel.close()

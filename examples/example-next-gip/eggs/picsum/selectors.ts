@@ -17,6 +17,7 @@ export const loadingStateSelector = (state: PicsumAwareState): PicsumLoadingStat
   return state[PICSUM_REDUCER_KEY].loadingState
 }
 
-export const isPicsLoading = createSelector(loadingStateSelector, (loadingState: PicsumLoadingState): boolean => {
-  return loadingState === PicsumLoadingState.LOADING
-})
+export const isPicsLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: PicsumLoadingState): boolean => loadingState === PicsumLoadingState.LOADING,
+)

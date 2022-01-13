@@ -1,5 +1,4 @@
 import type { FC } from 'react'
-import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
 
 import { useAppDispatch } from '../store'
@@ -7,14 +6,14 @@ import { loadXkcdInfo } from '../store/eggs/xkcd/action-creators'
 import { isXkcdInfoLoading, xkcdInfoSelector } from '../store/eggs/xkcd/selectors'
 import { Loading } from './loading'
 
-const XkcdInfo: FC = () => {
-  const info = useSelector(xkcdInfoSelector)
-
+const UpdateButton: FC = () => {
   const dispatch = useAppDispatch()
 
-  const handleUpdate = useCallback(() => {
-    dispatch(loadXkcdInfo())
-  }, [dispatch])
+  return <button onClick={() => dispatch(loadXkcdInfo())}>Update</button>
+}
+
+const XkcdInfo: FC = () => {
+  const info = useSelector(xkcdInfoSelector)
 
   if (info) {
     return (
@@ -23,7 +22,7 @@ const XkcdInfo: FC = () => {
         <pre style={{ overflow: 'auto' }}>
           <code>{JSON.stringify(info, undefined, 2)}</code>
         </pre>
-        <button onClick={handleUpdate}>Update</button>
+        <UpdateButton />
       </>
     )
   }

@@ -16,11 +16,7 @@ const combiner = (reducersMap: ReducersMapObject) => {
   const combinedReducer = combineReducers(reducersMap)
 
   return (state: any = {}, action: AnyAction) => {
-    if (action.type === StoreActionType.HYDRATE && action.payload) {
-      return combinedReducer({ ...state, ...action.payload }, action)
-    }
-
-    return combinedReducer(state, action)
+    return combinedReducer(action.type === StoreActionType.HYDRATE ? { ...state, ...action.payload } : state, action)
   }
 }
 

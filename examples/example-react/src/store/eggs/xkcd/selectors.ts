@@ -17,6 +17,7 @@ export const loadingStateSelector = (state: XkcdAwareState): XkcdLoadingState =>
   return stateSelector(state).loadingState
 }
 
-export const isXkcdInfoLoading = createSelector(loadingStateSelector, (loadingState: XkcdLoadingState): boolean => {
-  return loadingState === XkcdLoadingState.LOADING
-})
+export const isXkcdInfoLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: XkcdLoadingState): boolean => loadingState === XkcdLoadingState.LOADING,
+)

@@ -5,16 +5,17 @@ import { XKCD_SLICE, XkcdPublicAction, xkcdReducer } from '@/eggs/xkcd/slice'
 import type { AppStore } from '@/store'
 
 export const getXkcdEgg = (): Egg<AppStore> => {
-  return {
+  const egg: Egg<AppStore> = {
     id: 'xkcd',
     reducersMap: {
       [XKCD_SLICE]: xkcdReducer,
     },
     sagas: [loadXkcdInfoWatcher],
-    afterAdd(store) {
-      if (typeof window === 'undefined') {
-        store.dispatch(XkcdPublicAction.loadInfo())
-      }
-    },
   }
+
+  if (typeof window === 'undefined') {
+    egg.afterAdd = store => store.dispatch(XkcdPublicAction.loadInfo())
+  }
+
+  return egg
 }

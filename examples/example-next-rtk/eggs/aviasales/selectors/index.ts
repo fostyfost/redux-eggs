@@ -1,4 +1,4 @@
-import { createSelector } from 'redux-views'
+import { createSelector } from '@reduxjs/toolkit'
 
 import { AVAILABLE_STOPS, MAX_TICKETS_LENGTH_TO_SHOW } from '@/eggs/aviasales/constants'
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
@@ -25,7 +25,9 @@ export const stopsSelector = (state: AviasalesAwareState): number[] => {
 }
 
 export const ticketsArraySelector = createSelector(
-  [ticketsSelector, stopsSelector, currentSortSelector],
+  ticketsSelector,
+  stopsSelector,
+  currentSortSelector,
   (tickets: TicketsMap, stops, currentSort: Sort): Ticket[] => {
     let filteredTickets = Object.values(tickets).filter(
       ticket => stops.includes(ticket.stops[0]) && stops.includes(ticket.stops[1]),
@@ -41,9 +43,9 @@ export const ticketsArraySelector = createSelector(
   },
 )
 
-export const ticketsIdsSelector = createSelector([ticketsArraySelector], (tickets: Ticket[]): string[] => {
-  return tickets.map(ticket => ticket.id)
-})
+export const ticketsIdsSelector = createSelector(ticketsArraySelector, (tickets: Ticket[]): string[] =>
+  tickets.map(ticket => ticket.id),
+)
 
 export const getTicketByIdSelector = (state: AviasalesAwareState, id: string): Ticket | undefined => {
   return state[AVIASALES_SLICE].tickets[id]
@@ -58,17 +60,18 @@ export const loadingStateSelector = (state: AviasalesAwareState): AviasalesLoadi
 }
 
 export const isTicketsLoadingSelector = createSelector(
-  [loadingStateSelector],
+  loadingStateSelector,
   (loadingState: AviasalesLoadingState): boolean => loadingState === AviasalesLoadingState.LOADING,
 )
 
 export const isAllTicketLoadedSelector = createSelector(
-  [loadingStateSelector],
+  loadingStateSelector,
   (loadingState: AviasalesLoadingState): boolean => loadingState === AviasalesLoadingState.LOADED,
 )
 
 const availableStopsAsString = AVAILABLE_STOPS.join(',')
 
-export const isAllStopsSelectedSelector = createSelector([stopsSelector], (stops: number[]): boolean => {
-  return [...stops].sort().join(',') === availableStopsAsString
-})
+export const isAllStopsSelectedSelector = createSelector(
+  stopsSelector,
+  (stops: number[]): boolean => [...stops].sort().join(',') === availableStopsAsString,
+)

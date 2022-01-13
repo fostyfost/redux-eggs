@@ -25,10 +25,12 @@ export const loadingStateSelector = (state: XkcdAwareState): XkcdLoadingState =>
   return state[XKCD_REDUCER_KEY].loadingState
 }
 
-export const isXkcdInfoLoading = createSelector(loadingStateSelector, (loadingState: XkcdLoadingState): boolean => {
-  return loadingState === XkcdLoadingState.LOADING
-})
+export const isXkcdInfoLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: XkcdLoadingState): boolean => loadingState === XkcdLoadingState.LOADING,
+)
 
-export const isXkcdInfoLoaded = createSelector(loadingStateSelector, (loadingState: XkcdLoadingState): boolean => {
-  return loadingState === XkcdLoadingState.LOADED
-})
+export const isXkcdInfoLoaded = createSelector(
+  loadingStateSelector,
+  (loadingState: XkcdLoadingState): boolean => loadingState === XkcdLoadingState.LOADED,
+)

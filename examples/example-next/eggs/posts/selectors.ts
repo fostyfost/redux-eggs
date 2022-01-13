@@ -16,10 +16,12 @@ export const loadingStateSelector = (state: PostsAwareState): PostsLoadingState 
   return state[POSTS_REDUCER_KEY].loadingState
 }
 
-export const isPostsLoading = createSelector(loadingStateSelector, (loadingState: PostsLoadingState): boolean => {
-  return loadingState === PostsLoadingState.LOADING
-})
+export const isPostsLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: PostsLoadingState): boolean => loadingState === PostsLoadingState.LOADING,
+)
 
-export const isPostsLoaded = createSelector(loadingStateSelector, (loadingState: PostsLoadingState): boolean => {
-  return loadingState === PostsLoadingState.LOADED
-})
+export const isPostsLoaded = createSelector(
+  loadingStateSelector,
+  (loadingState: PostsLoadingState): boolean => loadingState === PostsLoadingState.LOADED,
+)

@@ -16,6 +16,7 @@ export const loadingStateSelector = (state: ChuckNorrisAwareState): ChuckNorrisL
   return state[CHUCK_NORRIS_REDUCER_KEY].loadingState
 }
 
-export const isJokeLoading = createSelector(loadingStateSelector, (loadingState: ChuckNorrisLoadingState): boolean => {
-  return loadingState === ChuckNorrisLoadingState.LOADING
-})
+export const isJokeLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: ChuckNorrisLoadingState): boolean => loadingState === ChuckNorrisLoadingState.LOADING,
+)

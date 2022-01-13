@@ -16,6 +16,7 @@ export const loadingStateSelector = (state: FoxAwareState): FoxLoadingState => {
   return state[FOX_REDUCER_KEY].loadingState
 }
 
-export const isFoxLoading = createSelector(loadingStateSelector, (loadingState: FoxLoadingState): boolean => {
-  return loadingState === FoxLoadingState.LOADING
-})
+export const isFoxLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: FoxLoadingState): boolean => loadingState === FoxLoadingState.LOADING,
+)

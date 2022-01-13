@@ -1,6 +1,5 @@
-import { all, call, delay, put, retry } from 'redux-saga/effects'
+import { all, call, delay, put, retry } from 'typed-redux-saga'
 
-import type { YieldReturnType } from '@/@types/redux-saga-call-effect-return-type'
 import { getTicketsWithApi } from '@/eggs/aviasales/api/get-tickets-with-api'
 import { DELAY_LENGTH, MAX_TRIES } from '@/eggs/aviasales/constants'
 import { AviasalesLoadingState } from '@/eggs/aviasales/contracts/loading-state'
@@ -13,27 +12,19 @@ const isServer = typeof window === 'undefined'
 export function* getTickets() {
   let stop = false
 
-  yield put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADING))
+  yield* put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADING))
 
-  const searchId: YieldReturnType<typeof getSearchId> = yield call(getSearchId)
+  const searchId = yield* call(getSearchId)
 
   while (!stop) {
     // It's long-polling api.
     // We receive data until the response contains a stop field with true as a value.
     // TODO: Add cancellation
-    const res: YieldReturnType<typeof getTicketsWithApi> = yield retry(
-      MAX_TRIES,
-      DELAY_LENGTH,
-      getTicketsWithApi,
-      searchId,
-    )
+    const res = yield* retry(MAX_TRIES, DELAY_LENGTH, getTicketsWithApi, searchId)
 
-    const { ticketsSegmentsMap, ticketsMap }: YieldReturnType<typeof normalizeTicketsResponse> = yield call(
-      normalizeTicketsResponse,
-      res.tickets,
-    )
+    const { ticketsSegmentsMap, ticketsMap } = yield* call(normalizeTicketsResponse, res.tickets)
 
-    yield all([
+    yield* all([
       put(AviasalesReducerAction.addTicketsSegments(ticketsSegmentsMap)),
       put(AviasalesReducerAction.addTickets(ticketsMap)),
     ])
@@ -41,9 +32,9 @@ export function* getTickets() {
     stop = res.stop || isServer
 
     if (res.stop) {
-      yield put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADED))
+      yield* put(AviasalesReducerAction.setLoadingState(AviasalesLoadingState.LOADED))
     } else if (!isServer) {
-      yield delay(DELAY_LENGTH)
+      yield* delay(DELAY_LENGTH)
     }
   }
 }

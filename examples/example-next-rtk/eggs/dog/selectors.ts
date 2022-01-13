@@ -16,6 +16,7 @@ export const loadingStateSelector = (state: DogAwareState): DogLoadingState => {
   return state[DOG_SLICE].loadingState
 }
 
-export const isDogLoading = createSelector(loadingStateSelector, (loadingState: DogLoadingState): boolean => {
-  return loadingState === DogLoadingState.LOADING
-})
+export const isDogLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: DogLoadingState): boolean => loadingState === DogLoadingState.LOADING,
+)

@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 
+import { Count } from '@/components/count'
 import { Navigation } from '@/components/layout/navigation'
 import { Xkcd } from '@/components/xkcd'
 
@@ -22,6 +23,7 @@ const Layout: FC = ({ children }) => {
       </p>
       <Navigation />
       <Xkcd small />
+      <Count />
       {children}
     </>
   )

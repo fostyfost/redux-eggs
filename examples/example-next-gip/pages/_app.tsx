@@ -1,4 +1,4 @@
-import type { BeforeResult } from '@redux-eggs/next'
+import type { AppWrapperOptions } from '@redux-eggs/next'
 import type { AppProps } from 'next/app'
 import NextApp from 'next/app'
 import { END } from 'redux-saga'
@@ -18,8 +18,10 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-const beforeResult: BeforeResult<AppStore> = async store => {
-  if (typeof window === 'undefined') {
+const options: AppWrapperOptions<AppStore> = {}
+
+if (typeof window === 'undefined') {
+  options.beforeResult = async store => {
     store.dispatch({ type: StoreActionType.STOP_ALL_TASKS })
 
     store.dispatch(END)
@@ -28,7 +30,7 @@ const beforeResult: BeforeResult<AppStore> = async store => {
   }
 }
 
-const wrapper = wrapperInitializer.getAppWrapper([getCommonEgg()], { beforeResult })
+const wrapper = wrapperInitializer.getAppWrapper([getCommonEgg()], options)
 
 CustomApp.getInitialProps = wrapper.wrapGetInitialProps(() => appContext => NextApp.getInitialProps(appContext))
 

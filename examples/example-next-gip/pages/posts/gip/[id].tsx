@@ -19,13 +19,9 @@ interface HeadingProps {
 
 type Props = HeadingProps & { errorCode?: number }
 
-const postTitleSelector = createSelector(isActivePostLoading, activePostSelector, (isLoading, activePost): string => {
-  if (isLoading) {
-    return 'Post is loading ...'
-  }
-
-  return `${activePost?.title || 'Empty title'}`
-})
+const postTitleSelector = createSelector(isActivePostLoading, activePostSelector, (isLoading, activePost): string =>
+  isLoading ? 'Post is loading ...' : `${activePost?.title || 'Empty title'}`,
+)
 
 const Heading: FC<HeadingProps> = ({ title }) => {
   const postTitle = useSelector(postTitleSelector)

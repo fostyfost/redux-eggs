@@ -1,6 +1,5 @@
 import { getInjector } from '@redux-eggs/react'
 import type { FC } from 'react'
-import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
 
 import { Loading } from '../components/loading'
@@ -9,21 +8,19 @@ import { getChuckNorrisEgg } from '../store/eggs/chuck-norris'
 import { loadJoke } from '../store/eggs/chuck-norris/action-creators'
 import { isJokeLoading, jokeSelector } from '../store/eggs/chuck-norris/selectors'
 
-const Joke: FC = () => {
-  const joke = useSelector(jokeSelector)
-
+const UpdateButton: FC = () => {
   const dispatch = useAppDispatch()
 
-  const handleUpdate = useCallback(() => {
-    dispatch(loadJoke())
-  }, [dispatch])
+  return <button onClick={() => dispatch(loadJoke())}>Update</button>
+}
+
+const Joke: FC = () => {
+  const joke = useSelector(jokeSelector)
 
   return (
     <>
       <p>{joke}</p>
-      <div>
-        <button onClick={handleUpdate}>Update</button>
-      </div>
+      <UpdateButton />
     </>
   )
 }

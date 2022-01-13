@@ -18,14 +18,10 @@ export const loadingStateSelector = (state: ActivePostAwareState): ActivePostLoa
 
 export const isActivePostLoading = createSelector(
   loadingStateSelector,
-  (loadingState: ActivePostLoadingState): boolean => {
-    return loadingState === ActivePostLoadingState.LOADING
-  },
+  (loadingState: ActivePostLoadingState): boolean => loadingState === ActivePostLoadingState.LOADING,
 )
 
 export const isActivePostLoaded = createSelector(
   loadingStateSelector,
-  (loadingState: ActivePostLoadingState): boolean => {
-    return loadingState === ActivePostLoadingState.LOADED
-  },
+  (loadingState: ActivePostLoadingState): boolean => loadingState === ActivePostLoadingState.LOADED,
 )

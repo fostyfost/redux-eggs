@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest } from 'redux-saga/effects'
+import { call, put, select, takeLatest } from 'typed-redux-saga'
 
 import type { ActivePostResponseItem } from '@/eggs/active-post/contracts/api-response'
 import { ActivePostLoadingState } from '@/eggs/active-post/contracts/state'
@@ -7,16 +7,16 @@ import { ActivePostPublicAction, ActivePostReducerAction } from '@/eggs/active-p
 import { fetchAsJson } from '@/utils/fetch-as-json'
 
 function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAction.loadActivePost>) {
-  yield put(ActivePostReducerAction.setLoadingState(ActivePostLoadingState.LOADING))
+  yield* put(ActivePostReducerAction.setLoadingState(ActivePostLoadingState.LOADING))
 
-  const error: ReturnType<typeof errorSelector> = yield select(errorSelector)
+  const error = yield* select(errorSelector)
 
   if (error) {
-    yield put(ActivePostReducerAction.setError(undefined))
+    yield* put(ActivePostReducerAction.setError(undefined))
   }
 
   try {
-    const responseItems: ActivePostResponseItem[] = yield call(
+    const responseItems = yield* call<(...args: Parameters<typeof fetchAsJson>) => Promise<ActivePostResponseItem[]>>(
       fetchAsJson,
       'https://jsonplaceholder.typicode.com/posts',
     )
@@ -24,7 +24,7 @@ function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAc
     const post = responseItems.slice(0, 10).find(post => `${post.id}` === payload)
 
     if (post) {
-      yield put(
+      yield* put(
         ActivePostReducerAction.setActivePost({
           id: `${post.id}`,
           title: post.title,
@@ -32,16 +32,16 @@ function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAc
         }),
       )
     } else {
-      yield put(ActivePostReducerAction.setError(`Post #${payload} not found`))
+      yield* put(ActivePostReducerAction.setError(`Post #${payload} not found`))
     }
   } catch (error: any) {
     console.error('[Error in `loadActivePostWorker`]', error)
-    yield put(ActivePostReducerAction.setError(error.message))
+    yield* put(ActivePostReducerAction.setError(error.message))
   } finally {
-    yield put(ActivePostReducerAction.setLoadingState(ActivePostLoadingState.LOADED))
+    yield* put(ActivePostReducerAction.setLoadingState(ActivePostLoadingState.LOADED))
   }
 }
 
 export function* loadActivePostWatcher() {
-  yield takeLatest(ActivePostPublicAction.loadActivePost, loadActivePostWorker)
+  yield* takeLatest(ActivePostPublicAction.loadActivePost, loadActivePostWorker)
 }

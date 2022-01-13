@@ -1,7 +1,7 @@
 import type { Handler } from 'mitt'
 import type { Subscribe, Task } from 'redux-saga'
 import { buffers, eventChannel } from 'redux-saga'
-import { cancel, cancelled, put, select, take, takeLatest } from 'redux-saga/effects'
+import { cancel, cancelled, put, select, take, takeLatest } from 'typed-redux-saga'
 
 import { AVAILABLE_STOPS } from '@/eggs/aviasales/constants'
 import { AviasalesEvent, AviasalesEventEmitter, ChangeStopsMassive } from '@/eggs/aviasales/events'
@@ -29,27 +29,27 @@ const subscribe: Subscribe<ChannelPayload> = emitter => {
 export function* filterSaga() {
   const channel = eventChannel<ChannelPayload>(subscribe, buffers.sliding(1))
 
-  const task: Task = yield takeLatest(channel, function* worker(payload: ChannelPayload) {
+  const task: Task = yield* takeLatest(channel, function* worker(payload: ChannelPayload) {
     try {
       if (payload === ChangeStopsMassive.CHECK_ALL) {
-        yield put(AviasalesReducerAction.setStops(AVAILABLE_STOPS))
+        yield* put(AviasalesReducerAction.setStops(AVAILABLE_STOPS))
         return
       }
 
       if (payload === ChangeStopsMassive.UNCHECK_ALL) {
-        yield put(AviasalesReducerAction.setStops([]))
+        yield* put(AviasalesReducerAction.setStops([]))
         return
       }
 
-      const stops: ReturnType<typeof stopsSelector> = yield select(stopsSelector)
+      const stops = yield* select(stopsSelector)
 
       if (stops.includes(payload)) {
-        yield put(AviasalesReducerAction.setStops(stops.filter(stop => stop !== payload)))
+        yield* put(AviasalesReducerAction.setStops(stops.filter(stop => stop !== payload)))
       } else {
-        yield put(AviasalesReducerAction.setStops([...stops, payload]))
+        yield* put(AviasalesReducerAction.setStops([...stops, payload]))
       }
     } finally {
-      const isCancelled: boolean = yield cancelled()
+      const isCancelled = yield* cancelled()
 
       if (isCancelled) {
         channel.close()
@@ -57,7 +57,7 @@ export function* filterSaga() {
     }
   })
 
-  yield take(StoreActionType.STOP_ALL_TASKS)
+  yield* take(StoreActionType.STOP_ALL_TASKS)
 
-  yield cancel(task)
+  yield* cancel(task)
 }

@@ -11,12 +11,12 @@ export const usersSelector = (state: UsersAwareState): User[] => {
 
 export const usersIdsSelector = createSelector(usersSelector, users => users.map(user => user.id))
 
-export const usersMapSelector = createSelector(usersSelector, users =>
-  users.reduce((acc, user) => {
+export const usersMapSelector = createSelector(usersSelector, users => {
+  return users.reduce<{ [key: string]: User }>((acc, user) => {
     acc[user.id] = user
     return acc
-  }, {} as { [key: string]: User }),
-)
+  }, {})
+})
 
 export const getUserById = (state: UsersAwareState, id: number): User | undefined => {
   return usersMapSelector(state)[id]
@@ -30,10 +30,12 @@ export const loadingStateSelector = (state: UsersAwareState): UsersLoadingState 
   return state[USERS_REDUCER_KEY].loadingState
 }
 
-export const isUsersLoading = createSelector(loadingStateSelector, (loadingState: UsersLoadingState): boolean => {
-  return loadingState === UsersLoadingState.LOADING
-})
+export const isUsersLoading = createSelector(
+  loadingStateSelector,
+  (loadingState: UsersLoadingState): boolean => loadingState === UsersLoadingState.LOADING,
+)
 
-export const isUsersLoaded = createSelector(loadingStateSelector, (loadingState: UsersLoadingState): boolean => {
-  return loadingState === UsersLoadingState.LOADED
-})
+export const isUsersLoaded = createSelector(
+  loadingStateSelector,
+  (loadingState: UsersLoadingState): boolean => loadingState === UsersLoadingState.LOADED,
+)

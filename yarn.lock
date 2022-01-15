@@ -2721,7 +2721,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 2.0.4
-    ts-jest: 27.1.0
+    ts-jest: 27.1.3
     tslib: 2.3.1
     typescript: 4.5.2
   languageName: unknown
@@ -2759,7 +2759,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 2.0.4
-    ts-jest: 27.1.0
+    ts-jest: 27.1.3
     tslib: 2.3.1
     typescript: 4.5.2
   peerDependencies:
@@ -2801,7 +2801,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 2.0.4
-    ts-jest: 27.1.0
+    ts-jest: 27.1.3
     tslib: 2.3.1
     typescript: 4.5.2
   peerDependencies:
@@ -2829,7 +2829,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 2.0.4
-    ts-jest: 27.1.0
+    ts-jest: 27.1.3
     tslib: 2.3.1
     typescript: 4.5.2
   peerDependencies:
@@ -2855,7 +2855,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 2.0.4
-    ts-jest: 27.1.0
+    ts-jest: 27.1.3
     tslib: 2.3.1
     typescript: 4.5.2
   peerDependencies:
@@ -2883,7 +2883,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 2.0.4
-    ts-jest: 27.1.0
+    ts-jest: 27.1.3
     tslib: 2.3.1
     typescript: 4.5.2
   peerDependencies:
@@ -13003,6 +13003,40 @@ __metadata:
   bin:
     ts-jest: cli.js
   checksum: ff59267dc93dde03b0cabc0c0ca44e1322ac1abc8401187dc687c2b539c6cd2f95400418855a9f4154bff7043caa6e84765f5bb02624f4b40df6bba9e8af555f
+  languageName: node
+  linkType: hard
+
+"ts-jest@npm:27.1.3":
+  version: 27.1.3
+  resolution: "ts-jest@npm:27.1.3"
+  dependencies:
+    bs-logger: 0.x
+    fast-json-stable-stringify: 2.x
+    jest-util: ^27.0.0
+    json5: 2.x
+    lodash.memoize: 4.x
+    make-error: 1.x
+    semver: 7.x
+    yargs-parser: 20.x
+  peerDependencies:
+    "@babel/core": ">=7.0.0-beta.0 <8"
+    "@types/jest": ^27.0.0
+    babel-jest: ">=27.0.0 <28"
+    esbuild: ~0.14.0
+    jest: ^27.0.0
+    typescript: ">=3.8 <5.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/jest":
+      optional: true
+    babel-jest:
+      optional: true
+    esbuild:
+      optional: true
+  bin:
+    ts-jest: cli.js
+  checksum: eb54e5b8fc5f06e4cc20ecec7891201ddc78a3537d5eb3775e29ffbc7e83fd2a68f91db801b6a8c820c872060b24dc41fb6decac800b76256d3cdda6520b5c4f
   languageName: node
   linkType: hard
 

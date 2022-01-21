@@ -2690,7 +2690,7 @@ __metadata:
     cli-table: 0.3.9
     colors: 1.4.0
     eslint: 7.32.0
-    filesize: 8.0.6
+    filesize: 8.0.7
     gzip-size: 6.0.0
     pacote: 12.0.2
     rimraf: 3.0.2
@@ -6815,10 +6815,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filesize@npm:8.0.6":
-  version: 8.0.6
-  resolution: "filesize@npm:8.0.6"
-  checksum: a16d7bd88c943ff55185559eabd4e9779d531b281a39a4a884659fd6f58bd29c20337ad7d58dc5492477df484bb9579a7ca6ad77e57a25908a51f8224790aaa3
+"filesize@npm:8.0.7":
+  version: 8.0.7
+  resolution: "filesize@npm:8.0.7"
+  checksum: 8603d27c5287b984cb100733640645e078f5f5ad65c6d913173e01fb99e09b0747828498fd86647685ccecb69be31f3587b9739ab1e50732116b2374aff4cbf9
   languageName: node
   linkType: hard
 

@@ -3713,7 +3713,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],
             ["@redux-eggs/core", "workspace:packages/core"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
-            ["@testing-library/dom", "npm:8.11.1"],
+            ["@testing-library/dom", "npm:8.11.3"],
             ["@testing-library/jest-dom", "npm:5.16.0"],
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.5.0"],
@@ -3759,7 +3759,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],
             ["@redux-eggs/core", "workspace:packages/core"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
-            ["@testing-library/dom", "npm:8.11.1"],
+            ["@testing-library/dom", "npm:8.11.3"],
             ["@testing-library/jest-dom", "npm:5.16.0"],
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.5.0"],
@@ -4158,6 +4158,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pretty-format", "npm:27.4.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:8.11.3", {
+          "packageLocation": "./.yarn/cache/@testing-library-dom-npm-8.11.3-bcb55609ff-2245d254b6.zip/node_modules/@testing-library/dom/",
+          "packageDependencies": [
+            ["@testing-library/dom", "npm:8.11.3"],
+            ["@babel/code-frame", "npm:7.16.0"],
+            ["@babel/runtime", "npm:7.16.3"],
+            ["@types/aria-query", "npm:4.2.2"],
+            ["aria-query", "npm:5.0.0"],
+            ["chalk", "npm:4.1.2"],
+            ["dom-accessibility-api", "npm:0.5.10"],
+            ["lz-string", "npm:1.4.4"],
+            ["pretty-format", "npm:27.4.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@testing-library/jest-dom", [
@@ -4219,7 +4234,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.5.0"],
             ["@babel/runtime", "npm:7.16.3"],
-            ["@testing-library/dom", "npm:8.11.1"],
+            ["@testing-library/dom", "npm:8.11.3"],
             ["@types/testing-library__dom", null]
           ],
           "packagePeers": [

@@ -3549,7 +3549,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
             ["gzip-size", "npm:6.0.0"],
-            ["pacote", "npm:12.0.2"],
+            ["pacote", "npm:12.0.3"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.60.2"],
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],
@@ -3578,7 +3578,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["filesize", "npm:8.0.6"],
             ["gzip-size", "npm:6.0.0"],
-            ["pacote", "npm:12.0.2"],
+            ["pacote", "npm:12.0.3"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:2.60.2"],
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],
@@ -4234,6 +4234,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-1.1.2-0517220057-e1fb1bbbc1.zip/node_modules/@tootallnate/once/",
           "packageDependencies": [
             ["@tootallnate/once", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@tootallnate-once-npm-2.0.0-e36cf4f140-ad87447820.zip/node_modules/@tootallnate/once/",
+          "packageDependencies": [
+            ["@tootallnate/once", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -9460,6 +9467,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:ee1bbcab87c0701d4ea83dd18afa59b10c6343191c17b3a8e7844ecdde3ca8e8977791131460b822baae289e9261b3b228709bc45987d850e69091b4d363edfa#npm:4.3.3"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/http-proxy-agent-npm-5.0.0-7f1f121b83-e2ee1ff165.zip/node_modules/http-proxy-agent/",
+          "packageDependencies": [
+            ["http-proxy-agent", "npm:5.0.0"],
+            ["@tootallnate/once", "npm:2.0.0"],
+            ["agent-base", "npm:6.0.2"],
+            ["debug", "virtual:ee1bbcab87c0701d4ea83dd18afa59b10c6343191c17b3a8e7844ecdde3ca8e8977791131460b822baae289e9261b3b228709bc45987d850e69091b4d363edfa#npm:4.3.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["http-signature", [
@@ -11367,6 +11384,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["make-fetch-happen", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/make-fetch-happen-npm-10.0.0-465f3b099f-f81548178d.zip/node_modules/make-fetch-happen/",
+          "packageDependencies": [
+            ["make-fetch-happen", "npm:10.0.0"],
+            ["agentkeepalive", "npm:4.1.4"],
+            ["cacache", "npm:15.3.0"],
+            ["http-cache-semantics", "npm:4.1.0"],
+            ["http-proxy-agent", "npm:5.0.0"],
+            ["https-proxy-agent", "npm:5.0.0"],
+            ["is-lambda", "npm:1.0.1"],
+            ["lru-cache", "npm:6.0.0"],
+            ["minipass", "npm:3.1.5"],
+            ["minipass-collect", "npm:1.0.2"],
+            ["minipass-fetch", "npm:1.4.1"],
+            ["minipass-flush", "npm:1.0.5"],
+            ["minipass-pipeline", "npm:1.2.4"],
+            ["negotiator", "npm:0.6.3"],
+            ["promise-retry", "npm:2.0.1"],
+            ["socks-proxy-agent", "npm:6.1.1"],
+            ["ssri", "npm:8.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:8.0.14", {
           "packageLocation": "./.yarn/cache/make-fetch-happen-npm-8.0.14-fa5d78adad-326fefde1a.zip/node_modules/make-fetch-happen/",
           "packageDependencies": [
@@ -11863,6 +11903,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["negotiator", "npm:0.6.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:0.6.3", {
+          "packageLocation": "./.yarn/cache/negotiator-npm-0.6.3-9d50e36171-b8ffeb1e26.zip/node_modules/negotiator/",
+          "packageDependencies": [
+            ["negotiator", "npm:0.6.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["neo-async", [
@@ -12353,6 +12400,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["npm:12.0.1", {
+          "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-12.0.1-9b1e419022-b8ba328437.zip/node_modules/npm-registry-fetch/",
+          "packageDependencies": [
+            ["npm-registry-fetch", "npm:12.0.1"],
+            ["make-fetch-happen", "npm:10.0.0"],
+            ["minipass", "npm:3.1.5"],
+            ["minipass-fetch", "npm:1.4.1"],
+            ["minipass-json-stream", "npm:1.0.1"],
+            ["minizlib", "npm:2.1.2"],
+            ["npm-package-arg", "npm:8.1.5"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:9.0.0", {
           "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-9.0.0-3a14ee1925-b5376b72ef.zip/node_modules/npm-registry-fetch/",
           "packageDependencies": [
@@ -12825,10 +12885,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:12.0.2", {
-          "packageLocation": "./.yarn/cache/pacote-npm-12.0.2-16610c8675-db2a338525.zip/node_modules/pacote/",
+        ["npm:12.0.3", {
+          "packageLocation": "./.yarn/cache/pacote-npm-12.0.3-99a2ca9e19-730e2b3446.zip/node_modules/pacote/",
           "packageDependencies": [
-            ["pacote", "npm:12.0.2"],
+            ["pacote", "npm:12.0.3"],
             ["@npmcli/git", "npm:2.1.0"],
             ["@npmcli/installed-package-contents", "npm:1.0.7"],
             ["@npmcli/promise-spawn", "npm:1.3.2"],
@@ -12842,7 +12902,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-package-arg", "npm:8.1.5"],
             ["npm-packlist", "npm:3.0.0"],
             ["npm-pick-manifest", "npm:6.1.1"],
-            ["npm-registry-fetch", "npm:11.0.0"],
+            ["npm-registry-fetch", "npm:12.0.1"],
             ["promise-retry", "npm:2.0.1"],
             ["read-package-json-fast", "npm:2.0.3"],
             ["rimraf", "npm:3.0.2"],

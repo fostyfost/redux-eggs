@@ -3714,7 +3714,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@testing-library/dom", "npm:8.11.1"],
-            ["@testing-library/jest-dom", "npm:5.16.0"],
+            ["@testing-library/jest-dom", "npm:5.16.2"],
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.5.0"],
             ["@types/jest", "npm:27.0.3"],
@@ -3760,7 +3760,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@testing-library/dom", "npm:8.11.1"],
-            ["@testing-library/jest-dom", "npm:5.16.0"],
+            ["@testing-library/jest-dom", "npm:5.16.2"],
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.5.0"],
             ["@types/jest", "npm:27.0.3"],
@@ -4161,10 +4161,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@testing-library/jest-dom", [
-        ["npm:5.16.0", {
-          "packageLocation": "./.yarn/cache/@testing-library-jest-dom-npm-5.16.0-acdaeaa796-34ccca14f6.zip/node_modules/@testing-library/jest-dom/",
+        ["npm:5.16.2", {
+          "packageLocation": "./.yarn/cache/@testing-library-jest-dom-npm-5.16.2-1ae5bcade4-e4569df67c.zip/node_modules/@testing-library/jest-dom/",
           "packageDependencies": [
-            ["@testing-library/jest-dom", "npm:5.16.0"],
+            ["@testing-library/jest-dom", "npm:5.16.2"],
             ["@babel/runtime", "npm:7.16.3"],
             ["@types/testing-library__jest-dom", "npm:5.14.2"],
             ["aria-query", "npm:5.0.0"],

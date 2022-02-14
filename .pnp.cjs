@@ -3540,7 +3540,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@types/cli-table", "npm:0.3.0"],
-            ["@types/node", "npm:16.11.11"],
+            ["@types/node", "npm:16.11.25"],
             ["@types/pacote", "npm:11.1.1"],
             ["@types/rollup", null],
             ["brotli-size", "npm:4.0.0"],
@@ -3570,7 +3570,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs-internal/rollup-plugin-filesize", "workspace:internal/rollup-plugin-filesize"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@types/cli-table", "npm:0.3.0"],
-            ["@types/node", "npm:16.11.11"],
+            ["@types/node", "npm:16.11.25"],
             ["@types/pacote", "npm:11.1.1"],
             ["brotli-size", "npm:4.0.0"],
             ["cli-table", "npm:0.3.9"],
@@ -3627,7 +3627,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/next", null],
-            ["@types/node", "npm:16.11.11"],
+            ["@types/node", "npm:16.11.25"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
             ["@types/react-redux", "npm:7.1.20"],
@@ -3676,7 +3676,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
             ["@types/jest", "npm:27.0.3"],
-            ["@types/node", "npm:16.11.11"],
+            ["@types/node", "npm:16.11.25"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
             ["@types/react-redux", "npm:7.1.20"],
@@ -4403,6 +4403,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-16.11.11-d8efa4328b-1c472bd63f.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:16.11.11"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:16.11.25", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.25-78cf927571-0b6e25a813.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:16.11.25"]
           ],
           "linkType": "HARD",
         }],

@@ -3624,7 +3624,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
-            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
+            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.3"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/next", null],
             ["@types/node", "npm:16.11.11"],
@@ -3674,7 +3674,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
-            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
+            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.3"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:16.11.11"],
             ["@types/react", "npm:17.0.37"],
@@ -3715,7 +3715,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@testing-library/dom", "npm:8.11.1"],
             ["@testing-library/jest-dom", "npm:5.16.0"],
-            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
+            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.3"],
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.5.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/react", "npm:17.0.37"],
@@ -3761,7 +3761,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.1"],
             ["@testing-library/dom", "npm:8.11.1"],
             ["@testing-library/jest-dom", "npm:5.16.0"],
-            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
+            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.3"],
             ["@testing-library/user-event", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#npm:13.5.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/react", "npm:17.0.37"],
@@ -4179,17 +4179,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@testing-library/react", [
-        ["npm:12.1.2", {
-          "packageLocation": "./.yarn/cache/@testing-library-react-npm-12.1.2-ccdefbca45-70b0f7f27c.zip/node_modules/@testing-library/react/",
+        ["npm:12.1.3", {
+          "packageLocation": "./.yarn/cache/@testing-library-react-npm-12.1.3-9cd5a455e7-2f059e93dc.zip/node_modules/@testing-library/react/",
           "packageDependencies": [
-            ["@testing-library/react", "npm:12.1.2"]
+            ["@testing-library/react", "npm:12.1.3"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2", {
-          "packageLocation": "./.yarn/__virtual__/@testing-library-react-virtual-11d2643171/0/cache/@testing-library-react-npm-12.1.2-ccdefbca45-70b0f7f27c.zip/node_modules/@testing-library/react/",
+        ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.3", {
+          "packageLocation": "./.yarn/__virtual__/@testing-library-react-virtual-7ea7a98d62/0/cache/@testing-library-react-npm-12.1.3-9cd5a455e7-2f059e93dc.zip/node_modules/@testing-library/react/",
           "packageDependencies": [
-            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.2"],
+            ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:12.1.3"],
             ["@babel/runtime", "npm:7.16.3"],
             ["@testing-library/dom", "npm:8.11.1"],
             ["@types/react", "npm:17.0.37"],

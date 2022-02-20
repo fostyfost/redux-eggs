@@ -1,15 +1,15 @@
 import brotli from 'brotli-size'
 import CliTable from 'cli-table'
-import colors from 'colors/safe'
+import { bold, cyan, green, red, white } from 'colorette'
 import fileSize from 'filesize'
 import fs from 'fs'
-import gzip from 'gzip-size'
 import pacote from 'pacote'
 import path from 'path'
 import * as process from 'process'
 import type { NormalizedOutputOptions, OutputChunk, OutputPlugin } from 'rollup'
 import terser from 'terser'
 import util from 'util'
+import zlib from 'zlib'
 
 type FileSizeValue = number
 type FileSizeSymbol = string
@@ -28,11 +28,7 @@ interface Info {
   brotliSizeBefore?: FileSizeOutputResult
 }
 
-const white = colors['white']
-const whiteBold = (white as unknown as { bold: typeof white }).bold
-const cyan = colors['cyan']
-const red = colors['red']
-const green = colors['green']
+const gzipSizeSync = (input: string): number => zlib.gzipSync(input, { level: 9 }).length
 
 const getSize = (value: number): FileSizeOutputResult => fileSize(value, { output: 'array', exponent: 0 }) as any
 
@@ -56,10 +52,10 @@ const getRow = (title: string, sizeCurrent: FileSizeOutputResult, sizeBefore?: F
 const getTable = async (info: Info) => {
   const table = new CliTable({
     head: [
-      `${whiteBold('File:')} ${green(info.file)}`,
-      whiteBold('Current version'),
-      whiteBold(`Last version${info.lastVersion ? ` (${info.lastVersion})` : ''}`),
-      whiteBold('Size diff'),
+      `${bold(white('File:'))} ${green(info.file)}`,
+      bold(white('Current version')),
+      bold(white(`Last version${info.lastVersion ? ` (${info.lastVersion})` : ''}`)),
+      bold(white('Size diff')),
     ],
   })
 
@@ -99,7 +95,7 @@ const getStrings = async (outputOptions: NormalizedOutputOptions, chunk: OutputC
   const minifiedCode = (await terser.minify(chunk.code)).code
   if (minifiedCode) {
     info.minSize = getSize(minifiedCode.length)
-    info.gzipSize = getSize(gzip.sync(minifiedCode))
+    info.gzipSize = getSize(gzipSizeSync(minifiedCode))
   }
 
   let file = outputOptions.file || ''
@@ -127,7 +123,7 @@ const getStrings = async (outputOptions: NormalizedOutputOptions, chunk: OutputC
         const minifiedCodeBefore = (await terser.minify(codeBefore)).code
         if (minifiedCodeBefore) {
           info.minSizeBefore = getSize(minifiedCodeBefore.length)
-          info.gzipSizeBefore = getSize(gzip.sync(minifiedCodeBefore))
+          info.gzipSizeBefore = getSize(gzipSizeSync(minifiedCodeBefore))
         }
       }
     } catch (error) {

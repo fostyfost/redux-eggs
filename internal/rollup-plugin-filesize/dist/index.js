@@ -4,15 +4,15 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var brotli = require('brotli-size');
 var CliTable = require('cli-table');
-var colors = require('colors/safe');
+var colorette = require('colorette');
 var fileSize = require('filesize');
 var fs = require('fs');
-var gzip = require('gzip-size');
 var pacote = require('pacote');
 var path = require('path');
 var process = require('process');
 var terser = require('terser');
 var util = require('util');
+var zlib = require('zlib');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -36,40 +36,35 @@ function _interopNamespace(e) {
 
 var brotli__default = /*#__PURE__*/_interopDefaultLegacy(brotli);
 var CliTable__default = /*#__PURE__*/_interopDefaultLegacy(CliTable);
-var colors__default = /*#__PURE__*/_interopDefaultLegacy(colors);
 var fileSize__default = /*#__PURE__*/_interopDefaultLegacy(fileSize);
 var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
-var gzip__default = /*#__PURE__*/_interopDefaultLegacy(gzip);
 var pacote__default = /*#__PURE__*/_interopDefaultLegacy(pacote);
 var path__default = /*#__PURE__*/_interopDefaultLegacy(path);
 var process__namespace = /*#__PURE__*/_interopNamespace(process);
 var terser__default = /*#__PURE__*/_interopDefaultLegacy(terser);
 var util__default = /*#__PURE__*/_interopDefaultLegacy(util);
+var zlib__default = /*#__PURE__*/_interopDefaultLegacy(zlib);
 
-const white = colors__default["default"]['white'];
-const whiteBold = white.bold;
-const cyan = colors__default["default"]['cyan'];
-const red = colors__default["default"]['red'];
-const green = colors__default["default"]['green'];
+const gzipSizeSync = (input) => zlib__default["default"].gzipSync(input, { level: 9 }).length;
 const getSize = (value) => fileSize__default["default"](value, { output: 'array', exponent: 0 });
 const getRow = (title, sizeCurrent, sizeBefore) => {
-    const size = [cyan(sizeCurrent.join(' '))];
+    const size = [colorette.cyan(sizeCurrent.join(' '))];
     if (sizeBefore) {
-        size.push(cyan(sizeBefore.join(' ')));
+        size.push(colorette.cyan(sizeBefore.join(' ')));
         const [valueCurrent, symbol] = sizeCurrent;
         const [valueBefore] = sizeBefore;
         const diff = valueCurrent - valueBefore;
-        size.push(diff > 0 ? red(`+${diff} ${symbol}`) : green(`${diff} ${symbol}`));
+        size.push(diff > 0 ? colorette.red(`+${diff} ${symbol}`) : colorette.green(`${diff} ${symbol}`));
     }
-    return { [white(title)]: size };
+    return { [colorette.white(title)]: size };
 };
 const getTable = async (info) => {
     const table = new CliTable__default["default"]({
         head: [
-            `${whiteBold('File:')} ${green(info.file)}`,
-            whiteBold('Current version'),
-            whiteBold(`Last version${info.lastVersion ? ` (${info.lastVersion})` : ''}`),
-            whiteBold('Size diff'),
+            `${colorette.bold(colorette.white('File:'))} ${colorette.green(info.file)}`,
+            colorette.bold(colorette.white('Current version')),
+            colorette.bold(colorette.white(`Last version${info.lastVersion ? ` (${info.lastVersion})` : ''}`)),
+            colorette.bold(colorette.white('Size diff')),
         ],
     });
     table.push(getRow('Bundle size', info.bundleSize, info.bundleSizeBefore));
@@ -101,7 +96,7 @@ const getStrings = async (outputOptions, chunk) => {
     const minifiedCode = (await terser__default["default"].minify(chunk.code)).code;
     if (minifiedCode) {
         info.minSize = getSize(minifiedCode.length);
-        info.gzipSize = getSize(gzip__default["default"].sync(minifiedCode));
+        info.gzipSize = getSize(gzipSizeSync(minifiedCode));
     }
     let file = outputOptions.file || '';
     try {
@@ -122,7 +117,7 @@ const getStrings = async (outputOptions, chunk) => {
                 const minifiedCodeBefore = (await terser__default["default"].minify(codeBefore)).code;
                 if (minifiedCodeBefore) {
                     info.minSizeBefore = getSize(minifiedCodeBefore.length);
-                    info.gzipSizeBefore = getSize(gzip__default["default"].sync(minifiedCodeBefore));
+                    info.gzipSizeBefore = getSize(gzipSizeSync(minifiedCodeBefore));
                 }
             }
         }

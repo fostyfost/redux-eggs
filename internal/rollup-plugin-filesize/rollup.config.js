@@ -4,7 +4,7 @@ import ts from 'rollup-plugin-ts'
 
 const config = {
   input: './src/index.ts',
-  external: ['process', 'path', 'fs', 'util'],
+  external: ['fs', 'path', 'process', 'util', 'zlib'],
   plugins: [
     peerDepsExternal({ includeDependencies: true }),
     eslint({

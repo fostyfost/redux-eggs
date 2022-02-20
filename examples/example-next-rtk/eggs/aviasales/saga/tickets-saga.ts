@@ -10,7 +10,7 @@ import { isAllTicketLoadedSelector } from '@/eggs/aviasales/selectors'
 import { AviasalesReducerAction } from '@/eggs/aviasales/slice'
 import { StoreActionType } from '@/store/action-types'
 
-type ChannelPayload = string
+type ChannelPayload = string | undefined
 
 const subscribe: Subscribe<ChannelPayload> = emitter => {
   const handler: Handler<ChannelPayload> = payload => {

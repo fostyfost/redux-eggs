@@ -1,7 +1,5 @@
 import mitt from 'mitt'
 
-export const AviasalesEventEmitter = mitt()
-
 export enum AviasalesEvent {
   GET_TICKETS = 'aviasales/GET_TICKETS',
   CHANGE_STOPS = 'aviasales/CHANGE_STOPS',
@@ -11,6 +9,13 @@ export enum ChangeStopsMassive {
   CHECK_ALL = 'CHECK_ALL',
   UNCHECK_ALL = 'UNCHECK_ALL',
 }
+
+type MittEvents = {
+  [AviasalesEvent.GET_TICKETS]: string | undefined
+  [AviasalesEvent.CHANGE_STOPS]: number | ChangeStopsMassive
+}
+
+export const AviasalesEventEmitter = mitt<MittEvents>()
 
 export const AviasalesPublicAction = {
   getTickets() {

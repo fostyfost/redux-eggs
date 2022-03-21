@@ -1,6 +1,8 @@
 # Redux Eggs for React
 
-_Redux Eggs_ Injector for [React](https://reactjs.org/) applications.
+This package provides higher-order component (HOC) and function to create an injector
+component that allows you to add parts of Redux store before the component is mounted,
+and remove them after the component is unmounted.
 
 Contents:
 
@@ -29,6 +31,33 @@ npm install --save @redux-eggs/core @redux-eggs/react
 - `react-redux` 7.0.0 and newer
 
 ## Usage
+
+### Usage with `withEggs` HOC (recommended 👍)
+
+```typescript jsx
+import { useSelector } from 'react-redux'
+
+const getMyEgg = () => {
+  return {
+    id: 'my-egg',
+    reducersMap: {
+      myState: myReducer,
+      // ...
+    },
+    // ...
+  }
+}
+
+const selector = state => state.myState.value
+
+export const MyComponent = withEggs([getMyEgg()])(function MyComponent() {
+  const value = useSelector(selector)
+
+  return <div>{value}</div>
+})
+```
+
+### Usage with `getInjector`
 
 Create your `eggs`:
 

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import type { FC, MouseEventHandler } from 'react'
 import { useState } from 'react'
 
-import styles from './index.module.scss'
+import styles from '@/components/layout/navigation/index.module.scss'
 
 interface Link {
   href: string

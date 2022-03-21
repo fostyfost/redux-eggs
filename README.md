@@ -56,8 +56,9 @@ extensions, triggering events, etc.
 
 ### React
 
-`@redux-eggs/react` - a package that provides a function to create an injector component that allows you to add parts of
-Redux store before the component is mounted, and remove them after the component is unmounted.
+`@redux-eggs/react` - a package that provides higher-order component (HOC) and function to create an injector
+component that allows you to add parts of Redux store before the component is mounted,
+and remove them after the component is unmounted.
 
 [More details here](https://github.com/fostyfost/redux-eggs/tree/main/packages/react#readme).
 

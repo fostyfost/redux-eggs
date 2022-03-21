@@ -1,4 +1,4 @@
-import { getInjector } from '@redux-eggs/react'
+import { withEggs } from '@redux-eggs/react'
 import type { FC } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -27,7 +27,7 @@ const Dog: FC = () => {
   )
 }
 
-const Content: FC = () => {
+const DogPage: FC = withEggs([getDogEgg()])(function DogPage() {
   const isLoading = useSelector(isDogLoading)
 
   return (
@@ -36,16 +36,6 @@ const Content: FC = () => {
       {isLoading ? <Loading /> : <Dog />}
     </div>
   )
-}
-
-const DogInjector = getInjector([getDogEgg()])
-
-const DogPage: FC = () => {
-  return (
-    <DogInjector.Wrapper>
-      <Content />
-    </DogInjector.Wrapper>
-  )
-}
+})
 
 export default DogPage

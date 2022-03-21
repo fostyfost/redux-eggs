@@ -45,7 +45,7 @@ describe('Tests for Eggs Injector Component', () => {
 
     let rendersCount = 0
 
-    const Component: FC<any> = () => {
+    const Component: FC = () => {
       const [value, setValue] = React.useState(0)
       const [isMounted1, setIsMounted1] = React.useState(true)
       const [isMounted2, setIsMounted2] = React.useState(false)
@@ -133,7 +133,7 @@ describe('Tests for Eggs Injector Component', () => {
 
     let rendersCount = 0
 
-    const Component: FC<any> = () => {
+    const Component: FC = () => {
       const [isMounted1, setIsMounted1] = React.useState(true)
       const [isMounted2, setIsMounted2] = React.useState(false)
 
@@ -218,7 +218,7 @@ describe('Tests for Eggs Injector Component', () => {
 
     const Injector = getInjector([egg1])
 
-    const Component: FC<any> = () => {
+    const Component: FC = () => {
       const [isMounted, setIsMounted] = React.useState(true)
 
       return (

@@ -3,8 +3,8 @@ import type { FC } from 'react'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import styles from './index.module.scss'
-import { ChuckNorrisLoading } from './loading'
+import styles from '@/components/chuck-norris-content/index.module.scss'
+import { ChuckNorrisLoading } from '@/components/chuck-norris-content/loading'
 
 const waitAMomentPlease = (): Promise<void> => {
   return new Promise(resolve => {

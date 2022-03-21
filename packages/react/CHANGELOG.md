@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/fostyfost/redux-eggs/compare/v2.1.0...v2.2.0) (2022-03-21)
+
+### Features
+
+- **@redux-eggs/react:** add `withEggs` HOC ([69819ee](https://github.com/fostyfost/redux-eggs/commit/69819eea2f8f52b61b84fd6dd8d793de57884f94))
+
 # [2.1.0](https://github.com/fostyfost/redux-eggs/compare/v2.0.0...v2.1.0) (2021-12-05)
 
 ### Features

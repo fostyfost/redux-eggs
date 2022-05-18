@@ -2,7 +2,7 @@ import { createWrapperInitializer } from '@redux-eggs/next'
 import { createStore } from '@redux-eggs/redux'
 import { getSagaExtension } from '@redux-eggs/saga-extension'
 import { batch } from 'react-redux'
-import type { AnyAction, ReducersMapObject, Store } from 'redux'
+import type { AnyAction, ReducersMapObject } from 'redux'
 import { combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import type { EffectMiddleware } from 'redux-saga'
@@ -12,15 +12,11 @@ import { effectTypes } from 'redux-saga/effects'
 import { StoreActionType } from '@/store/action-types'
 import { getLoggerExtension } from '@/store/logger-extension'
 
-const combiner = (reducersMap: ReducersMapObject) => {
+const reducerCombiner = (reducersMap: ReducersMapObject) => {
   const combinedReducer = combineReducers(reducersMap)
 
   return (state: any = {}, action: AnyAction) => {
-    if (action.type === StoreActionType.HYDRATE && action.payload) {
-      return combinedReducer({ ...state, ...action.payload }, action)
-    }
-
-    return combinedReducer(state, action)
+    return combinedReducer(action.type === StoreActionType.HYDRATE ? { ...state, ...action.payload } : state, action)
   }
 }
 
@@ -40,10 +36,10 @@ const batchAllPuts: EffectMiddleware = next => effect => {
 }
 
 const createAppStore = () => {
-  return createStore<Store & { test: number }>({
+  return createStore({
     extensions: [getSagaExtension({ effectMiddlewares: [batchAllPuts] }), getLoggerExtension()],
-    combiner,
-    composer: composeWithDevTools({ maxAge: 200 }),
+    reducerCombiner,
+    enhancersComposer: composeWithDevTools({ maxAge: 200 }),
   })
 }
 

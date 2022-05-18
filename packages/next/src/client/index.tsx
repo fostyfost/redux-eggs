@@ -1,15 +1,15 @@
-import type { EggTuple, WithEggExt } from '@redux-eggs/core'
+import type { EggTuple } from '@redux-eggs/core'
 import type { NextPage, NextPageContext } from 'next'
 import type { AppContext, AppProps } from 'next/app'
 import React from 'react'
 import { Provider } from 'react-redux'
-import type { Store } from 'redux'
 
 import { HYDRATE_ACTION_TYPE } from '@/action-types'
 import type {
   AppWrapperOptions,
   BeforeResult,
   PageWrapper,
+  WithEggExt,
   WrapperInitializerOptions,
   WrapperInitializerResults,
 } from '@/contracts'
@@ -17,12 +17,12 @@ import type { EggsConfig } from '@/contracts-internal'
 
 export * from '@/action-types'
 
-export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggExt<Store>>(
+export function createWrapperInitializer<S extends WithEggExt = WithEggExt>(
   storeCreator: () => S,
   options: WrapperInitializerOptions = {},
 ): WrapperInitializerResults<S> {
   let anyStore: S
-  let appEggsLocal: EggTuple<any> = []
+  let appEggsLocal: EggTuple = []
   let appHasGetInitialProps = false
   let beforeResult: BeforeResult<S> | undefined
   let prevPage: (NextPage & EggsConfig) | undefined
@@ -38,7 +38,13 @@ export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggEx
     if (nextPage !== prevPage) {
       const pageEggs = nextPage.__eggs || []
 
-      anyStore.addEggs(prevPage ? pageEggs : ([] as EggTuple<any>).concat(appEggsLocal, pageEggs))
+      if (!prevPage && appEggsLocal.length) {
+        anyStore.addEggs(appEggsLocal)
+      }
+
+      if (pageEggs.length) {
+        nextPage.__eggsCleanup = anyStore.addEggs(pageEggs)
+      }
 
       prevPage = nextPage
     }
@@ -55,7 +61,7 @@ export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggEx
   }
 
   return {
-    getAppWrapper(appEggs: EggTuple<any> = [], options: AppWrapperOptions<S> = {}) {
+    getAppWrapper(appEggs: EggTuple = [], options: AppWrapperOptions<S> = {}) {
       appEggsLocal = appEggs
 
       beforeResult = options.beforeResult
@@ -88,21 +94,21 @@ export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggEx
 
               add(props.Component)
 
-              hydrate(props.pageProps.__eggsState)
+              hydrate((props.pageProps as any).__eggsState)
             }
 
             shouldComponentUpdate(nextProps: Readonly<AppProps>): boolean {
               add(nextProps.Component)
 
               if (!nextProps.Component.getInitialProps) {
-                hydrate(nextProps.pageProps.__eggsState)
+                hydrate((nextProps.pageProps as any).__eggsState)
               }
 
               return true
             }
 
             render(): JSX.Element {
-              delete this.props.pageProps.__eggsState
+              delete (this.props.pageProps as any).__eggsState
 
               return (
                 <Provider store={anyStore as any}>
@@ -114,8 +120,9 @@ export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggEx
             componentDidUpdate(prevProps: Readonly<AppProps>): void {
               const prevComponent: NextPage & EggsConfig = prevProps.Component
 
-              if (prevComponent.__eggs?.length && this.props.Component !== prevComponent) {
-                anyStore.removeEggs(prevComponent.__eggs)
+              if (this.props.Component !== prevComponent) {
+                prevComponent.__eggsCleanup?.()
+                delete prevComponent.__eggsCleanup
               }
             }
           }
@@ -123,7 +130,7 @@ export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggEx
       }
     },
 
-    getPageWrapper(pageEggs: EggTuple<any> = []): PageWrapper<S> {
+    getPageWrapper(pageEggs: EggTuple = []): PageWrapper<S> {
       let currentPage: NextPage & EggsConfig
 
       return {

@@ -27,7 +27,7 @@ const Dog: FC = () => {
   )
 }
 
-const DogPage: FC = withEggs([getDogEgg()])(function DogPage() {
+const DogPage: FC = () => {
   const isLoading = useSelector(isDogLoading)
 
   return (
@@ -36,6 +36,6 @@ const DogPage: FC = withEggs([getDogEgg()])(function DogPage() {
       {isLoading ? <Loading /> : <Dog />}
     </div>
   )
-})
+}
 
-export default DogPage
+export default withEggs([getDogEgg()])(DogPage)

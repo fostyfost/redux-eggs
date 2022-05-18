@@ -1,5 +1,4 @@
 import { withEggs } from '@redux-eggs/react'
-import type { FC } from 'react'
 import { useSelector } from 'react-redux'
 
 import { ChuckNorrisLoading } from '@/components/chuck-norris-content/loading'
@@ -20,7 +19,7 @@ const postsEgg = getPostsEgg()
 postsEgg.afterAdd = store => store.dispatch(PostsPublicAction.loadPosts())
 postsEgg.afterRemove = () => console.log('Posts Egg has been removed')
 
-export const Users: FC = withEggs([usersEgg])(function Users() {
+export const Users = withEggs([usersEgg])(function Users() {
   const isLoaded = useSelector(isUsersLoaded)
 
   return <div>Users loading state: {isLoaded ? 'loaded' : 'loading ...'}</div>
@@ -32,7 +31,7 @@ export const Posts = withEggs([postsEgg])(function Posts() {
   return <div>Posts loading state: {isLoaded ? 'loaded' : 'loading ...'}</div>
 })
 
-export const Joke: FC = withEggs([getChuckNorrisEgg()])(function JokeContent() {
+export const Joke = withEggs([getChuckNorrisEgg()])(function JokeContent() {
   const isLoading = useSelector(isJokeLoading)
   const joke = useSelector(jokeSelector)
   const error = useSelector(errorSelector)

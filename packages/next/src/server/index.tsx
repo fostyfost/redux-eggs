@@ -1,39 +1,38 @@
-import type { EggTuple, WithEggExt } from '@redux-eggs/core'
+import type { EggTuple } from '@redux-eggs/core'
 import type { GetStaticPathsContext, NextPage, NextPageContext } from 'next'
 import type { AppContext, AppProps } from 'next/app'
 import React from 'react'
 import { Provider } from 'react-redux'
-import type { Store } from 'redux'
 
 import type { AppWrapperOptions, BeforeResult, PageWrapper, WrapperInitializerResults } from '@/contracts'
-import type { WrapperInitializerOptions } from '@/contracts'
+import type { WithEggExt, WrapperInitializerOptions } from '@/contracts'
 import type { EggsConfig, EggsConfigValue } from '@/contracts-internal'
 
 export * from '@/action-types'
 export * from '@/contracts'
 
-export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggExt<Store>>(
+export function createWrapperInitializer<S extends WithEggExt = WithEggExt>(
   storeCreator: () => S,
   options?: WrapperInitializerOptions,
 ): WrapperInitializerResults<S>
 
-export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggExt<Store>>(
+export function createWrapperInitializer<S extends WithEggExt = WithEggExt>(
   storeCreator: () => S,
 ): WrapperInitializerResults<S> {
   let anyStore: S
-  let appEggsLocal: EggTuple<any> = []
+  let appEggsLocal: EggTuple = []
   let appHasGetInitialProps = false
   let beforeResult: BeforeResult<S> | undefined
 
-  const getStore = (eggs: EggTuple<any> = []) => {
+  const getStore = (eggs: EggTuple = []) => {
     anyStore = storeCreator()
     anyStore.addEggs(eggs)
 
     return anyStore
   }
 
-  const withAppEggs = (pageEggs: EggTuple<any> = []): EggTuple<any> => {
-    return ([] as EggTuple<any>).concat(appEggsLocal, pageEggs)
+  const withAppEggs = (pageEggs: EggTuple = []): EggTuple => {
+    return ([] as EggTuple).concat(appEggsLocal, pageEggs)
   }
 
   const getLocalFn = (fnOrProps: any = {}, isGetInitialProps = false) => {
@@ -53,7 +52,7 @@ export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggEx
   }
 
   return {
-    getAppWrapper(appEggs: EggTuple<any> = [], options: AppWrapperOptions<S> = {}) {
+    getAppWrapper(appEggs: EggTuple = [], options: AppWrapperOptions<S> = {}) {
       appEggsLocal = appEggs
 
       beforeResult = options.beforeResult
@@ -100,7 +99,7 @@ export function createWrapperInitializer<S extends WithEggExt<Store> = WithEggEx
       }
     },
 
-    getPageWrapper(pageEggs: EggTuple<any> = []): PageWrapper<S> {
+    getPageWrapper(pageEggs: EggTuple = []): PageWrapper<S> {
       const eggsConfigValue: EggsConfigValue = {}
 
       const wrap = (fnOrProps?: any) => {

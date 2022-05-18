@@ -1,30 +1,23 @@
-import type { compose, Middleware, MiddlewareAPI } from 'redux'
-
+import type { AnyFn, AnyMiddleware, MiddlewareTray } from '@/contracts'
 import { getCounter } from '@/counter'
 
 interface Item {
-  mid: Middleware
-  act: ReturnType<Middleware>
+  mid: AnyMiddleware
+  act: ReturnType<AnyMiddleware>
 }
 
-export interface MiddlewareTray {
-  mid: Middleware
-  add(middlewares: Middleware[]): void
-  remove(middlewares: Middleware[]): void
-}
-
-export const getMiddlewareTray = <T extends typeof compose = typeof compose>(composeMiddlewares: T): MiddlewareTray => {
-  const counter = getCounter<Middleware>()
+export const getMiddlewareTray = <T extends AnyFn = AnyFn>(middlewareComposer: T): MiddlewareTray => {
+  const counter = getCounter<AnyMiddleware>()
   let items: Item[] = []
-  let api: MiddlewareAPI
+  let api: any
 
   return {
-    mid(store): ReturnType<Middleware> {
-      api = store
-      return next => action => composeMiddlewares<Middleware>(...items.map(item => item.act))(next)(action)
+    dynamicMiddleware(middlewareApi: any): ReturnType<AnyMiddleware> {
+      api = middlewareApi
+      return next => action => middlewareComposer(...items.map(item => item.act))(next)(action)
     },
 
-    add(middlewaresToAdd: Middleware[]): void {
+    add(middlewaresToAdd: AnyMiddleware[]): void {
       middlewaresToAdd.forEach(mid => {
         if (!counter.getCount(mid)) {
           items.push({ mid, act: mid(api) })
@@ -34,7 +27,7 @@ export const getMiddlewareTray = <T extends typeof compose = typeof compose>(com
       })
     },
 
-    remove(middlewaresToRemove: Middleware[]): void {
+    remove(middlewaresToRemove: AnyMiddleware[]): void {
       middlewaresToRemove.forEach(mid => {
         if (counter.getCount(mid) === 1) {
           items = items.filter(item => mid !== item.mid)

@@ -1,4 +1,4 @@
-import { call, delay, put, select, takeLatest } from 'typed-redux-saga'
+import { call, delay, put, select, takeLatest } from 'redux-saga/effects'
 
 import type { JokeResponse } from '@/eggs/chuck-norris/contracts/api-response'
 import { ChuckNorrisLoadingState } from '@/eggs/chuck-norris/contracts/state'
@@ -7,31 +7,28 @@ import { ChuckNorrisPublicAction, ChuckNorrisReducerAction } from '@/eggs/chuck-
 import { fetchAsJson } from '@/utils/fetch-as-json'
 
 function* loadChuckNorrisJokeWorker() {
-  yield* put(ChuckNorrisReducerAction.setLoadingState(ChuckNorrisLoadingState.LOADING))
+  yield put(ChuckNorrisReducerAction.setLoadingState(ChuckNorrisLoadingState.LOADING))
 
-  const error = yield* select(errorSelector)
+  const error: ReturnType<typeof errorSelector> = yield select(errorSelector)
 
   if (error) {
-    yield* put(ChuckNorrisReducerAction.setError(undefined))
+    yield put(ChuckNorrisReducerAction.setError(undefined))
   }
 
-  yield* delay(1000)
+  yield delay(1000)
 
   try {
-    const joke = yield* call<(...args: Parameters<typeof fetchAsJson>) => Promise<JokeResponse>>(
-      fetchAsJson,
-      'https://api.chucknorris.io/jokes/random',
-    )
+    const joke: JokeResponse = yield call(fetchAsJson, 'https://api.chucknorris.io/jokes/random')
 
-    yield* put(ChuckNorrisReducerAction.setJoke(joke.value))
+    yield put(ChuckNorrisReducerAction.setJoke(joke.value))
   } catch (error: any) {
     console.error('[Error in `loadChuckNorrisJokeWorker`]', error)
-    yield* put(ChuckNorrisReducerAction.setError(error.message))
+    yield put(ChuckNorrisReducerAction.setError(error.message))
   } finally {
-    yield* put(ChuckNorrisReducerAction.setLoadingState(ChuckNorrisLoadingState.LOADED))
+    yield put(ChuckNorrisReducerAction.setLoadingState(ChuckNorrisLoadingState.LOADED))
   }
 }
 
 export function* loadChuckNorrisJokeWatcher() {
-  yield* takeLatest(ChuckNorrisPublicAction.loadJoke, loadChuckNorrisJokeWorker)
+  yield takeLatest(ChuckNorrisPublicAction.loadJoke, loadChuckNorrisJokeWorker)
 }

@@ -4,8 +4,6 @@ import type { AppStore } from '../../index'
 import { loadJoke } from './action-creators'
 import { CHUCK_NORRIS_REDUCER_KEY, chuckNorrisReducer } from './reducer'
 
-const log = console.log
-
 export const getChuckNorrisEgg = (): Egg<AppStore> => {
   return {
     id: 'chuck-norris',
@@ -16,7 +14,7 @@ export const getChuckNorrisEgg = (): Egg<AppStore> => {
       store.dispatch(loadJoke())
     },
     afterRemove() {
-      log('*** CHUCK NORRIS FOREVER ***')
+      console.log('*** CHUCK NORRIS FOREVER ***')
     },
   }
 }

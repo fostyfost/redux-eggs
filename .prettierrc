@@ -9,8 +9,5 @@
   "trailingComma": "all",
   "bracketSpacing": true,
   "bracketSameLine": false,
-  "arrowParens": "avoid",
-  "newline-before-return": true,
-  "no-duplicate-variable": [true, "check-parameters"],
-  "no-var-keyword": true
+  "arrowParens": "avoid"
 }

@@ -7,7 +7,7 @@ const config = {
   },
   preset: 'ts-jest',
   roots: ['<rootDir>/src/'],
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
 }
 
 module.exports = config

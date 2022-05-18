@@ -1,32 +1,17 @@
-import type { Middleware, Reducer } from 'redux'
-
-import type { Egg } from '@/contracts'
+import type { AnyMiddleware, AnyReducer, Egg, EggTray } from '@/contracts'
 import { getEggTray } from '@/egg-tray'
 
-const middleware1: Middleware = () => next => action => next(action)
-const middleware2: Middleware = () => next => action => next(action)
-const middleware3: Middleware = () => next => action => next(action)
-
-const reducer1: Reducer = () => ({ value: 1 })
-const reducer2: Reducer = () => ({ value: 2 })
-const reducer3: Reducer = () => ({ value: 3 })
-
 describe('Tests for eggs tray', () => {
-  const spyOnConsoleWarn = jest.spyOn(console, 'warn')
-  const spyOnConsoleError = jest.spyOn(console, 'error')
+  const middleware1: AnyMiddleware = () => next => action => next(action)
+  const middleware2: AnyMiddleware = () => next => action => next(action)
+  const middleware3: AnyMiddleware = () => next => action => next(action)
 
-  afterEach(() => {
-    expect(spyOnConsoleWarn).not.toBeCalled()
-    expect(spyOnConsoleError).not.toBeCalled()
-  })
-
-  afterAll(() => {
-    spyOnConsoleWarn.mockRestore()
-    spyOnConsoleError.mockRestore()
-  })
+  const reducer1: AnyReducer = () => ({ value: 1 })
+  const reducer2: AnyReducer = () => ({ value: 2 })
+  const reducer3: AnyReducer = () => ({ value: 3 })
 
   test('Eggs should be added to and removed from tray correctly', () => {
-    const tray = getEggTray()
+    const tray: EggTray = getEggTray()
 
     expect(tray.getItems()).toEqual([])
 
@@ -112,7 +97,7 @@ describe('Tests for eggs tray', () => {
   })
 
   test('Egg tray works correctly with eternal eggs', () => {
-    const tray = getEggTray()
+    const tray: EggTray = getEggTray()
 
     const egg1: Egg = {
       id: 'egg1',

@@ -3,10 +3,10 @@ import { createSelector } from 'reselect'
 import type { XkcdInfo } from './contracts/api-response'
 import type { XkcdAwareState, XkcdState } from './contracts/state'
 import { XkcdLoadingState } from './contracts/state'
-import { initialState, XKCD_REDUCER_KEY } from './reducer'
+import { XKCD_REDUCER_KEY } from './reducer'
 
 const stateSelector = (state: XkcdAwareState): XkcdState => {
-  return state[XKCD_REDUCER_KEY] ?? initialState
+  return state[XKCD_REDUCER_KEY]
 }
 
 export const xkcdInfoSelector = (state: XkcdAwareState): XkcdInfo | undefined => {

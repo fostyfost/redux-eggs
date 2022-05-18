@@ -1,14 +1,15 @@
+import path from 'node:path'
+import util from 'node:util'
+
 import brotli from 'brotli-size'
 import CliTable from 'cli-table'
 import { bold, cyan, green, red, white } from 'colorette'
 import fileSize from 'filesize'
 import fs from 'fs'
 import pacote from 'pacote'
-import path from 'path'
 import * as process from 'process'
 import type { NormalizedOutputOptions, OutputChunk, OutputPlugin } from 'rollup'
 import terser from 'terser'
-import util from 'util'
 import zlib from 'zlib'
 
 type FileSizeValue = number
@@ -112,7 +113,7 @@ const getStrings = async (outputOptions: NormalizedOutputOptions, chunk: OutputC
     file = ''
   }
 
-  if (file) {
+  if (file && (await util.promisify(fs.stat)(file)).isFile()) {
     try {
       const codeBefore = await util.promisify(fs.readFile)(file, 'utf8')
 

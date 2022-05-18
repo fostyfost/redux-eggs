@@ -1,4 +1,4 @@
-import type { EggTuple, WithEggExt } from '@redux-eggs/core'
+import type { EggExt, EggTuple } from '@redux-eggs/core'
 import type {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -17,6 +17,8 @@ import type { AppContext } from 'next/app'
 import type App from 'next/app'
 import type { Store } from 'redux'
 
+export type WithEggExt<S extends Store = Store> = S extends EggExt ? S : S & EggExt
+
 export type InferGetStaticPathsQueryType<Fn> = Fn extends GetStaticPaths<infer Query>
   ? Partial<Query>
   : Fn extends (context?: GetStaticPathsContext) => Promise<GetStaticPathsResult<infer Query>>
@@ -24,7 +26,7 @@ export type InferGetStaticPathsQueryType<Fn> = Fn extends GetStaticPaths<infer Q
   : never
 
 export interface AppWrapperOptions<
-  S extends WithEggExt<Store> = WithEggExt<Store>,
+  S extends WithEggExt = WithEggExt,
   C extends
     | GetStaticPropsContext<any>
     | GetServerSidePropsContext<any>
@@ -47,7 +49,7 @@ export interface BeforeResultExtraParams<
 }
 
 export type BeforeResult<
-  S extends WithEggExt<Store> = WithEggExt<Store>,
+  S extends WithEggExt = WithEggExt,
   C extends
     | GetStaticPropsContext<any>
     | GetServerSidePropsContext<any>
@@ -56,21 +58,17 @@ export type BeforeResult<
     | NextPageContext = any,
 > = (store: S, options: BeforeResultExtraParams<C>) => Promise<void>
 
-export type StaticPathsFn<S extends WithEggExt<Store> = WithEggExt<Store>> = (store: S) => GetStaticPaths
+export type StaticPathsFn<S extends WithEggExt = WithEggExt> = (store: S) => GetStaticPaths
 
-export type StaticPropsFn<S extends WithEggExt<Store> = WithEggExt<Store>> = (store: S) => GetStaticProps
+export type StaticPropsFn<S extends WithEggExt = WithEggExt> = (store: S) => GetStaticProps
 
-export type ServerSidePropsFn<S extends WithEggExt<Store> = WithEggExt<Store>> = (store: S) => GetServerSideProps
+export type ServerSidePropsFn<S extends WithEggExt = WithEggExt> = (store: S) => GetServerSideProps
 
-export type InitialAppPropsFn<S extends WithEggExt<Store> = WithEggExt<Store>> = (
-  store: S,
-) => typeof App['getInitialProps']
+export type InitialAppPropsFn<S extends WithEggExt = WithEggExt> = (store: S) => typeof App['getInitialProps']
 
-export type InitialPagePropsFn<S extends WithEggExt<Store> = WithEggExt<Store>> = (
-  store: S,
-) => NextPage['getInitialProps']
+export type InitialPagePropsFn<S extends WithEggExt = WithEggExt> = (store: S) => NextPage['getInitialProps']
 
-export interface AppWrapper<S extends WithEggExt<Store> = WithEggExt<Store>> {
+export interface AppWrapper<S extends WithEggExt = WithEggExt> {
   wrapGetInitialProps<Fn extends InitialAppPropsFn<S> = InitialAppPropsFn<S>>(
     fn: Fn,
   ): ReturnType<Fn> extends typeof App['getInitialProps'] ? Exclude<typeof App['getInitialProps'], undefined> : never
@@ -78,7 +76,7 @@ export interface AppWrapper<S extends WithEggExt<Store> = WithEggExt<Store>> {
   wrapApp<T extends NextComponentType<any, any, any> = NextComponentType<any, any, any>>(AppComponent: T): T
 }
 
-export interface PageWrapper<S extends WithEggExt<Store> = WithEggExt<Store>> {
+export interface PageWrapper<S extends WithEggExt = WithEggExt> {
   wrapGetStaticPaths<Fn extends StaticPathsFn<S> = StaticPathsFn<S>>(
     fn: Fn,
   ): GetStaticPaths<InferGetStaticPathsQueryType<ReturnType<Fn>>>
@@ -142,7 +140,7 @@ export interface WrapperInitializerOptions {
   hydrationActionType?: string
 }
 
-export interface WrapperInitializerResults<S extends WithEggExt<Store> = WithEggExt<Store>> {
-  getAppWrapper(eggs?: EggTuple<any>, options?: AppWrapperOptions<S>): AppWrapper<S>
-  getPageWrapper(eggs?: EggTuple<any>): PageWrapper<S>
+export interface WrapperInitializerResults<S extends WithEggExt = WithEggExt> {
+  getAppWrapper(eggs?: EggTuple, options?: AppWrapperOptions<S>): AppWrapper<S>
+  getPageWrapper(eggs?: EggTuple): PageWrapper<S>
 }

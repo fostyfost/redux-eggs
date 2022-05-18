@@ -1,11 +1,4 @@
-import type { CounterItem } from '@/contracts'
-
-export interface Counter<T = unknown> {
-  getCount(item: T): number
-  getItems(): CounterItem<T>[]
-  add(item: T): void
-  remove(item: T): void
-}
+import type { Counter, CounterItem } from '@/contracts'
 
 const defaultEqualityCheck = <T>(left: T, right: T): boolean => left === right
 

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": ["DOM", "ES2017"],
+    "lib": ["DOM", "ESNext"],
     "moduleResolution": "Node",
     "jsx": "react",
     "strict": true,

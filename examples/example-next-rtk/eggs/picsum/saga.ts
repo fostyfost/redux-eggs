@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest } from 'typed-redux-saga'
+import { call, put, select, takeLatest } from 'redux-saga/effects'
 
 import type { Picture } from '@/eggs/picsum/contracts/picture'
 import { PicsumLoadingState } from '@/eggs/picsum/contracts/state'
@@ -7,29 +7,26 @@ import { PicsumPublicAction, PicsumReducerAction } from '@/eggs/picsum/slice'
 import { fetchAsJson } from '@/utils/fetch-as-json'
 
 function* loadPicsumWorker() {
-  yield* put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADING))
+  yield put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADING))
 
-  const error = yield* select(errorSelector)
+  const error: ReturnType<typeof errorSelector> = yield select(errorSelector)
 
   if (error) {
-    yield* put(PicsumReducerAction.setError(undefined))
+    yield put(PicsumReducerAction.setError(undefined))
   }
 
   try {
-    const pics = yield* call<(...args: Parameters<typeof fetchAsJson>) => Promise<Picture[]>>(
-      fetchAsJson,
-      'https://picsum.photos/v2/list',
-    )
+    const pics: Picture[] = yield call(fetchAsJson, 'https://picsum.photos/v2/list')
 
-    yield* put(PicsumReducerAction.setPics(pics))
+    yield put(PicsumReducerAction.setPics(pics))
   } catch (error: any) {
     console.error('[Error in `loadPicsumWorker`]', error)
-    yield* put(PicsumReducerAction.setError(error.message))
+    yield put(PicsumReducerAction.setError(error.message))
   } finally {
-    yield* put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADED))
+    yield put(PicsumReducerAction.setLoadingState(PicsumLoadingState.LOADED))
   }
 }
 
 export function* loadPicsumWatcher() {
-  yield* takeLatest(PicsumPublicAction.loadPics, loadPicsumWorker)
+  yield takeLatest(PicsumPublicAction.loadPics, loadPicsumWorker)
 }

@@ -1,10 +1,10 @@
-import type { FC } from 'react'
+import type { FC, PropsWithChildren } from 'react'
 
 import { Count } from '@/components/count'
 import { Navigation } from '@/components/layout/navigation'
 import { Xkcd } from '@/components/xkcd'
 
-const Layout: FC = ({ children }) => {
+const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <p>

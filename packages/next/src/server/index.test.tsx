@@ -3,7 +3,7 @@
  */
 
 import type { Egg } from '@redux-eggs/core'
-import { createStore as createReduxStore, createStore } from '@redux-eggs/redux'
+import { createStore } from '@redux-eggs/redux'
 import type {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -1032,7 +1032,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       const pageWrapper = wrapperInitializer.getPageWrapper([egg5])
       const WrappedPage = pageWrapper.wrapPage(Page)
 
-      const result = await WrappedApp.getInitialProps?.({ Component: WrappedPage, ctx: {} } as any)
+      const result: any = await WrappedApp.getInitialProps?.({ Component: WrappedPage, ctx: {} } as any)
 
       expect(storeCreator).toBeCalledTimes(1)
       expect(Object.keys(result?.pageProps.__eggsState)).toEqual([
@@ -1468,7 +1468,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
 
     type NotAny<T, True, False = never> = true | false extends (T extends never ? true : false) ? False : True
 
-    const wrapperInitializer = createWrapperInitializer(createReduxStore)
+    const wrapperInitializer = createWrapperInitializer(createStore)
 
     describe('Get Static Props', () => {
       test('Mixed `StaticPropsFn` without types for `GSP`', async () => {

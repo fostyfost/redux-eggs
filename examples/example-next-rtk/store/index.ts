@@ -1,5 +1,4 @@
 import { createWrapperInitializer } from '@redux-eggs/next'
-import type { DefaultEnhancedStore } from '@redux-eggs/redux-toolkit'
 import { createStore } from '@redux-eggs/redux-toolkit'
 import { getSagaExtension } from '@redux-eggs/saga-extension'
 import type { AnyAction, ReducersMapObject } from '@reduxjs/toolkit'
@@ -12,7 +11,7 @@ import { effectTypes } from 'redux-saga/effects'
 import { StoreActionType } from '@/store/action-types'
 import { getLoggerExtension } from '@/store/logger-extension'
 
-const combiner = (reducersMap: ReducersMapObject) => {
+const reducerCombiner = (reducersMap: ReducersMapObject) => {
   const combinedReducer = combineReducers(reducersMap)
 
   return (state: any = {}, action: AnyAction) => {
@@ -36,9 +35,9 @@ const batchAllPuts: EffectMiddleware = next => effect => {
 }
 
 const createAppStore = () => {
-  return createStore<DefaultEnhancedStore & { test: number }>({
+  return createStore({
     extensions: [getSagaExtension({ effectMiddlewares: [batchAllPuts] }), getLoggerExtension()],
-    combiner,
+    reducerCombiner,
     devTools: { maxAge: 200 },
   })
 }

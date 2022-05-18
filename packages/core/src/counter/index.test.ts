@@ -1,4 +1,4 @@
-import type { CounterItem } from '@/contracts'
+import type { CounterItem, Egg } from '@/contracts'
 import { getCounter } from '@/counter'
 
 describe('Tests for counter', () => {
@@ -56,18 +56,9 @@ describe('Tests for counter', () => {
   })
 
   test('Counter works with strings and numbers', () => {
-    const data = {
-      value1: '1',
-      value2: 1,
-      value3: 'str',
-      value4: NaN,
-      value5: '0',
-      value6: 0,
-    }
+    const values = ['1', 1, 'str', NaN, '0', 0]
 
     const counter = getCounter<string | number>(Object.is)
-
-    const values = Object.values(data)
 
     values.forEach(value => {
       counter.add(value)
@@ -97,12 +88,6 @@ describe('Tests for counter', () => {
       counter.remove(value)
       expect(counter.getCount(value)).toBe(0)
     })
-    expect(counter.getItems()).toEqual([])
-
-    expect(counter.getCount(Number.NaN)).toBe(0)
-    expect(counter.getItems()).toEqual([])
-
-    expect(counter.getCount(NaN)).toBe(0)
     expect(counter.getItems()).toEqual([])
 
     counter.add(Number.NaN)
@@ -195,5 +180,58 @@ describe('Tests for counter', () => {
       expect(counter.getCount(item)).toBe(keepCheck(item) ? Infinity : 0)
     })
     expect(counter.getItems()).toEqual(values.map(value => mapper(value, 0)).filter(filter))
+  })
+
+  test('Counter works with symbols', () => {
+    const item1: Egg = { id: Symbol('1') }
+    const item2: Egg = { id: Symbol('2') }
+
+    const counter = getCounter<Egg>((left, right) => left.id === right.id)
+
+    expect(counter.getCount(item1)).toBe(0)
+    expect(counter.getItems()).toEqual([])
+
+    counter.add(item1)
+    expect(counter.getCount(item1)).toBe(1)
+    expect(counter.getItems()).toEqual([{ value: item1, count: 1 }])
+
+    counter.add(item2)
+    expect(counter.getCount(item1)).toBe(1)
+    expect(counter.getCount(item2)).toBe(1)
+    expect(counter.getItems()).toEqual([
+      { value: item1, count: 1 },
+      { value: item2, count: 1 },
+    ])
+
+    counter.add(item2)
+    expect(counter.getCount(item1)).toBe(1)
+    expect(counter.getCount(item2)).toBe(2)
+    expect(counter.getItems()).toEqual([
+      { value: item1, count: 1 },
+      { value: item2, count: 2 },
+    ])
+
+    counter.remove(item2)
+    expect(counter.getCount(item1)).toBe(1)
+    expect(counter.getCount(item2)).toBe(1)
+    expect(counter.getItems()).toEqual([
+      { value: item1, count: 1 },
+      { value: item2, count: 1 },
+    ])
+
+    counter.remove(item2)
+    expect(counter.getCount(item1)).toBe(1)
+    expect(counter.getCount(item2)).toBe(0)
+    expect(counter.getItems()).toEqual([{ value: item1, count: 1 }])
+
+    counter.remove(item2)
+    expect(counter.getCount(item1)).toBe(1)
+    expect(counter.getCount(item2)).toBe(0)
+    expect(counter.getItems()).toEqual([{ value: item1, count: 1 }])
+
+    counter.remove(item1)
+    expect(counter.getCount(item1)).toBe(0)
+    expect(counter.getCount(item2)).toBe(0)
+    expect(counter.getItems()).toEqual([])
   })
 })

@@ -1,37 +1,34 @@
-import type { AnyAction, combineReducers, Reducer, ReducersMapObject } from 'redux'
-
+import type {
+  AnyFn,
+  AnyReducer,
+  AnyReducersMapObject,
+  CombineAnyReducers,
+  ReducerEntry,
+  ReducerTray,
+} from '@/contracts'
 import { getCounter } from '@/counter'
+import { isNonEmptyArray } from '@/utils'
 
-export type ReducerEntry = [string, Reducer]
-
-export interface ReducersTray {
-  reducer: Reducer
-  add(entries: ReducerEntry[]): string[]
-  remove(entries: ReducerEntry[]): string[]
-}
-
-export const getReducerTray = <T extends typeof combineReducers = typeof combineReducers>(
-  reducerCombiner: T,
-): ReducersTray => {
+export const getReducerTray = <T extends AnyFn = CombineAnyReducers>(reducerCombiner: T): ReducerTray => {
   const counter = getCounter<string>()
-  const reducersMap: ReducersMapObject = {}
-  let combinedReducer: Reducer
+  const reducersMap: AnyReducersMapObject = {}
+  let combinedReducer: AnyReducer
   let keysToRemove: string[] = []
 
   return {
-    reducer(state: any = {}, action: AnyAction): Reducer {
+    dynamicReducer(state: any = {}, action: any): AnyReducer {
       let nextState = state
 
-      if (keysToRemove.length) {
-        nextState = Object.assign({}, state)
+      if (isNonEmptyArray(keysToRemove)) {
+        nextState = { ...state }
         keysToRemove.forEach(key => delete nextState[key])
         keysToRemove = []
       }
 
-      return (Object.keys(reducersMap).length ? combinedReducer : () => ({}))(nextState, action)
+      return (isNonEmptyArray(Object.keys(reducersMap)) ? combinedReducer : () => ({}))(nextState, action)
     },
 
-    add(entries: ReducerEntry[]): string[] {
+    add(entries: ReadonlyArray<ReducerEntry>): string[] {
       const addedKeys: string[] = []
 
       entries.forEach(([key, reducer]) => {
@@ -43,14 +40,14 @@ export const getReducerTray = <T extends typeof combineReducers = typeof combine
         counter.add(key)
       })
 
-      if (addedKeys.length) {
+      if (isNonEmptyArray(addedKeys)) {
         combinedReducer = reducerCombiner(reducersMap)
       }
 
       return addedKeys
     },
 
-    remove(entries: ReducerEntry[]): string[] {
+    remove(entries: ReadonlyArray<ReducerEntry>): string[] {
       entries.forEach(([key]) => {
         if (counter.getCount(key) === 1) {
           delete reducersMap[key]
@@ -60,7 +57,7 @@ export const getReducerTray = <T extends typeof combineReducers = typeof combine
         counter.remove(key)
       })
 
-      if (keysToRemove.length) {
+      if (isNonEmptyArray(keysToRemove)) {
         combinedReducer = reducerCombiner(reducersMap)
       }
 

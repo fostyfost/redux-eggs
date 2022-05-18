@@ -1,4 +1,4 @@
-import type { AppWrapperOptions } from '@redux-eggs/next/src/contracts'
+import type { AppWrapperOptions } from '@redux-eggs/next'
 import type { AppType } from 'next/dist/shared/lib/utils'
 import { END } from 'redux-saga'
 

@@ -2,10 +2,10 @@ import { createSelector } from 'reselect'
 
 import type { ChuckNorrisAwareState, ChuckNorrisState } from './contracts/state'
 import { ChuckNorrisLoadingState } from './contracts/state'
-import { CHUCK_NORRIS_REDUCER_KEY, initialState } from './reducer'
+import { CHUCK_NORRIS_REDUCER_KEY } from './reducer'
 
 const stateSelector = (state: ChuckNorrisAwareState): ChuckNorrisState => {
-  return state[CHUCK_NORRIS_REDUCER_KEY] ?? initialState
+  return state[CHUCK_NORRIS_REDUCER_KEY]
 }
 
 export const jokeSelector = (state: ChuckNorrisAwareState): string | undefined => {

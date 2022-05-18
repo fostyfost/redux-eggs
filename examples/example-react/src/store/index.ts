@@ -1,8 +1,8 @@
 import { createStore } from '@redux-eggs/redux'
 import { useDispatch } from 'react-redux'
-import type { AnyAction, Store } from 'redux'
+import type { AnyAction } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import type { ThunkAction, ThunkDispatch } from 'redux-thunk'
+import type { ThunkAction } from 'redux-thunk'
 
 import { getCommonEggs } from './eggs/common'
 import { getLoggerExtension } from './logger-extension'
@@ -16,9 +16,9 @@ export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, any, unknown, 
 
 export const useAppDispatch = () => useDispatch<AppDispatch>()
 
-const store = createStore<Store & { dispatch: ThunkDispatch<any, unknown, AnyAction> }>({
+const store = createStore({
   extensions: [getThunkExtension(), getLoggerExtension()],
-  composer: composeWithDevTools({ maxAge: 200 }),
+  enhancersComposer: composeWithDevTools({ maxAge: 200 }),
 })
 
 store.addEggs(getCommonEggs())

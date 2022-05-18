@@ -22,8 +22,20 @@ const terserOptions = {
   },
 }
 
-const getDefaultConfig = (tsOptions = {}) => ({
+const getDefaultConfig = (file, format, tsOptions = {}) => ({
   input: './src/index.ts',
+  output: {
+    file,
+    format,
+    generatedCode: {
+      preset: 'es2015',
+      symbols: false,
+    },
+    strict: false,
+    externalLiveBindings: false,
+    freeze: false,
+    interop: 'esModule',
+  },
   plugins: [
     peerDepsExternal({ includeDependencies: true }),
     eslint({
@@ -33,7 +45,7 @@ const getDefaultConfig = (tsOptions = {}) => ({
       exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
     }),
     ts({
-      browserslist: ['defaults'],
+      browserslist: false,
       include: ['src/**/*'],
       exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
       ...tsOptions,
@@ -44,25 +56,13 @@ const getDefaultConfig = (tsOptions = {}) => ({
 })
 
 const config = [
-  {
-    ...getDefaultConfig({
-      tsconfig: resolvedConfig => ({
-        ...resolvedConfig,
-        declaration: true,
-      }),
+  getDefaultConfig('./dist/index.js', 'cjs', {
+    tsconfig: resolvedConfig => ({
+      ...resolvedConfig,
+      declaration: true,
     }),
-    output: {
-      file: './dist/index.js',
-      format: 'cjs',
-    },
-  },
-  {
-    ...getDefaultConfig(),
-    output: {
-      file: './dist/index.es.js',
-      format: 'es',
-    },
-  },
+  }),
+  getDefaultConfig('./dist/index.es.js', 'es'),
 ]
 
 export default config

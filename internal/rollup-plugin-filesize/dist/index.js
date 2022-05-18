@@ -108,7 +108,7 @@ const getStrings = async (outputOptions, chunk) => {
         console.error(error);
         file = '';
     }
-    if (file) {
+    if (file && (await util__default["default"].promisify(fs__default["default"].stat)(file)).isFile()) {
         try {
             const codeBefore = await util__default["default"].promisify(fs__default["default"].readFile)(file, 'utf8');
             if (codeBefore) {

@@ -13,10 +13,6 @@ export const xkcdInfoTitleSelector = (state: XkcdAwareState): string | undefined
   return state[XKCD_REDUCER_KEY].info?.title
 }
 
-export const xkcdInfoNumSelector = (state: XkcdAwareState): number | undefined => {
-  return state[XKCD_REDUCER_KEY].info?.num
-}
-
 export const errorSelector = (state: XkcdAwareState): string | undefined => {
   return state[XKCD_REDUCER_KEY].error
 }

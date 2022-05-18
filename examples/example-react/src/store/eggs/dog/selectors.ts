@@ -2,10 +2,10 @@ import { createSelector } from 'reselect'
 
 import type { DogAwareState, DogState } from './contracts/state'
 import { DogLoadingState } from './contracts/state'
-import { DOG_REDUCER_KEY, initialState } from './reducer'
+import { DOG_REDUCER_KEY } from './reducer'
 
 const stateSelector = (state: DogAwareState): DogState => {
-  return state[DOG_REDUCER_KEY] ?? initialState
+  return state[DOG_REDUCER_KEY]
 }
 
 export const dogSelector = (state: DogAwareState): string | undefined => {

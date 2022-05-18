@@ -1,10 +1,11 @@
-import type { EggTuple } from '@redux-eggs/core'
+import type { EggTuple, RemoveAddedEggs } from '@redux-eggs/core'
 
 export interface EggsConfigValue {
   gspOrGsspDetected?: boolean
 }
 
 export interface EggsConfig {
-  __eggs?: EggTuple<any>
+  __eggs?: EggTuple
+  __eggsCleanup?: RemoveAddedEggs
   __eggsConfig?: EggsConfigValue
 }

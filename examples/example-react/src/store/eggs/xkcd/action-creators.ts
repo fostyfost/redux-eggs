@@ -28,7 +28,7 @@ export const loadXkcdInfo = (): AppThunk => {
 
     try {
       // Alternative api https://xkcd.com/${getRandomInteger(0, 1000)}/info.0.json
-      const info = await fetchAsJson<XkcdInfo>(`https://xkcd.now.sh/?comic=${getRandomInteger(0, 1000)}`)
+      const info = await fetchAsJson<XkcdInfo>(`https://xkcd.vercel.app/?comic=${getRandomInteger(0, 1000)}`)
 
       dispatch(XkcdReducerAction.setInfo(info))
     } catch (error: any) {

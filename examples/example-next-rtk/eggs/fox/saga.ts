@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest } from 'typed-redux-saga'
+import { call, put, select, takeLatest } from 'redux-saga/effects'
 
 import type { FoxResponse } from '@/eggs/fox/contracts/api-response'
 import { FoxLoadingState } from '@/eggs/fox/contracts/state'
@@ -7,29 +7,26 @@ import { FoxPublicAction, FoxReducerAction } from '@/eggs/fox/slice'
 import { fetchAsJson } from '@/utils/fetch-as-json'
 
 function* loadFoxWorker() {
-  yield* put(FoxReducerAction.setLoadingState(FoxLoadingState.LOADING))
+  yield put(FoxReducerAction.setLoadingState(FoxLoadingState.LOADING))
 
-  const error = yield* select(errorSelector)
+  const error: ReturnType<typeof errorSelector> = yield select(errorSelector)
 
   if (error) {
-    yield* put(FoxReducerAction.setError(undefined))
+    yield put(FoxReducerAction.setError(undefined))
   }
 
   try {
-    const res = yield* call<(...args: Parameters<typeof fetchAsJson>) => Promise<FoxResponse>>(
-      fetchAsJson,
-      'https://randomfox.ca/floof/',
-    )
+    const res: FoxResponse = yield call(fetchAsJson, 'https://randomfox.ca/floof/')
 
-    yield* put(FoxReducerAction.setFox(res.image))
+    yield put(FoxReducerAction.setFox(res.image))
   } catch (error: any) {
     console.error('[Error in `loadFoxWorker`]', error)
-    yield* put(FoxReducerAction.setError(error.message))
+    yield put(FoxReducerAction.setError(error.message))
   } finally {
-    yield* put(FoxReducerAction.setLoadingState(FoxLoadingState.LOADED))
+    yield put(FoxReducerAction.setLoadingState(FoxLoadingState.LOADED))
   }
 }
 
 export function* loadFoxWatcher() {
-  yield* takeLatest(FoxPublicAction.loadFox, loadFoxWorker)
+  yield takeLatest(FoxPublicAction.loadFox, loadFoxWorker)
 }

@@ -1,15 +1,11 @@
 import { getCounter } from '@redux-eggs/core'
 import type { Saga, SagaMiddleware, Task } from 'redux-saga'
 
+import type { SagaTray } from '@/contracts'
+
 interface Item {
   saga: Saga
   task: Task
-}
-
-export interface SagaTray {
-  getTasks(): Task[]
-  add(sagas: Saga[]): void
-  remove(sagas: Saga[]): void
 }
 
 export const getSagaTray = (sagaMiddleware: SagaMiddleware): SagaTray => {
@@ -37,6 +33,7 @@ export const getSagaTray = (sagaMiddleware: SagaMiddleware): SagaTray => {
         if (counter.getCount(saga) === 1) {
           items = items.filter(item => {
             const result = item.saga === saga
+
             if (result) {
               item.task.cancel()
             }

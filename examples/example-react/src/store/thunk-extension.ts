@@ -1,8 +1,9 @@
-import type { Extension } from '@redux-eggs/core/dist'
+import type { Extension } from '@redux-eggs/core'
+import type { ThunkMiddleware } from 'redux-thunk'
 import thunk from 'redux-thunk'
 
-export const getThunkExtension = (): Extension<any> => {
+export const getThunkExtension = (): Extension<ThunkMiddleware> => {
   return {
-    middlewares: [thunk],
+    middleware: thunk,
   }
 }

@@ -3,8 +3,7 @@
  */
 
 import type { Egg } from '@redux-eggs/core'
-import { REDUCE_ACTION_TYPE } from '@redux-eggs/core'
-import type { StoreCreatorOptions } from '@redux-eggs/redux'
+import type { CreateStoreOptions } from '@redux-eggs/redux'
 import { createStore } from '@redux-eggs/redux'
 import type { RenderResult } from '@testing-library/react'
 import { act, render } from '@testing-library/react'
@@ -20,7 +19,7 @@ import type { AppWrapperOptions } from '@/contracts'
 import type { EggsConfig } from '@/contracts-internal'
 
 describe('Next Eggs Wrapper tests (Client-side)', () => {
-  const createAnyStore = (options?: StoreCreatorOptions) => createStore(options)
+  const createAnyStore = (options?: CreateStoreOptions) => createStore(options)
 
   const getCombiner = (actionType = HYDRATE_ACTION_TYPE) => {
     return (reducersMap: ReducersMapObject) => {
@@ -112,7 +111,10 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     expect(spyOnAddEggs).toBeCalledTimes(1)
     expect(spyOnAddEggs).toBeCalledWith([egg1])
     expect(spyOnDispatch).toBeCalledTimes(2)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer1'] },
+    })
     expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: { test: 123 } })
 
     renderChecker.mockClear()
@@ -142,7 +144,10 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     expect(spyOnAddEggs).toBeCalledTimes(1)
     expect(spyOnAddEggs).toBeCalledWith([egg1])
     expect(spyOnDispatch).toBeCalledTimes(2)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer1'] },
+    })
     expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: { test: 123 } })
   })
 
@@ -169,7 +174,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
   describe('Tests for initial eggs concatenation, store creation and initial hydration', () => {
     describe('Wrapped App with GIP and Page with GIP', () => {
       test('Unwrapped page', async () => {
-        const store = createAnyStore({ combiner: getSimpleCombiner() })
+        const store = createAnyStore({ reducerCombiner: getSimpleCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -193,15 +198,14 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toBeUndefined()
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([])
+        expect(spyOnAddEggs).not.toBeCalled()
         expect(spyOnDispatch).toBeCalledTimes(1)
         expect(spyOnDispatch).toBeCalledWith({ type: HYDRATE_ACTION_TYPE, payload: { value: 'initial state' } })
         expect(Object.keys(store.getState())).toEqual([])
       })
 
       test('Eggs: `undefined`', async () => {
-        const store = createAnyStore({ combiner: getSimpleCombiner() })
+        const store = createAnyStore({ reducerCombiner: getSimpleCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -230,15 +234,14 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([])
+        expect(spyOnAddEggs).not.toBeCalled()
         expect(spyOnDispatch).toBeCalledTimes(1)
         expect(spyOnDispatch).toBeCalledWith({ type: HYDRATE_ACTION_TYPE, payload: { value: 'initial state' } })
         expect(Object.keys(store.getState())).toEqual([])
       })
 
       test('Eggs: `[]`', async () => {
-        const store = createAnyStore({ combiner: getSimpleCombiner() })
+        const store = createAnyStore({ reducerCombiner: getSimpleCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -267,15 +270,14 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([])
+        expect(spyOnAddEggs).not.toBeCalled()
         expect(spyOnDispatch).toBeCalledTimes(1)
         expect(spyOnDispatch).toBeCalledWith({ type: HYDRATE_ACTION_TYPE, payload: { value: 'initial state' } })
         expect(Object.keys(store.getState())).toEqual([])
       })
 
       test('Eggs: `Egg[]`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -306,16 +308,24 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([egg2, egg3])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([egg1, egg2, egg3])
-        expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
-        expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
+        expect(spyOnAddEggs).toBeCalledTimes(2)
+        expect(spyOnAddEggs).toBeCalledWith([egg1])
+        expect(spyOnAddEggs).toBeCalledWith([egg2, egg3])
+        expect(spyOnDispatch).toBeCalledTimes(3)
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer1'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(2, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer2', 'reducer3'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(3, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
 
       test('Eggs: `EggTuple`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -348,16 +358,24 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([[[egg4], [[[egg5]]]]])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([egg1, [egg2, egg3], [[egg4], [[[egg5]]]]])
-        expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
-        expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
+        expect(spyOnAddEggs).toBeCalledTimes(2)
+        expect(spyOnAddEggs).toBeCalledWith([egg1, [egg2, egg3]])
+        expect(spyOnAddEggs).toBeCalledWith([[[egg4], [[[egg5]]]]])
+        expect(spyOnDispatch).toBeCalledTimes(3)
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer1', 'reducer2', 'reducer3'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(2, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer4', 'reducer5'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(3, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
 
       test('Eggs: App eggs = `Egg[]`, Page eggs = `[]`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -389,13 +407,16 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         expect(spyOnAddEggs).toBeCalledTimes(1)
         expect(spyOnAddEggs).toBeCalledWith([egg1])
         expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer1'] },
+        })
         expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
 
       test('Eggs: App eggs = `[]`, Page eggs = `Egg[]`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -427,7 +448,10 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         expect(spyOnAddEggs).toBeCalledTimes(1)
         expect(spyOnAddEggs).toBeCalledWith([egg5])
         expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer5'] },
+        })
         expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
@@ -435,7 +459,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     describe('Wrapped App without GIP and Page with GIP', () => {
       test('Unwrapped page', async () => {
-        const store = createAnyStore({ combiner: getSimpleCombiner() })
+        const store = createAnyStore({ reducerCombiner: getSimpleCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -455,15 +479,14 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toBeUndefined()
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([])
+        expect(spyOnAddEggs).not.toBeCalled()
         expect(spyOnDispatch).toBeCalledTimes(1)
         expect(spyOnDispatch).toBeCalledWith({ type: HYDRATE_ACTION_TYPE, payload: { value: 'initial state' } })
         expect(Object.keys(store.getState())).toEqual([])
       })
 
       test('Eggs: `undefined`', async () => {
-        const store = createAnyStore({ combiner: getSimpleCombiner() })
+        const store = createAnyStore({ reducerCombiner: getSimpleCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -488,15 +511,14 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([])
+        expect(spyOnAddEggs).not.toBeCalled()
         expect(spyOnDispatch).toBeCalledTimes(1)
         expect(spyOnDispatch).toBeCalledWith({ type: HYDRATE_ACTION_TYPE, payload: { value: 'initial state' } })
         expect(Object.keys(store.getState())).toEqual([])
       })
 
       test('Eggs: `[]`', async () => {
-        const store = createAnyStore({ combiner: getSimpleCombiner() })
+        const store = createAnyStore({ reducerCombiner: getSimpleCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -521,15 +543,14 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([])
+        expect(spyOnAddEggs).not.toBeCalled()
         expect(spyOnDispatch).toBeCalledTimes(1)
         expect(spyOnDispatch).toBeCalledWith({ type: HYDRATE_ACTION_TYPE, payload: { value: 'initial state' } })
         expect(Object.keys(store.getState())).toEqual([])
       })
 
       test('Eggs: `Egg[]`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -556,16 +577,24 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([egg2, egg3])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([egg1, egg2, egg3])
-        expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
-        expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
+        expect(spyOnAddEggs).toBeCalledTimes(2)
+        expect(spyOnAddEggs).nthCalledWith(1, [egg1])
+        expect(spyOnAddEggs).nthCalledWith(2, [egg2, egg3])
+        expect(spyOnDispatch).toBeCalledTimes(3)
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer1'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(2, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer2', 'reducer3'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(3, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
 
       test('Eggs: `EggTuple`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -594,16 +623,24 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         })
 
         expect((Page as EggsConfig).__eggs).toEqual([[[egg4], [[[egg5]]]]])
-        expect(spyOnAddEggs).toBeCalledTimes(1)
-        expect(spyOnAddEggs).toBeCalledWith([egg1, [egg2, egg3], [[egg4], [[[egg5]]]]])
-        expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
-        expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
+        expect(spyOnAddEggs).toBeCalledTimes(2)
+        expect(spyOnAddEggs).nthCalledWith(1, [egg1, [egg2, egg3]])
+        expect(spyOnAddEggs).nthCalledWith(2, [[[egg4], [[[egg5]]]]])
+        expect(spyOnDispatch).toBeCalledTimes(3)
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer1', 'reducer2', 'reducer3'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(2, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer4', 'reducer5'] },
+        })
+        expect(spyOnDispatch).nthCalledWith(3, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
 
       test('Eggs: App eggs = `Egg[]`, Page eggs = `[]`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -631,13 +668,16 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         expect(spyOnAddEggs).toBeCalledTimes(1)
         expect(spyOnAddEggs).toBeCalledWith([egg1])
         expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer1'] },
+        })
         expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
 
       test('Eggs: App eggs = `[]`, Page eggs = `Egg[]`', async () => {
-        const store = createAnyStore({ combiner: getCombiner() })
+        const store = createAnyStore({ reducerCombiner: getCombiner() })
         const storeCreator = () => store
 
         const spyOnAddEggs = jest.spyOn(store, 'addEggs')
@@ -665,7 +705,10 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         expect(spyOnAddEggs).toBeCalledTimes(1)
         expect(spyOnAddEggs).toBeCalledWith([egg5])
         expect(spyOnDispatch).toBeCalledTimes(2)
-        expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+        expect(spyOnDispatch).nthCalledWith(1, {
+          type: '@@eggs/reduce',
+          payload: { method: 'add', reducers: ['reducer5'] },
+        })
         expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: getPageProps().__eggsState })
         expect(store.getState()).toEqual(getPageProps().__eggsState)
       })
@@ -757,7 +800,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     })
 
     test('Undefined `beforeResult` should be checked', async () => {
-      const store = createAnyStore({ combiner: getCombiner() })
+      const store = createAnyStore({ reducerCombiner: getCombiner() })
       const storeCreator = () => store
 
       const wrapperInitializer = createWrapperInitializer(storeCreator)
@@ -788,11 +831,10 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
   })
 
   test('When changing the page, the eggs of the previous page should be removed', () => {
-    const store = createAnyStore({ combiner: getCombiner() })
+    const store = createAnyStore({ reducerCombiner: getCombiner() })
     const storeCreator = () => store
 
     const spyOnAddEggs = jest.spyOn(store, 'addEggs')
-    const spyOnRemoveEggs = jest.spyOn(store, 'removeEggs')
     const spyOnDispatch = jest.spyOn(store, 'dispatch')
 
     const wrapperInitializer = createWrapperInitializer(storeCreator)
@@ -806,7 +848,6 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     const UnwrappedPage: NextPage = () => null
 
     expect(spyOnAddEggs).not.toBeCalled()
-    expect(spyOnRemoveEggs).not.toBeCalled()
     expect(spyOnDispatch).not.toBeCalled()
 
     let renderResult: RenderResult
@@ -821,12 +862,19 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
       )
     })
 
-    expect(spyOnAddEggs).toBeCalledTimes(1)
-    expect(spyOnAddEggs).toBeCalledWith([egg1, egg2])
-    expect(spyOnRemoveEggs).not.toBeCalled()
-    expect(spyOnDispatch).toBeCalledTimes(2)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnAddEggs).toBeCalledTimes(2)
+    expect(spyOnAddEggs).toBeCalledWith([egg1])
+    expect(spyOnAddEggs).toBeCalledWith([egg2])
+    expect(spyOnDispatch).toBeCalledTimes(3)
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer1'] },
+    })
     expect(spyOnDispatch).nthCalledWith(2, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer2'] },
+    })
+    expect(spyOnDispatch).nthCalledWith(3, {
       type: HYDRATE_ACTION_TYPE,
       payload: { reducer1: { value: 1 }, reducer2: { value: 1 } },
     })
@@ -845,16 +893,19 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     expect(spyOnAddEggs).toBeCalledTimes(1)
     expect(spyOnAddEggs).toBeCalledWith([egg3])
-    expect(spyOnRemoveEggs).toBeCalledTimes(1)
-    expect(spyOnRemoveEggs).toBeCalledWith([egg2])
     expect(spyOnDispatch).toBeCalledTimes(3)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer3'] },
+    })
     expect(spyOnDispatch).nthCalledWith(2, { type: HYDRATE_ACTION_TYPE, payload: nextState })
-    expect(spyOnDispatch).nthCalledWith(3, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(3, {
+      type: '@@eggs/reduce',
+      payload: { method: 'remove', reducers: ['reducer2'] },
+    })
     expect(store.getState()).toEqual({ reducer1: { value: 2 }, reducer3: { value: 2 } })
 
     spyOnAddEggs.mockClear()
-    spyOnRemoveEggs.mockClear()
     spyOnDispatch.mockClear()
 
     act(() => {
@@ -864,7 +915,6 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     })
 
     expect(spyOnAddEggs).not.toBeCalled()
-    expect(spyOnRemoveEggs).not.toBeCalled()
     expect(spyOnDispatch).not.toBeCalled()
     expect(store.getState()).toEqual({ reducer1: { value: 2 }, reducer3: { value: 2 } })
 
@@ -872,17 +922,17 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
       renderResult.rerender(<WrappedApp Component={UnwrappedPage} router={{} as any} pageProps={{}} />)
     })
 
-    expect(spyOnAddEggs).toBeCalledTimes(1)
-    expect(spyOnAddEggs).toBeCalledWith([])
-    expect(spyOnRemoveEggs).toBeCalledTimes(1)
-    expect(spyOnRemoveEggs).toBeCalledWith([egg3])
+    expect(spyOnAddEggs).not.toBeCalled()
     expect(spyOnDispatch).toBeCalledTimes(1)
-    expect(spyOnDispatch).toBeCalledWith({ type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).toBeCalledWith({
+      type: '@@eggs/reduce',
+      payload: { method: 'remove', reducers: ['reducer3'] },
+    })
     expect(store.getState()).toEqual({ reducer1: { value: 2 } })
   })
 
   test('GIP of wrapped App should not return initial props with store', async () => {
-    const store = createAnyStore({ combiner: getCombiner() })
+    const store = createAnyStore({ reducerCombiner: getCombiner() })
     const storeCreator = () => store
 
     const beforeResult = jest.fn()
@@ -909,7 +959,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
   })
 
   test('GIP of wrapped Page should not return initial props with store', async () => {
-    const store = createAnyStore({ combiner: getCombiner() })
+    const store = createAnyStore({ reducerCombiner: getCombiner() })
     const storeCreator = () => store
 
     const beforeResult = jest.fn()
@@ -937,7 +987,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
   })
 
   test('Non-initial hydration fires only for page without GIP', async () => {
-    const store = createAnyStore({ combiner: getCombiner() })
+    const store = createAnyStore({ reducerCombiner: getCombiner() })
     const storeCreator = () => store
 
     const spyOnDispatch = jest.spyOn(store, 'dispatch')
@@ -971,9 +1021,16 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
       )
     })
 
-    expect(spyOnDispatch).toBeCalledTimes(2)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).toBeCalledTimes(3)
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer1'] },
+    })
     expect(spyOnDispatch).nthCalledWith(2, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer2'] },
+    })
+    expect(spyOnDispatch).nthCalledWith(3, {
       type: HYDRATE_ACTION_TYPE,
       payload: { reducer1: { value: 1 }, reducer2: { value: 1 } },
     })
@@ -992,8 +1049,14 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     })
 
     expect(spyOnDispatch).toBeCalledTimes(2)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer3'] },
+    })
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer3'] },
+    })
 
     spyOnDispatch.mockClear()
 
@@ -1008,12 +1071,18 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     })
 
     expect(spyOnDispatch).toBeCalledTimes(3)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer2'] },
+    })
     expect(spyOnDispatch).nthCalledWith(2, {
       type: HYDRATE_ACTION_TYPE,
       payload: { reducer1: { value: 1 }, reducer2: { value: 1 } },
     })
-    expect(spyOnDispatch).nthCalledWith(3, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(3, {
+      type: '@@eggs/reduce',
+      payload: { method: 'remove', reducers: ['reducer3'] },
+    })
   })
 
   test('Undefined `InitialPagePropsFn` should work', async () => {
@@ -1107,7 +1176,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
   })
 
   test('`createWrapperInitializer` supports custom hydration action type', () => {
-    const store = createAnyStore({ combiner: getSimpleCombiner() })
+    const store = createAnyStore({ reducerCombiner: getSimpleCombiner() })
     const storeCreator = () => store
 
     const spyOnDispatch = jest.spyOn(store, 'dispatch')
@@ -1130,7 +1199,10 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     })
 
     expect(spyOnDispatch).toBeCalledTimes(2)
-    expect(spyOnDispatch).nthCalledWith(1, { type: REDUCE_ACTION_TYPE })
+    expect(spyOnDispatch).nthCalledWith(1, {
+      type: '@@eggs/reduce',
+      payload: { method: 'add', reducers: ['reducer1'] },
+    })
     expect(spyOnDispatch).nthCalledWith(2, { type: 'CUSTOM', payload: { reducer1: { value: 1 } } })
   })
 })

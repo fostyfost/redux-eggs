@@ -1,4 +1,4 @@
-import { withEggs } from '@redux-eggs/react'
+import { getInjector } from '@redux-eggs/react'
 import type { FC } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -25,7 +25,9 @@ const Joke: FC = () => {
   )
 }
 
-const ChuckNorrisPage: FC = withEggs([getChuckNorrisEgg()])(function ChuckNorrisPage() {
+const Injector = getInjector([getChuckNorrisEgg()])
+
+const ChuckNorrisPage: FC = () => {
   const isLoading = useSelector(isJokeLoading)
 
   return (
@@ -34,6 +36,12 @@ const ChuckNorrisPage: FC = withEggs([getChuckNorrisEgg()])(function ChuckNorris
       {isLoading ? <Loading /> : <Joke />}
     </div>
   )
-})
+}
 
-export default ChuckNorrisPage
+export default function Page() {
+  return (
+    <Injector.Wrapper>
+      <ChuckNorrisPage />
+    </Injector.Wrapper>
+  )
+}

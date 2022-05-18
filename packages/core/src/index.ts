@@ -1,3 +1,3 @@
 export * from '@/contracts'
+export * from '@/core'
 export * from '@/counter'
-export * from '@/store'

@@ -39,19 +39,15 @@ import { createWrapperInitializer } from '@redux-eggs/next'
 import { createStore } from '@redux-eggs/redux-toolkit'
 import { combineReducers } from '@reduxjs/toolkit'
 
-const combiner = reducersMap => {
+const reducerCombiner = (reducersMap: ReducersMapObject) => {
   const combinedReducer = combineReducers(reducersMap)
 
-  return (state = {}, action) => {
-    if (action.type === StoreActionType.HYDRATE && action.payload) {
-      return combinedReducer({ ...state, ...action.payload }, action)
-    }
-
-    return combinedReducer(state, action)
+  return (state: any = {}, action: AnyAction) => {
+    return combinedReducer(action.type === StoreActionType.HYDRATE ? { ...state, ...action.payload } : state, action)
   }
 }
 
-const createAppStore = () => createStore({ combiner })
+const createAppStore = () => createStore({ reducerCombiner })
 
 export const wrapperInitializer = createWrapperInitializer(createAppStore, {
   hydrationActionType: StoreActionType.HYDRATE,

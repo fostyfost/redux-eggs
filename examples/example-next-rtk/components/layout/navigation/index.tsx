@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import type { FC, MouseEventHandler } from 'react'
+import type { FC, MouseEventHandler, PropsWithChildren } from 'react'
 import { useState } from 'react'
 
 import styles from '@/components/layout/navigation/index.module.scss'
@@ -217,23 +217,9 @@ const groupedLinks: GroupedLink[] = [
       },
     ],
   },
-
-  {
-    id: 'aviasales',
-    items: [
-      {
-        href: '/aviasales/gip',
-        label: 'Aviasales page (with Get Initial Props)',
-      },
-      {
-        href: '/aviasales/gssp',
-        label: 'Aviasales page (with Get Server-side Props)',
-      },
-    ],
-  },
 ]
 
-const MenuButton: FC<MenuButtonProps> = ({ onClick, children }) => {
+const MenuButton: FC<PropsWithChildren<MenuButtonProps>> = ({ onClick, children }) => {
   return (
     <button type='button' onClick={onClick} className={styles.button}>
       {children}

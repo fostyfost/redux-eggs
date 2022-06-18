@@ -16,7 +16,7 @@
   "dependencies": {
     "brotli-size": "4.0.0",
     "cli-table": "0.3.11",
-    "colorette": "2.0.16",
+    "colorette": "2.0.19",
     "filesize": "8.0.7",
     "pacote": "13.0.2",
     "terser": "5.10.0"

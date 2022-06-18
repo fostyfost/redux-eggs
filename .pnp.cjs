@@ -3473,7 +3473,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rollup", null],\
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.16"],\
+            ["colorette", "npm:2.0.19"],\
             ["eslint", "npm:8.9.0"],\
             ["filesize", "npm:8.0.7"],\
             ["pacote", "npm:13.0.2"],\
@@ -3501,7 +3501,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/pacote", "npm:11.1.3"],\
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.16"],\
+            ["colorette", "npm:2.0.19"],\
             ["eslint", "npm:8.9.0"],\
             ["filesize", "npm:8.0.7"],\
             ["pacote", "npm:13.0.2"],\
@@ -6331,10 +6331,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["colorette", [\
-        ["npm:2.0.16", {\
-          "packageLocation": "./.yarn/cache/colorette-npm-2.0.16-7b996485d7-cd55596a3a.zip/node_modules/colorette/",\
+        ["npm:2.0.19", {\
+          "packageLocation": "./.yarn/cache/colorette-npm-2.0.19-f73dfe6a4e-888cf5493f.zip/node_modules/colorette/",\
           "packageDependencies": [\
-            ["colorette", "npm:2.0.16"]\
+            ["colorette", "npm:2.0.19"]\
           ],\
           "linkType": "HARD"\
         }]\

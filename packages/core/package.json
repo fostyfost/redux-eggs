@@ -35,7 +35,7 @@
     "@jest/types": "27.5.1",
     "@redux-eggs-internal/rollup-plugin-filesize": "1.0.0",
     "@rollup/plugin-eslint": "8.0.1",
-    "@types/jest": "27.4.0",
+    "@types/jest": "27.5.2",
     "cross-env": "7.0.3",
     "jest": "27.5.1",
     "redux": "4.1.2",

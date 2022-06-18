@@ -37,7 +37,7 @@
     "@redux-eggs/core": "2.2.0",
     "@reduxjs/toolkit": "1.7.2",
     "@rollup/plugin-eslint": "8.0.1",
-    "@types/jest": "27.4.0",
+    "@types/jest": "27.5.2",
     "cross-env": "7.0.3",
     "jest": "27.5.1",
     "redux": "4.1.2",

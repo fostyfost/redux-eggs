@@ -3648,7 +3648,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.11"],\
             ["@types/react-redux", "npm:7.1.22"],\
             ["@types/redux-eggs__core", null],\
-            ["@types/testing-library__jest-dom", "npm:5.14.2"],\
+            ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["cross-env", "npm:7.0.3"],\
             ["eslint", "npm:8.9.0"],\
             ["eslint-plugin-react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.28.0"],\
@@ -3694,7 +3694,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.11"],\
             ["@types/react-redux", "npm:7.1.20"],\
             ["@types/redux-eggs__core", null],\
-            ["@types/testing-library__jest-dom", "npm:5.14.2"],\
+            ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["cross-env", "npm:7.0.3"],\
             ["eslint", "npm:8.9.0"],\
             ["eslint-plugin-react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.28.0"],\
@@ -3739,7 +3739,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.11"],\
             ["@types/react-redux", "npm:7.1.22"],\
-            ["@types/testing-library__jest-dom", "npm:5.14.2"],\
+            ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["cross-env", "npm:7.0.3"],\
             ["eslint", "npm:8.9.0"],\
             ["eslint-plugin-react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.28.0"],\
@@ -4724,6 +4724,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-testing-library__jest-dom-npm-5.14.2-639cce59b8-e08715a565.zip/node_modules/@types/testing-library__jest-dom/",\
           "packageDependencies": [\
             ["@types/testing-library__jest-dom", "npm:5.14.2"],\
+            ["@types/jest", "npm:27.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.14.5", {\
+          "packageLocation": "./.yarn/cache/@types-testing-library__jest-dom-npm-5.14.5-251c4c9d75-dcb0541675.zip/node_modules/@types/testing-library__jest-dom/",\
+          "packageDependencies": [\
+            ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["@types/jest", "npm:27.0.3"]\
           ],\
           "linkType": "HARD"\

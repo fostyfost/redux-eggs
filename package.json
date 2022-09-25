@@ -42,7 +42,7 @@
     "eslint-config-prettier": "8.4.0",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-simple-import-sort": "8.0.0",
     "eslint-plugin-unicorn": "41.0.0",
     "husky": "7.0.4",
     "lerna": "4.0.0",

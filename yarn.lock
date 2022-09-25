@@ -2730,7 +2730,7 @@ __metadata:
     cli-table: 0.3.11
     colorette: 2.0.16
     eslint: 8.9.0
-    filesize: 8.0.7
+    filesize: 9.0.11
     pacote: 13.0.2
     rimraf: 3.0.2
     rollup: 2.67.3
@@ -6502,10 +6502,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filesize@npm:8.0.7":
-  version: 8.0.7
-  resolution: "filesize@npm:8.0.7"
-  checksum: 8603d27c5287b984cb100733640645e078f5f5ad65c6d913173e01fb99e09b0747828498fd86647685ccecb69be31f3587b9739ab1e50732116b2374aff4cbf9
+"filesize@npm:9.0.11":
+  version: 9.0.11
+  resolution: "filesize@npm:9.0.11"
+  checksum: 7e8a9f9a4089e3ee29de64c241b50db8db4008351ace959873cb950bac0c2e1e09f4b45f42eaed8acd589a895dde978ed199e7a9982902fa06ca0be48e5ea92d
   languageName: node
   linkType: hard
 

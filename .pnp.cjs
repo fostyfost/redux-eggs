@@ -3922,7 +3922,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:27.5.1"],\
             ["mitt", "npm:3.0.0"],\
             ["redux", "npm:4.1.2"],\
-            ["redux-saga", "npm:1.1.3"],\
+            ["redux-saga", "npm:1.2.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.67.3"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
@@ -3950,6 +3950,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript-tuple", "npm:2.2.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@redux-saga-core-npm-1.2.1-26e66f51bb-f44fbfe375.zip/node_modules/@redux-saga/core/",\
+          "packageDependencies": [\
+            ["@redux-saga/core", "npm:1.2.1"],\
+            ["@babel/runtime", "npm:7.16.3"],\
+            ["@redux-saga/deferred", "npm:1.2.1"],\
+            ["@redux-saga/delay-p", "npm:1.2.1"],\
+            ["@redux-saga/is", "npm:1.1.3"],\
+            ["@redux-saga/symbols", "npm:1.1.3"],\
+            ["@redux-saga/types", "npm:1.2.1"],\
+            ["redux", "npm:4.1.2"],\
+            ["typescript-tuple", "npm:2.2.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@redux-saga/deferred", [\
@@ -3957,6 +3972,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@redux-saga-deferred-npm-1.1.2-8cf2adb75c-98bc41ca1c.zip/node_modules/@redux-saga/deferred/",\
           "packageDependencies": [\
             ["@redux-saga/deferred", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@redux-saga-deferred-npm-1.2.1-ec57ca1b3b-2caca8d2fe.zip/node_modules/@redux-saga/deferred/",\
+          "packageDependencies": [\
+            ["@redux-saga/deferred", "npm:1.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3967,6 +3989,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-saga/delay-p", "npm:1.1.2"],\
             ["@redux-saga/symbols", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@redux-saga-delay-p-npm-1.2.1-aed55ef6d3-060533ce8b.zip/node_modules/@redux-saga/delay-p/",\
+          "packageDependencies": [\
+            ["@redux-saga/delay-p", "npm:1.2.1"],\
+            ["@redux-saga/symbols", "npm:1.1.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3980,6 +4010,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-saga/types", "npm:1.1.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.1.3", {\
+          "packageLocation": "./.yarn/cache/@redux-saga-is-npm-1.1.3-b810d8c710-8e24194d36.zip/node_modules/@redux-saga/is/",\
+          "packageDependencies": [\
+            ["@redux-saga/is", "npm:1.1.3"],\
+            ["@redux-saga/symbols", "npm:1.1.3"],\
+            ["@redux-saga/types", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@redux-saga/symbols", [\
@@ -3989,6 +4028,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-saga/symbols", "npm:1.1.2"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.1.3", {\
+          "packageLocation": "./.yarn/cache/@redux-saga-symbols-npm-1.1.3-d95f758fa4-65a8ea23c1.zip/node_modules/@redux-saga/symbols/",\
+          "packageDependencies": [\
+            ["@redux-saga/symbols", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@redux-saga/types", [\
@@ -3996,6 +4042,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@redux-saga-types-npm-1.1.0-2c2f416e43-e75a6ddc89.zip/node_modules/@redux-saga/types/",\
           "packageDependencies": [\
             ["@redux-saga/types", "npm:1.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@redux-saga-types-npm-1.2.1-e3cea8c4d4-754f183bd1.zip/node_modules/@redux-saga/types/",\
+          "packageDependencies": [\
+            ["@redux-saga/types", "npm:1.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13450,6 +13503,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["redux-saga", "npm:1.1.3"],\
             ["@redux-saga/core", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/redux-saga-npm-1.2.1-4875573c97-4253848b7f.zip/node_modules/redux-saga/",\
+          "packageDependencies": [\
+            ["redux-saga", "npm:1.2.1"],\
+            ["@redux-saga/core", "npm:1.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\

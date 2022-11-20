@@ -27,7 +27,7 @@
     "node": ">=16",
     "yarn": ">=3"
   },
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@3.3.0",
   "workspaces": [
     "examples/*",
     "internal/*",

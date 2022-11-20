@@ -46,7 +46,7 @@
     "@types/testing-library__jest-dom": "5.14.2",
     "cross-env": "7.0.3",
     "eslint": "8.9.0",
-    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.3.0",
     "jest": "27.5.1",
     "react": "17.0.2",

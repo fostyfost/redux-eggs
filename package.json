@@ -44,7 +44,7 @@
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "eslint-plugin-unicorn": "41.0.0",
-    "husky": "7.0.4",
+    "husky": "8.0.2",
     "lerna": "4.0.0",
     "prettier": "2.5.1",
     "pretty-quick": "3.1.3",

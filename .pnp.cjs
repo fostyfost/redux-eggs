@@ -4619,7 +4619,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.16"],\
-            ["eslint", "npm:8.9.0"],\
+            ["eslint", "npm:8.29.0"],\
             ["filesize", "npm:8.0.7"],\
             ["pacote", "npm:13.0.2"],\
             ["rimraf", "npm:3.0.2"],\
@@ -4647,7 +4647,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.16"],\
-            ["eslint", "npm:8.9.0"],\
+            ["eslint", "npm:8.29.0"],\
             ["filesize", "npm:8.0.7"],\
             ["pacote", "npm:13.0.2"],\
             ["rimraf", "npm:3.0.2"],\

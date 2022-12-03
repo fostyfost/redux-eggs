@@ -3497,7 +3497,7 @@ __metadata:
     brotli-size: 4.0.0
     cli-table: 0.3.11
     colorette: 2.0.16
-    eslint: 8.9.0
+    eslint: 8.29.0
     filesize: 8.0.7
     pacote: 13.0.2
     rimraf: 3.0.2

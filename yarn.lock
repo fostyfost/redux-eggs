@@ -3077,7 +3077,7 @@ __metadata:
     "@types/jest": 29.2.3
     "@types/node": 18.11.10
     "@types/react": 17.0.39
-    "@types/react-dom": 17.0.11
+    "@types/react-dom": 18.0.9
     "@types/react-redux": 7.1.24
     "@types/react-test-renderer": 17.0.2
     cross-env: 7.0.3
@@ -3122,7 +3122,7 @@ __metadata:
     "@testing-library/user-event": 14.4.3
     "@types/jest": 29.2.3
     "@types/react": 17.0.39
-    "@types/react-dom": 17.0.11
+    "@types/react-dom": 18.0.9
     "@types/react-redux": 7.1.24
     "@types/testing-library__jest-dom": 5.14.5
     cross-env: 7.0.3
@@ -3770,7 +3770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:*":
+"@types/react-dom@npm:*, @types/react-dom@npm:18.0.9":
   version: 18.0.9
   resolution: "@types/react-dom@npm:18.0.9"
   dependencies:

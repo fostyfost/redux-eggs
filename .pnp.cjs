@@ -3880,7 +3880,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.11"],\
             ["@types/react-redux", "npm:7.1.24"],\
-            ["@types/react-test-renderer", "npm:17.0.2"],\
+            ["@types/react-test-renderer", "npm:18.0.0"],\
             ["@types/redux-eggs__core", null],\
             ["cross-env", "npm:7.0.3"],\
             ["eslint", "npm:8.29.0"],\
@@ -3930,7 +3930,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.11"],\
             ["@types/react-redux", "npm:7.1.24"],\
-            ["@types/react-test-renderer", "npm:17.0.2"],\
+            ["@types/react-test-renderer", "npm:18.0.0"],\
             ["cross-env", "npm:7.0.3"],\
             ["eslint", "npm:8.29.0"],\
             ["eslint-plugin-react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.31.11"],\
@@ -4926,16 +4926,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["csstype", "npm:3.0.10"]\
           ],\
           "linkType": "HARD"\
-        }],\
-        ["npm:17.0.52", {\
-          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.52-5254858324-a51b98dd87.zip/node_modules/@types/react/",\
-          "packageDependencies": [\
-            ["@types/react", "npm:17.0.52"],\
-            ["@types/prop-types", "npm:15.7.4"],\
-            ["@types/scheduler", "npm:0.16.2"],\
-            ["csstype", "npm:3.0.10"]\
-          ],\
-          "linkType": "HARD"\
         }]\
       ]],\
       ["@types/react-dom", [\
@@ -4962,11 +4952,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/react-test-renderer", [\
-        ["npm:17.0.2", {\
-          "packageLocation": "./.yarn/cache/@types-react-test-renderer-npm-17.0.2-71899ad95b-0be325798b.zip/node_modules/@types/react-test-renderer/",\
+        ["npm:18.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-react-test-renderer-npm-18.0.0-159e9589e1-6afc938a1d.zip/node_modules/@types/react-test-renderer/",\
           "packageDependencies": [\
-            ["@types/react-test-renderer", "npm:17.0.2"],\
-            ["@types/react", "npm:17.0.52"]\
+            ["@types/react-test-renderer", "npm:18.0.0"],\
+            ["@types/react", "npm:17.0.37"]\
           ],\
           "linkType": "HARD"\
         }]\

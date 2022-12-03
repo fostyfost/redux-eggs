@@ -3073,7 +3073,7 @@ __metadata:
     "@redux-eggs/core": 2.2.0
     "@redux-eggs/redux": 2.2.0
     "@rollup/plugin-eslint": 9.0.1
-    "@testing-library/react": 12.1.3
+    "@testing-library/react": 13.4.0
     "@types/jest": 29.2.3
     "@types/node": 18.11.10
     "@types/react": 17.0.39
@@ -3118,7 +3118,7 @@ __metadata:
     "@rollup/plugin-eslint": 9.0.1
     "@testing-library/dom": 8.19.0
     "@testing-library/jest-dom": 5.16.5
-    "@testing-library/react": 12.1.3
+    "@testing-library/react": 13.4.0
     "@testing-library/user-event": 14.4.3
     "@types/jest": 29.2.3
     "@types/react": 17.0.39
@@ -3388,7 +3388,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:8.19.0, @testing-library/dom@npm:^8.0.0":
+"@testing-library/dom@npm:8.19.0, @testing-library/dom@npm:^8.5.0":
   version: 8.19.0
   resolution: "@testing-library/dom@npm:8.19.0"
   dependencies:
@@ -3421,17 +3421,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:12.1.3":
-  version: 12.1.3
-  resolution: "@testing-library/react@npm:12.1.3"
+"@testing-library/react@npm:13.4.0":
+  version: 13.4.0
+  resolution: "@testing-library/react@npm:13.4.0"
   dependencies:
     "@babel/runtime": ^7.12.5
-    "@testing-library/dom": ^8.0.0
-    "@types/react-dom": "*"
+    "@testing-library/dom": ^8.5.0
+    "@types/react-dom": ^18.0.0
   peerDependencies:
-    react: "*"
-    react-dom: "*"
-  checksum: 2f059e93dc3f161c4d15910d1fa80cd4f5cfb6eff8a733939a72ac720c2499b74761e8980c02983a6e49153b776e82bd770a1c3e66e05c4429db0e01612f7d0a
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 51ec548c1fdb1271089a5c63e0908f0166f2c7fcd9cacd3108ebbe0ce64cb4351812d885892020dc37608418cfb15698514856502b3cab0e5cc58d6cc1bd4a3e
   languageName: node
   linkType: hard
 
@@ -3770,21 +3770,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:*":
-  version: 18.0.9
-  resolution: "@types/react-dom@npm:18.0.9"
-  dependencies:
-    "@types/react": "*"
-  checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
-  languageName: node
-  linkType: hard
-
 "@types/react-dom@npm:17.0.11":
   version: 17.0.11
   resolution: "@types/react-dom@npm:17.0.11"
   dependencies:
     "@types/react": "*"
   checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.0.0":
+  version: 18.0.9
+  resolution: "@types/react-dom@npm:18.0.9"
+  dependencies:
+    "@types/react": "*"
+  checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
   languageName: node
   linkType: hard
 

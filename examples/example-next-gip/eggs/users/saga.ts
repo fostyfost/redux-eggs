@@ -17,7 +17,9 @@ function* loadUsersWorker() {
   }
 
   try {
-    const users: User[] = yield call(fetchAsJson, 'https://jsonplaceholder.typicode.com/users')
+    const users: User[] = yield call(() => {
+      return fetchAsJson<User[]>('https://jsonplaceholder.typicode.com/users')
+    })
 
     yield put(UsersReducerAction.setUsers(users))
   } catch (error: any) {

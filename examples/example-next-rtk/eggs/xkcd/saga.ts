@@ -24,10 +24,9 @@ function* loadXkcdInfoWorker() {
 
   try {
     // Alternative api https://xkcd.com/${getRandomInteger(0, 1000)}/info.0.json
-    const info = yield* call<(...args: Parameters<typeof fetchAsJson>) => Promise<XkcdInfo>>(
-      fetchAsJson,
-      `https://xkcd.now.sh/?comic=${getRandomInteger(0, 1000)}`,
-    )
+    const info = yield* call(() => {
+      return fetchAsJson<XkcdInfo>(`https://xkcd.now.sh/?comic=${getRandomInteger(0, 1000)}`)
+    })
 
     yield* put(XkcdReducerAction.setInfo(info))
   } catch (error: any) {

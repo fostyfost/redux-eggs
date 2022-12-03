@@ -16,10 +16,9 @@ function* loadPostsWorker() {
   }
 
   try {
-    const responseItems = yield* call<(...args: Parameters<typeof fetchAsJson>) => Promise<PostsResponseItem[]>>(
-      fetchAsJson,
-      'https://jsonplaceholder.typicode.com/posts',
-    )
+    const responseItems = yield* call(() => {
+      return fetchAsJson<PostsResponseItem[]>('https://jsonplaceholder.typicode.com/posts')
+    })
 
     yield* put(
       PostsReducerAction.setPosts(

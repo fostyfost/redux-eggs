@@ -11,7 +11,7 @@ export enum ChangeStopsMassive {
 }
 
 type MittEvents = {
-  [AviasalesEvent.GET_TICKETS]: string | undefined
+  [AviasalesEvent.GET_TICKETS]: string
   [AviasalesEvent.CHANGE_STOPS]: number | ChangeStopsMassive
 }
 

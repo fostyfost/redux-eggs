@@ -16,10 +16,9 @@ function* loadActivePostWorker({ payload }: ReturnType<typeof ActivePostPublicAc
   }
 
   try {
-    const responseItems = yield* call<(...args: Parameters<typeof fetchAsJson>) => Promise<ActivePostResponseItem[]>>(
-      fetchAsJson,
-      'https://jsonplaceholder.typicode.com/posts',
-    )
+    const responseItems = yield* call(() => {
+      return fetchAsJson<ActivePostResponseItem[]>('https://jsonplaceholder.typicode.com/posts')
+    })
 
     const post = responseItems.slice(0, 10).find(post => `${post.id}` === payload)
 

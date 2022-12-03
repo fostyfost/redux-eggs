@@ -17,7 +17,9 @@ function* loadDogWorker() {
   }
 
   try {
-    const res: DogResponse = yield call(fetchAsJson, 'https://dog.ceo/api/breeds/image/random')
+    const res: DogResponse = yield call(() => {
+      return fetchAsJson<DogResponse>('https://dog.ceo/api/breeds/image/random')
+    })
 
     if (res.status === 'success') {
       yield put(DogReducerAction.setDog(res.message))

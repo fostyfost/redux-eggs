@@ -17,7 +17,9 @@ function* loadPicsumWorker() {
   }
 
   try {
-    const pics: Picture[] = yield call(fetchAsJson, 'https://picsum.photos/v2/list')
+    const pics: Picture[] = yield call(() => {
+      return fetchAsJson<Picture[]>('https://picsum.photos/v2/list')
+    })
 
     yield put(PicsumReducerAction.setPics(pics))
   } catch (error: any) {

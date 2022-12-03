@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import * as React from 'react'
 import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
@@ -11,7 +10,7 @@ import NotFoundPage from './pages/not-found'
 const ChuckNorrisPage = lazy(() => import('./pages/chuck-norris'))
 const DogPage = lazy(() => import('./pages/dog'))
 
-export const App: FC = () => {
+export const App = () => {
   return (
     <div>
       <h1>Redux Eggs Simple Example</h1>

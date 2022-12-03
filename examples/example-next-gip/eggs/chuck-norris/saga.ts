@@ -19,7 +19,9 @@ function* loadChuckNorrisJokeWorker() {
   yield delay(1000)
 
   try {
-    const joke: JokeResponse = yield call(fetchAsJson, 'https://api.chucknorris.io/jokes/random')
+    const joke: JokeResponse = yield call(() => {
+      return fetchAsJson<JokeResponse>('https://api.chucknorris.io/jokes/random')
+    })
 
     yield put(ChuckNorrisReducerAction.setJoke(joke.value))
   } catch (error: any) {

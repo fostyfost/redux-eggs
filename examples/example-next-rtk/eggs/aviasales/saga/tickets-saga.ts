@@ -10,10 +10,8 @@ import { isAllTicketLoadedSelector } from '@/eggs/aviasales/selectors'
 import { AviasalesReducerAction } from '@/eggs/aviasales/slice'
 import { StoreActionType } from '@/store/action-types'
 
-type ChannelPayload = string | undefined
-
-const subscribe: Subscribe<ChannelPayload> = emitter => {
-  const handler: Handler<ChannelPayload> = payload => {
+const subscribe: Subscribe<string> = emitter => {
+  const handler: Handler<string> = payload => {
     if (typeof payload !== 'undefined') {
       emitter(payload)
     }
@@ -31,7 +29,7 @@ export function* ticketsSaga() {
   let channel
 
   if (typeof window !== 'undefined') {
-    channel = eventChannel<ChannelPayload>(subscribe, buffers.sliding(1))
+    channel = eventChannel<string>(subscribe, buffers.sliding(1))
 
     // На клиенте дождемся наступления гидратации или события в канале
     yield* race([take(StoreActionType.HYDRATE), take(channel)])

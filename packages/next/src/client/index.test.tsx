@@ -54,7 +54,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
   const egg4: Egg = { id: 'egg4', reducersMap: { reducer4: (state = {}) => state } }
   const egg5: Egg = { id: 'egg5', reducersMap: { reducer5: (state = {}) => state } }
 
-  test('Store is created once', () => {
+  test('Store is created once', async () => {
     const store = createAnyStore()
     const storeCreator = jest.fn(() => store)
 
@@ -67,12 +67,12 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     let renderResult1: RenderResult
     let renderResult2: RenderResult
 
-    act(() => {
+    await act(() => {
       renderResult1 = render(<WrappedApp1 Component={() => null} router={{} as any} pageProps={{}} />)
       renderResult2 = render(<WrappedApp2 Component={() => null} router={{} as any} pageProps={{}} />)
     })
 
-    act(() => {
+    await act(() => {
       renderResult1.rerender(<WrappedApp1 Component={() => null} router={{} as any} pageProps={{ test: 1 }} />)
       renderResult2.rerender(<WrappedApp2 Component={() => null} router={{} as any} pageProps={{ test: 2 }} />)
     })
@@ -80,7 +80,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     expect(storeCreator).toBeCalledTimes(1)
   })
 
-  test('Store is created once in React Strict Mode', () => {
+  test('Store is created once in React Strict Mode', async () => {
     const renderChecker = jest.fn()
 
     let store = createAnyStore()
@@ -103,7 +103,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const Page1: NextPage = () => null
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp1 Component={Page1} pageProps={{ __eggsState: { test: 123 } }} />)
     })
 
@@ -129,7 +129,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const Page2: NextPage = () => null
 
-    act(() => {
+    await act(() => {
       render(
         <React.StrictMode>
           <WrappedApp2 Component={Page2} pageProps={{ __eggsState: { test: 123 } }} />
@@ -186,7 +186,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         const pageWrapper = wrapperInitializer.getPageWrapper()
         Page.getInitialProps = pageWrapper.wrapGetInitialProps()
 
-        act(() => {
+        await act(() => {
           render(
             <WrappedApp Component={Page} router={{} as any} pageProps={{ __eggsState: { value: 'initial state' } }} />,
           )
@@ -219,7 +219,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         Page.getInitialProps = pageWrapper.wrapGetInitialProps()
         const WrappedPage = pageWrapper.wrapPage(Page)
 
-        act(() => {
+        await act(() => {
           render(
             <WrappedApp
               Component={WrappedPage}
@@ -256,7 +256,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         Page.getInitialProps = pageWrapper.wrapGetInitialProps()
         const WrappedPage = pageWrapper.wrapPage(Page)
 
-        act(() => {
+        await act(() => {
           render(
             <WrappedApp
               Component={WrappedPage}
@@ -301,7 +301,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -343,7 +343,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -381,7 +381,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -419,7 +419,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -448,7 +448,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         const pageWrapper = wrapperInitializer.getPageWrapper()
         Page.getInitialProps = pageWrapper.wrapGetInitialProps()
 
-        act(() => {
+        await act(() => {
           render(
             <WrappedApp Component={Page} router={{} as any} pageProps={{ __eggsState: { value: 'initial state' } }} />,
           )
@@ -477,7 +477,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         Page.getInitialProps = pageWrapper.wrapGetInitialProps()
         const WrappedPage = pageWrapper.wrapPage(Page)
 
-        act(() => {
+        await act(() => {
           render(
             <WrappedApp
               Component={WrappedPage}
@@ -510,7 +510,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
         Page.getInitialProps = pageWrapper.wrapGetInitialProps()
         const WrappedPage = pageWrapper.wrapPage(Page)
 
-        act(() => {
+        await act(() => {
           render(
             <WrappedApp
               Component={WrappedPage}
@@ -551,7 +551,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -589,7 +589,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -623,7 +623,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -657,7 +657,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
           },
         })
 
-        act(() => {
+        await act(() => {
           render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={getPageProps()} />)
         })
 
@@ -695,7 +695,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
       expect(beforeResult).not.toBeCalled()
       expect(beforeResult).not.toBeCalled()
 
-      act(() => {
+      await act(() => {
         render(
           <WrappedApp
             Component={() => null}
@@ -736,7 +736,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
       expect(storeCreator).not.toBeCalled()
       expect(beforeResult).not.toBeCalled()
 
-      act(() => {
+      await act(() => {
         render(
           <WrappedApp
             Component={() => null}
@@ -777,7 +777,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
       App.getInitialProps = appWrapper.wrapGetInitialProps(() => context => NextApp.getInitialProps(context))
       const WrappedApp: AppType = appWrapper.wrapApp(App)
 
-      act(() => {
+      await act(() => {
         render(<WrappedApp Component={Page} router={{} as any} pageProps={{}} />)
       })
 
@@ -787,7 +787,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     })
   })
 
-  test('When changing the page, the eggs of the previous page should be removed', () => {
+  test('When changing the page, the eggs of the previous page should be removed', async () => {
     const store = createAnyStore({ combiner: getCombiner() })
     const storeCreator = () => store
 
@@ -811,7 +811,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     let renderResult: RenderResult
 
-    act(() => {
+    await act(() => {
       renderResult = render(
         <WrappedApp
           Component={WrappedPage1}
@@ -837,7 +837,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const nextState = { reducer1: { value: 2 }, reducer3: { value: 2 } }
 
-    act(() => {
+    await act(() => {
       renderResult.rerender(
         <WrappedApp Component={WrappedPage2} router={{} as any} pageProps={{ __eggsState: nextState }} />,
       )
@@ -857,7 +857,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     spyOnRemoveEggs.mockClear()
     spyOnDispatch.mockClear()
 
-    act(() => {
+    await act(() => {
       renderResult.rerender(
         <WrappedApp Component={WrappedPage2} router={{ asPath: '#' } as any} pageProps={{ __eggsState: nextState }} />,
       )
@@ -868,7 +868,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     expect(spyOnDispatch).not.toBeCalled()
     expect(store.getState()).toEqual({ reducer1: { value: 2 }, reducer3: { value: 2 } })
 
-    act(() => {
+    await act(() => {
       renderResult.rerender(<WrappedApp Component={UnwrappedPage} router={{} as any} pageProps={{}} />)
     })
 
@@ -894,7 +894,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     App.getInitialProps = appWrapper.wrapGetInitialProps(() => context => NextApp.getInitialProps(context))
     const WrappedApp: AppType = appWrapper.wrapApp(App)
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp Component={() => null} router={{} as any} pageProps={{}} />)
     })
 
@@ -923,7 +923,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     Page.getInitialProps = pageWrapper.wrapGetInitialProps(() => () => ({ test: 123 }))
     const WrappedPage = pageWrapper.wrapPage(Page)
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp Component={WrappedPage} router={{} as any} pageProps={{}} />)
     })
 
@@ -961,7 +961,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     let renderResult: RenderResult
 
-    act(() => {
+    await act(() => {
       renderResult = render(
         <WrappedApp
           Component={WrappedPage1}
@@ -985,7 +985,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     const result = await WrappedApp.getInitialProps?.({ Component: WrappedPage2, ctx: { isApp: true } } as any)
     expect(result).toEqual({ pageProps: { test: 123 } })
 
-    act(() => {
+    await act(() => {
       renderResult.rerender(
         <WrappedApp Component={WrappedPage2} router={{} as any} pageProps={{ __eggsState: nextState }} />,
       )
@@ -997,7 +997,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     spyOnDispatch.mockClear()
 
-    act(() => {
+    await act(() => {
       renderResult.rerender(
         <WrappedApp
           Component={WrappedPage1}
@@ -1021,7 +1021,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const WrappedApp: AppType = wrapperInitializer.getAppWrapper().wrapApp(() => null)
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp Component={() => null} router={{} as any} pageProps={{}} />)
     })
 
@@ -1039,7 +1039,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const WrappedApp: AppType = wrapperInitializer.getAppWrapper().wrapApp(() => null)
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp Component={() => null} router={{} as any} pageProps={{}} />)
     })
 
@@ -1057,7 +1057,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const WrappedApp: AppType = wrapperInitializer.getAppWrapper().wrapApp(() => null)
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp Component={() => null} router={{} as any} pageProps={{}} />)
     })
 
@@ -1075,7 +1075,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const WrappedApp: AppType = wrapperInitializer.getAppWrapper().wrapApp(() => null)
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp Component={() => null} router={{} as any} pageProps={{}} />)
     })
 
@@ -1093,7 +1093,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
 
     const WrappedApp: AppType = wrapperInitializer.getAppWrapper().wrapApp(() => null)
 
-    act(() => {
+    await act(() => {
       render(<WrappedApp Component={() => null} router={{} as any} pageProps={{}} />)
     })
 
@@ -1106,7 +1106,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     expect(result).toEqual({ test: 123 })
   })
 
-  test('`createWrapperInitializer` supports custom hydration action type', () => {
+  test('`createWrapperInitializer` supports custom hydration action type', async () => {
     const store = createAnyStore({ combiner: getSimpleCombiner() })
     const storeCreator = () => store
 
@@ -1119,7 +1119,7 @@ describe('Next Eggs Wrapper tests (Client-side)', () => {
     App.getInitialProps = appWrapper.wrapGetInitialProps(() => context => NextApp.getInitialProps(context))
     const WrappedApp = appWrapper.wrapApp(App)
 
-    act(() => {
+    await act(() => {
       render(
         <WrappedApp
           Component={() => null}

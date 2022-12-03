@@ -1,13 +1,11 @@
 import type { EggTuple, RemoveAddedEggs } from '@redux-eggs/core'
 import type { WithEggExt } from '@redux-eggs/core'
-import type { FC } from 'react'
+import type { FC, PropsWithChildren } from 'react'
 import React from 'react'
 import { useStore } from 'react-redux'
 
-// TODO: Check React 18 compat
-
 export interface InjectorResult {
-  Wrapper: FC
+  Wrapper: FC<PropsWithChildren>
 }
 
 export const getInjector = (eggs: EggTuple<any>): InjectorResult => {
@@ -15,7 +13,7 @@ export const getInjector = (eggs: EggTuple<any>): InjectorResult => {
     get() {
       let removeFn: RemoveAddedEggs | undefined
 
-      const Wrapper: FC = ({ children }) => {
+      const Wrapper: FC<PropsWithChildren> = ({ children }) => {
         const store = useStore() as WithEggExt<ReturnType<typeof useStore>>
 
         if (!removeFn) {

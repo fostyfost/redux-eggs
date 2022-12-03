@@ -995,7 +995,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
       expect(WrappedAppClassWithoutGip.getInitialProps).toBe(NextApp.getInitialProps)
     })
 
-    test('App renders React-Redux Provider', () => {
+    test('App renders React-Redux Provider', async () => {
       const store = createAnyStore()
       const storeCreator = () => store
 
@@ -1005,7 +1005,7 @@ describe('Next Eggs Wrapper tests (Server-side)', () => {
 
       let renderer = TestRenderer.create(<></>)
 
-      TestRenderer.act(() => {
+      await TestRenderer.act(() => {
         renderer = TestRenderer.create(<WrappedApp />)
       })
 

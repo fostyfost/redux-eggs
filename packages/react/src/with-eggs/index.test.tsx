@@ -50,7 +50,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(withEggs([])(() => null).displayName).toBe('withEggs(Component)')
   })
 
-  test('HOC should work correctly with mount, rerender and unmount', () => {
+  test('HOC should work correctly with mount, rerender and unmount', async () => {
     const store = createAnyStore()
 
     let rendersCount = 0
@@ -83,7 +83,7 @@ describe('Tests for WithEggs HOC', () => {
       )
     }
 
-    act(() => {
+    await act(() => {
       render(
         <Provider store={store}>
           <Component />
@@ -98,8 +98,8 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg1)).toBe(1)
     expect(store.getEggCount(egg2)).toBe(1)
 
-    act(() => userEvent.click(screen.getByText(/Rerender 0/i)))
-    act(() => userEvent.click(screen.getByText(/Rerender 1/i)))
+    await act(() => userEvent.click(screen.getByText(/Rerender 0/i)))
+    await act(() => userEvent.click(screen.getByText(/Rerender 1/i)))
 
     expect(rendersCount).toBe(3)
     expect(screen.getByText('Rerender 2')).toBeInTheDocument()
@@ -108,7 +108,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg1)).toBe(1)
     expect(store.getEggCount(egg2)).toBe(1)
 
-    act(() => userEvent.click(screen.getByText(/Mount 2/i)))
+    await act(() => userEvent.click(screen.getByText(/Mount 2/i)))
 
     expect(rendersCount).toBe(4)
     expect(screen.getByText('Rerender 2')).toBeInTheDocument()
@@ -117,7 +117,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg1)).toBe(2)
     expect(store.getEggCount(egg2)).toBe(2)
 
-    act(() => userEvent.click(screen.getByText(/Unmount 1/i)))
+    await act(() => userEvent.click(screen.getByText(/Unmount 1/i)))
 
     expect(rendersCount).toBe(5)
     expect(screen.getByText('Rerender 2')).toBeInTheDocument()
@@ -126,7 +126,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg1)).toBe(1)
     expect(store.getEggCount(egg2)).toBe(1)
 
-    act(() => userEvent.click(screen.getByText(/Unmount 2/i)))
+    await act(() => userEvent.click(screen.getByText(/Unmount 2/i)))
 
     expect(rendersCount).toBe(6)
     expect(screen.getByText('Rerender 2')).toBeInTheDocument()
@@ -136,7 +136,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg2)).toBe(0)
   })
 
-  test('HOC should support React Strict Mode', () => {
+  test('HOC should support React Strict Mode', async () => {
     const store = createAnyStore()
 
     let rendersCount = 0
@@ -167,7 +167,7 @@ describe('Tests for WithEggs HOC', () => {
       )
     }
 
-    act(() => {
+    await act(() => {
       render(
         <React.StrictMode>
           <Provider store={store}>
@@ -183,7 +183,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg1)).toBe(1)
     expect(store.getEggCount(egg2)).toBe(1)
 
-    act(() => userEvent.click(screen.getByText(/Mount 2/i)))
+    await act(() => userEvent.click(screen.getByText(/Mount 2/i)))
 
     expect(rendersCount).toBe(4)
     expect(screen.getAllByText('find-me-1')).toHaveLength(2)
@@ -191,7 +191,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg1)).toBe(2)
     expect(store.getEggCount(egg2)).toBe(2)
 
-    act(() => userEvent.click(screen.getByText(/Unmount 1/i)))
+    await act(() => userEvent.click(screen.getByText(/Unmount 1/i)))
 
     expect(rendersCount).toBe(6)
     expect(screen.getAllByText('find-me-1')).toHaveLength(1)
@@ -199,7 +199,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg1)).toBe(1)
     expect(store.getEggCount(egg2)).toBe(1)
 
-    act(() => userEvent.click(screen.getByText(/Unmount 2/i)))
+    await act(() => userEvent.click(screen.getByText(/Unmount 2/i)))
 
     expect(rendersCount).toBe(8)
     expect(screen.queryByText('find-me-1')).not.toBeInTheDocument()
@@ -208,7 +208,7 @@ describe('Tests for WithEggs HOC', () => {
     expect(store.getEggCount(egg2)).toBe(0)
   })
 
-  test('HOC should clean up eggs', () => {
+  test('HOC should clean up eggs', async () => {
     const store = createAnyStore()
     const originalAddEggs = store.addEggs
 
@@ -248,7 +248,7 @@ describe('Tests for WithEggs HOC', () => {
 
     spyOnAddEggs.mockClear()
 
-    act(() => userEvent.click(screen.getByText(/Unmount/i)))
+    await act(() => userEvent.click(screen.getByText(/Unmount/i)))
 
     expect(spyOnAddEggs).not.toBeCalled()
     expect(spyOnRemoveEggs).toBeCalledTimes(1)

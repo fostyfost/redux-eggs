@@ -3298,13 +3298,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@npmcli/node-gyp", [\
-        ["npm:1.0.3", {\
-          "packageLocation": "./.yarn/cache/@npmcli-node-gyp-npm-1.0.3-678a56ae5b-496d5eef2e.zip/node_modules/@npmcli/node-gyp/",\
-          "packageDependencies": [\
-            ["@npmcli/node-gyp", "npm:1.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/@npmcli-node-gyp-npm-2.0.0-411b1e0bad-b6bbf00150.zip/node_modules/@npmcli/node-gyp/",\
           "packageDependencies": [\
@@ -3342,17 +3335,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@npmcli/run-script", [\
-        ["npm:2.0.0", {\
-          "packageLocation": "./.yarn/cache/@npmcli-run-script-npm-2.0.0-244659a556-c016ea9411.zip/node_modules/@npmcli/run-script/",\
-          "packageDependencies": [\
-            ["@npmcli/run-script", "npm:2.0.0"],\
-            ["@npmcli/node-gyp", "npm:1.0.3"],\
-            ["@npmcli/promise-spawn", "npm:1.3.2"],\
-            ["node-gyp", "npm:8.4.1"],\
-            ["read-package-json-fast", "npm:2.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:4.2.1", {\
           "packageLocation": "./.yarn/cache/@npmcli-run-script-npm-4.2.1-6bd9c817c8-7b8d667635.zip/node_modules/@npmcli/run-script/",\
           "packageDependencies": [\
@@ -3813,7 +3795,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:2.0.16"],\
             ["eslint", "npm:8.9.0"],\
             ["filesize", "npm:8.0.7"],\
-            ["pacote", "npm:13.0.2"],\
+            ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.67.3"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
@@ -3841,7 +3823,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:2.0.16"],\
             ["eslint", "npm:8.9.0"],\
             ["filesize", "npm:8.0.7"],\
-            ["pacote", "npm:13.0.2"],\
+            ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.67.3"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
@@ -10351,14 +10333,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ignore-walk", [\
-        ["npm:4.0.1", {\
-          "packageLocation": "./.yarn/cache/ignore-walk-npm-4.0.1-e301e7e75f-903cd5cb68.zip/node_modules/ignore-walk/",\
-          "packageDependencies": [\
-            ["ignore-walk", "npm:4.0.1"],\
-            ["minimatch", "npm:3.0.4"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:5.0.1", {\
           "packageLocation": "./.yarn/cache/ignore-walk-npm-5.0.1-58258fb4ca-1a4ef35174.zip/node_modules/ignore-walk/",\
           "packageDependencies": [\
@@ -13190,17 +13164,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["npm-packlist", [\
-        ["npm:3.0.0", {\
-          "packageLocation": "./.yarn/cache/npm-packlist-npm-3.0.0-9671ff7386-8550ecdec5.zip/node_modules/npm-packlist/",\
-          "packageDependencies": [\
-            ["npm-packlist", "npm:3.0.0"],\
-            ["glob", "npm:7.2.0"],\
-            ["ignore-walk", "npm:4.0.1"],\
-            ["npm-bundled", "npm:1.1.2"],\
-            ["npm-normalize-package-bin", "npm:1.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:5.1.3", {\
           "packageLocation": "./.yarn/cache/npm-packlist-npm-5.1.3-16be2a45cc-94cc9c6674.zip/node_modules/npm-packlist/",\
           "packageDependencies": [\
@@ -13764,34 +13727,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["pacote", [\
-        ["npm:13.0.2", {\
-          "packageLocation": "./.yarn/cache/pacote-npm-13.0.2-f524a81012-8949bc0c4e.zip/node_modules/pacote/",\
-          "packageDependencies": [\
-            ["pacote", "npm:13.0.2"],\
-            ["@npmcli/git", "npm:3.0.0"],\
-            ["@npmcli/installed-package-contents", "npm:1.0.7"],\
-            ["@npmcli/promise-spawn", "npm:1.3.2"],\
-            ["@npmcli/run-script", "npm:2.0.0"],\
-            ["cacache", "npm:15.3.0"],\
-            ["chownr", "npm:2.0.0"],\
-            ["fs-minipass", "npm:2.1.0"],\
-            ["infer-owner", "npm:1.0.4"],\
-            ["minipass", "npm:3.1.6"],\
-            ["mkdirp", "npm:1.0.4"],\
-            ["npm-package-arg", "npm:9.0.0"],\
-            ["npm-packlist", "npm:3.0.0"],\
-            ["npm-pick-manifest", "npm:7.0.0"],\
-            ["npm-registry-fetch", "npm:13.0.0"],\
-            ["proc-log", "npm:2.0.0"],\
-            ["promise-retry", "npm:2.0.1"],\
-            ["read-package-json", "npm:4.1.1"],\
-            ["read-package-json-fast", "npm:2.0.3"],\
-            ["rimraf", "npm:3.0.2"],\
-            ["ssri", "npm:8.0.1"],\
-            ["tar", "npm:6.1.11"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:13.6.2", {\
           "packageLocation": "./.yarn/cache/pacote-npm-13.6.2-1018a3151b-a7b7f97094.zip/node_modules/pacote/",\
           "packageDependencies": [\
@@ -14688,17 +14623,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["read-package-json", [\
-        ["npm:4.1.1", {\
-          "packageLocation": "./.yarn/cache/read-package-json-npm-4.1.1-7696cd1b3e-d95f6e9747.zip/node_modules/read-package-json/",\
-          "packageDependencies": [\
-            ["read-package-json", "npm:4.1.1"],\
-            ["glob", "npm:7.2.0"],\
-            ["json-parse-even-better-errors", "npm:2.3.1"],\
-            ["normalize-package-data", "npm:3.0.3"],\
-            ["npm-normalize-package-bin", "npm:1.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:5.0.2", {\
           "packageLocation": "./.yarn/cache/read-package-json-npm-5.0.2-a9701ba368-0882ac9cec.zip/node_modules/read-package-json/",\
           "packageDependencies": [\

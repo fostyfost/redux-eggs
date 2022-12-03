@@ -2872,6 +2872,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@jridgewell/source-map", [\
+        ["npm:0.3.2", {\
+          "packageLocation": "./.yarn/cache/@jridgewell-source-map-npm-0.3.2-6fd1f37b22-1b83f0eb94.zip/node_modules/@jridgewell/source-map/",\
+          "packageDependencies": [\
+            ["@jridgewell/source-map", "npm:0.3.2"],\
+            ["@jridgewell/gen-mapping", "npm:0.3.2"],\
+            ["@jridgewell/trace-mapping", "npm:0.3.17"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@jridgewell/sourcemap-codec", [\
         ["npm:1.4.11", {\
           "packageLocation": "./.yarn/cache/@jridgewell-sourcemap-codec-npm-1.4.11-68fac44d63-3b2afaf840.zip/node_modules/@jridgewell/sourcemap-codec/",\
@@ -4626,7 +4637,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.67.3"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
             ["rollup-plugin-ts", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:2.0.5"],\
-            ["terser", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:5.10.0"],\
+            ["terser", "npm:5.14.2"],\
             ["tslib", "npm:2.3.1"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bcec9a"]\
           ],\
@@ -4654,7 +4665,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.67.3"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
             ["rollup-plugin-ts", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:2.0.5"],\
-            ["terser", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:5.10.0"],\
+            ["terser", "npm:5.14.2"],\
             ["tslib", "npm:2.3.1"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bcec9a"]\
           ],\
@@ -17069,7 +17080,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:26.6.2"],\
             ["rollup", "npm:2.67.3"],\
             ["serialize-javascript", "npm:4.0.0"],\
-            ["terser", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:5.10.0"]\
+            ["terser", "virtual:c4049278d6d555367b216f6bd41ba4288e2094d64279ec27b256a04e8311e5489a2b3fda6c3beafe432ccd9801db71ab960d0e44b77ea097af9bbcd183ad61de#npm:5.10.0"]\
           ],\
           "packagePeers": [\
             "@types/rollup",\
@@ -18102,10 +18113,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:5.10.0", {\
-          "packageLocation": "./.yarn/__virtual__/terser-virtual-b1e33639f9/0/cache/terser-npm-5.10.0-1690d2acb8-1080faeb6d.zip/node_modules/terser/",\
+        ["npm:5.14.2", {\
+          "packageLocation": "./.yarn/cache/terser-npm-5.14.2-b0f8815852-cabb50a640.zip/node_modules/terser/",\
           "packageDependencies": [\
-            ["terser", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:5.10.0"],\
+            ["terser", "npm:5.14.2"],\
+            ["@jridgewell/source-map", "npm:0.3.2"],\
+            ["acorn", "npm:8.7.0"],\
+            ["commander", "npm:2.20.3"],\
+            ["source-map-support", "npm:0.5.21"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:c4049278d6d555367b216f6bd41ba4288e2094d64279ec27b256a04e8311e5489a2b3fda6c3beafe432ccd9801db71ab960d0e44b77ea097af9bbcd183ad61de#npm:5.10.0", {\
+          "packageLocation": "./.yarn/__virtual__/terser-virtual-6760ac1fc3/0/cache/terser-npm-5.10.0-1690d2acb8-1080faeb6d.zip/node_modules/terser/",\
+          "packageDependencies": [\
+            ["terser", "virtual:c4049278d6d555367b216f6bd41ba4288e2094d64279ec27b256a04e8311e5489a2b3fda6c3beafe432ccd9801db71ab960d0e44b77ea097af9bbcd183ad61de#npm:5.10.0"],\
             ["@types/acorn", null],\
             ["acorn", "npm:8.7.0"],\
             ["commander", "npm:2.20.3"],\

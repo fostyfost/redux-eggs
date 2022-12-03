@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var brotli = require('brotli-size');
 var CliTable = require('cli-table');
 var colorette = require('colorette');
-var fileSize = require('filesize');
+var filesize$1 = require('filesize');
 var fs = require('fs');
 var pacote = require('pacote');
 var path = require('path');
@@ -36,7 +36,6 @@ function _interopNamespace(e) {
 
 var brotli__default = /*#__PURE__*/_interopDefaultLegacy(brotli);
 var CliTable__default = /*#__PURE__*/_interopDefaultLegacy(CliTable);
-var fileSize__default = /*#__PURE__*/_interopDefaultLegacy(fileSize);
 var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
 var pacote__default = /*#__PURE__*/_interopDefaultLegacy(pacote);
 var path__default = /*#__PURE__*/_interopDefaultLegacy(path);
@@ -46,7 +45,7 @@ var util__default = /*#__PURE__*/_interopDefaultLegacy(util);
 var zlib__default = /*#__PURE__*/_interopDefaultLegacy(zlib);
 
 const gzipSizeSync = (input) => zlib__default["default"].gzipSync(input, { level: 9 }).length;
-const getSize = (value) => fileSize__default["default"](value, { output: 'array', exponent: 0 });
+const getSize = (value) => filesize$1.filesize(value, { output: 'array', exponent: 0 });
 const getRow = (title, sizeCurrent, sizeBefore) => {
     const size = [colorette.cyan(sizeCurrent.join(' '))];
     if (sizeBefore) {

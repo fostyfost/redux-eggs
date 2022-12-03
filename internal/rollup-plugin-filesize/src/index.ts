@@ -1,7 +1,7 @@
 import brotli from 'brotli-size'
 import CliTable from 'cli-table'
 import { bold, cyan, green, red, white } from 'colorette'
-import fileSize from 'filesize'
+import { filesize as fileSize } from 'filesize'
 import fs from 'fs'
 import pacote from 'pacote'
 import path from 'path'

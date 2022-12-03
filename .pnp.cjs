@@ -4612,7 +4612,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.1"],\
-            ["@types/cli-table", "npm:0.3.0"],\
+            ["@types/cli-table", "npm:0.3.1"],\
             ["@types/node", "npm:17.0.18"],\
             ["@types/pacote", "npm:11.1.3"],\
             ["@types/rollup", null],\
@@ -4641,7 +4641,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs-internal/rollup-plugin-filesize", "workspace:internal/rollup-plugin-filesize"],\
             ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.1"],\
-            ["@types/cli-table", "npm:0.3.0"],\
+            ["@types/cli-table", "npm:0.3.1"],\
             ["@types/node", "npm:17.0.18"],\
             ["@types/pacote", "npm:11.1.3"],\
             ["brotli-size", "npm:4.0.0"],\
@@ -5630,10 +5630,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cli-table", [\
-        ["npm:0.3.0", {\
-          "packageLocation": "./.yarn/cache/@types-cli-table-npm-0.3.0-4053222c9d-defae6a415.zip/node_modules/@types/cli-table/",\
+        ["npm:0.3.1", {\
+          "packageLocation": "./.yarn/cache/@types-cli-table-npm-0.3.1-03981af745-d6017999e3.zip/node_modules/@types/cli-table/",\
           "packageDependencies": [\
-            ["@types/cli-table", "npm:0.3.0"]\
+            ["@types/cli-table", "npm:0.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\

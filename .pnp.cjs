@@ -3803,7 +3803,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@redux-eggs-internal-rollup-plugin-filesize-virtual-cba4b5edde/1/internal/rollup-plugin-filesize/",\
           "packageDependencies": [\
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
-            ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.1"],\
+            ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.5"],\
             ["@types/cli-table", "npm:0.3.0"],\
             ["@types/node", "npm:17.0.18"],\
             ["@types/pacote", "npm:11.1.3"],\
@@ -3832,7 +3832,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./internal/rollup-plugin-filesize/",\
           "packageDependencies": [\
             ["@redux-eggs-internal/rollup-plugin-filesize", "workspace:internal/rollup-plugin-filesize"],\
-            ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.1"],\
+            ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.5"],\
             ["@types/cli-table", "npm:0.3.0"],\
             ["@types/node", "npm:17.0.18"],\
             ["@types/pacote", "npm:11.1.3"],\
@@ -4358,10 +4358,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@rollup/plugin-eslint", [\
-        ["npm:8.0.1", {\
-          "packageLocation": "./.yarn/cache/@rollup-plugin-eslint-npm-8.0.1-07fea4e060-c939b3fcb1.zip/node_modules/@rollup/plugin-eslint/",\
+        ["npm:8.0.5", {\
+          "packageLocation": "./.yarn/cache/@rollup-plugin-eslint-npm-8.0.5-3c9e59e56d-692b5ef8a5.zip/node_modules/@rollup/plugin-eslint/",\
           "packageDependencies": [\
-            ["@rollup/plugin-eslint", "npm:8.0.1"]\
+            ["@rollup/plugin-eslint", "npm:8.0.5"]\
           ],\
           "linkType": "SOFT"\
         }],\
@@ -4387,10 +4387,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.1", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-plugin-eslint-virtual-614951d8c8/0/cache/@rollup-plugin-eslint-npm-8.0.1-07fea4e060-c939b3fcb1.zip/node_modules/@rollup/plugin-eslint/",\
+        ["virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.5", {\
+          "packageLocation": "./.yarn/__virtual__/@rollup-plugin-eslint-virtual-f81811d329/0/cache/@rollup-plugin-eslint-npm-8.0.5-3c9e59e56d-692b5ef8a5.zip/node_modules/@rollup/plugin-eslint/",\
           "packageDependencies": [\
-            ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.1"],\
+            ["@rollup/plugin-eslint", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:8.0.5"],\
             ["@rollup/pluginutils", "npm:4.1.1"],\
             ["@types/rollup", null],\
             ["eslint", "npm:7.32.0"],\

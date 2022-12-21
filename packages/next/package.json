@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/fostyfost/redux-eggs",
   "main": "dist/index.server.js",
-  "module": "dist/index.server.js",
+  "module": "dist/index.server.es.js",
   "browser": "dist/index.client.js",
   "types": "dist/index.server.d.ts",
   "files": [

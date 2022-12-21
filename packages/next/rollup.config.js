@@ -43,6 +43,14 @@ const getDefaultConfig = (tsOptions = {}, addTerser = false) => {
 
 const config = [
   {
+    ...getDefaultConfig(),
+    input: './src/server/index.tsx',
+    output: {
+      file: './dist/index.server.es.js',
+      format: 'es',
+    },
+  },
+  {
     ...getDefaultConfig({
       tsconfig: resolvedConfig => ({
         ...resolvedConfig,
@@ -52,15 +60,28 @@ const config = [
     input: './src/server/index.tsx',
     output: {
       file: './dist/index.server.js',
-      format: 'es',
+      format: 'cjs',
     },
   },
   {
     ...getDefaultConfig({ browserslist: ['defaults'] }, true),
     input: './src/client/index.tsx',
     output: {
-      file: './dist/index.client.js',
+      file: './dist/index.client.es.js',
       format: 'es',
+    },
+  },
+  {
+    ...getDefaultConfig({
+      tsconfig: resolvedConfig => ({
+        ...resolvedConfig,
+        declaration: true,
+      }),
+    }),
+    input: './src/client/index.tsx',
+    output: {
+      file: './dist/index.client.js',
+      format: 'cjs',
     },
   },
 ]

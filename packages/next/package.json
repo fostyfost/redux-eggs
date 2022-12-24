@@ -11,9 +11,9 @@
     "url": "https://github.com/fostyfost/redux-eggs/issues"
   },
   "homepage": "https://github.com/fostyfost/redux-eggs",
-  "main": "dist/index.server.js",
+  "main": "dist/index.server.es.js",
   "module": "dist/index.server.es.js",
-  "browser": "dist/index.client.js",
+  "browser": "dist/index.client.es.js",
   "types": "dist/index.server.d.ts",
   "files": [
     "dist"

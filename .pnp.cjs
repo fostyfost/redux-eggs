@@ -6262,7 +6262,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["isbot", "npm:3.4.5"],\
             ["object-path", "npm:0.11.8"],\
             ["semver", "npm:7.3.8"],\
-            ["ua-parser-js", "npm:1.0.2"]\
+            ["ua-parser-js", "npm:1.0.33"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16413,10 +16413,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ua-parser-js", [\
-        ["npm:1.0.2", {\
-          "packageLocation": "./.yarn/cache/ua-parser-js-npm-1.0.2-c3376785e2-ff7f6d79a9.zip/node_modules/ua-parser-js/",\
+        ["npm:1.0.33", {\
+          "packageLocation": "./.yarn/cache/ua-parser-js-npm-1.0.33-60ab7da777-460adef512.zip/node_modules/ua-parser-js/",\
           "packageDependencies": [\
-            ["ua-parser-js", "npm:1.0.2"]\
+            ["ua-parser-js", "npm:1.0.33"]\
           ],\
           "linkType": "HARD"\
         }]\

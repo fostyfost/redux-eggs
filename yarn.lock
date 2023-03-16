@@ -3078,7 +3078,7 @@ __metadata:
     "@types/node": 18.11.10
     "@types/react": 17.0.39
     "@types/react-dom": 17.0.11
-    "@types/react-redux": 7.1.24
+    "@types/react-redux": 7.1.25
     "@types/react-test-renderer": 17.0.2
     cross-env: 7.0.3
     eslint: 8.29.0
@@ -3089,7 +3089,7 @@ __metadata:
     next: 12.1.0
     react: 17.0.2
     react-dom: 17.0.2
-    react-redux: 7.2.8
+    react-redux: 7.2.9
     react-test-renderer: 17.0.2
     redux: 4.1.2
     rimraf: 3.0.2
@@ -3123,7 +3123,7 @@ __metadata:
     "@types/jest": 29.2.3
     "@types/react": 17.0.39
     "@types/react-dom": 17.0.11
-    "@types/react-redux": 7.1.24
+    "@types/react-redux": 7.1.25
     "@types/testing-library__jest-dom": 5.14.5
     cross-env: 7.0.3
     eslint: 8.29.0
@@ -3133,7 +3133,7 @@ __metadata:
     jest-environment-jsdom: 29.3.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-redux: 7.2.8
+    react-redux: 7.2.9
     redux: 4.1.2
     rimraf: 3.0.2
     rollup: 2.67.3
@@ -3797,6 +3797,18 @@ __metadata:
     hoist-non-react-statics: ^3.3.0
     redux: ^4.0.0
   checksum: 6582246581331ac7fbbd44aa1f1c136c8a9c8febbcf462432ac81302263308c21e1a2e7868beb7f73bbcb52a8e67935d133cb37f5bdcb6564eaff3a811805101
+  languageName: node
+  linkType: hard
+
+"@types/react-redux@npm:7.1.25":
+  version: 7.1.25
+  resolution: "@types/react-redux@npm:7.1.25"
+  dependencies:
+    "@types/hoist-non-react-statics": ^3.3.0
+    "@types/react": "*"
+    hoist-non-react-statics: ^3.3.0
+    redux: ^4.0.0
+  checksum: a61ec25cbf8bb3720850402d3c49493fcff4afb73ad447d161460b5d4c600c984ad48708e8564d2fd32052eaa3c3b3f655c5b300ce813429637cce9e5958329f
   languageName: node
   linkType: hard
 
@@ -11802,6 +11814,27 @@ __metadata:
     react-native:
       optional: true
   checksum: ecf1933e91013f2d41bfc781515b536bf81eb1f70ff228607841094c8330fe77d522372b359687e51c0b52b9888dba73db9ac0486aace1896ab9eb9daec102d5
+  languageName: node
+  linkType: hard
+
+"react-redux@npm:7.2.9":
+  version: 7.2.9
+  resolution: "react-redux@npm:7.2.9"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    "@types/react-redux": ^7.1.20
+    hoist-non-react-statics: ^3.3.2
+    loose-envify: ^1.4.0
+    prop-types: ^15.7.2
+    react-is: ^17.0.2
+  peerDependencies:
+    react: ^16.8.3 || ^17 || ^18
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 369a2bdcf87915659af9e5c55abfd9f52a84e43e0d12dcc108ed17dbe6933558b7b7fc12caa9c10c1a10a8be7df89454b6c96989d8573fedec1a772c94a1f145
   languageName: node
   linkType: hard
 

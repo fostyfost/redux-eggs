@@ -27,7 +27,7 @@
     "@types/node": "18.11.10",
     "@types/pacote": "11.1.5",
     "eslint": "8.29.0",
-    "rimraf": "3.0.2",
+    "rimraf": "4.4.1",
     "rollup": "2.67.3",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-ts": "3.0.2",

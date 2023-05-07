@@ -3789,7 +3789,7 @@ __metadata:
     cross-env: 7.0.3
     jest: 29.5.0
     redux: 4.1.2
-    redux-thunk: 2.4.1
+    redux-thunk: 2.4.2
     rimraf: 3.0.2
     rollup: 2.79.1
     rollup-plugin-peer-deps-external: 2.2.4
@@ -3820,7 +3820,7 @@ __metadata:
     jest: 29.5.0
     redux: 4.1.2
     redux-saga: 1.2.3
-    redux-thunk: 2.4.1
+    redux-thunk: 2.4.2
     rimraf: 3.0.2
     rollup: 2.79.0
     rollup-plugin-peer-deps-external: 2.2.4
@@ -12662,6 +12662,15 @@ __metadata:
   peerDependencies:
     redux: ^4
   checksum: af5abb425fb9dccda02e5f387d6f3003997f62d906542a3d35fc9420088f550dc1a018bdc246c7d23ee852b4d4ab8b5c64c5be426e45a328d791c4586a3c6b6e
+  languageName: node
+  linkType: hard
+
+"redux-thunk@npm:2.4.2":
+  version: 2.4.2
+  resolution: "redux-thunk@npm:2.4.2"
+  peerDependencies:
+    redux: ^4
+  checksum: c7f757f6c383b8ec26152c113e20087818d18ed3edf438aaad43539e9a6b77b427ade755c9595c4a163b6ad3063adf3497e5fe6a36c68884eb1f1cfb6f049a5c
   languageName: node
   linkType: hard
 

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.1](https://github.com/fostyfost/redux-eggs/compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2023-05-07)
+
+**Note:** Version bump only for package @redux-eggs/core
+
 # [2.2.0](https://github.com/fostyfost/redux-eggs/compare/v2.1.0...v2.2.0) (2022-03-21)
 
 **Note:** Version bump only for package @redux-eggs/core

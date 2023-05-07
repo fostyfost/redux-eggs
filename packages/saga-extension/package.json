@@ -48,7 +48,7 @@
     "redux": "4.1.2",
     "redux-saga": "1.2.3",
     "redux-thunk": "2.4.1",
-    "rimraf": "3.0.2",
+    "rimraf": "5.0.0",
     "rollup": "2.79.0",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-terser": "7.0.2",

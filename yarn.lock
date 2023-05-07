@@ -3632,7 +3632,7 @@ __metadata:
     rollup: 2.79.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-ts: 3.0.2
-    terser: 5.15.0
+    terser: 5.17.1
     tslib: 2.4.0
     typescript: 4.6.4
   peerDependencies:
@@ -13773,9 +13773,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:5.15.0":
-  version: 5.15.0
-  resolution: "terser@npm:5.15.0"
+"terser@npm:5.17.1":
+  version: 5.17.1
+  resolution: "terser@npm:5.17.1"
   dependencies:
     "@jridgewell/source-map": ^0.3.2
     acorn: ^8.5.0
@@ -13783,7 +13783,7 @@ __metadata:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: b2358c989fcb76b4a1c265f60e175c950d3f776e5f619a9f58f54e8d2d792cd6b4cca86071834075f3b9943556d695357bafdd4ee2390de2fc9fd96ba3efa8c8
+  checksum: 69b0e80e3c4084db2819de4d6ae8a2ba79f2fcd7ed6df40fe4b602ec7bfd8e889cc63c7d5268f30990ffecbf6eeda18f857adad9386fe2c2331b398d58ed855c
   languageName: node
   linkType: hard
 

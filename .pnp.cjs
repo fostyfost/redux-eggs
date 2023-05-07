@@ -4382,7 +4382,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
             ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
-            ["terser", "npm:5.15.0"],\
+            ["terser", "npm:5.17.1"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
           ],\
@@ -4411,7 +4411,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.77.0"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
             ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
-            ["terser", "npm:5.15.0"],\
+            ["terser", "npm:5.17.1"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
           ],\
@@ -4440,7 +4440,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.79.0"],\
             ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
             ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
-            ["terser", "npm:5.15.0"],\
+            ["terser", "npm:5.17.1"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
           ],\
@@ -4468,7 +4468,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
             ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
-            ["terser", "npm:5.15.0"],\
+            ["terser", "npm:5.17.1"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
           ],\
@@ -16975,10 +16975,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:5.15.0", {\
-          "packageLocation": "./.yarn/cache/terser-npm-5.15.0-a7f79b7859-b2358c989f.zip/node_modules/terser/",\
+        ["npm:5.17.1", {\
+          "packageLocation": "./.yarn/cache/terser-npm-5.17.1-5b220f4a17-69b0e80e3c.zip/node_modules/terser/",\
           "packageDependencies": [\
-            ["terser", "npm:5.15.0"],\
+            ["terser", "npm:5.17.1"],\
             ["@jridgewell/source-map", "npm:0.3.2"],\
             ["acorn", "npm:8.7.0"],\
             ["commander", "npm:2.20.3"],\

@@ -4376,7 +4376,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.19"],\
             ["eslint", "npm:8.24.0"],\
-            ["filesize", "npm:9.0.11"],\
+            ["filesize", "npm:10.0.7"],\
             ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.1"],\
@@ -4405,7 +4405,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.19"],\
             ["eslint", "npm:8.24.0"],\
-            ["filesize", "npm:9.0.11"],\
+            ["filesize", "npm:10.0.7"],\
             ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.77.0"],\
@@ -4434,7 +4434,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.19"],\
             ["eslint", "npm:8.24.0"],\
-            ["filesize", "npm:9.0.11"],\
+            ["filesize", "npm:10.0.7"],\
             ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.0"],\
@@ -4462,7 +4462,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.19"],\
             ["eslint", "npm:8.24.0"],\
-            ["filesize", "npm:9.0.11"],\
+            ["filesize", "npm:10.0.7"],\
             ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.1"],\
@@ -10065,10 +10065,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["filesize", [\
-        ["npm:9.0.11", {\
-          "packageLocation": "./.yarn/cache/filesize-npm-9.0.11-3b5a24c45b-7e8a9f9a40.zip/node_modules/filesize/",\
+        ["npm:10.0.7", {\
+          "packageLocation": "./.yarn/cache/filesize-npm-10.0.7-c53206c5d5-acabe6ddcf.zip/node_modules/filesize/",\
           "packageDependencies": [\
-            ["filesize", "npm:9.0.11"]\
+            ["filesize", "npm:10.0.7"]\
           ],\
           "linkType": "HARD"\
         }]\

@@ -4374,7 +4374,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rollup", null],\
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.19"],\
+            ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.24.0"],\
             ["filesize", "npm:9.0.11"],\
             ["pacote", "npm:13.6.2"],\
@@ -4403,7 +4403,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rollup", null],\
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.19"],\
+            ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.24.0"],\
             ["filesize", "npm:9.0.11"],\
             ["pacote", "npm:13.6.2"],\
@@ -4432,7 +4432,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rollup", null],\
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.19"],\
+            ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.24.0"],\
             ["filesize", "npm:9.0.11"],\
             ["pacote", "npm:13.6.2"],\
@@ -4460,7 +4460,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/pacote", "npm:11.1.5"],\
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.19"],\
+            ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.24.0"],\
             ["filesize", "npm:9.0.11"],\
             ["pacote", "npm:13.6.2"],\
@@ -7799,10 +7799,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["colorette", [\
-        ["npm:2.0.19", {\
-          "packageLocation": "./.yarn/cache/colorette-npm-2.0.19-f73dfe6a4e-888cf5493f.zip/node_modules/colorette/",\
+        ["npm:2.0.20", {\
+          "packageLocation": "./.yarn/cache/colorette-npm-2.0.20-692d428726-0c016fea2b.zip/node_modules/colorette/",\
           "packageDependencies": [\
-            ["colorette", "npm:2.0.19"]\
+            ["colorette", "npm:2.0.20"]\
           ],\
           "linkType": "HARD"\
         }]\

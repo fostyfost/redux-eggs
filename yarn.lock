@@ -3688,7 +3688,7 @@ __metadata:
     react-dom: 18.2.0
     react-redux: 8.0.4
     react-test-renderer: 18.2.0
-    redux: 4.2.0
+    redux: 4.2.1
     rimraf: 3.0.2
     rollup: 2.79.1
     rollup-plugin-peer-deps-external: 2.2.4
@@ -3733,7 +3733,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-redux: 8.0.4
-    redux: 4.2.0
+    redux: 4.2.1
     rimraf: 3.0.2
     rollup: 2.79.1
     rollup-plugin-peer-deps-external: 2.2.4
@@ -3788,7 +3788,7 @@ __metadata:
     "@types/node": 20.1.0
     cross-env: 7.0.3
     jest: 29.5.0
-    redux: 4.1.2
+    redux: 4.2.1
     redux-thunk: 2.4.1
     rimraf: 3.0.2
     rollup: 2.79.1
@@ -3818,7 +3818,7 @@ __metadata:
     "@types/jest": 29.0.3
     cross-env: 7.0.3
     jest: 29.5.0
-    redux: 4.1.2
+    redux: 4.2.1
     redux-saga: 1.2.3
     redux-thunk: 2.4.1
     rimraf: 3.0.2
@@ -12665,21 +12665,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux@npm:4.1.2, redux@npm:^4.0.0, redux@npm:^4.0.4, redux@npm:^4.1.2":
-  version: 4.1.2
-  resolution: "redux@npm:4.1.2"
-  dependencies:
-    "@babel/runtime": ^7.9.2
-  checksum: 6a839cee5bd580c5298d968e9e2302150e961318253819bcd97f9d945a5a409559eacddf6026f4118bb68b681c593d90e8a2c5bbf278f014aff9bf0d2d8fa084
-  languageName: node
-  linkType: hard
-
 "redux@npm:4.2.0":
   version: 4.2.0
   resolution: "redux@npm:4.2.0"
   dependencies:
     "@babel/runtime": ^7.9.2
   checksum: 75f3955c89b3f18edf5411e5fb482aa2e4f41a416183e8802a6bf6472c4fc3d47675b8b321d147f8af8e0f616436ac507bf5a25f1c4d6180e797b549c7db2c1d
+  languageName: node
+  linkType: hard
+
+"redux@npm:4.2.1":
+  version: 4.2.1
+  resolution: "redux@npm:4.2.1"
+  dependencies:
+    "@babel/runtime": ^7.9.2
+  checksum: f63b9060c3a1d930ae775252bb6e579b42415aee7a23c4114e21a0b4ba7ec12f0ec76936c00f546893f06e139819f0e2855e0d55ebfce34ca9c026241a6950dd
+  languageName: node
+  linkType: hard
+
+"redux@npm:^4.0.0, redux@npm:^4.0.4, redux@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "redux@npm:4.1.2"
+  dependencies:
+    "@babel/runtime": ^7.9.2
+  checksum: 6a839cee5bd580c5298d968e9e2302150e961318253819bcd97f9d945a5a409559eacddf6026f4118bb68b681c593d90e8a2c5bbf278f014aff9bf0d2d8fa084
   languageName: node
   linkType: hard
 

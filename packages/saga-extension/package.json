@@ -45,7 +45,7 @@
     "@types/jest": "29.0.3",
     "cross-env": "7.0.3",
     "jest": "29.5.0",
-    "redux": "4.1.2",
+    "redux": "4.2.1",
     "redux-saga": "1.2.3",
     "redux-thunk": "2.4.1",
     "rimraf": "3.0.2",

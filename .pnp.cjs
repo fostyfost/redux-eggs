@@ -4631,7 +4631,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:12.3.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:18.2.0"],\
-            ["react-redux", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.4"],\
+            ["react-redux", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.5"],\
             ["react-test-renderer", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:18.2.0"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
@@ -4771,7 +4771,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-environment-jsdom", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:18.2.0"],\
-            ["react-redux", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.4"],\
+            ["react-redux", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.5"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.1"],\
@@ -15073,10 +15073,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:8.0.4", {\
-          "packageLocation": "./.yarn/cache/react-redux-npm-8.0.4-ee216b0e53-fd940de6a6.zip/node_modules/react-redux/",\
+        ["npm:8.0.5", {\
+          "packageLocation": "./.yarn/cache/react-redux-npm-8.0.5-9ff31aed95-a108f4f7ea.zip/node_modules/react-redux/",\
           "packageDependencies": [\
-            ["react-redux", "npm:8.0.4"]\
+            ["react-redux", "npm:8.0.5"]\
           ],\
           "linkType": "SOFT"\
         }],\
@@ -15142,10 +15142,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.4", {\
-          "packageLocation": "./.yarn/__virtual__/react-redux-virtual-ec84e8b662/0/cache/react-redux-npm-8.0.4-ee216b0e53-fd940de6a6.zip/node_modules/react-redux/",\
+        ["virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.5", {\
+          "packageLocation": "./.yarn/__virtual__/react-redux-virtual-2fdd4fedbf/0/cache/react-redux-npm-8.0.5-9ff31aed95-a108f4f7ea.zip/node_modules/react-redux/",\
           "packageDependencies": [\
-            ["react-redux", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.4"],\
+            ["react-redux", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.5"],\
             ["@babel/runtime", "npm:7.17.9"],\
             ["@types/hoist-non-react-statics", "npm:3.3.1"],\
             ["@types/react", "npm:18.0.21"],\
@@ -15159,7 +15159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:18.0.0"],\
             ["react-native", null],\
             ["redux", "npm:4.2.0"],\
-            ["use-sync-external-store", "virtual:ec84e8b662527a3353162c5a8e369473f72cb4fb000fb853bca0b1aa52e477e80b70585b8bacee24f51b33e51f8a1b78856be71a64977e95c47bc6ebe243e482#npm:1.0.0"]\
+            ["use-sync-external-store", "virtual:2fdd4fedbff0ff46056bbc50ebeffe8209802a7d7b2fb2b5fe76aed45a43396d60df86cf407a8f83578d78401598df7d62e4cef34b42bbc53096425a3dad7d44#npm:1.0.0"]\
           ],\
           "packagePeers": [\
             "@types/react-dom",\
@@ -17700,6 +17700,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["virtual:2fdd4fedbff0ff46056bbc50ebeffe8209802a7d7b2fb2b5fe76aed45a43396d60df86cf407a8f83578d78401598df7d62e4cef34b42bbc53096425a3dad7d44#npm:1.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/use-sync-external-store-virtual-892d572c9b/0/cache/use-sync-external-store-npm-1.0.0-2b52c92170-f3df10af62.zip/node_modules/use-sync-external-store/",\
+          "packageDependencies": [\
+            ["use-sync-external-store", "virtual:2fdd4fedbff0ff46056bbc50ebeffe8209802a7d7b2fb2b5fe76aed45a43396d60df86cf407a8f83578d78401598df7d62e4cef34b42bbc53096425a3dad7d44#npm:1.0.0"],\
+            ["@types/react", "npm:18.0.21"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["virtual:39e3fac16fdf4815dbc22ed6c5f9483b6bfc4526be7fc796d750c8d5c980d6db46388068f628c051313ebb721f297a9caca2baaea543692bebf9c43ea4b66e25#npm:1.2.0", {\
           "packageLocation": "./.yarn/__virtual__/use-sync-external-store-virtual-6dd8f1afbd/0/cache/use-sync-external-store-npm-1.2.0-44f75d2564-5c639e0f8d.zip/node_modules/use-sync-external-store/",\
           "packageDependencies": [\
@@ -17718,19 +17731,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["use-sync-external-store", "virtual:d709bb2a82cc58ec88bf2b25aa243c9e8a77487fec091db9ffb733adb8a68cc2703b9f0eb256f8d540844337b58a77669fad62f94aa96f79e2b0b29b5aa7e699#npm:1.2.0"],\
             ["@types/react", "npm:18.0.15"],\
-            ["react", "npm:18.2.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/react",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:ec84e8b662527a3353162c5a8e369473f72cb4fb000fb853bca0b1aa52e477e80b70585b8bacee24f51b33e51f8a1b78856be71a64977e95c47bc6ebe243e482#npm:1.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/use-sync-external-store-virtual-ce2ec3807d/0/cache/use-sync-external-store-npm-1.0.0-2b52c92170-f3df10af62.zip/node_modules/use-sync-external-store/",\
-          "packageDependencies": [\
-            ["use-sync-external-store", "virtual:ec84e8b662527a3353162c5a8e369473f72cb4fb000fb853bca0b1aa52e477e80b70585b8bacee24f51b33e51f8a1b78856be71a64977e95c47bc6ebe243e482#npm:1.0.0"],\
-            ["@types/react", "npm:18.0.21"],\
             ["react", "npm:18.2.0"]\
           ],\
           "packagePeers": [\

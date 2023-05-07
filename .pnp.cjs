@@ -67,7 +67,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@redux-eggs-example/next-gip", ["workspace:examples/example-next-gip"]],\
       ["@redux-eggs-example/next-rtk", ["workspace:examples/example-next-rtk"]],\
       ["@redux-eggs-example/react", ["workspace:examples/example-react"]],\
-      ["@redux-eggs-internal/rollup-plugin-filesize", ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize", "workspace:internal/rollup-plugin-filesize"]],\
+      ["@redux-eggs-internal/rollup-plugin-filesize", ["virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize", "workspace:internal/rollup-plugin-filesize"]],\
       ["@redux-eggs/core", ["workspace:packages/core"]],\
       ["@redux-eggs/next", ["virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/next", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#workspace:packages/next", "workspace:packages/next"]],\
       ["@redux-eggs/react", ["virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/react", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#workspace:packages/react", "workspace:packages/react"]],\
@@ -4363,35 +4363,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@redux-eggs-internal/rollup-plugin-filesize", [\
-        ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize", {\
-          "packageLocation": "./.yarn/__virtual__/@redux-eggs-internal-rollup-plugin-filesize-virtual-52a2dd5c69/1/internal/rollup-plugin-filesize/",\
-          "packageDependencies": [\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
-            ["@types/cli-table", "npm:0.3.1"],\
-            ["@types/node", "npm:20.1.0"],\
-            ["@types/pacote", "npm:11.1.5"],\
-            ["@types/rollup", null],\
-            ["brotli-size", "npm:4.0.0"],\
-            ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.19"],\
-            ["eslint", "npm:8.24.0"],\
-            ["filesize", "npm:9.0.11"],\
-            ["pacote", "npm:13.6.2"],\
-            ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
-            ["terser", "npm:5.15.0"],\
-            ["tslib", "npm:2.4.0"],\
-            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "SOFT"\
-        }],\
         ["virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize", {\
           "packageLocation": "./.yarn/__virtual__/@redux-eggs-internal-rollup-plugin-filesize-virtual-cba4b5edde/1/internal/rollup-plugin-filesize/",\
           "packageDependencies": [\
@@ -4408,38 +4379,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["filesize", "npm:9.0.11"],\
             ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.77.0"],\
+            ["rollup", "npm:3.21.5"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
             ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
-            ["terser", "npm:5.15.0"],\
-            ["tslib", "npm:2.4.0"],\
-            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize", {\
-          "packageLocation": "./.yarn/__virtual__/@redux-eggs-internal-rollup-plugin-filesize-virtual-dd3d1a81a7/1/internal/rollup-plugin-filesize/",\
-          "packageDependencies": [\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
-            ["@types/cli-table", "npm:0.3.1"],\
-            ["@types/node", "npm:20.1.0"],\
-            ["@types/pacote", "npm:11.1.5"],\
-            ["@types/rollup", null],\
-            ["brotli-size", "npm:4.0.0"],\
-            ["cli-table", "npm:0.3.11"],\
-            ["colorette", "npm:2.0.19"],\
-            ["eslint", "npm:8.24.0"],\
-            ["filesize", "npm:9.0.11"],\
-            ["pacote", "npm:13.6.2"],\
-            ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
             ["terser", "npm:5.15.0"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4454,7 +4396,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./internal/rollup-plugin-filesize/",\
           "packageDependencies": [\
             ["@redux-eggs-internal/rollup-plugin-filesize", "workspace:internal/rollup-plugin-filesize"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/cli-table", "npm:0.3.1"],\
             ["@types/node", "npm:20.1.0"],\
             ["@types/pacote", "npm:11.1.5"],\
@@ -4465,9 +4407,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["filesize", "npm:9.0.11"],\
             ["pacote", "npm:13.6.2"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["terser", "npm:5.15.0"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4488,7 +4430,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["jest-environment-jsdom", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.77.0"],\
+            ["rollup", "npm:3.21.5"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
             ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
             ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
@@ -4505,10 +4447,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/next", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/next"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:13.4.0"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/next", null],\
@@ -4532,10 +4474,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-test-renderer", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:18.2.0"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4559,10 +4501,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/next", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#workspace:packages/next"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:13.4.0"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/next", null],\
@@ -4586,10 +4528,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-test-renderer", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:18.2.0"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4612,10 +4554,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/next", "workspace:packages/next"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@testing-library/react", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:13.4.0"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
@@ -4635,10 +4577,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-test-renderer", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:18.2.0"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4652,11 +4594,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/react", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/react"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#workspace:packages/redux-toolkit"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@testing-library/dom", "npm:8.18.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:13.4.0"],\
@@ -4678,10 +4620,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#npm:8.0.2"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4701,11 +4643,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/react", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#workspace:packages/react"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#workspace:packages/redux-toolkit"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@testing-library/dom", "npm:8.18.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:13.4.0"],\
@@ -4727,10 +4669,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#npm:8.0.2"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4750,11 +4692,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/react", "workspace:packages/react"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#workspace:packages/redux-toolkit"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@testing-library/dom", "npm:8.18.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:13.4.0"],\
@@ -4774,10 +4716,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:74ec4c6ae14376088de39cca656a82f9a2a0e75f4ed072f1fdb41e12d3ddb4ef1f6bcd1fd15b24e7a28b7b8b66a407941a7b289615c4a47ddfc0d52977312ff7#npm:8.0.4"],\
             ["redux", "npm:4.2.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4791,9 +4733,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
             ["@types/redux", null],\
@@ -4803,10 +4745,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux", "npm:4.2.0"],\
             ["redux-thunk", "virtual:4a24c0097dc013f9ac711cd4b6869650bf819d9e2d534890e69fed557dc1c588b5a691dc48cabd133d13d3f17b5843218e14e22f39b9738a73116e251f87b20d#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4824,9 +4766,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/redux", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#workspace:packages/redux"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
             ["@types/redux", null],\
@@ -4836,10 +4778,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux", "npm:4.1.2"],\
             ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4857,9 +4799,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/redux", "workspace:packages/redux"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
             ["cross-env", "npm:7.0.3"],\
@@ -4867,10 +4809,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux", "npm:4.1.2"],\
             ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4884,10 +4826,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/redux-toolkit", "virtual:20b3aac9fd09b21e8b8628934fcc37df1c0944831e7e8e0fd64b897bfdd4a35b2870b4d942156ad7f0ade453ac2bf960335fcfe26d4f60ac43ebc5c032adf604#workspace:packages/redux-toolkit"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
             ["@types/redux-eggs__core", null],\
@@ -4895,10 +4837,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4915,10 +4857,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/redux-toolkit", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#workspace:packages/redux-toolkit"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@reduxjs/toolkit", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#npm:1.8.3"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
             ["@types/redux-eggs__core", null],\
@@ -4926,10 +4868,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4947,10 +4889,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/redux-toolkit", "virtual:4bbbe626f757236918535bbbf2e8aad12bc9f24d22dcc44a15273630e4aa36c687d649befba056c826635a0aae509983a922bdc70a8740978d9b53744c47faa7#workspace:packages/redux-toolkit"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
             ["@types/redux-eggs__core", null],\
@@ -4958,10 +4900,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -4979,19 +4921,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/redux-toolkit", "workspace:packages/redux-toolkit"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -5005,12 +4947,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/saga-extension", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/saga-extension"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:4bbbe626f757236918535bbbf2e8aad12bc9f24d22dcc44a15273630e4aa36c687d649befba056c826635a0aae509983a922bdc70a8740978d9b53744c47faa7#workspace:packages/redux-toolkit"],\
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/redux", null],\
             ["@types/redux-eggs__core", null],\
@@ -5021,10 +4963,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux-saga", "npm:1.2.3"],\
             ["redux-thunk", "virtual:4a24c0097dc013f9ac711cd4b6869650bf819d9e2d534890e69fed557dc1c588b5a691dc48cabd133d13d3f17b5843218e14e22f39b9738a73116e251f87b20d#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -5044,12 +4986,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/saga-extension", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#workspace:packages/saga-extension"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:4bbbe626f757236918535bbbf2e8aad12bc9f24d22dcc44a15273630e4aa36c687d649befba056c826635a0aae509983a922bdc70a8740978d9b53744c47faa7#workspace:packages/redux-toolkit"],\
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/redux", null],\
             ["@types/redux-eggs__core", null],\
@@ -5060,10 +5002,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux-saga", "npm:1.2.3"],\
             ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -5082,12 +5024,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@redux-eggs/saga-extension", "workspace:packages/saga-extension"],\
             ["@jest/types", "npm:29.1.0"],\
-            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
+            ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:4bbbe626f757236918535bbbf2e8aad12bc9f24d22dcc44a15273630e4aa36c687d649befba056c826635a0aae509983a922bdc70a8740978d9b53744c47faa7#workspace:packages/redux-toolkit"],\
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
+            ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
@@ -5095,10 +5037,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux-saga", "npm:1.2.3"],\
             ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.79.0"],\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
+            ["rollup", "npm:3.21.5"],\
+            ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
+            ["rollup-plugin-terser", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2"],\
+            ["rollup-plugin-ts", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2"],\
             ["ts-jest", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:29.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
@@ -5237,21 +5179,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-plugin-eslint-virtual-329b3aba4e/0/cache/@rollup-plugin-eslint-npm-8.0.2-f77fe7135f-7d9d9708be.zip/node_modules/@rollup/plugin-eslint/",\
-          "packageDependencies": [\
-            ["@rollup/plugin-eslint", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:8.0.2"],\
-            ["@rollup/pluginutils", "npm:4.1.1"],\
-            ["@types/rollup", null],\
-            ["eslint", "npm:7.32.0"],\
-            ["rollup", "npm:2.79.1"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:8.0.2", {\
           "packageLocation": "./.yarn/__virtual__/@rollup-plugin-eslint-virtual-bb973ad946/0/cache/@rollup-plugin-eslint-npm-8.0.2-f77fe7135f-7d9d9708be.zip/node_modules/@rollup/plugin-eslint/",\
           "packageDependencies": [\
@@ -5259,22 +5186,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/pluginutils", "npm:4.1.1"],\
             ["@types/rollup", null],\
             ["eslint", "npm:7.32.0"],\
-            ["rollup", "npm:2.77.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-plugin-eslint-virtual-11bd1978b8/0/cache/@rollup-plugin-eslint-npm-8.0.2-f77fe7135f-7d9d9708be.zip/node_modules/@rollup/plugin-eslint/",\
-          "packageDependencies": [\
-            ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
-            ["@rollup/pluginutils", "npm:4.1.1"],\
-            ["@types/rollup", null],\
-            ["eslint", "npm:7.32.0"],\
-            ["rollup", "npm:2.79.0"]\
+            ["rollup", "npm:3.21.5"]\
           ],\
           "packagePeers": [\
             "@types/rollup",\
@@ -15789,30 +15701,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["rollup", [\
-        ["npm:2.77.0", {\
-          "packageLocation": "./.yarn/cache/rollup-npm-2.77.0-5594dacb98-74ccc98429.zip/node_modules/rollup/",\
-          "packageDependencies": [\
-            ["rollup", "npm:2.77.0"],\
-            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:2.79.0", {\
-          "packageLocation": "./.yarn/cache/rollup-npm-2.79.0-bb690b7013-166f1ffea1.zip/node_modules/rollup/",\
-          "packageDependencies": [\
-            ["rollup", "npm:2.79.0"],\
-            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:2.79.1", {\
-          "packageLocation": "./.yarn/cache/rollup-npm-2.79.1-94e707a9a3-6a2bf167b3.zip/node_modules/rollup/",\
-          "packageDependencies": [\
-            ["rollup", "npm:2.79.1"],\
-            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.21.5", {\
           "packageLocation": "./.yarn/cache/rollup-npm-3.21.5-a57d6eed06-dfe2e4002f.zip/node_modules/rollup/",\
           "packageDependencies": [\
@@ -15830,38 +15718,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4", {\
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-peer-deps-external-virtual-fb7a5e4082/0/cache/rollup-plugin-peer-deps-external-npm-2.2.4-907ae6e3f2-597bc7631f.zip/node_modules/rollup-plugin-peer-deps-external/",\
-          "packageDependencies": [\
-            ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
-            ["@types/rollup", null],\
-            ["rollup", "npm:2.79.1"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4", {\
           "packageLocation": "./.yarn/__virtual__/rollup-plugin-peer-deps-external-virtual-2d47925a5e/0/cache/rollup-plugin-peer-deps-external-npm-2.2.4-907ae6e3f2-597bc7631f.zip/node_modules/rollup-plugin-peer-deps-external/",\
           "packageDependencies": [\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
             ["@types/rollup", null],\
-            ["rollup", "npm:2.77.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4", {\
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-peer-deps-external-virtual-b8c826a6bf/0/cache/rollup-plugin-peer-deps-external-npm-2.2.4-907ae6e3f2-597bc7631f.zip/node_modules/rollup-plugin-peer-deps-external/",\
-          "packageDependencies": [\
-            ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
-            ["@types/rollup", null],\
-            ["rollup", "npm:2.79.0"]\
+            ["rollup", "npm:3.21.5"]\
           ],\
           "packagePeers": [\
             "@types/rollup",\
@@ -15878,23 +15740,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-terser-virtual-d89e6b32ac/0/cache/rollup-plugin-terser-npm-7.0.2-3f55469f5a-af84bb7a7a.zip/node_modules/rollup-plugin-terser/",\
-          "packageDependencies": [\
-            ["rollup-plugin-terser", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:7.0.2"],\
-            ["@babel/code-frame", "npm:7.16.0"],\
-            ["@types/rollup", null],\
-            ["jest-worker", "npm:26.6.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["serialize-javascript", "npm:4.0.0"],\
-            ["terser", "virtual:c4049278d6d555367b216f6bd41ba4288e2094d64279ec27b256a04e8311e5489a2b3fda6c3beafe432ccd9801db71ab960d0e44b77ea097af9bbcd183ad61de#npm:5.10.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:7.0.2", {\
           "packageLocation": "./.yarn/__virtual__/rollup-plugin-terser-virtual-c4049278d6/0/cache/rollup-plugin-terser-npm-7.0.2-3f55469f5a-af84bb7a7a.zip/node_modules/rollup-plugin-terser/",\
           "packageDependencies": [\
@@ -15902,24 +15747,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/code-frame", "npm:7.16.0"],\
             ["@types/rollup", null],\
             ["jest-worker", "npm:26.6.2"],\
-            ["rollup", "npm:2.77.0"],\
-            ["serialize-javascript", "npm:4.0.0"],\
-            ["terser", "virtual:c4049278d6d555367b216f6bd41ba4288e2094d64279ec27b256a04e8311e5489a2b3fda6c3beafe432ccd9801db71ab960d0e44b77ea097af9bbcd183ad61de#npm:5.10.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-terser-virtual-dc2d6d289e/0/cache/rollup-plugin-terser-npm-7.0.2-3f55469f5a-af84bb7a7a.zip/node_modules/rollup-plugin-terser/",\
-          "packageDependencies": [\
-            ["rollup-plugin-terser", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:7.0.2"],\
-            ["@babel/code-frame", "npm:7.16.0"],\
-            ["@types/rollup", null],\
-            ["jest-worker", "npm:26.6.2"],\
-            ["rollup", "npm:2.79.0"],\
+            ["rollup", "npm:3.21.5"],\
             ["serialize-javascript", "npm:4.0.0"],\
             ["terser", "virtual:c4049278d6d555367b216f6bd41ba4288e2094d64279ec27b256a04e8311e5489a2b3fda6c3beafe432ccd9801db71ab960d0e44b77ea097af9bbcd183ad61de#npm:5.10.0"]\
           ],\
@@ -15937,61 +15765,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-ts", "npm:3.0.2"]\
           ],\
           "linkType": "SOFT"\
-        }],\
-        ["virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-ts-virtual-c71b0465ed/0/cache/rollup-plugin-ts-npm-3.0.2-62f6d8bffb-4ed91d2aed.zip/node_modules/rollup-plugin-ts/",\
-          "packageDependencies": [\
-            ["rollup-plugin-ts", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:3.0.2"],\
-            ["@babel/core", null],\
-            ["@babel/plugin-transform-runtime", null],\
-            ["@babel/preset-env", null],\
-            ["@babel/preset-typescript", null],\
-            ["@babel/runtime", null],\
-            ["@rollup/pluginutils", "npm:4.2.1"],\
-            ["@swc/core", null],\
-            ["@swc/helpers", null],\
-            ["@types/babel__core", null],\
-            ["@types/babel__plugin-transform-runtime", null],\
-            ["@types/babel__preset-env", null],\
-            ["@types/babel__preset-typescript", null],\
-            ["@types/babel__runtime", null],\
-            ["@types/rollup", null],\
-            ["@types/swc__core", null],\
-            ["@types/swc__helpers", null],\
-            ["@types/typescript", null],\
-            ["@wessberg/stringutil", "npm:1.0.19"],\
-            ["ansi-colors", "npm:4.1.3"],\
-            ["browserslist", "npm:4.21.1"],\
-            ["browserslist-generator", "npm:1.0.66"],\
-            ["compatfactory", "virtual:f792c8dfe5d19f5b6923b9848b142d9f960498ba2411c6eabc92a17eb007c1829956f26a759d1392d920cb3c96c4e03d0398d5fa3e44e0988b788eeccae84377#npm:1.0.1"],\
-            ["crosspath", "npm:2.0.0"],\
-            ["magic-string", "npm:0.26.2"],\
-            ["rollup", "npm:2.79.1"],\
-            ["ts-clone-node", "virtual:f792c8dfe5d19f5b6923b9848b142d9f960498ba2411c6eabc92a17eb007c1829956f26a759d1392d920cb3c96c4e03d0398d5fa3e44e0988b788eeccae84377#npm:1.0.0"],\
-            ["tslib", "npm:2.4.0"],\
-            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
-          ],\
-          "packagePeers": [\
-            "@babel/core",\
-            "@babel/plugin-transform-runtime",\
-            "@babel/preset-env",\
-            "@babel/preset-typescript",\
-            "@babel/runtime",\
-            "@swc/core",\
-            "@swc/helpers",\
-            "@types/babel__core",\
-            "@types/babel__plugin-transform-runtime",\
-            "@types/babel__preset-env",\
-            "@types/babel__preset-typescript",\
-            "@types/babel__runtime",\
-            "@types/rollup",\
-            "@types/swc__core",\
-            "@types/swc__helpers",\
-            "@types/typescript",\
-            "rollup",\
-            "typescript"\
-          ],\
-          "linkType": "HARD"\
         }],\
         ["virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:3.0.2", {\
           "packageLocation": "./.yarn/__virtual__/rollup-plugin-ts-virtual-f792c8dfe5/0/cache/rollup-plugin-ts-npm-3.0.2-62f6d8bffb-4ed91d2aed.zip/node_modules/rollup-plugin-ts/",\
@@ -16021,62 +15794,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["compatfactory", "virtual:f792c8dfe5d19f5b6923b9848b142d9f960498ba2411c6eabc92a17eb007c1829956f26a759d1392d920cb3c96c4e03d0398d5fa3e44e0988b788eeccae84377#npm:1.0.1"],\
             ["crosspath", "npm:2.0.0"],\
             ["magic-string", "npm:0.26.2"],\
-            ["rollup", "npm:2.77.0"],\
-            ["ts-clone-node", "virtual:f792c8dfe5d19f5b6923b9848b142d9f960498ba2411c6eabc92a17eb007c1829956f26a759d1392d920cb3c96c4e03d0398d5fa3e44e0988b788eeccae84377#npm:1.0.0"],\
-            ["tslib", "npm:2.4.0"],\
-            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
-          ],\
-          "packagePeers": [\
-            "@babel/core",\
-            "@babel/plugin-transform-runtime",\
-            "@babel/preset-env",\
-            "@babel/preset-typescript",\
-            "@babel/runtime",\
-            "@swc/core",\
-            "@swc/helpers",\
-            "@types/babel__core",\
-            "@types/babel__plugin-transform-runtime",\
-            "@types/babel__preset-env",\
-            "@types/babel__preset-typescript",\
-            "@types/babel__runtime",\
-            "@types/rollup",\
-            "@types/swc__core",\
-            "@types/swc__helpers",\
-            "@types/typescript",\
-            "rollup",\
-            "typescript"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-ts-virtual-4a32536acf/0/cache/rollup-plugin-ts-npm-3.0.2-62f6d8bffb-4ed91d2aed.zip/node_modules/rollup-plugin-ts/",\
-          "packageDependencies": [\
-            ["rollup-plugin-ts", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:3.0.2"],\
-            ["@babel/core", null],\
-            ["@babel/plugin-transform-runtime", null],\
-            ["@babel/preset-env", null],\
-            ["@babel/preset-typescript", null],\
-            ["@babel/runtime", null],\
-            ["@rollup/pluginutils", "npm:4.2.1"],\
-            ["@swc/core", null],\
-            ["@swc/helpers", null],\
-            ["@types/babel__core", null],\
-            ["@types/babel__plugin-transform-runtime", null],\
-            ["@types/babel__preset-env", null],\
-            ["@types/babel__preset-typescript", null],\
-            ["@types/babel__runtime", null],\
-            ["@types/rollup", null],\
-            ["@types/swc__core", null],\
-            ["@types/swc__helpers", null],\
-            ["@types/typescript", null],\
-            ["@wessberg/stringutil", "npm:1.0.19"],\
-            ["ansi-colors", "npm:4.1.3"],\
-            ["browserslist", "npm:4.21.1"],\
-            ["browserslist-generator", "npm:1.0.66"],\
-            ["compatfactory", "virtual:f792c8dfe5d19f5b6923b9848b142d9f960498ba2411c6eabc92a17eb007c1829956f26a759d1392d920cb3c96c4e03d0398d5fa3e44e0988b788eeccae84377#npm:1.0.1"],\
-            ["crosspath", "npm:2.0.0"],\
-            ["magic-string", "npm:0.26.2"],\
-            ["rollup", "npm:2.79.0"],\
+            ["rollup", "npm:3.21.5"],\
             ["ts-clone-node", "virtual:f792c8dfe5d19f5b6923b9848b142d9f960498ba2411c6eabc92a17eb007c1829956f26a759d1392d920cb3c96c4e03d0398d5fa3e44e0988b788eeccae84377#npm:1.0.0"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\

@@ -3652,7 +3652,7 @@ __metadata:
     jest: 29.5.0
     jest-environment-jsdom: 29.5.0
     rimraf: 3.0.2
-    rollup: 2.77.0
+    rollup: 2.79.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
@@ -3763,7 +3763,7 @@ __metadata:
     cross-env: 7.0.3
     jest: 29.5.0
     rimraf: 3.0.2
-    rollup: 2.79.0
+    rollup: 2.79.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
@@ -3822,7 +3822,7 @@ __metadata:
     redux-saga: 1.2.3
     redux-thunk: 2.4.1
     rimraf: 3.0.2
-    rollup: 2.79.0
+    rollup: 2.79.1
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
@@ -12958,34 +12958,6 @@ __metadata:
     "@swc/helpers":
       optional: true
   checksum: 4ed91d2aed37efe665b8a305f3bb88bb55b38de5f73c73722c0001dca6dc11cf953b5b0add0b75437b71fee3647886d601da1c56e18618adf9c66645d28436b1
-  languageName: node
-  linkType: hard
-
-"rollup@npm:2.77.0":
-  version: 2.77.0
-  resolution: "rollup@npm:2.77.0"
-  dependencies:
-    fsevents: ~2.3.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    rollup: dist/bin/rollup
-  checksum: 74ccc98429709984a89af636250833e7502d87f1d9c6d96ebfe4b52030ebf94b9f6b84b8ab476670329a61d54b681d35eecdc601bac5b5396b099b1ea69970ef
-  languageName: node
-  linkType: hard
-
-"rollup@npm:2.79.0":
-  version: 2.79.0
-  resolution: "rollup@npm:2.79.0"
-  dependencies:
-    fsevents: ~2.3.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    rollup: dist/bin/rollup
-  checksum: 166f1ffea1898e157003920065b3a328e7012ea6808860ee8fe5d1ce94804fcce9985c95a3c0f7fe9c611aff0d09a70f073f1d6f715c8faba28e4e40f71ee3bb
   languageName: node
   linkType: hard
 

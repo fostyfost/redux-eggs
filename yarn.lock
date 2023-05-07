@@ -3633,7 +3633,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-ts: 3.0.2
     terser: 5.15.0
-    tslib: 2.4.0
+    tslib: 2.5.0
     typescript: 4.6.4
   peerDependencies:
     rollup: ^2.57.0
@@ -3657,7 +3657,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
     ts-jest: 29.0.2
-    tslib: 2.4.0
+    tslib: 2.5.0
     typescript: 4.6.4
   languageName: unknown
   linkType: soft
@@ -3695,7 +3695,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
     ts-jest: 29.0.2
-    tslib: 2.4.0
+    tslib: 2.5.0
     typescript: 4.6.4
   peerDependencies:
     "@redux-eggs/core": ^2.0.0
@@ -3740,7 +3740,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
     ts-jest: 29.0.2
-    tslib: 2.4.0
+    tslib: 2.5.0
     typescript: 4.6.4
   peerDependencies:
     "@redux-eggs/core": ^2.0.0
@@ -3768,7 +3768,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
     ts-jest: 29.0.2
-    tslib: 2.4.0
+    tslib: 2.5.0
     typescript: 4.6.4
   peerDependencies:
     "@redux-eggs/core": ^2.0.0
@@ -3796,7 +3796,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
     ts-jest: 29.0.2
-    tslib: 2.4.0
+    tslib: 2.5.0
     typescript: 4.6.4
   peerDependencies:
     "@redux-eggs/core": ^2.0.0
@@ -3827,7 +3827,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     rollup-plugin-ts: 3.0.2
     ts-jest: 29.0.2
-    tslib: 2.4.0
+    tslib: 2.5.0
     typescript: 4.6.4
   peerDependencies:
     "@redux-eggs/core": ^2.0.0
@@ -14053,6 +14053,13 @@ __metadata:
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
+"tslib@npm:2.5.0":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
   languageName: node
   linkType: hard
 

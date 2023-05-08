@@ -1,5 +1,5 @@
 import type { Draft } from 'immer'
-import produce from 'immer'
+import { produce } from 'immer'
 
 import type { FoxActionsUnion } from '@/eggs/fox/action-creators'
 import { FoxActionType } from '@/eggs/fox/action-types'

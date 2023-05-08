@@ -64,14 +64,16 @@ export type StaticPropsFn<S extends WithEggExt = WithEggExt> = (store: S) => Get
 
 export type ServerSidePropsFn<S extends WithEggExt = WithEggExt> = (store: S) => GetServerSideProps
 
-export type InitialAppPropsFn<S extends WithEggExt = WithEggExt> = (store: S) => typeof App['getInitialProps']
+export type InitialAppPropsFn<S extends WithEggExt = WithEggExt> = (store: S) => (typeof App)['getInitialProps']
 
 export type InitialPagePropsFn<S extends WithEggExt = WithEggExt> = (store: S) => NextPage['getInitialProps']
 
 export interface AppWrapper<S extends WithEggExt = WithEggExt> {
   wrapGetInitialProps<Fn extends InitialAppPropsFn<S> = InitialAppPropsFn<S>>(
     fn: Fn,
-  ): ReturnType<Fn> extends typeof App['getInitialProps'] ? Exclude<typeof App['getInitialProps'], undefined> : never
+  ): ReturnType<Fn> extends (typeof App)['getInitialProps']
+    ? Exclude<(typeof App)['getInitialProps'], undefined>
+    : never
 
   wrapApp<T extends NextComponentType<any, any, any> = NextComponentType<any, any, any>>(AppComponent: T): T
 }

@@ -26,7 +26,16 @@ const Fox: FC = () => {
       {fox ? (
         <>
           <div>
-            <NextImage src={fox} alt='Fox' width={700} height={475} layout='fixed' objectFit='contain' unoptimized />
+            <NextImage
+              src={fox}
+              alt='Fox'
+              width={700}
+              height={475}
+              unoptimized
+              style={{
+                objectFit: 'contain',
+              }}
+            />
           </div>
           <button onClick={update}>Update</button>
         </>

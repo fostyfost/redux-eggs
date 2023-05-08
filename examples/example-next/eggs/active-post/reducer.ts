@@ -1,5 +1,5 @@
 import type { Draft } from 'immer'
-import produce from 'immer'
+import { produce } from 'immer'
 
 import type { ActivePostActionsUnion } from '@/eggs/active-post/action-creators'
 import { ActivePostActionType } from '@/eggs/active-post/action-types'

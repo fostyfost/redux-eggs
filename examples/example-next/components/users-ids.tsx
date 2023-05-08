@@ -14,12 +14,17 @@ const LoadedUsers: FC<Props> = ({ rootUrl }) => {
   return (
     <div>
       {ids.map(id => (
-        <NextLink key={id} href={`${rootUrl}/${id}`} scroll={false}>
-          <a style={{ display: 'block', padding: '10px' }}>Get user with ID: {id}</a>
+        <NextLink key={id} href={`${rootUrl}/${id}`} scroll={false} style={{ display: 'block', padding: '10px' }}>
+          Get user with ID: {id}
         </NextLink>
       ))}
-      <NextLink prefetch={false} href={`${rootUrl}/100500`} scroll={false}>
-        <a style={{ display: 'block', padding: '10px' }}>Unavailable user</a>
+      <NextLink
+        prefetch={false}
+        href={`${rootUrl}/100500`}
+        scroll={false}
+        style={{ display: 'block', padding: '10px' }}
+      >
+        Unavailable user
       </NextLink>
     </div>
   )

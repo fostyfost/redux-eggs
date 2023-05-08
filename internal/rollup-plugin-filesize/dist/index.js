@@ -2,17 +2,17 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var fs = require('node:fs');
+var path = require('node:path');
+var process = require('node:process');
+var util = require('node:util');
+var zlib = require('node:zlib');
 var brotli = require('brotli-size');
 var CliTable = require('cli-table');
 var colorette = require('colorette');
-var fileSize = require('filesize');
-var fs = require('fs');
+var filesize$1 = require('filesize');
 var pacote = require('pacote');
-var path = require('path');
-var process = require('process');
 var terser = require('terser');
-var util = require('util');
-var zlib = require('zlib');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -34,19 +34,18 @@ function _interopNamespace(e) {
   return Object.freeze(n);
 }
 
-var brotli__default = /*#__PURE__*/_interopDefaultLegacy(brotli);
-var CliTable__default = /*#__PURE__*/_interopDefaultLegacy(CliTable);
-var fileSize__default = /*#__PURE__*/_interopDefaultLegacy(fileSize);
 var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
-var pacote__default = /*#__PURE__*/_interopDefaultLegacy(pacote);
 var path__default = /*#__PURE__*/_interopDefaultLegacy(path);
-var process__namespace = /*#__PURE__*/_interopNamespace(process);
-var terser__default = /*#__PURE__*/_interopDefaultLegacy(terser);
+var process__default = /*#__PURE__*/_interopDefaultLegacy(process);
 var util__default = /*#__PURE__*/_interopDefaultLegacy(util);
 var zlib__default = /*#__PURE__*/_interopDefaultLegacy(zlib);
+var brotli__default = /*#__PURE__*/_interopDefaultLegacy(brotli);
+var CliTable__default = /*#__PURE__*/_interopDefaultLegacy(CliTable);
+var pacote__default = /*#__PURE__*/_interopDefaultLegacy(pacote);
+var terser__default = /*#__PURE__*/_interopDefaultLegacy(terser);
 
 const gzipSizeSync = (input) => zlib__default["default"].gzipSync(input, { level: 9 }).length;
-const getSize = (value) => fileSize__default["default"](value, { output: 'array', exponent: 0 });
+const getSize = (value) => filesize$1.filesize(value, { output: 'array', exponent: 0 });
 const getRow = (title, sizeCurrent, sizeBefore) => {
     const size = [colorette.cyan(sizeCurrent.join(' '))];
     if (sizeBefore) {
@@ -85,7 +84,7 @@ const getStrings = async (outputOptions, chunk) => {
         bundleSize: getSize(Buffer.byteLength(chunk.code)),
         brotliSize: getSize(await brotli__default["default"](chunk.code)),
     };
-    const { name } = await (function (t) { return Promise.resolve().then(function () { return /*#__PURE__*/_interopNamespace(require(t)); }); })(path__default["default"].join(process__namespace.cwd(), './package.json'));
+    const { name } = await (function (t) { return Promise.resolve().then(function () { return /*#__PURE__*/_interopNamespace(require(t)); }); })(path__default["default"].join(process__default["default"].cwd(), './package.json'));
     try {
         const { version } = await pacote__default["default"].manifest(`${name}@latest`);
         info.lastVersion = version;
@@ -100,7 +99,7 @@ const getStrings = async (outputOptions, chunk) => {
     }
     let file = outputOptions.file || '';
     try {
-        const output = path__default["default"].join(process__namespace.cwd(), './file-size-cache');
+        const output = path__default["default"].join(process__default["default"].cwd(), './file-size-cache');
         await pacote__default["default"].extract(`${name}@latest`, output);
         file = path__default["default"].resolve(output, file);
     }
@@ -131,7 +130,7 @@ const filesize = () => {
     const plugin = {
         name: 'filesize',
     };
-    if (process__namespace.env.FILESIZE === 'true') {
+    if (process__default["default"].env.FILESIZE === 'true') {
         plugin.generateBundle = async (outputOptions, bundle) => {
             Promise.all(Object.keys(bundle)
                 .map(fileName => bundle[fileName])

@@ -28,9 +28,10 @@ const Xkcd: FC<{ small?: boolean }> = ({ small }) => {
           alt={info.alt}
           width={200}
           height={100}
-          layout='fixed'
-          objectFit='contain'
           unoptimized
+          style={{
+            objectFit: 'contain',
+          }}
         />
       </div>
     )
@@ -45,9 +46,10 @@ const Xkcd: FC<{ small?: boolean }> = ({ small }) => {
             alt={info.alt}
             width={700}
             height={475}
-            layout='fixed'
-            objectFit='contain'
             unoptimized
+            style={{
+              objectFit: 'contain',
+            }}
           />
           <pre>
             <code>{JSON.stringify(info, null, 2)}</code>

@@ -1,5 +1,5 @@
 import type { Draft } from 'immer'
-import produce from 'immer'
+import { produce } from 'immer'
 
 import type { CountActionsUnion } from '@/eggs/count/action-creators'
 import { CountActionType } from '@/eggs/count/action-types'

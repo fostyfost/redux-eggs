@@ -1,5 +1,5 @@
 import type { Draft } from 'immer'
-import produce from 'immer'
+import { produce } from 'immer'
 
 import type { ClockActionsUnion } from '@/eggs/clock/action-creators'
 import { ClockActionType } from '@/eggs/clock/action-types'

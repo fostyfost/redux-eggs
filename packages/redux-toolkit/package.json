@@ -1,6 +1,6 @@
 {
   "name": "@redux-eggs/redux-toolkit",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "license": "MIT",
   "author": "Fosty Fost",
   "repository": {
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@jest/types": "29.1.0",
     "@redux-eggs-internal/rollup-plugin-filesize": "1.0.0",
-    "@redux-eggs/core": "3.0.0-alpha.1",
+    "@redux-eggs/core": "3.0.0-alpha.2",
     "@reduxjs/toolkit": "1.8.5",
     "@rollup/plugin-eslint": "8.0.2",
     "@types/jest": "29.0.3",
@@ -57,5 +57,5 @@
     "@redux-eggs/core": "^2.0.0",
     "@reduxjs/toolkit": "^1.6.0"
   },
-  "gitHead": "5ead04c987c52df518ab3558168e1595df3dde19"
+  "gitHead": "57afc180bbec9a2915242c895e712a1ec61d856c"
 }

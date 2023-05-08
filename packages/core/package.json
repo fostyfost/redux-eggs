@@ -1,6 +1,6 @@
 {
   "name": "@redux-eggs/core",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0-alpha.3",
   "license": "MIT",
   "author": "Fosty Fost",
   "repository": {
@@ -51,5 +51,5 @@
     "tslib": "2.4.0",
     "typescript": "4.6.4"
   },
-  "gitHead": "57afc180bbec9a2915242c895e712a1ec61d856c"
+  "gitHead": "2c6e28bcf45dee0d1311d3deb270f9bfe094c5ef"
 }

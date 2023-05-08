@@ -18,8 +18,13 @@ const LoadedPosts: FC<Props> = ({ rootUrl }) => {
   return (
     <div>
       {posts.map(post => (
-        <NextLink key={post.id} href={`${rootUrl}/${post.id}`} scroll={false}>
-          <a style={{ display: 'block', padding: '10px' }}>{post.title}</a>
+        <NextLink
+          key={post.id}
+          href={`${rootUrl}/${post.id}`}
+          scroll={false}
+          style={{ display: 'block', padding: '10px' }}
+        >
+          {post.title}
         </NextLink>
       ))}
     </div>

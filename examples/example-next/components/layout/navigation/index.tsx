@@ -229,16 +229,12 @@ const MenuButton: FC<PropsWithChildren<MenuButtonProps>> = ({ onClick, children 
 
 const NavigationItem: FC<NavigationItemProps> = ({ href, label, isCurrent }) => {
   if (isCurrent) {
-    return (
-      <span key={href} className={styles.navItem}>
-        {label}
-      </span>
-    )
+    return <span className={styles.navItem}>{label}</span>
   }
 
   return (
-    <NextLink key={href} href={href} prefetch={false}>
-      <a className={styles.navItem}>{label}</a>
+    <NextLink href={href} prefetch={false} className={styles.navItem}>
+      {label}
     </NextLink>
   )
 }

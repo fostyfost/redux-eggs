@@ -1,5 +1,5 @@
 import type { Draft } from 'immer'
-import produce from 'immer'
+import { produce } from 'immer'
 
 import type { DogActionsUnion } from './action-creators'
 import { DogActionType } from './action-types'

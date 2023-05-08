@@ -26,7 +26,16 @@ const Dog: FC = () => {
       {dog ? (
         <>
           <div>
-            <NextImage src={dog} alt='Dog' width={700} height={475} layout='fixed' objectFit='contain' unoptimized />
+            <NextImage
+              src={dog}
+              alt='Dog'
+              width={700}
+              height={475}
+              unoptimized
+              style={{
+                objectFit: 'contain',
+              }}
+            />
           </div>
           <button onClick={update}>Update</button>
         </>

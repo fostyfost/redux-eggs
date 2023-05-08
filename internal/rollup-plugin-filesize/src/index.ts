@@ -1,16 +1,16 @@
+import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
 import util from 'node:util'
+import zlib from 'node:zlib'
 
 import brotli from 'brotli-size'
 import CliTable from 'cli-table'
 import { bold, cyan, green, red, white } from 'colorette'
-import fileSize from 'filesize'
-import fs from 'fs'
+import { filesize as fileSize } from 'filesize'
 import pacote from 'pacote'
-import * as process from 'process'
 import type { NormalizedOutputOptions, OutputChunk, OutputPlugin } from 'rollup'
 import terser from 'terser'
-import zlib from 'zlib'
 
 type FileSizeValue = number
 type FileSizeSymbol = string

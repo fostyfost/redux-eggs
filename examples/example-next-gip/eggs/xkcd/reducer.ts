@@ -1,5 +1,5 @@
 import type { Draft } from 'immer'
-import produce from 'immer'
+import { produce } from 'immer'
 
 import type { XkcdActionsUnion } from '@/eggs/xkcd/action-creators'
 import { XkcdActionType } from '@/eggs/xkcd/action-types'

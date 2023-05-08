@@ -1,11 +1,12 @@
 import eslint from '@rollup/plugin-eslint'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import ts from 'rollup-plugin-ts'
 
 const config = {
   input: './src/index.ts',
-  external: ['fs', 'path', 'process', 'util', 'zlib'],
   plugins: [
+    nodeResolve(),
     peerDepsExternal({ includeDependencies: true }),
     eslint({
       throwOnError: true,

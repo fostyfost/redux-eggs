@@ -1,7 +1,7 @@
+import { composeWithDevTools } from '@redux-devtools/extension'
 import { createStore } from '@redux-eggs/redux'
 import { useDispatch } from 'react-redux'
 import type { AnyAction } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
 import type { ThunkAction } from 'redux-thunk'
 
 import { getCommonEggs } from './eggs/common'

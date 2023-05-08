@@ -1,5 +1,5 @@
 import type { Draft } from 'immer'
-import produce from 'immer'
+import { produce } from 'immer'
 
 import type { PicsumActionsUnion } from '@/eggs/picsum/action-creators'
 import { PicsumActionType } from '@/eggs/picsum/action-types'

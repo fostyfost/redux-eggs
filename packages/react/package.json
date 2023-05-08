@@ -39,7 +39,7 @@
     "@redux-eggs/core": "3.0.0-alpha.2",
     "@redux-eggs/redux": "3.0.0-alpha.2",
     "@redux-eggs/redux-toolkit": "3.0.0-alpha.2",
-    "@rollup/plugin-eslint": "8.0.2",
+    "@rollup/plugin-eslint": "8.0.5",
     "@testing-library/dom": "8.18.1",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",

@@ -3618,7 +3618,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@redux-eggs-internal/rollup-plugin-filesize@workspace:internal/rollup-plugin-filesize"
   dependencies:
-    "@rollup/plugin-eslint": 8.0.2
+    "@rollup/plugin-eslint": 8.0.5
     "@types/cli-table": 0.3.1
     "@types/node": 20.1.0
     "@types/pacote": 11.1.5
@@ -3640,13 +3640,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@2.2.0, @redux-eggs/core@workspace:*, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@3.0.0-alpha.2, @redux-eggs/core@workspace:*, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
     "@jest/types": 29.1.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@rollup/plugin-eslint": 8.0.2
+    "@rollup/plugin-eslint": 8.0.5
     "@types/jest": 28.1.5
     cross-env: 7.0.3
     jest: 29.5.0
@@ -3668,9 +3668,9 @@ __metadata:
   dependencies:
     "@jest/types": 29.1.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 2.2.0
-    "@redux-eggs/redux": 2.2.0
-    "@rollup/plugin-eslint": 8.0.2
+    "@redux-eggs/core": 3.0.0-alpha.2
+    "@redux-eggs/redux": 3.0.0-alpha.2
+    "@rollup/plugin-eslint": 8.0.5
     "@testing-library/react": 13.4.0
     "@types/jest": 29.0.3
     "@types/node": 20.1.0
@@ -3712,10 +3712,10 @@ __metadata:
   dependencies:
     "@jest/types": 29.1.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 2.2.0
-    "@redux-eggs/redux": 2.2.0
-    "@redux-eggs/redux-toolkit": 2.2.0
-    "@rollup/plugin-eslint": 8.0.2
+    "@redux-eggs/core": 3.0.0-alpha.2
+    "@redux-eggs/redux": 3.0.0-alpha.2
+    "@redux-eggs/redux-toolkit": 3.0.0-alpha.2
+    "@rollup/plugin-eslint": 8.0.5
     "@testing-library/dom": 8.18.1
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 13.4.0
@@ -3749,15 +3749,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@2.2.0, @redux-eggs/redux-toolkit@workspace:*, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@3.0.0-alpha.2, @redux-eggs/redux-toolkit@workspace:*, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
     "@jest/types": 29.1.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 2.2.0
+    "@redux-eggs/core": 3.0.0-alpha.2
     "@reduxjs/toolkit": 1.8.5
-    "@rollup/plugin-eslint": 8.0.2
+    "@rollup/plugin-eslint": 8.0.5
     "@types/jest": 29.0.3
     "@types/node": 20.1.0
     cross-env: 7.0.3
@@ -3776,14 +3776,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@2.2.0, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@3.0.0-alpha.2, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 29.1.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 2.2.0
-    "@rollup/plugin-eslint": 8.0.2
+    "@redux-eggs/core": 3.0.0-alpha.2
+    "@rollup/plugin-eslint": 8.0.5
     "@types/jest": 29.0.3
     "@types/node": 20.1.0
     cross-env: 7.0.3
@@ -3810,11 +3810,11 @@ __metadata:
   dependencies:
     "@jest/types": 29.1.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 2.2.0
-    "@redux-eggs/redux": 2.2.0
-    "@redux-eggs/redux-toolkit": 2.2.0
+    "@redux-eggs/core": 3.0.0-alpha.2
+    "@redux-eggs/redux": 3.0.0-alpha.2
+    "@redux-eggs/redux-toolkit": 3.0.0-alpha.2
     "@reduxjs/toolkit": 1.8.5
-    "@rollup/plugin-eslint": 8.0.2
+    "@rollup/plugin-eslint": 8.0.5
     "@types/jest": 29.0.3
     cross-env: 7.0.3
     jest: 29.5.0
@@ -3932,15 +3932,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-eslint@npm:8.0.2":
-  version: 8.0.2
-  resolution: "@rollup/plugin-eslint@npm:8.0.2"
+"@rollup/plugin-eslint@npm:8.0.5":
+  version: 8.0.5
+  resolution: "@rollup/plugin-eslint@npm:8.0.5"
   dependencies:
     "@rollup/pluginutils": ^4.0.0
     eslint: ^7.12.0
   peerDependencies:
     rollup: ^1.20.0||^2.0.0
-  checksum: 7d9d9708be74984e8f279b226e61fe152cc095fa3efb40972bd06291f830be6388b19692b1460b5e195d04d42ee8964991844c6efc650c337a6b4af87390aa12
+  checksum: 692b5ef8a53b1cd2763ffa675ace571582398b2fd23015abdae262c51880ac9f355267a8551f68245babf2108a0ab32d42548be2da2f5d7549c16bf9ab09a1ec
   languageName: node
   linkType: hard
 

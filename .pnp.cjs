@@ -4834,7 +4834,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["redux", "npm:4.1.2"],\
-            ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
+            ["redux-thunk", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
@@ -4865,7 +4865,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["redux", "npm:4.1.2"],\
-            ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
+            ["redux-thunk", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:2.2.4"],\
@@ -4886,7 +4886,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/types", "npm:29.1.0"],\
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
-            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
+            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
@@ -4949,7 +4949,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/types", "npm:29.1.0"],\
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
-            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
+            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
@@ -4981,7 +4981,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/types", "npm:29.1.0"],\
             ["@redux-eggs-internal/rollup-plugin-filesize", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#workspace:internal/rollup-plugin-filesize"],\
             ["@redux-eggs/core", "workspace:packages/core"],\
-            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
+            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/node", "npm:20.1.0"],\
@@ -5009,7 +5009,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:0f718a0d747720b14bd8c32c418e3c4b86fb3e451f3abf55467f10bbeb5f196369ddae5939811817a019f38bffcea18652d015b920409dc9b6fd0f7179f4010a#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:4bbbe626f757236918535bbbf2e8aad12bc9f24d22dcc44a15273630e4aa36c687d649befba056c826635a0aae509983a922bdc70a8740978d9b53744c47faa7#workspace:packages/redux-toolkit"],\
-            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
+            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/redux", null],\
@@ -5048,7 +5048,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:4bbbe626f757236918535bbbf2e8aad12bc9f24d22dcc44a15273630e4aa36c687d649befba056c826635a0aae509983a922bdc70a8740978d9b53744c47faa7#workspace:packages/redux-toolkit"],\
-            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
+            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["@types/redux", null],\
@@ -5058,7 +5058,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["redux", "npm:4.1.2"],\
             ["redux-saga", "npm:1.2.3"],\
-            ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
+            ["redux-thunk", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.0"],\
             ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
@@ -5086,14 +5086,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@redux-eggs/redux", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#workspace:packages/redux"],\
             ["@redux-eggs/redux-toolkit", "virtual:4bbbe626f757236918535bbbf2e8aad12bc9f24d22dcc44a15273630e4aa36c687d649befba056c826635a0aae509983a922bdc70a8740978d9b53744c47faa7#workspace:packages/redux-toolkit"],\
-            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
+            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:8.0.2"],\
             ["@types/jest", "npm:29.0.3"],\
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["redux", "npm:4.1.2"],\
             ["redux-saga", "npm:1.2.3"],\
-            ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
+            ["redux-thunk", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#npm:2.4.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.79.0"],\
             ["rollup-plugin-peer-deps-external", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:2.2.4"],\
@@ -5179,10 +5179,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:1.8.5", {\
-          "packageLocation": "./.yarn/cache/@reduxjs-toolkit-npm-1.8.5-3ca47cf2f4-831b5c7477.zip/node_modules/@reduxjs/toolkit/",\
+        ["npm:1.9.5", {\
+          "packageLocation": "./.yarn/cache/@reduxjs-toolkit-npm-1.9.5-4da955008b-54672c5593.zip/node_modules/@reduxjs/toolkit/",\
           "packageDependencies": [\
-            ["@reduxjs/toolkit", "npm:1.8.5"]\
+            ["@reduxjs/toolkit", "npm:1.9.5"]\
           ],\
           "linkType": "SOFT"\
         }],\
@@ -5196,7 +5196,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-redux", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#npm:8.0.2"],\
             ["redux", "npm:4.1.2"],\
-            ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
+            ["redux-thunk", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#npm:2.4.1"],\
             ["reselect", "npm:4.1.5"]\
           ],\
           "packagePeers": [\
@@ -5207,18 +5207,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5", {\
-          "packageLocation": "./.yarn/__virtual__/@reduxjs-toolkit-virtual-016ef9cac1/0/cache/@reduxjs-toolkit-npm-1.8.5-3ca47cf2f4-831b5c7477.zip/node_modules/@reduxjs/toolkit/",\
+        ["virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5", {\
+          "packageLocation": "./.yarn/__virtual__/@reduxjs-toolkit-virtual-3c6c5f249d/0/cache/@reduxjs-toolkit-npm-1.9.5-4da955008b-54672c5593.zip/node_modules/@reduxjs/toolkit/",\
           "packageDependencies": [\
-            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.8.5"],\
+            ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@types/react", null],\
             ["@types/react-redux", null],\
-            ["immer", "npm:9.0.12"],\
+            ["immer", "npm:9.0.21"],\
             ["react", null],\
             ["react-redux", null],\
-            ["redux", "npm:4.1.2"],\
-            ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
-            ["reselect", "npm:4.1.5"]\
+            ["redux", "npm:4.2.1"],\
+            ["redux-thunk", "virtual:3c6c5f249d59d065ebd6717b2ba99c823051f8e4c5441ca26105215c506d74415bff8a88293cc793533c5a7451f7a1560865ec99b2bbece08d6f55b543262244#npm:2.4.2"],\
+            ["reselect", "npm:4.1.8"]\
           ],\
           "packagePeers": [\
             "@types/react-redux",\
@@ -11049,6 +11049,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["immer", "npm:9.0.15"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:9.0.21", {\
+          "packageLocation": "./.yarn/cache/immer-npm-9.0.21-03c48c58ea-70e3c27416.zip/node_modules/immer/",\
+          "packageDependencies": [\
+            ["immer", "npm:9.0.21"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["immutable", [\
@@ -15488,6 +15495,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.16.3"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.2.1", {\
+          "packageLocation": "./.yarn/cache/redux-npm-4.2.1-e7e2cf2e37-f63b9060c3.zip/node_modules/redux/",\
+          "packageDependencies": [\
+            ["redux", "npm:4.2.1"],\
+            ["@babel/runtime", "npm:7.16.3"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["redux-devtools-extension", [\
@@ -15565,12 +15580,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1", {\
-          "packageLocation": "./.yarn/__virtual__/redux-thunk-virtual-62053116aa/0/cache/redux-thunk-npm-2.4.1-2ba08bf615-af5abb425f.zip/node_modules/redux-thunk/",\
+        ["npm:2.4.2", {\
+          "packageLocation": "./.yarn/cache/redux-thunk-npm-2.4.2-3acdaaf7b0-c7f757f6c3.zip/node_modules/redux-thunk/",\
           "packageDependencies": [\
-            ["redux-thunk", "virtual:016ef9cac10325583c33bc1d06f0aaca087d1da34258457a96d8dfe5a0535dffa80ac7752839cd42dfd0443805907f8990824758698d26467aca5b4888622199#npm:2.4.1"],\
+            ["redux-thunk", "npm:2.4.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#npm:2.4.1", {\
+          "packageLocation": "./.yarn/__virtual__/redux-thunk-virtual-14ee0fa544/0/cache/redux-thunk-npm-2.4.1-2ba08bf615-af5abb425f.zip/node_modules/redux-thunk/",\
+          "packageDependencies": [\
+            ["redux-thunk", "virtual:283a1e09eceafdb2da83ffd7d71bd2b9f95106137f71f7d631baf75f538429096e6c709c39b69bbe459568bc5508a3e651a560bc5f3f8c944b10e0f746430350#npm:2.4.1"],\
             ["@types/redux", null],\
             ["redux", "npm:4.1.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/redux",\
+            "redux"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:3c6c5f249d59d065ebd6717b2ba99c823051f8e4c5441ca26105215c506d74415bff8a88293cc793533c5a7451f7a1560865ec99b2bbece08d6f55b543262244#npm:2.4.2", {\
+          "packageLocation": "./.yarn/__virtual__/redux-thunk-virtual-b6263fde3b/0/cache/redux-thunk-npm-2.4.2-3acdaaf7b0-c7f757f6c3.zip/node_modules/redux-thunk/",\
+          "packageDependencies": [\
+            ["redux-thunk", "virtual:3c6c5f249d59d065ebd6717b2ba99c823051f8e4c5441ca26105215c506d74415bff8a88293cc793533c5a7451f7a1560865ec99b2bbece08d6f55b543262244#npm:2.4.2"],\
+            ["@types/redux", null],\
+            ["redux", "npm:4.2.1"]\
           ],\
           "packagePeers": [\
             "@types/redux",\
@@ -15670,6 +15705,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/reselect-npm-4.1.6-869f318cc3-3ea1058422.zip/node_modules/reselect/",\
           "packageDependencies": [\
             ["reselect", "npm:4.1.6"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.1.8", {\
+          "packageLocation": "./.yarn/cache/reselect-npm-4.1.8-cad5f0a3f3-a4ac87ceda.zip/node_modules/reselect/",\
+          "packageDependencies": [\
+            ["reselect", "npm:4.1.8"]\
           ],\
           "linkType": "HARD"\
         }]\

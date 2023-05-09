@@ -2821,7 +2821,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/core@3.0.0-alpha.3, @redux-eggs/core@workspace:*, @redux-eggs/core@workspace:packages/core":
+"@redux-eggs/core@3.0.0-alpha.4, @redux-eggs/core@workspace:*, @redux-eggs/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/core@workspace:packages/core"
   dependencies:
@@ -2849,8 +2849,8 @@ __metadata:
   dependencies:
     "@jest/types": 29.5.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 3.0.0-alpha.3
-    "@redux-eggs/redux": 3.0.0-alpha.3
+    "@redux-eggs/core": 3.0.0-alpha.4
+    "@redux-eggs/redux": 3.0.0-alpha.4
     "@rollup/plugin-eslint": 9.0.3
     "@testing-library/react": 13.4.0
     "@types/jest": 29.5.1
@@ -2893,9 +2893,9 @@ __metadata:
   dependencies:
     "@jest/types": 29.5.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 3.0.0-alpha.3
-    "@redux-eggs/redux": 3.0.0-alpha.3
-    "@redux-eggs/redux-toolkit": 3.0.0-alpha.3
+    "@redux-eggs/core": 3.0.0-alpha.4
+    "@redux-eggs/redux": 3.0.0-alpha.4
+    "@redux-eggs/redux-toolkit": 3.0.0-alpha.4
     "@rollup/plugin-eslint": 9.0.3
     "@testing-library/dom": 8.18.1
     "@testing-library/jest-dom": 5.16.5
@@ -2930,13 +2930,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux-toolkit@3.0.0-alpha.3, @redux-eggs/redux-toolkit@workspace:*, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
+"@redux-eggs/redux-toolkit@3.0.0-alpha.4, @redux-eggs/redux-toolkit@workspace:*, @redux-eggs/redux-toolkit@workspace:packages/redux-toolkit":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux-toolkit@workspace:packages/redux-toolkit"
   dependencies:
     "@jest/types": 29.5.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 3.0.0-alpha.3
+    "@redux-eggs/core": 3.0.0-alpha.4
     "@reduxjs/toolkit": 1.9.5
     "@rollup/plugin-eslint": 9.0.3
     "@types/jest": 29.5.1
@@ -2957,13 +2957,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@redux-eggs/redux@3.0.0-alpha.3, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
+"@redux-eggs/redux@3.0.0-alpha.4, @redux-eggs/redux@workspace:*, @redux-eggs/redux@workspace:packages/redux":
   version: 0.0.0-use.local
   resolution: "@redux-eggs/redux@workspace:packages/redux"
   dependencies:
     "@jest/types": 29.5.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 3.0.0-alpha.3
+    "@redux-eggs/core": 3.0.0-alpha.4
     "@rollup/plugin-eslint": 9.0.3
     "@types/jest": 29.5.1
     "@types/node": 20.1.0
@@ -2991,9 +2991,9 @@ __metadata:
   dependencies:
     "@jest/types": 29.5.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@redux-eggs/core": 3.0.0-alpha.3
-    "@redux-eggs/redux": 3.0.0-alpha.3
-    "@redux-eggs/redux-toolkit": 3.0.0-alpha.3
+    "@redux-eggs/core": 3.0.0-alpha.4
+    "@redux-eggs/redux": 3.0.0-alpha.4
+    "@redux-eggs/redux-toolkit": 3.0.0-alpha.4
     "@reduxjs/toolkit": 1.9.5
     "@rollup/plugin-eslint": 9.0.3
     "@types/jest": 29.5.1

@@ -2798,7 +2798,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@redux-eggs-internal/rollup-plugin-filesize@workspace:internal/rollup-plugin-filesize"
   dependencies:
-    "@rollup/plugin-eslint": 9.0.3
+    "@rollup/plugin-eslint": 9.0.4
     "@rollup/plugin-node-resolve": 15.0.2
     "@types/cli-table": 0.3.1
     "@types/node": 20.1.0
@@ -2827,7 +2827,7 @@ __metadata:
   dependencies:
     "@jest/types": 29.5.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
-    "@rollup/plugin-eslint": 9.0.3
+    "@rollup/plugin-eslint": 9.0.4
     "@types/jest": 29.5.1
     cross-env: 7.0.3
     jest: 29.5.0
@@ -2851,7 +2851,7 @@ __metadata:
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
     "@redux-eggs/core": 3.0.0-alpha.4
     "@redux-eggs/redux": 3.0.0-alpha.4
-    "@rollup/plugin-eslint": 9.0.3
+    "@rollup/plugin-eslint": 9.0.4
     "@testing-library/react": 13.4.0
     "@types/jest": 29.5.1
     "@types/node": 20.1.0
@@ -2896,7 +2896,7 @@ __metadata:
     "@redux-eggs/core": 3.0.0-alpha.4
     "@redux-eggs/redux": 3.0.0-alpha.4
     "@redux-eggs/redux-toolkit": 3.0.0-alpha.4
-    "@rollup/plugin-eslint": 9.0.3
+    "@rollup/plugin-eslint": 9.0.4
     "@testing-library/dom": 8.18.1
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 13.4.0
@@ -2938,7 +2938,7 @@ __metadata:
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
     "@redux-eggs/core": 3.0.0-alpha.4
     "@reduxjs/toolkit": 1.9.5
-    "@rollup/plugin-eslint": 9.0.3
+    "@rollup/plugin-eslint": 9.0.4
     "@types/jest": 29.5.1
     "@types/node": 20.1.0
     cross-env: 7.0.3
@@ -2964,7 +2964,7 @@ __metadata:
     "@jest/types": 29.5.0
     "@redux-eggs-internal/rollup-plugin-filesize": 1.0.0
     "@redux-eggs/core": 3.0.0-alpha.4
-    "@rollup/plugin-eslint": 9.0.3
+    "@rollup/plugin-eslint": 9.0.4
     "@types/jest": 29.5.1
     "@types/node": 20.1.0
     cross-env: 7.0.3
@@ -2995,7 +2995,7 @@ __metadata:
     "@redux-eggs/redux": 3.0.0-alpha.4
     "@redux-eggs/redux-toolkit": 3.0.0-alpha.4
     "@reduxjs/toolkit": 1.9.5
-    "@rollup/plugin-eslint": 9.0.3
+    "@rollup/plugin-eslint": 9.0.4
     "@types/jest": 29.5.1
     cross-env: 7.0.3
     jest: 29.5.0
@@ -3100,9 +3100,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-eslint@npm:9.0.3":
-  version: 9.0.3
-  resolution: "@rollup/plugin-eslint@npm:9.0.3"
+"@rollup/plugin-eslint@npm:9.0.4":
+  version: 9.0.4
+  resolution: "@rollup/plugin-eslint@npm:9.0.4"
   dependencies:
     "@rollup/pluginutils": ^5.0.1
     eslint: ^8.24.0
@@ -3111,7 +3111,7 @@ __metadata:
   peerDependenciesMeta:
     rollup:
       optional: true
-  checksum: 609abead94bd82dd6b207ffff7b7b2edca906d593268cde1fe171ff8328898734ccb9b449965fee3684e62c581b770eae46c72965161d41ff9826e88ca113191
+  checksum: 1801b2b0a0a070e5fda96336789e91f90ea65fdee72019692805279a91e0e1c47c3b19fe03db12661194c08ba8c0531cc4ff9d02aa1a1e8a58bd29145f9ff537
   languageName: node
   linkType: hard
 

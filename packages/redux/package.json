@@ -38,7 +38,7 @@
     "@jest/types": "29.5.0",
     "@redux-eggs-internal/rollup-plugin-filesize": "1.0.0",
     "@redux-eggs/core": "3.0.0-alpha.4",
-    "@rollup/plugin-eslint": "9.0.3",
+    "@rollup/plugin-eslint": "9.0.4",
     "@types/jest": "29.5.1",
     "@types/node": "20.1.0",
     "cross-env": "7.0.3",

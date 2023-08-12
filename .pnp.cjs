@@ -3641,7 +3641,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.40.0"],\
-            ["filesize", "npm:10.0.7"],\
+            ["filesize", "npm:10.0.12"],\
             ["pacote", "npm:15.1.3"],\
             ["rimraf", "npm:5.0.0"],\
             ["rollup", "npm:2.79.1"],\
@@ -3670,7 +3670,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-table", "npm:0.3.11"],\
             ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.40.0"],\
-            ["filesize", "npm:10.0.7"],\
+            ["filesize", "npm:10.0.12"],\
             ["pacote", "npm:15.1.3"],\
             ["rimraf", "npm:5.0.0"],\
             ["rollup", "npm:2.79.1"],\
@@ -8599,10 +8599,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["filesize", [\
-        ["npm:10.0.7", {\
-          "packageLocation": "./.yarn/cache/filesize-npm-10.0.7-c53206c5d5-acabe6ddcf.zip/node_modules/filesize/",\
+        ["npm:10.0.12", {\
+          "packageLocation": "./.yarn/cache/filesize-npm-10.0.12-bf6f983450-1719683813.zip/node_modules/filesize/",\
           "packageDependencies": [\
-            ["filesize", "npm:10.0.7"]\
+            ["filesize", "npm:10.0.12"]\
           ],\
           "linkType": "HARD"\
         }]\

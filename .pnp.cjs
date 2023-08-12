@@ -2898,6 +2898,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@npmcli/agent", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/@npmcli-agent-npm-1.1.0-adfdd7a785-35434a99be.zip/node_modules/@npmcli/agent/",\
+          "packageDependencies": [\
+            ["@npmcli/agent", "npm:1.1.0"],\
+            ["lru-cache", "npm:7.18.3"],\
+            ["socks", "npm:2.7.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@npmcli/arborist", [\
         ["npm:5.3.0", {\
           "packageLocation": "./.yarn/cache/@npmcli-arborist-npm-5.3.0-5f9b001b69-7f99f451ba.zip/node_modules/@npmcli/arborist/",\
@@ -3642,7 +3653,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.40.0"],\
             ["filesize", "npm:10.0.7"],\
-            ["pacote", "npm:15.1.3"],\
+            ["pacote", "npm:16.0.0"],\
             ["rimraf", "npm:5.0.0"],\
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
@@ -3671,7 +3682,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.40.0"],\
             ["filesize", "npm:10.0.7"],\
-            ["pacote", "npm:15.1.3"],\
+            ["pacote", "npm:16.0.0"],\
             ["rimraf", "npm:5.0.0"],\
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
@@ -11535,6 +11546,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ssri", "npm:10.0.4"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:12.0.0", {\
+          "packageLocation": "./.yarn/cache/make-fetch-happen-npm-12.0.0-b8ee614d2c-f239cd771a.zip/node_modules/make-fetch-happen/",\
+          "packageDependencies": [\
+            ["make-fetch-happen", "npm:12.0.0"],\
+            ["@npmcli/agent", "npm:1.1.0"],\
+            ["cacache", "npm:17.1.0"],\
+            ["http-cache-semantics", "npm:4.1.1"],\
+            ["is-lambda", "npm:1.0.1"],\
+            ["minipass", "npm:7.0.2"],\
+            ["minipass-fetch", "npm:3.0.3"],\
+            ["minipass-flush", "npm:1.0.5"],\
+            ["minipass-pipeline", "npm:1.2.4"],\
+            ["negotiator", "npm:0.6.3"],\
+            ["promise-retry", "npm:2.0.1"],\
+            ["ssri", "npm:10.0.4"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["makeerror", [\
@@ -11733,6 +11762,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/minipass-npm-5.0.0-c64fb63c92-425dab2887.zip/node_modules/minipass/",\
           "packageDependencies": [\
             ["minipass", "npm:5.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.0.2", {\
+          "packageLocation": "./.yarn/cache/minipass-npm-7.0.2-baa42a5a34-46776de732.zip/node_modules/minipass/",\
+          "packageDependencies": [\
+            ["minipass", "npm:7.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12464,12 +12500,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:14.0.5", {\
-          "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-14.0.5-6b3e6c0dd0-c636496429.zip/node_modules/npm-registry-fetch/",\
+        ["npm:15.0.0", {\
+          "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-15.0.0-adce15d160-5c3703e970.zip/node_modules/npm-registry-fetch/",\
           "packageDependencies": [\
-            ["npm-registry-fetch", "npm:14.0.5"],\
-            ["make-fetch-happen", "npm:11.1.1"],\
-            ["minipass", "npm:5.0.0"],\
+            ["npm-registry-fetch", "npm:15.0.0"],\
+            ["make-fetch-happen", "npm:12.0.0"],\
+            ["minipass", "npm:7.0.2"],\
             ["minipass-fetch", "npm:3.0.3"],\
             ["minipass-json-stream", "npm:1.0.1"],\
             ["minizlib", "npm:2.1.2"],\
@@ -13003,21 +13039,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:15.1.3", {\
-          "packageLocation": "./.yarn/cache/pacote-npm-15.1.3-c419c60be9-de03c08e2e.zip/node_modules/pacote/",\
+        ["npm:16.0.0", {\
+          "packageLocation": "./.yarn/cache/pacote-npm-16.0.0-10600d09a0-79fa8f6799.zip/node_modules/pacote/",\
           "packageDependencies": [\
-            ["pacote", "npm:15.1.3"],\
+            ["pacote", "npm:16.0.0"],\
             ["@npmcli/git", "npm:4.0.4"],\
             ["@npmcli/installed-package-contents", "npm:2.0.2"],\
             ["@npmcli/promise-spawn", "npm:6.0.2"],\
             ["@npmcli/run-script", "npm:6.0.2"],\
             ["cacache", "npm:17.1.0"],\
             ["fs-minipass", "npm:3.0.2"],\
-            ["minipass", "npm:5.0.0"],\
+            ["minipass", "npm:7.0.2"],\
             ["npm-package-arg", "npm:10.1.0"],\
             ["npm-packlist", "npm:7.0.4"],\
             ["npm-pick-manifest", "npm:8.0.1"],\
-            ["npm-registry-fetch", "npm:14.0.5"],\
+            ["npm-registry-fetch", "npm:15.0.0"],\
             ["proc-log", "npm:3.0.0"],\
             ["promise-retry", "npm:2.0.1"],\
             ["read-package-json", "npm:6.0.3"],\

@@ -97,7 +97,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:8.0.3"],\
             ["lerna", "npm:5.5.4"],\
             ["npm-run-all", "npm:4.1.5"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.2"],\
             ["pretty-quick", "virtual:82c078ca42b7720696625f99fb97d78eead328557c0f04e35d70b92b9d3cb023f4fd68c9a4016aa34d26ce404ac69dd1a7c59916f0a4f5c7712b8ad9d994dbfd#npm:3.1.3"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
           ],\
@@ -8154,7 +8154,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prettier", null],\
             ["eslint", "npm:8.40.0"],\
             ["eslint-config-prettier", "virtual:82c078ca42b7720696625f99fb97d78eead328557c0f04e35d70b92b9d3cb023f4fd68c9a4016aa34d26ce404ac69dd1a7c59916f0a4f5c7712b8ad9d994dbfd#npm:8.8.0"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.2"],\
             ["prettier-linter-helpers", "npm:1.0.0"]\
           ],\
           "packagePeers": [\
@@ -13312,10 +13312,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.8.8", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.8.8-430828a36c-b49e409431.zip/node_modules/prettier/",\
+        ["npm:3.0.2", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-3.0.2-2cbecb9037-118b59ddb6.zip/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.8.8"]\
+            ["prettier", "npm:3.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13371,7 +13371,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ignore", "npm:5.2.4"],\
             ["mri", "npm:1.2.0"],\
             ["multimatch", "npm:4.0.0"],\
-            ["prettier", "npm:2.8.8"]\
+            ["prettier", "npm:3.0.2"]\
           ],\
           "packagePeers": [\
             "@types/prettier",\
@@ -14091,7 +14091,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:8.0.3"],\
             ["lerna", "npm:5.5.4"],\
             ["npm-run-all", "npm:4.1.5"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.2"],\
             ["pretty-quick", "virtual:82c078ca42b7720696625f99fb97d78eead328557c0f04e35d70b92b9d3cb023f4fd68c9a4016aa34d26ce404ac69dd1a7c59916f0a4f5c7712b8ad9d994dbfd#npm:3.1.3"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
           ],\

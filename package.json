@@ -39,7 +39,7 @@
     "node": ">=16",
     "yarn": ">=3"
   },
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "yarn@3.6.2",
   "workspaces": [
     "examples/*",
     "internal/*",

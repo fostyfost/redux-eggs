@@ -2801,7 +2801,7 @@ __metadata:
     "@rollup/plugin-eslint": 9.0.3
     "@rollup/plugin-node-resolve": 15.0.2
     "@types/cli-table": 0.3.1
-    "@types/node": 20.1.0
+    "@types/node": 20.5.1
     "@types/pacote": 11.1.5
     brotli-size: 4.0.0
     cli-table: 0.3.11
@@ -2854,7 +2854,7 @@ __metadata:
     "@rollup/plugin-eslint": 9.0.3
     "@testing-library/react": 13.4.0
     "@types/jest": 29.5.1
-    "@types/node": 20.1.0
+    "@types/node": 20.5.1
     "@types/react": 18.2.6
     "@types/react-dom": 18.2.4
     "@types/react-test-renderer": 18.0.0
@@ -2940,7 +2940,7 @@ __metadata:
     "@reduxjs/toolkit": 1.9.5
     "@rollup/plugin-eslint": 9.0.3
     "@types/jest": 29.5.1
-    "@types/node": 20.1.0
+    "@types/node": 20.5.1
     cross-env: 7.0.3
     jest: 29.5.0
     rimraf: 5.0.0
@@ -2966,7 +2966,7 @@ __metadata:
     "@redux-eggs/core": 3.0.0-alpha.4
     "@rollup/plugin-eslint": 9.0.3
     "@types/jest": 29.5.1
-    "@types/node": 20.1.0
+    "@types/node": 20.5.1
     cross-env: 7.0.3
     jest: 29.5.0
     redux: 4.2.1
@@ -3507,6 +3507,13 @@ __metadata:
   version: 20.1.0
   resolution: "@types/node@npm:20.1.0"
   checksum: c6d9afa9aa78b4b4348c69ece94975be70346b144c278f1395694a10ef919d7db300018101b6f9245e6bdd76674a5327d2d14829092f3d5295e858cff5f22a66
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.5.1":
+  version: 20.5.1
+  resolution: "@types/node@npm:20.5.1"
+  checksum: 3dbe611cd67afa987102c8558ee70f848949c5dcfee5f60abc073e55c0d7b048e391bf06bb1e0dc052cb7210ca97136ac496cbaf6e89123c989de6bd125fde82
   languageName: node
   linkType: hard
 

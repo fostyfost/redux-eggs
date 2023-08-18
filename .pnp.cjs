@@ -3634,7 +3634,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@rollup/plugin-node-resolve", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:15.0.2"],\
             ["@types/cli-table", "npm:0.3.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/pacote", "npm:11.1.5"],\
             ["@types/rollup", null],\
             ["brotli-size", "npm:4.0.0"],\
@@ -3664,7 +3664,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@rollup/plugin-node-resolve", "virtual:cba4b5edde0f5393773ece5645ee296fc38bcab8032f0a2353f3e6caccc84700520bdbf3493bd76e211469a282e9a626d0ab0ff77fec8e8fdd1f6a734d860330#npm:15.0.2"],\
             ["@types/cli-table", "npm:0.3.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/pacote", "npm:11.1.5"],\
             ["brotli-size", "npm:4.0.0"],\
             ["cli-table", "npm:0.3.11"],\
@@ -3720,7 +3720,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:13.4.0"],\
             ["@types/jest", "npm:29.5.1"],\
             ["@types/next", null],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/react", "npm:18.2.6"],\
             ["@types/react-dom", "npm:18.2.4"],\
             ["@types/react-redux", null],\
@@ -3774,7 +3774,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:13.4.0"],\
             ["@types/jest", "npm:29.5.1"],\
             ["@types/next", null],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/react", "npm:18.2.6"],\
             ["@types/react-dom", "npm:18.2.4"],\
             ["@types/react-redux", null],\
@@ -3826,7 +3826,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@testing-library/react", "virtual:2f511d3dbd08e0a1bbf2300b78e00c02b6f0ab789c851fe206d73a53dfcb99986746a78d75cfb9bc6be1859906ece19bb233da0372815428edebb7a814980c6e#npm:13.4.0"],\
             ["@types/jest", "npm:29.5.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/react", "npm:18.2.6"],\
             ["@types/react-dom", "npm:18.2.4"],\
             ["@types/react-test-renderer", "npm:18.0.0"],\
@@ -4003,7 +4003,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@types/jest", "npm:29.5.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/redux", null],\
             ["@types/redux-eggs__core", null],\
             ["cross-env", "npm:7.0.3"],\
@@ -4036,7 +4036,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@redux-eggs/core", "workspace:packages/core"],\
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@types/jest", "npm:29.5.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["redux", "npm:4.2.1"],\
@@ -4064,7 +4064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@types/jest", "npm:29.5.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/redux-eggs__core", null],\
             ["@types/reduxjs__toolkit", null],\
             ["cross-env", "npm:7.0.3"],\
@@ -4095,7 +4095,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@reduxjs/toolkit", "virtual:35b2ab9c788567103573ec0c13cdd328169f6b11f34aae27e05ddd13762ac0e914e88a476285430cead39ef955294a4474c78fa300db634acbc2337474150c6f#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@types/jest", "npm:29.5.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/redux-eggs__core", null],\
             ["@types/reduxjs__toolkit", null],\
             ["cross-env", "npm:7.0.3"],\
@@ -4127,7 +4127,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@types/jest", "npm:29.5.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["@types/redux-eggs__core", null],\
             ["@types/reduxjs__toolkit", null],\
             ["cross-env", "npm:7.0.3"],\
@@ -4159,7 +4159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@reduxjs/toolkit", "virtual:9d07465a4f8d72a282c53a7ab42e1c63d2e24220d5cddd889b19cb4bd06c67c925d0ce13fe424e40bbf8fff674833539c718d4369ad5baafec8ef19dd6851848#npm:1.9.5"],\
             ["@rollup/plugin-eslint", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:9.0.3"],\
             ["@types/jest", "npm:29.5.1"],\
-            ["@types/node", "npm:20.1.0"],\
+            ["@types/node", "npm:20.5.1"],\
             ["cross-env", "npm:7.0.3"],\
             ["jest", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:29.5.0"],\
             ["rimraf", "npm:5.0.0"],\
@@ -4876,6 +4876,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-20.1.0-c5561d67cd-c6d9afa9aa.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:20.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:20.5.1", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.5.1-d4e9ac5c26-3dbe611cd6.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.5.1"]\
           ],\
           "linkType": "HARD"\
         }]\

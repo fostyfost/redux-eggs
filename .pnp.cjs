@@ -2898,6 +2898,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@npmcli/agent", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@npmcli-agent-npm-2.0.0-39f1c89819-4b96a6f27b.zip/node_modules/@npmcli/agent/",\
+          "packageDependencies": [\
+            ["@npmcli/agent", "npm:2.0.0"],\
+            ["lru-cache", "npm:10.0.1"],\
+            ["socks", "npm:2.7.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@npmcli/arborist", [\
         ["npm:5.3.0", {\
           "packageLocation": "./.yarn/cache/@npmcli-arborist-npm-5.3.0-5f9b001b69-7f99f451ba.zip/node_modules/@npmcli/arborist/",\
@@ -2977,13 +2988,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:4.0.4", {\
-          "packageLocation": "./.yarn/cache/@npmcli-git-npm-4.0.4-58b0cf13b7-fd8ad33113.zip/node_modules/@npmcli/git/",\
+        ["npm:5.0.1", {\
+          "packageLocation": "./.yarn/cache/@npmcli-git-npm-5.0.1-2ebd99e937-857575adc0.zip/node_modules/@npmcli/git/",\
           "packageDependencies": [\
-            ["@npmcli/git", "npm:4.0.4"],\
+            ["@npmcli/git", "npm:5.0.1"],\
             ["@npmcli/promise-spawn", "npm:6.0.2"],\
-            ["lru-cache", "npm:7.18.3"],\
-            ["npm-pick-manifest", "npm:8.0.1"],\
+            ["lru-cache", "npm:10.0.1"],\
+            ["npm-pick-manifest", "npm:9.0.0"],\
             ["proc-log", "npm:3.0.0"],\
             ["promise-inflight", "virtual:4e2088ed0df52533102f445d7e7aeba6560b7effa0cabbc7cc20dd1e36a86dd838cc541de4414688f4ce3ec77b0ad5298cea6de581350d934ceb35c3e0fe3462#npm:1.0.1"],\
             ["promise-retry", "npm:2.0.1"],\
@@ -3642,7 +3653,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.40.0"],\
             ["filesize", "npm:10.0.7"],\
-            ["pacote", "npm:15.1.3"],\
+            ["pacote", "npm:17.0.2"],\
             ["rimraf", "npm:5.0.0"],\
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
@@ -3671,7 +3682,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:2.0.20"],\
             ["eslint", "npm:8.40.0"],\
             ["filesize", "npm:10.0.7"],\
-            ["pacote", "npm:15.1.3"],\
+            ["pacote", "npm:17.0.2"],\
             ["rimraf", "npm:5.0.0"],\
             ["rollup", "npm:2.79.1"],\
             ["rollup-plugin-peer-deps-external", "virtual:333cf77e9167c79aba0657c14411198204979d29352f2a246b2248fa8b71672793fc87fc68db3e3de2f2cbaf5da6134ad6bae006cc789bf532e06e2000e2862b#npm:2.2.4"],\
@@ -4463,11 +4474,44 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@sigstore/protobuf-specs", [\
-        ["npm:0.1.0", {\
-          "packageLocation": "./.yarn/cache/@sigstore-protobuf-specs-npm-0.1.0-0b5d821c3c-9959bc5176.zip/node_modules/@sigstore/protobuf-specs/",\
+      ["@sigstore/bundle", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@sigstore-bundle-npm-2.0.0-9f84e94e5c-98d702bdf2.zip/node_modules/@sigstore/bundle/",\
           "packageDependencies": [\
-            ["@sigstore/protobuf-specs", "npm:0.1.0"]\
+            ["@sigstore/bundle", "npm:2.0.0"],\
+            ["@sigstore/protobuf-specs", "npm:0.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sigstore/protobuf-specs", [\
+        ["npm:0.2.1", {\
+          "packageLocation": "./.yarn/cache/@sigstore-protobuf-specs-npm-0.2.1-feecdcc08c-ddb7c829c7.zip/node_modules/@sigstore/protobuf-specs/",\
+          "packageDependencies": [\
+            ["@sigstore/protobuf-specs", "npm:0.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sigstore/sign", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@sigstore-sign-npm-2.0.0-08c8def836-fd612868ba.zip/node_modules/@sigstore/sign/",\
+          "packageDependencies": [\
+            ["@sigstore/sign", "npm:2.0.0"],\
+            ["@sigstore/bundle", "npm:2.0.0"],\
+            ["@sigstore/protobuf-specs", "npm:0.2.1"],\
+            ["make-fetch-happen", "npm:13.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sigstore/tuf", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@sigstore-tuf-npm-2.0.0-17178685c2-678cba5e23.zip/node_modules/@sigstore/tuf/",\
+          "packageDependencies": [\
+            ["@sigstore/tuf", "npm:2.0.0"],\
+            ["@sigstore/protobuf-specs", "npm:0.2.1"],\
+            ["tuf-js", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4657,21 +4701,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@tufjs/canonical-json", [\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/@tufjs-canonical-json-npm-1.0.0-66d27d850f-9ff3bcd129.zip/node_modules/@tufjs/canonical-json/",\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@tufjs-canonical-json-npm-2.0.0-46a22aa444-cc719a1d0d.zip/node_modules/@tufjs/canonical-json/",\
           "packageDependencies": [\
-            ["@tufjs/canonical-json", "npm:1.0.0"]\
+            ["@tufjs/canonical-json", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@tufjs/models", [\
-        ["npm:1.0.4", {\
-          "packageLocation": "./.yarn/cache/@tufjs-models-npm-1.0.4-a1dddaf561-b489baa854.zip/node_modules/@tufjs/models/",\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@tufjs-models-npm-2.0.0-f0effe74b2-aac9f2f3a4.zip/node_modules/@tufjs/models/",\
           "packageDependencies": [\
-            ["@tufjs/models", "npm:1.0.4"],\
-            ["@tufjs/canonical-json", "npm:1.0.0"],\
-            ["minimatch", "npm:9.0.0"]\
+            ["@tufjs/models", "npm:2.0.0"],\
+            ["@tufjs/canonical-json", "npm:2.0.0"],\
+            ["minimatch", "npm:9.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6293,15 +6337,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:17.1.0", {\
-          "packageLocation": "./.yarn/cache/cacache-npm-17.1.0-122252b60e-ae1f072f84.zip/node_modules/cacache/",\
+        ["npm:18.0.0", {\
+          "packageLocation": "./.yarn/cache/cacache-npm-18.0.0-32582cfebc-2cd6bf1555.zip/node_modules/cacache/",\
           "packageDependencies": [\
-            ["cacache", "npm:17.1.0"],\
+            ["cacache", "npm:18.0.0"],\
             ["@npmcli/fs", "npm:3.1.0"],\
             ["fs-minipass", "npm:3.0.2"],\
             ["glob", "npm:10.2.2"],\
-            ["lru-cache", "npm:7.18.3"],\
-            ["minipass", "npm:5.0.0"],\
+            ["lru-cache", "npm:10.0.1"],\
+            ["minipass", "npm:7.0.3"],\
             ["minipass-collect", "npm:1.0.2"],\
             ["minipass-flush", "npm:1.0.5"],\
             ["minipass-pipeline", "npm:1.2.4"],\
@@ -9372,11 +9416,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.1.1", {\
-          "packageLocation": "./.yarn/cache/hosted-git-info-npm-6.1.1-d57807f6a5-fcd3ca2eaa.zip/node_modules/hosted-git-info/",\
+        ["npm:7.0.0", {\
+          "packageLocation": "./.yarn/cache/hosted-git-info-npm-7.0.0-4ca712cdc8-b892237a38.zip/node_modules/hosted-git-info/",\
           "packageDependencies": [\
-            ["hosted-git-info", "npm:6.1.1"],\
-            ["lru-cache", "npm:7.18.3"]\
+            ["hosted-git-info", "npm:7.0.0"],\
+            ["lru-cache", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11412,6 +11456,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["lru-cache", [\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/cache/lru-cache-npm-10.0.1-0e1abf4c13-06f8d0e1ce.zip/node_modules/lru-cache/",\
+          "packageDependencies": [\
+            ["lru-cache", "npm:10.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:5.1.1", {\
           "packageLocation": "./.yarn/cache/lru-cache-npm-5.1.1-f475882a51-c154ae1cbb.zip/node_modules/lru-cache/",\
           "packageDependencies": [\
@@ -11514,24 +11565,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:11.1.1", {\
-          "packageLocation": "./.yarn/cache/make-fetch-happen-npm-11.1.1-f32b79aaaa-7268bf274a.zip/node_modules/make-fetch-happen/",\
+        ["npm:13.0.0", {\
+          "packageLocation": "./.yarn/cache/make-fetch-happen-npm-13.0.0-f87a92bb87-7c7a6d381c.zip/node_modules/make-fetch-happen/",\
           "packageDependencies": [\
-            ["make-fetch-happen", "npm:11.1.1"],\
-            ["agentkeepalive", "npm:4.3.0"],\
-            ["cacache", "npm:17.1.0"],\
+            ["make-fetch-happen", "npm:13.0.0"],\
+            ["@npmcli/agent", "npm:2.0.0"],\
+            ["cacache", "npm:18.0.0"],\
             ["http-cache-semantics", "npm:4.1.1"],\
-            ["http-proxy-agent", "npm:5.0.0"],\
-            ["https-proxy-agent", "npm:5.0.1"],\
             ["is-lambda", "npm:1.0.1"],\
-            ["lru-cache", "npm:7.18.3"],\
-            ["minipass", "npm:5.0.0"],\
+            ["minipass", "npm:7.0.3"],\
             ["minipass-fetch", "npm:3.0.3"],\
             ["minipass-flush", "npm:1.0.5"],\
             ["minipass-pipeline", "npm:1.2.4"],\
             ["negotiator", "npm:0.6.3"],\
             ["promise-retry", "npm:2.0.1"],\
-            ["socks-proxy-agent", "npm:7.0.0"],\
             ["ssri", "npm:10.0.4"]\
           ],\
           "linkType": "HARD"\
@@ -11697,6 +11744,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["brace-expansion", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:9.0.3", {\
+          "packageLocation": "./.yarn/cache/minimatch-npm-9.0.3-69d7d6fad5-253487976b.zip/node_modules/minimatch/",\
+          "packageDependencies": [\
+            ["minimatch", "npm:9.0.3"],\
+            ["brace-expansion", "npm:2.0.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["minimist", [\
@@ -11733,6 +11788,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/minipass-npm-5.0.0-c64fb63c92-425dab2887.zip/node_modules/minipass/",\
           "packageDependencies": [\
             ["minipass", "npm:5.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.0.3", {\
+          "packageLocation": "./.yarn/cache/minipass-npm-7.0.3-3b57909ee9-6f1614f5b5.zip/node_modules/minipass/",\
+          "packageDependencies": [\
+            ["minipass", "npm:7.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12282,11 +12344,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:5.0.0", {\
-          "packageLocation": "./.yarn/cache/normalize-package-data-npm-5.0.0-6327e2af68-a459f05eaf.zip/node_modules/normalize-package-data/",\
+        ["npm:6.0.0", {\
+          "packageLocation": "./.yarn/cache/normalize-package-data-npm-6.0.0-eb6fb03d4d-741211a435.zip/node_modules/normalize-package-data/",\
           "packageDependencies": [\
-            ["normalize-package-data", "npm:5.0.0"],\
-            ["hosted-git-info", "npm:6.1.1"],\
+            ["normalize-package-data", "npm:6.0.0"],\
+            ["hosted-git-info", "npm:7.0.0"],\
             ["is-core-module", "npm:2.12.0"],\
             ["semver", "npm:7.5.0"],\
             ["validate-npm-package-license", "npm:3.0.4"]\
@@ -12371,11 +12433,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["npm-package-arg", [\
-        ["npm:10.1.0", {\
-          "packageLocation": "./.yarn/cache/npm-package-arg-npm-10.1.0-e9f0aaa69d-8fe4b6a742.zip/node_modules/npm-package-arg/",\
+        ["npm:11.0.0", {\
+          "packageLocation": "./.yarn/cache/npm-package-arg-npm-11.0.0-aee6a122cd-d88dd22929.zip/node_modules/npm-package-arg/",\
           "packageDependencies": [\
-            ["npm-package-arg", "npm:10.1.0"],\
-            ["hosted-git-info", "npm:6.1.1"],\
+            ["npm-package-arg", "npm:11.0.0"],\
+            ["hosted-git-info", "npm:7.0.0"],\
             ["proc-log", "npm:3.0.0"],\
             ["semver", "npm:7.5.0"],\
             ["validate-npm-package-name", "npm:5.0.0"]\
@@ -12437,13 +12499,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:8.0.1", {\
-          "packageLocation": "./.yarn/cache/npm-pick-manifest-npm-8.0.1-186ce1bec0-b8e16f2fbc.zip/node_modules/npm-pick-manifest/",\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/npm-pick-manifest-npm-9.0.0-ad85663392-a6f102f9e9.zip/node_modules/npm-pick-manifest/",\
           "packageDependencies": [\
-            ["npm-pick-manifest", "npm:8.0.1"],\
+            ["npm-pick-manifest", "npm:9.0.0"],\
             ["npm-install-checks", "npm:6.1.1"],\
             ["npm-normalize-package-bin", "npm:3.0.1"],\
-            ["npm-package-arg", "npm:10.1.0"],\
+            ["npm-package-arg", "npm:11.0.0"],\
             ["semver", "npm:7.5.0"]\
           ],\
           "linkType": "HARD"\
@@ -12464,16 +12526,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:14.0.5", {\
-          "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-14.0.5-6b3e6c0dd0-c636496429.zip/node_modules/npm-registry-fetch/",\
+        ["npm:16.0.0", {\
+          "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-16.0.0-3eb72d6496-d50363d1f7.zip/node_modules/npm-registry-fetch/",\
           "packageDependencies": [\
-            ["npm-registry-fetch", "npm:14.0.5"],\
-            ["make-fetch-happen", "npm:11.1.1"],\
-            ["minipass", "npm:5.0.0"],\
+            ["npm-registry-fetch", "npm:16.0.0"],\
+            ["make-fetch-happen", "npm:13.0.0"],\
+            ["minipass", "npm:7.0.3"],\
             ["minipass-fetch", "npm:3.0.3"],\
             ["minipass-json-stream", "npm:1.0.1"],\
             ["minizlib", "npm:2.1.2"],\
-            ["npm-package-arg", "npm:10.1.0"],\
+            ["npm-package-arg", "npm:11.0.0"],\
             ["proc-log", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -13003,26 +13065,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:15.1.3", {\
-          "packageLocation": "./.yarn/cache/pacote-npm-15.1.3-c419c60be9-de03c08e2e.zip/node_modules/pacote/",\
+        ["npm:17.0.2", {\
+          "packageLocation": "./.yarn/cache/pacote-npm-17.0.2-08be34a34d-bf3efdb550.zip/node_modules/pacote/",\
           "packageDependencies": [\
-            ["pacote", "npm:15.1.3"],\
-            ["@npmcli/git", "npm:4.0.4"],\
+            ["pacote", "npm:17.0.2"],\
+            ["@npmcli/git", "npm:5.0.1"],\
             ["@npmcli/installed-package-contents", "npm:2.0.2"],\
             ["@npmcli/promise-spawn", "npm:6.0.2"],\
             ["@npmcli/run-script", "npm:6.0.2"],\
-            ["cacache", "npm:17.1.0"],\
+            ["cacache", "npm:18.0.0"],\
             ["fs-minipass", "npm:3.0.2"],\
-            ["minipass", "npm:5.0.0"],\
-            ["npm-package-arg", "npm:10.1.0"],\
+            ["minipass", "npm:7.0.3"],\
+            ["npm-package-arg", "npm:11.0.0"],\
             ["npm-packlist", "npm:7.0.4"],\
-            ["npm-pick-manifest", "npm:8.0.1"],\
-            ["npm-registry-fetch", "npm:14.0.5"],\
+            ["npm-pick-manifest", "npm:9.0.0"],\
+            ["npm-registry-fetch", "npm:16.0.0"],\
             ["proc-log", "npm:3.0.0"],\
             ["promise-retry", "npm:2.0.1"],\
-            ["read-package-json", "npm:6.0.3"],\
+            ["read-package-json", "npm:7.0.0"],\
             ["read-package-json-fast", "npm:3.0.2"],\
-            ["sigstore", "npm:1.4.0"],\
+            ["sigstore", "npm:2.0.0"],\
             ["ssri", "npm:10.0.4"],\
             ["tar", "npm:6.1.14"]\
           ],\
@@ -13926,13 +13988,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.0.3", {\
-          "packageLocation": "./.yarn/cache/read-package-json-npm-6.0.3-7ccdda3c7f-8865b70ac4.zip/node_modules/read-package-json/",\
+        ["npm:7.0.0", {\
+          "packageLocation": "./.yarn/cache/read-package-json-npm-7.0.0-5d4e9022be-9b6e3ebba0.zip/node_modules/read-package-json/",\
           "packageDependencies": [\
-            ["read-package-json", "npm:6.0.3"],\
+            ["read-package-json", "npm:7.0.0"],\
             ["glob", "npm:10.2.2"],\
             ["json-parse-even-better-errors", "npm:3.0.0"],\
-            ["normalize-package-data", "npm:5.0.0"],\
+            ["normalize-package-data", "npm:6.0.0"],\
             ["npm-normalize-package-bin", "npm:3.0.1"]\
           ],\
           "linkType": "HARD"\
@@ -14711,13 +14773,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sigstore", [\
-        ["npm:1.4.0", {\
-          "packageLocation": "./.yarn/cache/sigstore-npm-1.4.0-7a4f656b53-8bbe2963f4.zip/node_modules/sigstore/",\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/sigstore-npm-2.0.0-fb30374285-d3c10b7932.zip/node_modules/sigstore/",\
           "packageDependencies": [\
-            ["sigstore", "npm:1.4.0"],\
-            ["@sigstore/protobuf-specs", "npm:0.1.0"],\
-            ["make-fetch-happen", "npm:11.1.1"],\
-            ["tuf-js", "npm:1.1.5"]\
+            ["sigstore", "npm:2.0.0"],\
+            ["@sigstore/bundle", "npm:2.0.0"],\
+            ["@sigstore/protobuf-specs", "npm:0.2.1"],\
+            ["@sigstore/sign", "npm:2.0.0"],\
+            ["@sigstore/tuf", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15702,12 +15765,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["tuf-js", [\
-        ["npm:1.1.5", {\
-          "packageLocation": "./.yarn/cache/tuf-js-npm-1.1.5-140b0f1312-59b0b0abb6.zip/node_modules/tuf-js/",\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/tuf-js-npm-2.0.0-506a503e99-af4bf442bf.zip/node_modules/tuf-js/",\
           "packageDependencies": [\
-            ["tuf-js", "npm:1.1.5"],\
-            ["@tufjs/models", "npm:1.0.4"],\
-            ["make-fetch-happen", "npm:11.1.1"]\
+            ["tuf-js", "npm:2.0.0"],\
+            ["@tufjs/models", "npm:2.0.0"],\
+            ["debug", "virtual:531b6e79f7bcef9fa432316ab3ce4b1417df151c8e8350181023a666d55724fcedfdfe50cba6ee7c25a5adbd4f024013f036b79fb10bed8621708e2f7d85e6c6#npm:4.3.4"],\
+            ["make-fetch-happen", "npm:13.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
